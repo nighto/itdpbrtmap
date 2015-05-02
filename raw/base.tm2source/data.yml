@@ -1,0 +1,94 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: ''
+  rev: ''
+  saveCenter: true
+attribution: ''
+center: 
+  - -43.2146
+  - -22.9141
+  - 14
+description: ''
+Layer: 
+  - id: RJ_TCM_Limites_Administrativos_Bairros_com_dados
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/1. RJ_TCM_Limites_Administrativos_Bairros_com_dados/RJ_TCM_Limites_Administrativos_Bairros_com_dados.shp
+      type: shape
+    description: Bairros
+    fields: 
+      AREA: String
+      AREA_KM2: Number
+      BAIRRO_BDA: String
+      CIDADE: String
+      CODAP: String
+      CODAPI: String
+      CODBAIRRO: String
+      CODRA: String
+      DENS_POP_K: Number
+      EMPRG: Number
+      POPULACAO: Number
+      RA: String
+      RAZAO_EMPR: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=utm +zone=23 +south +ellps=WGS84 +units=m +no_defs
+  - id: Lines_BRT_revised
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/2. RJ_TP_BRT/Lines_BRT_revised.shp
+      type: shape
+    description: Linhas de BRT
+    fields: 
+      Corredor: String
+      Name: String
+      Shape_Leng: Number
+      Status: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: Stations_BRT_revised
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/2. RJ_TP_BRT/Stations_BRT_revised.shp
+      type: shape
+    description: Estações de BRT
+    fields: 
+      Corredor: String
+      Name: String
+      Status: String
+      Type: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: Lines_Metro
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/3. RJ_TP_other/Lines_Metro.shp
+      type: shape
+    description: MetrôRio
+    fields: 
+      Name: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: Lines_Supervia
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/3. RJ_TP_other/Lines_Supervia.shp
+      type: shape
+    description: SuperVIa
+    fields: 
+      Name: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: Lines_VLT
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/3. RJ_TP_other/Lines_VLT.shp
+      type: shape
+    description: VLT
+    fields: 
+      Linetype: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=utm +zone=23 +south +ellps=WGS84 +units=m +no_defs
+maxzoom: 16
+minzoom: 0
+name: ''
