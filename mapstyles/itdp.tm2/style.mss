@@ -1,5 +1,5 @@
 // Languages: name (local), name_en, name_fr, name_es, name_de
-@name: '[name_en]';
+@name: '[name]';
 
 // Fonts //
 @sans: 'Source Sans Pro Regular';
