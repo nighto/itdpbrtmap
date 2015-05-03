@@ -7,6 +7,16 @@ html, body, #map {
     height: 100%;
 }
 
+.my-custom-control {
+  background: white;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  padding: 0 10px 10px;
+}
+.my-custom-control h2 {
+  font-size: 12px;
+}
+
 /*****************/
 /* Cores do ITDP */
 /*****************/

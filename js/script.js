@@ -111,30 +111,84 @@ require(["data"], function(util){
   var geoJsonBairros                 = L.geoJson(BAIRROS, {onEachFeature: bairrosPopupFn, style: pathStyleBairros});
 
   // defining layers
-  var layerTransOeste    = L.layerGroup([geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOeste]),
-      layerTransCarioca  = L.layerGroup([geoJsonLineTransCarioca, geoJsonStationTransCarioca]),
-      layerTransOlimpica = L.layerGroup([geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpica]),
-      layerTransBrasil   = L.layerGroup([geoJsonLineTransBrasil, geoJsonStationTransBrasil]),
-      layerOutrosModos   = L.layerGroup([geoJsonLineMetroRioLinha1, geoJsonLineMetroRioLinha2, geoJsonLineSuperViaSantaCruz, geoJsonLineSuperViaSaracuruna, geoJsonLineSuperViaJaperi, geoJsonLineSuperViaJaperi, geoJsonLineSuperViaBelfordRoxo, geoJsonLineVltCarioca]),
-      layerBairros       = L.layerGroup([geoJsonBairros]);
+  var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOeste],
+      arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCarioca],
+      arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpica],
+      arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasil],
+      arrayLayerOutrosModos   = [geoJsonLineMetroRioLinha1, geoJsonLineMetroRioLinha2, geoJsonLineSuperViaSantaCruz, geoJsonLineSuperViaSaracuruna,
+                                 geoJsonLineSuperViaJaperi, geoJsonLineSuperViaBelfordRoxo, geoJsonLineVltCarioca],
+      arrayLayerBairros       = [geoJsonBairros];
 
-  var overlayMaps = {
-    "BRT TransOeste":    layerTransOeste,
-    "BRT TransCarioca":  layerTransCarioca,
-    "BRT TransOlímpica": layerTransOlimpica,
-    "BRT TransBrasil":   layerTransBrasil,
-    "Outros Modos Estruturantes": layerOutrosModos,
-    "Bairros": layerBairros
-  };
+  var layerGroupTransOeste    = L.layerGroup(arrayLayerTransOeste),
+      layerGroupTransCarioca  = L.layerGroup(arrayLayerTransCarioca),
+      layerGroupTransOlimpica = L.layerGroup(arrayLayerTransOlimpica),
+      layerGroupTransBrasil   = L.layerGroup(arrayLayerTransBrasil),
+      layerGroupOutrosModos   = L.layerGroup(arrayLayerOutrosModos),
+      layerGroupBairros       = L.layerGroup(arrayLayerBairros);
 
   // adding layer control to map
-  L.control.layers(null, overlayMaps).addTo(map);
+  var MyControl = L.Control.extend({
+    options: {
+      position: 'topright'
+    },
+
+    _createTitle: function(titleText, container){
+      // <h2>Sistemas BRT</h2>
+      this.title = L.DomUtil.create('h2', '', container);
+      this.title.innerHTML = titleText;
+    },
+
+    _createCheckboxInput: function(labelText, htmlId, checked, container, layerArray){
+      // <div><input type="checkbox" name=""><label for=""></label></div>
+      this.div = L.DomUtil.create('div', '', container);
+      this.input = L.DomUtil.create('input', '', this.div);
+      this.input.type = 'checkbox';
+      this.input.id = htmlId;
+      this.input.checked = checked;
+      this.label = L.DomUtil.create('label', '', this.div);
+      this.label.innerHTML = labelText;
+      this.label.htmlFor = htmlId;
+
+      // event
+      if(layerArray !== undefined){
+        L.DomEvent
+          .disableClickPropagation(this.input)
+          .on(this.input, 'change', function(e){
+            for (l in layerArray){
+              if(map.hasLayer(layerArray[l])){
+                map.removeLayer(layerArray[l]);
+              }else{
+                map.addLayer(layerArray[l]);
+              }
+            }
+          });
+      }
+    },
+
+    onAdd: function(map){
+      var container = L.DomUtil.create('div', 'my-custom-control');
+      this.form = L.DomUtil.create('form', '', container);
+
+      this._createTitle('Sistemas BRT', this.form);
+      this._createCheckboxInput('TransOeste',    'TW', true, this.form, arrayLayerTransOeste);
+      this._createCheckboxInput('TransCarioca',  'TC', true, this.form, arrayLayerTransCarioca);
+      this._createCheckboxInput('TransOlímpica', 'TO', true, this.form, arrayLayerTransOlimpica);
+      this._createCheckboxInput('TransBrasil',   'TB', true, this.form, arrayLayerTransBrasil);
+
+      this._createTitle('Extras', this.form);
+      this._createCheckboxInput('Outros Modos Estruturantes', 'OME', true, this.form, arrayLayerOutrosModos);
+      this._createCheckboxInput('Bairros/Densidade/Empregos', 'BDE', true, this.form, arrayLayerBairros);
+
+      return container;
+    }
+  });
+  map.addControl(new MyControl());
 
   // initiating pre-opened layers
-  layerBairros.addTo(map);
-  layerTransOeste.addTo(map);
-  layerTransCarioca.addTo(map);
-  layerTransOlimpica.addTo(map);
-  layerTransBrasil.addTo(map);
-  layerOutrosModos.addTo(map);
+  layerGroupBairros.addTo(map);
+  layerGroupTransOeste.addTo(map);
+  layerGroupTransCarioca.addTo(map);
+  layerGroupTransOlimpica.addTo(map);
+  layerGroupTransBrasil.addTo(map);
+  layerGroupOutrosModos.addTo(map);
 });
