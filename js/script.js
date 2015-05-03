@@ -1,4 +1,4 @@
-require(["data"], function(util){
+require(["base", "dummy"], function(util){
     // coordenadas do mapa
   var INITIAL_COORDINATES = [-22.871658, -43.3371976], // Madureira
       INITIAL_ZOOM = 11,
@@ -86,45 +86,57 @@ require(["data"], function(util){
     layer.bindPopup(popupText);
   };
 
+  var estudoPopupFn = function(feature, layer){
+    // "properties": { "Name": "Uma coisa muito crítica", "Description": "Muito crítica mesmo" }
+    var popupText = '<b>' + feature.properties.Name + '</b><br>' + feature.properties.Description;
+    layer.bindPopup(popupText);
+  };
+
   // defining geojson's objects
-  var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: pathStyleConstructedBRT}),
-      geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}),
-      geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStylePlannedBRT}),
-      geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: linePopupFn, style: pathStyleConstructedBRT}),
-      geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}),
-      geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}),
-      geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}),
-      geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1,                    {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}),
-      geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2,                    {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}),
-      geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes});
+  var geoJsonBairros                 = L.geoJson(BAIRROS, {onEachFeature: bairrosPopupFn, style: pathStyleBairros}).addTo(map);
 
-  var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn}),
-      geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn}),
-      geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn}),
-      geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn});
+  var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: pathStyleConstructedBRT}).addTo(map);
+  var geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}).addTo(map);
+  var geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStylePlannedBRT}).addTo(map);
+  var geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: linePopupFn, style: pathStyleConstructedBRT}).addTo(map);
+  var geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}).addTo(map);
+  var geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}).addTo(map);
+  var geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}).addTo(map);
+  var geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1,                    {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
+  var geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2,                    {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
+  var geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
+  var geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
+  var geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
+  var geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
+  var geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
+  var geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
 
-  var geoJsonBairros                 = L.geoJson(BAIRROS, {onEachFeature: bairrosPopupFn, style: pathStyleBairros});
+  var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn}).addTo(map);
+  var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn}).addTo(map);
+  var geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn}).addTo(map);
+  var geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn}).addTo(map);
 
-  // defining layers
+  var estudo = {};
+      estudo.TW = {};
+      estudo.TW.SV = {};
+      estudo.TW.SV.CR = {};
+      estudo.TW.SV.CR.geojson = L.geoJson(TW_SV_CR, {onEachFeature: estudoPopupFn}).addTo(map);
+      estudo.TW.SV.CR.status  = true;
+      estudo.TW.SV.AT = {};
+      estudo.TW.SV.AT.geojson = L.geoJson(TW_SV_AT, {onEachFeature: estudoPopupFn}).addTo(map);
+      estudo.TW.SV.AT.status  = true;
+      estudo.TW.SV.SU = {};
+      estudo.TW.SV.SU.geojson = L.geoJson(TW_SV_SU, {onEachFeature: estudoPopupFn}).addTo(map);
+      estudo.TW.SV.SU.status  = true;
+
+  // defining base layers
   var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOeste],
       arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCarioca],
       arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpica],
       arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasil],
       arrayLayerOutrosModos   = [geoJsonLineMetroRioLinha1, geoJsonLineMetroRioLinha2, geoJsonLineSuperViaSantaCruz, geoJsonLineSuperViaSaracuruna,
-                                 geoJsonLineSuperViaJaperi, geoJsonLineSuperViaBelfordRoxo, geoJsonLineVltCarioca],
+                                 geoJsonLineSuperViaJaperi, geoJsonLineSuperViaGuapimirim, geoJsonLineSuperViaBelfordRoxo, geoJsonLineVltCarioca],
       arrayLayerBairros       = [geoJsonBairros];
-
-  var layerGroupTransOeste    = L.layerGroup(arrayLayerTransOeste),
-      layerGroupTransCarioca  = L.layerGroup(arrayLayerTransCarioca),
-      layerGroupTransOlimpica = L.layerGroup(arrayLayerTransOlimpica),
-      layerGroupTransBrasil   = L.layerGroup(arrayLayerTransBrasil),
-      layerGroupOutrosModos   = L.layerGroup(arrayLayerOutrosModos),
-      layerGroupBairros       = L.layerGroup(arrayLayerBairros);
 
   // adding layer control to map
   var MyControl = L.Control.extend({
@@ -150,10 +162,12 @@ require(["data"], function(util){
       this.label.htmlFor = htmlId;
 
       // event
-      if(layerArray !== undefined){
-        L.DomEvent
-          .disableClickPropagation(this.input)
-          .on(this.input, 'change', function(e){
+      var context = this;
+      L.DomEvent
+        .disableClickPropagation(this.input)
+        .on(this.input, 'change', function(e){
+          if(layerArray !== undefined){ // checkboxes das linhas
+            // remove ou adiciona todos os layers
             for (l in layerArray){
               if(map.hasLayer(layerArray[l])){
                 map.removeLayer(layerArray[l]);
@@ -161,7 +175,43 @@ require(["data"], function(util){
                 map.addLayer(layerArray[l]);
               }
             }
-          });
+          }
+          context._handleLayerEstudoAddRemove();
+        });
+    },
+
+    _handleLayerEstudoAddRemove: function(){
+      var brts = ['TW'];
+      var caracteristicas = ['SV'];
+      var niveis = ['CR', 'AT', 'SU'];
+
+      for(b in brts){
+        for(c in caracteristicas){
+          for(n in niveis){
+            // se tudo está marcado e eu ainda não adicionei, adiciono.
+            if(
+              document.getElementById(brts[b]).checked &&
+              document.getElementById(caracteristicas[c]).checked &&
+              document.getElementById(niveis[n]).checked &&
+              !estudo[brts[b]][caracteristicas[c]][niveis[n]].status
+            ){
+              estudo[brts[b]][caracteristicas[c]][niveis[n]].geojson.addTo(map);
+              estudo[brts[b]][caracteristicas[c]][niveis[n]].status = true;
+            }
+
+            // se algum não está marcado e eu já adicionei, removo.
+            if(
+              (
+                !document.getElementById(brts[b]).checked ||
+                !document.getElementById(caracteristicas[c]).checked ||
+                !document.getElementById(niveis[n]).checked
+              ) && estudo[brts[b]][caracteristicas[c]][niveis[n]].status
+            ){
+              map.removeLayer(estudo[brts[b]][caracteristicas[c]][niveis[n]].geojson);
+              estudo[brts[b]][caracteristicas[c]][niveis[n]].status = false;
+            }
+          }
+        }
       }
     },
 
@@ -175,6 +225,18 @@ require(["data"], function(util){
       this._createCheckboxInput('TransOlímpica', 'TO', true, this.form, arrayLayerTransOlimpica);
       this._createCheckboxInput('TransBrasil',   'TB', true, this.form, arrayLayerTransBrasil);
 
+      this._createTitle('Categorias', this.form);
+      this._createCheckboxInput('Segurança Viária', 'SV', true, this.form);
+      this._createCheckboxInput('Integração',       'IN', true, this.form);
+      this._createCheckboxInput('Operação',         'OP', true, this.form);
+      this._createCheckboxInput('TOD',              'TD', true, this.form);
+      this._createCheckboxInput('Transporte Ativo', 'TA', true, this.form);
+
+      this._createTitle('Níveis de Atenção', this.form);
+      this._createCheckboxInput('Crítico',  'CR', true, this.form);
+      this._createCheckboxInput('Atenção',  'AT', true, this.form);
+      this._createCheckboxInput('Sugestão', 'SU', true, this.form);
+
       this._createTitle('Extras', this.form);
       this._createCheckboxInput('Outros Modos Estruturantes', 'OME', true, this.form, arrayLayerOutrosModos);
       this._createCheckboxInput('Bairros/Densidade/Empregos', 'BDE', true, this.form, arrayLayerBairros);
@@ -183,12 +245,4 @@ require(["data"], function(util){
     }
   });
   map.addControl(new MyControl());
-
-  // initiating pre-opened layers
-  layerGroupBairros.addTo(map);
-  layerGroupTransOeste.addTo(map);
-  layerGroupTransCarioca.addTo(map);
-  layerGroupTransOlimpica.addTo(map);
-  layerGroupTransBrasil.addTo(map);
-  layerGroupOutrosModos.addTo(map);
 });
