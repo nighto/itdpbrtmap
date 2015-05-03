@@ -116,18 +116,27 @@ require(["base", "dummy"], function(util){
   var geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn}).addTo(map);
   var geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn}).addTo(map);
 
-  var estudo = {};
-      estudo.TW = {};
-      estudo.TW.SV = {};
-      estudo.TW.SV.CR = {};
-      estudo.TW.SV.CR.geojson = L.geoJson(TW_SV_CR, {onEachFeature: estudoPopupFn}).addTo(map);
-      estudo.TW.SV.CR.status  = true;
-      estudo.TW.SV.AT = {};
-      estudo.TW.SV.AT.geojson = L.geoJson(TW_SV_AT, {onEachFeature: estudoPopupFn}).addTo(map);
-      estudo.TW.SV.AT.status  = true;
-      estudo.TW.SV.SU = {};
-      estudo.TW.SV.SU.geojson = L.geoJson(TW_SV_SU, {onEachFeature: estudoPopupFn}).addTo(map);
-      estudo.TW.SV.SU.status  = true;
+  // initializing estudo object
+  var study = {},
+      brts = ['TW'],
+      caracteristicas = ['SV'],
+      niveis = ['CR', 'AT', 'SU'];
+
+  var initializeStudy = function(study){
+    for(b in brts){
+      study[brts[b]] = {};
+        for(c in caracteristicas){
+          study[brts[b]][caracteristicas[c]] = {};
+          for(n in niveis){
+            study[brts[b]][caracteristicas[c]][niveis[n]] = {};
+            study[brts[b]][caracteristicas[c]][niveis[n]].status = true;
+            // L.geoJson(TW_SV_CR, {...})
+            study[brts[b]][caracteristicas[c]][niveis[n]].geojson = L.geoJson(window[brts[b] + '_' + caracteristicas[c] + '_' + niveis[n]], {onEachFeature: estudoPopupFn}).addTo(map);
+          }
+        }
+    }
+  };
+  initializeStudy(study);
 
   // defining base layers
   var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOeste],
@@ -181,10 +190,6 @@ require(["base", "dummy"], function(util){
     },
 
     _handleLayerEstudoAddRemove: function(){
-      var brts = ['TW'];
-      var caracteristicas = ['SV'];
-      var niveis = ['CR', 'AT', 'SU'];
-
       for(b in brts){
         for(c in caracteristicas){
           for(n in niveis){
@@ -193,10 +198,10 @@ require(["base", "dummy"], function(util){
               document.getElementById(brts[b]).checked &&
               document.getElementById(caracteristicas[c]).checked &&
               document.getElementById(niveis[n]).checked &&
-              !estudo[brts[b]][caracteristicas[c]][niveis[n]].status
+              !study[brts[b]][caracteristicas[c]][niveis[n]].status
             ){
-              estudo[brts[b]][caracteristicas[c]][niveis[n]].geojson.addTo(map);
-              estudo[brts[b]][caracteristicas[c]][niveis[n]].status = true;
+              study[brts[b]][caracteristicas[c]][niveis[n]].geojson.addTo(map);
+              study[brts[b]][caracteristicas[c]][niveis[n]].status = true;
             }
 
             // se algum não está marcado e eu já adicionei, removo.
@@ -205,10 +210,10 @@ require(["base", "dummy"], function(util){
                 !document.getElementById(brts[b]).checked ||
                 !document.getElementById(caracteristicas[c]).checked ||
                 !document.getElementById(niveis[n]).checked
-              ) && estudo[brts[b]][caracteristicas[c]][niveis[n]].status
+              ) && study[brts[b]][caracteristicas[c]][niveis[n]].status
             ){
-              map.removeLayer(estudo[brts[b]][caracteristicas[c]][niveis[n]].geojson);
-              estudo[brts[b]][caracteristicas[c]][niveis[n]].status = false;
+              map.removeLayer(study[brts[b]][caracteristicas[c]][niveis[n]].geojson);
+              study[brts[b]][caracteristicas[c]][niveis[n]].status = false;
             }
           }
         }
