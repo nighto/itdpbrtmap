@@ -1,4 +1,13 @@
-require(["base", "dummy"], function(util){
+require([
+  "basemap/brt/transoeste",
+  "basemap/brt/transcarioca",
+  "basemap/brt/transolimpica",
+  "basemap/brt/transbrasil",
+  "basemap/ome/metrorio",
+  "basemap/ome/supervia",
+  "basemap/ome/vltcarioca",
+  "basemap/bairros", "dummy"
+], function(util){
     // coordenadas do mapa
   var INITIAL_COORDINATES = [-22.871658, -43.3371976], // Madureira
       INITIAL_ZOOM = 11,
