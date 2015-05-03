@@ -20,25 +20,54 @@ require(["data"], function(util){
       lineStyleOutrosModosEstruturantes = {"color": "#000000","weight": 3,"opacity": 1};
 
   // defining popups
+  var lineStatusText = function(status){
+    if(status == 'Open')
+      return 'Em funcionamento';
+    if(status == 'U.C.')
+      return 'Em construção';
+    if(status == 'Planned')
+      return 'Planejado';
+    return '';
+  };
+
+  var stationStatusText = function(status){
+    if(status == 'Operational')
+      return 'Em operação';
+    if(status == 'Planned')
+      return 'Planejada';
+    if(status == 'In Study')
+      return 'Em estudo';
+    return '';
+  };
+
   var linePopupFn = function(feature, layer){
     // does this feature have a property named "Name"?
     if(feature.properties && feature.properties.Name){
       var popupText = feature.properties.Name;
 
       if(feature.properties.Status){
-        var statusText;
-        switch(feature.properties.Status){
-          case 'Open':
-            statusText = 'Em funcionamento';
-            break;
-          case 'U.C.':
-            statusText = 'Em construção';
-            break;
-          case 'Planned':
-            statusText = 'Planejado';
-            break;
-        }
-        popupText += '<br>' + statusText;
+        popupText += '<br>Status: ' + lineStatusText(feature.properties.Status);
+      }
+
+      layer.bindPopup(popupText);
+    }
+  };
+
+  var stationPopupFn = function(feature, layer){
+    // "properties":{"Name":"Terminal Alvorada","Corredor":"TransCarioca","Type":"Expresso\/Parador","Status":"Operational"}
+    if(feature.properties && feature.properties.Name){
+      var popupText = 'Estação ' + feature.properties.Name;
+
+      if(feature.properties.Type){
+        popupText += ' (' + feature.properties.Type + ')';
+      }
+
+      if(feature.properties.Corredor){
+        popupText += '<br>Corredor: ' + feature.properties.Corredor;
+      }
+
+      if(feature.properties.Status){
+        popupText += '<br>Status: ' + stationStatusText(feature.properties.Status);
       }
 
       layer.bindPopup(popupText);
@@ -61,10 +90,10 @@ require(["data"], function(util){
       geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,                       {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
       geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
       geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
-      geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE),
-      geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA),
-      geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA),
-      geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL);
+      geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,                     {onEachFeature: stationPopupFn}),
+      geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,                   {onEachFeature: stationPopupFn}),
+      geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA,                  {onEachFeature: stationPopupFn}),
+      geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,                    {onEachFeature: stationPopupFn});
 
   // defining layers
   var layerTransOeste    = L.layerGroup([geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOeste]),
