@@ -20,7 +20,7 @@ require(["data"], function(util){
       lineStyleOutrosModosEstruturantes = {"color": "#000000","weight": 3,"opacity": 1};
 
   // defining popups
-  var onEachFeature = function(feature, layer){
+  var linePopupFn = function(feature, layer){
     // does this feature have a property named "Name"?
     if(feature.properties && feature.properties.Name){
       var popupText = feature.properties.Name;
@@ -46,21 +46,21 @@ require(["data"], function(util){
   };
 
   // defining geojson's objects
-  var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: onEachFeature, style: lineStyleConstructedBRT}),
-      geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: onEachFeature, style: lineStyleUnderConstructionBRT}),
-      geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: onEachFeature, style: lineStylePlannedBRT}),
-      geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: onEachFeature, style: lineStyleConstructedBRT}),
-      geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: onEachFeature, style: lineStyleUnderConstructionBRT}),
-      geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: onEachFeature, style: lineStyleUnderConstructionBRT}),
-      geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: onEachFeature, style: lineStyleUnderConstructionBRT}),
-      geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1,                    {onEachFeature: onEachFeature, style: lineStyleOutrosModosEstruturantes}),
-      geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2,                    {onEachFeature: onEachFeature, style: lineStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,                       {onEachFeature: onEachFeature, style: lineStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,                       {onEachFeature: onEachFeature, style: lineStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,                       {onEachFeature: onEachFeature, style: lineStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,                       {onEachFeature: onEachFeature, style: lineStyleOutrosModosEstruturantes}),
-      geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: onEachFeature, style: lineStyleOutrosModosEstruturantes}),
-      geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: onEachFeature, style: lineStyleOutrosModosEstruturantes}),
+  var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: lineStyleConstructedBRT}),
+      geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: lineStyleUnderConstructionBRT}),
+      geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: lineStylePlannedBRT}),
+      geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: linePopupFn, style: lineStyleConstructedBRT}),
+      geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: linePopupFn, style: lineStyleUnderConstructionBRT}),
+      geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: lineStyleUnderConstructionBRT}),
+      geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: lineStyleUnderConstructionBRT}),
+      geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1,                    {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
+      geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2,                    {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
+      geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,                       {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
+      geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,                       {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
+      geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,                       {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
+      geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,                       {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
+      geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
+      geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: linePopupFn, style: lineStyleOutrosModosEstruturantes}),
       geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE),
       geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA),
       geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA),
