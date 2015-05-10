@@ -27,8 +27,56 @@ require([
   var pathStyleConstructedBRT           = {"color": "#ff7800","weight": 5,"opacity": 1},
       pathStyleUnderConstructionBRT     = {"color": "#666666","weight": 5,"opacity": 1},
       pathStylePlannedBRT               = {"color": "#CCCCCC","weight": 5,"opacity": 1},
-      pathStyleOutrosModosEstruturantes = {"color": "#000000","weight": 3,"opacity": 1},
-      pathStyleBairros                  = {"color": "#404040","weight": 2,"fillOpacity": .05};
+      pathStyleOutrosModosEstruturantes = {"color": "#000000","weight": 3,"opacity": 1};
+
+  var selectedMapaDeCalorRef = 'DES';
+
+  var pathStyleBairros = function(layer){
+    // estilo padrão
+    if(selectedMapaDeCalorRef == 'DES'){
+      return {
+        "color": "#404040",
+        "weight": 2,
+        "fillOpacity": .05
+      }
+    }
+
+    var _prop, _value, minLimit, maxLimit, hue = 0;
+    switch(selectedMapaDeCalorRef){
+      case 'DEN':
+        _prop = 'DENS_POP_K';
+        minLimit = 0;
+        maxLimit = 40;
+        break;
+      case 'EMP':
+        _prop = 'RAZAO_EMPR';
+        minLimit = 0;
+        maxLimit = 3;
+        break;
+    }
+    _value = layer.feature.properties[_prop];
+
+    // normalizing value
+    if(_value > maxLimit){
+      _value = maxLimit;
+    } else if(_value < minLimit){
+      _value = minLimit;
+    }
+
+    // calculates color (hsl(hue, 100%, 40%);), hue is defined between 0 (red) and 120 (green)
+//    hue = ( (_value - minLimit) / maxLimit ) * 120;
+    hue = Math.log( ( (_value - minLimit) / maxLimit ) * (Math.E - 1) + 1) * 120;
+
+    // inverting hue: I'd like my green to be 0, and red 120
+    hue *= -1; hue += 120;
+
+    return {
+      "color": "#404040",
+      "fillColor": 'hsl(' + hue + ', 100%, 40%)',
+      "weight": 2,
+      "fillOpacity": .4
+    }
+  };
 
   // defining circle icons
   var fnMarkerOptionsBrtStation = function(feature, latlng){
@@ -182,7 +230,7 @@ require([
     },
 
     _createCheckboxInput: function(labelText, htmlId, checked, container, layerArray){
-      // <div><input type="checkbox" name=""><label for=""></label></div>
+      // <div><input type="checkbox" id=""><label for=""></label></div>
       this.div = L.DomUtil.create('div', '', container);
       this.input = L.DomUtil.create('input', '', this.div);
       this.input.type = 'checkbox';
@@ -207,8 +255,40 @@ require([
               }
             }
           }
+          if(e.srcElement.id == 'BDE'){ // checkbox dos bairros
+            if(e.srcElement.checked){   // se está ligando
+              document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'block';
+            } else {
+              document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'none';
+            }
+          }
           context._handleLayerEstudoAddRemove();
-        });
+        }
+      );
+    },
+
+    _createRadioInput: function(labelText, htmlId, groupName, selected, container, layerArray){
+      //<div><input type="radio" name=""><label for=""></label></div>
+      this.div = L.DomUtil.create('div', '', container);
+      this.input = L.DomUtil.create('input',  '', this.div);
+      this.input.type = 'radio';
+      this.input.id = htmlId;
+      this.input.name = groupName;
+      this.input.checked = selected;
+      this.label = L.DomUtil.create('label', '', this.div);
+      this.label.innerHTML = labelText;
+      this.label.htmlFor = htmlId;
+
+      var context = this;
+      L.DomEvent
+        .disableClickPropagation(this.input)
+        .on(this.input, 'change', function(e){
+          selectedMapaDeCalorRef = e.srcElement.id;
+          geoJsonBairros.eachLayer(function(layer){
+            layer.setStyle(pathStyleBairros(layer));
+          });
+        }
+      );
     },
 
     _handleLayerEstudoAddRemove: function(){
@@ -267,6 +347,13 @@ require([
       this._createTitle('Extras', this.form);
       this._createCheckboxInput('Outros Modos Estruturantes', 'OME', true, this.form, arrayLayerOutrosModos);
       this._createCheckboxInput('Bairros/Densidade/Empregos', 'BDE', true, this.form, arrayLayerBairros);
+
+      this.divMapasDeCalor = L.DomUtil.create('div', 'mapasDeCalorInputs', this.form);
+
+      this._createTitle('Mapas de Calor', this.divMapasDeCalor);
+      this._createRadioInput('Desativado', 'DES', 'mapaCalor', true,  this.divMapasDeCalor, undefined);
+      this._createRadioInput('Densidade' , 'DEN', 'mapaCalor', false, this.divMapasDeCalor, undefined);
+      this._createRadioInput('Empregos',   'EMP', 'mapaCalor', false, this.divMapasDeCalor, undefined);
 
       return container;
     }
