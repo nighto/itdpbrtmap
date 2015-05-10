@@ -50,8 +50,8 @@ require([
         break;
       case 'EMP':
         _prop = 'RAZAO_EMPR';
-        minLimit = 0;
-        maxLimit = 3;
+        minLimit = 0.001;
+        maxLimit = 15.238;
         break;
     }
     _value = layer.feature.properties[_prop];
@@ -63,9 +63,19 @@ require([
       _value = minLimit;
     }
 
+    Math.log10 = Math.log10 || function(x) {
+      return Math.log(x) / Math.LN10;
+    };
+
     // calculates color (hsl(hue, 100%, 40%);), hue is defined between 0 (red) and 120 (green)
-//    hue = ( (_value - minLimit) / maxLimit ) * 120;
-    hue = Math.log( ( (_value - minLimit) / maxLimit ) * (Math.E - 1) + 1) * 120;
+    if(selectedMapaDeCalorRef == 'DEN'){
+      //hue = ( (_value - minLimit) / maxLimit ) * 120;
+      hue = Math.log( ( (_value - minLimit) / maxLimit ) * (Math.E - 1) + 1) * 120;
+    }
+    else if(selectedMapaDeCalorRef == 'EMP'){
+      var epsilon = 0.008;
+      hue = ( ( Math.log(_value + epsilon) - Math.log(epsilon) ) / ( Math.log(15.238 + epsilon) - Math.log(epsilon) ) ) * 120;
+    }
 
     // inverting hue: I'd like my green to be 0, and red 120
     hue *= -1; hue += 120;
