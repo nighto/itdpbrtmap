@@ -8,7 +8,8 @@ require([
   "basemap/ome/vltcarioca",
   "basemap/bairros", "dummy"
 ], function(util){
-    // coordenadas do mapa
+
+  // coordenadas do mapa
   var INITIAL_COORDINATES = [-22.871658, -43.3371976], // Madureira
       INITIAL_ZOOM = 11,
       OSM_TILE_LAYER_URL = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
@@ -27,7 +28,7 @@ require([
       pathStyleUnderConstructionBRT     = {"color": "#666666","weight": 5,"opacity": 1},
       pathStylePlannedBRT               = {"color": "#CCCCCC","weight": 5,"opacity": 1},
       pathStyleOutrosModosEstruturantes = {"color": "#000000","weight": 3,"opacity": 1},
-      pathStyleBairros                  = {"color": "#A8E6FF","weight": 2};
+      pathStyleBairros                  = {"color": "#404040","weight": 2,"fillOpacity": .05};
 
   // defining popups
   var lineStatusText = function(status){

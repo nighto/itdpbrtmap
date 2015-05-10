@@ -8,7 +8,7 @@
 
 // Common Colors //
 @land: #fff;
-@water: #c3e6ff;
+@water: #ddeffb;
 
 Map { background-color: @land; }
 
@@ -130,7 +130,7 @@ Map { background-color: @land; }
 #tunnel,
 #bridge {
   ['mapnik::geometry_type'=2] {
-    line-color: #cde;
+    line-color: #becc2a;
     line-width: 0.5;
     [class='motorway'],
     [class='main'] {
@@ -146,4 +146,10 @@ Map { background-color: @land; }
     }
     [class='street_limited'] { line-dasharray: 4,1; }
   }
+}
+
+#landuse[class='park'],
+#landuse[class='forest'],
+#boundary[class='protected_area']{
+  polygon-fill: #f3f8c2;
 }
