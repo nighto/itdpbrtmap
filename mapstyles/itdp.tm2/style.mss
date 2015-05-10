@@ -130,7 +130,7 @@ Map { background-color: @land; }
 #tunnel,
 #bridge {
   ['mapnik::geometry_type'=2] {
-    line-color: #becc2a;
+    line-color: #afa9a6;
     line-width: 0.5;
     [class='motorway'],
     [class='main'] {
