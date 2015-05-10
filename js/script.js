@@ -30,6 +30,18 @@ require([
       pathStyleOutrosModosEstruturantes = {"color": "#000000","weight": 3,"opacity": 1},
       pathStyleBairros                  = {"color": "#404040","weight": 2,"fillOpacity": .05};
 
+  // defining circle icons
+  var fnMarkerOptionsBrtStation = function(feature, latlng){
+    return L.circleMarker(latlng, {
+      radius: 6,
+      fillColor: '#649bd2',
+      color: '#649bd2',
+      weight: 1,
+      opacity: 1,
+      fillOpacity: .6
+    });
+  };
+
   // defining popups
   var lineStatusText = function(status){
     if(status == 'Open')
@@ -121,10 +133,10 @@ require([
   var geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
   var geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
 
-  var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn}).addTo(map);
-  var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn}).addTo(map);
-  var geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn}).addTo(map);
-  var geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn}).addTo(map);
+  var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
 
   // initializing estudo object
   var study = {},
