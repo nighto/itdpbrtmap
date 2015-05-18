@@ -24,10 +24,14 @@ require([
   }).addTo(map);
 
   // defining styles
-  var pathStyleConstructedBRT           = {"color": "#ff7800","weight": 5,"opacity": 1},
-      pathStyleUnderConstructionBRT     = {"color": "#666666","weight": 5,"opacity": 1},
-      pathStylePlannedBRT               = {"color": "#CCCCCC","weight": 5,"opacity": 1},
-      pathStyleOutrosModosEstruturantes = {"color": "#000000","weight": 3,"opacity": 1};
+  var pathStyleBRTTransoeste    = {"color": "#5AC9E6","weight": 5,"opacity": .75},
+      pathStyleBRTTranscarioca  = {"color": "#FFCB5D","weight": 5,"opacity": .75},
+      pathStyleBRTTransolimpica = {"color": "#BDCC2A","weight": 5,"opacity": .75},
+      pathStyleBRTTransbrasil   = {"color": "#EF4738","weight": 5,"opacity": .75},
+      pathStyleSuperVia         = {"color": "#9A8D28","weight": 2,"opacity": .9},
+      pathStyleMetroRio         = {"color": "#9490BC","weight": 2,"opacity": .9},
+      pathStyleVLTCarioca       = {"color": "#FFE090","weight": 2,"opacity": .9};
+  // becc2a, a15019
 
   var selectedMapaDeCalorRef = 'DES';
 
@@ -36,8 +40,9 @@ require([
     if(selectedMapaDeCalorRef == 'DES'){
       return {
         "color": "#404040",
-        "weight": 2,
-        "fillOpacity": .05
+        "weight": .6,
+        "fillOpacity": .05,
+        "dashArray": "5, 5"
       }
     }
 
@@ -74,7 +79,7 @@ require([
     }
     else if(selectedMapaDeCalorRef == 'EMP'){
       var epsilon = 0.008;
-      hue = ( ( Math.log(_value + epsilon) - Math.log(epsilon) ) / ( Math.log(15.238 + epsilon) - Math.log(epsilon) ) ) * 120;
+      hue = ( ( Math.log(_value + epsilon) - Math.log(epsilon) ) / ( Math.log(maxLimit + epsilon) - Math.log(epsilon) ) ) * 120;
     }
 
     // inverting hue: I'd like my green to be 0, and red 120
@@ -91,12 +96,12 @@ require([
   // defining circle icons
   var fnMarkerOptionsBrtStation = function(feature, latlng){
     return L.circleMarker(latlng, {
-      radius: 6,
-      fillColor: '#649bd2',
-      color: '#649bd2',
+      radius: 2.5,
+      fillColor: '#ffffff',
+      color: '#ff7800',
       weight: 1,
       opacity: 1,
-      fillOpacity: .6
+      fillOpacity: 1
     });
   };
 
@@ -158,11 +163,11 @@ require([
   var bairrosPopupFn = function(feature, layer){
     // "properties": { "BAIRRO_BDA": "Santa Teresa", "AREA": "Centro", "AREA_KM2": 5.1571268999999997, "POPULACAO": 40926, "EMPRG": 2297, "DENS_POP_K": 7.9358140285400003, "RAZAO_EMPR": 0.0561256902702 }
     var popupText = '<b>' + feature.properties.BAIRRO_BDA + '</b><br>'
-                  + 'Área: ' + feature.properties.AREA_KM2.toFixed(2).toString().replace('.',',') + 'km²<br>'
-                  + 'População: ' + feature.properties.POPULACAO + '<br>'
-                  + 'Empregos: ' + feature.properties.EMPRG + '<br>'
-                  + 'Densidade populacional: ' + feature.properties.DENS_POP_K.toFixed(3).toString().replace('.',',') + '<br>'
-                  + 'Razão de Empregos: ' + feature.properties.RAZAO_EMPR.toFixed(3).toString().replace('.',',');
+                  + 'Área: ' + feature.properties.AREA_KM2.toFixed(2).toString().replace('.',',') + ' km²<br>'
+                  + 'População: ' + feature.properties.POPULACAO + ' hab.<br>'
+                  + 'Densidade populacional: ' + feature.properties.DENS_POP_K.toFixed(3).toString().replace('.',',') + ' hab./km²<br>'
+                  + 'Empregos formais: ' + feature.properties.EMPRG + '<br>'
+                  + 'Empregos formais/habitante: ' + feature.properties.RAZAO_EMPR.toFixed(3).toString().replace('.',',');
     layer.bindPopup(popupText);
   };
 
@@ -175,21 +180,22 @@ require([
   // defining geojson's objects
   var geoJsonBairros                 = L.geoJson(BAIRROS, {onEachFeature: bairrosPopupFn, style: pathStyleBairros}).addTo(map);
 
-  var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: pathStyleConstructedBRT}).addTo(map);
-  var geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}).addTo(map);
-  var geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStylePlannedBRT}).addTo(map);
-  var geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: linePopupFn, style: pathStyleConstructedBRT}).addTo(map);
-  var geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}).addTo(map);
-  var geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}).addTo(map);
-  var geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyleUnderConstructionBRT}).addTo(map);
-  var geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1,                    {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
-  var geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2,                    {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
-  var geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
-  var geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
-  var geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
-  var geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
-  var geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
-  var geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: linePopupFn, style: pathStyleOutrosModosEstruturantes}).addTo(map);
+  var geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1,                    {onEachFeature: linePopupFn, style: pathStyleMetroRio}).addTo(map);
+  var geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2,                    {onEachFeature: linePopupFn, style: pathStyleMetroRio}).addTo(map);
+  var geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
+  var geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
+  var geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
+  var geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
+  var geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
+  var geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: linePopupFn, style: pathStyleVLTCarioca}).addTo(map);
+
+  var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: pathStyleBRTTransoeste}).addTo(map);
+  var geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: pathStyleBRTTransoeste}).addTo(map);
+  var geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStyleBRTTransoeste}).addTo(map);
+  var geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: linePopupFn, style: pathStyleBRTTranscarioca}).addTo(map);
+  var geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: linePopupFn, style: pathStyleBRTTransolimpica}).addTo(map);
+  var geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyleBRTTransolimpica}).addTo(map);
+  var geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyleBRTTransbrasil}).addTo(map);
 
   var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
   var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
@@ -343,27 +349,27 @@ require([
       this._createCheckboxInput('TransBrasil',   'TB', true, this.form, arrayLayerTransBrasil);
 
       this._createTitle('Categorias', this.form);
-      this._createCheckboxInput('Segurança Viária', 'SV', true, this.form);
-      this._createCheckboxInput('Integração',       'IN', true, this.form);
-      this._createCheckboxInput('Operação',         'OP', true, this.form);
-      this._createCheckboxInput('TOD',              'TD', true, this.form);
-      this._createCheckboxInput('Transporte Ativo', 'TA', true, this.form);
+      this._createCheckboxInput('Segurança viária',     'SV', true, this.form);
+      this._createCheckboxInput('Integração modal',     'IN', true, this.form);
+      this._createCheckboxInput('Operação',             'OP', true, this.form);
+      this._createCheckboxInput('TOD',                  'TD', true, this.form);
+      this._createCheckboxInput('Bicicleta e pedestre', 'TA', true, this.form);
 
       this._createTitle('Níveis de Atenção', this.form);
       this._createCheckboxInput('Crítico',  'CR', true, this.form);
       this._createCheckboxInput('Atenção',  'AT', true, this.form);
       this._createCheckboxInput('Sugestão', 'SU', true, this.form);
 
-      this._createTitle('Extras', this.form);
-      this._createCheckboxInput('Outros Modos Estruturantes', 'OME', true, this.form, arrayLayerOutrosModos);
-      this._createCheckboxInput('Bairros/Densidade/Empregos', 'BDE', true, this.form, arrayLayerBairros);
+      //this._createTitle('Extras', this.form);
+      //this._createCheckboxInput('Trens, Metrô e VLT', 'OME', true, this.form, arrayLayerOutrosModos);
+      //this._createCheckboxInput('Bairros e dados socioeconômicos', 'BDE', true, this.form, arrayLayerBairros);
 
       this.divMapasDeCalor = L.DomUtil.create('div', 'mapasDeCalorInputs', this.form);
 
-      this._createTitle('Mapas de Calor', this.divMapasDeCalor);
-      this._createRadioInput('Desativado', 'DES', 'mapaCalor', true,  this.divMapasDeCalor, undefined);
-      this._createRadioInput('Densidade' , 'DEN', 'mapaCalor', false, this.divMapasDeCalor, undefined);
-      this._createRadioInput('Empregos',   'EMP', 'mapaCalor', false, this.divMapasDeCalor, undefined);
+      this._createTitle('Extras', this.divMapasDeCalor);
+      this._createRadioInput('Desativado',                 'DES', 'mapaCalor', true,  this.divMapasDeCalor, undefined);
+      this._createRadioInput('Densidade populacional',     'DEN', 'mapaCalor', false, this.divMapasDeCalor, undefined);
+      this._createRadioInput('Empregos formais/habitante', 'EMP', 'mapaCalor', false, this.divMapasDeCalor, undefined);
 
       return container;
     }

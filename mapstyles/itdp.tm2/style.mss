@@ -141,8 +141,8 @@ Map { background-color: @land; }
     }
     [class='street'],
     [class='street_limited'] {
-      [zoom>=14] { line-width: 1; }
-      [zoom>=16] { line-width: 2; }
+      //[zoom>=14] { line-width: 1; }
+      //[zoom>=16] { line-width: 2; }
     }
     [class='street_limited'] { line-dasharray: 4,1; }
   }
@@ -151,5 +151,5 @@ Map { background-color: @land; }
 #landuse[class='park'],
 #landuse[class='forest'],
 #boundary[class='protected_area']{
-  polygon-fill: #f3f8c2;
+  polygon-fill: #96d0a0;
 }

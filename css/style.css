@@ -17,6 +17,31 @@ html, body, #map {
   font-size: 12px;
 }
 
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: rgba(0,168,81,.9);
+  color: white;
+}
+
+.leaflet-popup-content-wrapper b {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 2.0;
+}
+
+.leaflet-popup-content {
+  margin: 7px 19px 13px;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  top: 2px;
+  right: 2px;
+  color: #ddd;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: white;
+}
+
 /*****************/
 /* Cores do ITDP */
 /*****************/
