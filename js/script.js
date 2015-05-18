@@ -19,7 +19,7 @@ require([
       MAPBOX_TILE_LAYER_URL = 'http://{s}.tiles.mapbox.com/v3/nighto.02109f37/{z}/{x}/{y}.png';
 
   // create a map in the "map" div, set the view to a given place and zoom
-  var map = L.map('map').setView(INITIAL_COORDINATES, INITIAL_ZOOM);
+  map = L.map('map').setView(INITIAL_COORDINATES, INITIAL_ZOOM);
 
   // add an OpenStreetMap tile layer
   L.tileLayer(MAPBOX_TILE_LAYER_URL, {
@@ -123,8 +123,8 @@ require([
   var geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyle.BRT.TO}).addTo(map);
   var geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyle.BRT.TB}).addTo(map);
 
-  var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
-  var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  //var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  //var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
   var geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
   var geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
 
@@ -151,8 +151,8 @@ require([
   initializeStudy(study);
 
   // defining base layers
-  var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOeste],
-      arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCarioca],
+  var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada], // geoJsonStationTransOeste
+      arrayLayerTransCarioca  = [geoJsonLineTransCarioca], // geoJsonStationTransCarioca
       arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpica],
       arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasil],
       arrayLayerOutrosModos   = [geoJsonLineMetroRioLinha1, geoJsonLineMetroRioLinha2, geoJsonLineSuperViaSantaCruz, geoJsonLineSuperViaSaracuruna,
