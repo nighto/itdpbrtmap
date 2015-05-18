@@ -22,50 +22,44 @@ pathStyle.Bairros = function(layer){
     }
   }
 
-  var _prop, _value, minLimit, maxLimit, hue = 0;
-  switch(selectedMapaDeCalorRef){
-    case 'DEN':
-      _prop = 'DENS_POP_K';
-      minLimit = 0;
-      maxLimit = 40;
-      break;
-    case 'EMP':
-      _prop = 'RAZAO_EMPR';
-      minLimit = 0.001;
-      maxLimit = 15.238;
-      break;
-  }
-  _value = layer.feature.properties[_prop];
-
-  // normalizing value
-  if(_value > maxLimit){
-    _value = maxLimit;
-  } else if(_value < minLimit){
-    _value = minLimit;
-  }
-
-  Math.log10 = Math.log10 || function(x) {
-    return Math.log(x) / Math.LN10;
-  };
-
-  // calculates color (hsl(hue, 100%, 40%);), hue is defined between 0 (red) and 120 (green)
+  var _value,
+      _fillColor,
+      _color = "#404040",
+      _weight = 2,
+      _fillOpacity = .6;
   if(selectedMapaDeCalorRef == 'DEN'){
-    //hue = ( (_value - minLimit) / maxLimit ) * 120;
-    hue = Math.log( ( (_value - minLimit) / maxLimit ) * (Math.E - 1) + 1) * 120;
+    _value = layer.feature.properties['DENS_POP_K'];
+    if(_value < 5)
+      _fillColor = "#FFE090"; // PMS 7403
+    else if(_value < 10)
+      _fillColor = "#FFCB5D"; // PMS 135
+    else if(_value < 15)
+      _fillColor = "#F9A460"; // PMS 7411
+    else if(_value < 20)
+      _fillColor = "#A1501C"; // PMS 470
+    else
+      _fillColor = "#6B2E20"; // PMS 478
   }
-  else if(selectedMapaDeCalorRef == 'EMP'){
-    var epsilon = 0.008;
-    hue = ( ( Math.log(_value + epsilon) - Math.log(epsilon) ) / ( Math.log(maxLimit + epsilon) - Math.log(epsilon) ) ) * 120;
+  if(selectedMapaDeCalorRef == 'EMP'){
+    _value = layer.feature.properties['RAZAO_EMPR'];
+    if(_value === 0 || Math.log(_value) <= -1.5) // 1 emprego por 32 habitantes
+      _fillColor = "#E3E3E5";
+    else if(Math.log(_value) <= -1.0) // 1 emprego por 10 habitantes
+      _fillColor = "#B9B7CA";
+    else if(Math.log(_value) <= -0.5) // 1 emprego por 3.2 habitantes
+      _fillColor = "#9490BC";
+    else if(Math.log(_value) <= 0) // 1 emprego por habitante
+      _fillColor = "#534C9C";
+    else // mais de 1 emprego por habitante
+      _fillColor = "#271C92";
   }
-
-  // inverting hue: I'd like my green to be 0, and red 120
-  hue *= -1; hue += 120;
 
   return {
-    "color": "#404040",
-    "fillColor": 'hsl(' + hue + ', 100%, 40%)',
-    "weight": 2,
-    "fillOpacity": .4
+    "color": _color,
+    //"fillColor": 'hsl(' + hue + ', 100%, 40%)',
+    "fillColor": _fillColor,
+    "weight": _weight,
+    "fillOpacity": _fillOpacity
   }
 };
 
