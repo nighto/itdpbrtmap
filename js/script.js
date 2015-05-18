@@ -85,11 +85,12 @@ require([
 
   var bairrosPopupFn = function(feature, layer){
     // "properties": { "BAIRRO_BDA": "Santa Teresa", "AREA": "Centro", "AREA_KM2": 5.1571268999999997, "POPULACAO": 40926, "EMPRG": 2297, "DENS_POP_K": 7.9358140285400003, "RAZAO_EMPR": 0.0561256902702 }
+    // .toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",").replace('.','/').replace(',','.').replace('/',',')
     var popupText = '<b>' + feature.properties.BAIRRO_BDA + '</b><br>'
                   + 'Área: ' + feature.properties.AREA_KM2.toFixed(2).toString().replace('.',',') + ' km²<br>'
-                  + 'População: ' + feature.properties.POPULACAO + ' hab.<br>'
+                  + 'População: ' + feature.properties.POPULACAO.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' hab.<br>'
                   + 'Densidade populacional: ' + feature.properties.DENS_POP_K.toFixed(3).toString().replace('.',',') + ' hab./km²<br>'
-                  + 'Empregos formais: ' + feature.properties.EMPRG + '<br>'
+                  + 'Empregos formais: ' + feature.properties.EMPRG.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + '<br>'
                   + 'Empregos formais/habitante: ' + feature.properties.RAZAO_EMPR.toFixed(3).toString().replace('.',',');
     layer.bindPopup(popupText);
   };
