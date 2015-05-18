@@ -65,10 +65,22 @@ pathStyle.Bairros = function(layer){
 
 // defining circle icons
 pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng){
+  // feature.properties.Corredor
+  var _color;
+  switch(feature.properties.Corredor){
+    case "TransOeste":
+      _color = pathStyle.BRT.TW.color; break;
+    case "TransCarioca":
+      _color = pathStyle.BRT.TC.color; break;
+    case "TransOlímpica":
+      _color = pathStyle.BRT.TO.color; break;
+    case "TransBrasil":
+      _color = pathStyle.BRT.TB.color; break;
+  }
   return L.circleMarker(latlng, {
     radius: 2.5,
     fillColor: '#ffffff',
-    color: '#ff7800',
+    color: _color,
     weight: 1,
     opacity: 1,
     fillOpacity: 1
