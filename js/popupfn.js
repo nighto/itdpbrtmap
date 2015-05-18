@@ -6,7 +6,7 @@ popupfn.createTitle = function(titleText, container){
   this.title.innerHTML = titleText;
 };
 
-popupfn.createCheckboxInput = function(labelText, htmlId, checked, container, layerArray){
+popupfn.createCheckboxInput = function(labelText, htmlId, checked, container, layerArray, arrayLinesIcons){
   // <div><input type="checkbox" id=""><label for=""></label></div>
   this.div = L.DomUtil.create('div', '', container);
   this.input = L.DomUtil.create('input', '', this.div);
@@ -14,7 +14,16 @@ popupfn.createCheckboxInput = function(labelText, htmlId, checked, container, la
   this.input.id = htmlId;
   this.input.checked = checked;
   this.label = L.DomUtil.create('label', '', this.div);
-  this.label.innerHTML = labelText;
+
+  var _iconsHTML = '';
+
+  if(arrayLinesIcons !== undefined){
+    for(var i=0, l=arrayLinesIcons.length; i<l; i++){
+      _iconsHTML += '<span class="icon ' + arrayLinesIcons[i] + '">●</span> ';
+    }
+  }
+
+  this.label.innerHTML = _iconsHTML + labelText;
   this.label.htmlFor = htmlId;
 
   // event

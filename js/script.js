@@ -85,7 +85,6 @@ require([
 
   var bairrosPopupFn = function(feature, layer){
     // "properties": { "BAIRRO_BDA": "Santa Teresa", "AREA": "Centro", "AREA_KM2": 5.1571268999999997, "POPULACAO": 40926, "EMPRG": 2297, "DENS_POP_K": 7.9358140285400003, "RAZAO_EMPR": 0.0561256902702 }
-    // .toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",").replace('.','/').replace(',','.').replace('/',',')
     var popupText = '<b>' + feature.properties.BAIRRO_BDA + '</b><br>'
                   + 'Área: ' + feature.properties.AREA_KM2.toFixed(2).toString().replace('.',',') + ' km²<br>'
                   + 'População: ' + feature.properties.POPULACAO.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' hab.<br>'
@@ -206,10 +205,10 @@ require([
       this.form = L.DomUtil.create('form', '', container);
 
       this._createTitle('Sistemas BRT', this.form);
-      this._createCheckboxInput('TransOeste',    'TW', true, this.form, arrayLayerTransOeste);
-      this._createCheckboxInput('TransCarioca',  'TC', true, this.form, arrayLayerTransCarioca);
-      this._createCheckboxInput('TransOlímpica', 'TO', true, this.form, arrayLayerTransOlimpica);
-      this._createCheckboxInput('TransBrasil',   'TB', true, this.form, arrayLayerTransBrasil);
+      this._createCheckboxInput('TransOeste',    'TW', true, this.form, arrayLayerTransOeste,    ['icon-TW']);
+      this._createCheckboxInput('TransCarioca',  'TC', true, this.form, arrayLayerTransCarioca,  ['icon-TC']);
+      this._createCheckboxInput('TransOlímpica', 'TO', true, this.form, arrayLayerTransOlimpica, ['icon-TO']);
+      this._createCheckboxInput('TransBrasil',   'TB', true, this.form, arrayLayerTransBrasil,   ['icon-TB']);
 
       this._createTitle('Categorias', this.form);
       this._createCheckboxInput('Segurança viária',     'SV', true, this.form);

@@ -16,6 +16,16 @@ html, body, #map {
 .my-custom-control h2 {
   font-size: 12px;
 }
+.my-custom-control .icon {
+  font-size: 23px;
+  line-height: 12px;
+  position: relative;
+  top: 3px;
+}
+.my-custom-control .icon-TW { color: #5AC9E6; }
+.my-custom-control .icon-TC { color: #FFCB5D; }
+.my-custom-control .icon-TO { color: #BDCC2A; }
+.my-custom-control .icon-TB { color: #EF4738; }
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
   background: rgba(0,168,81,.9);
@@ -41,11 +51,3 @@ html, body, #map {
 .leaflet-container a.leaflet-popup-close-button:hover {
   color: white;
 }
-
-/*****************/
-/* Cores do ITDP */
-/*****************/
-/*
-/* Azul pastel: rgb(168,230,255) // #A8E6FF */
-/* Verde limão: rgb(178,235,  5) // #B2EB05 */
-/* Vermelho:    rgb(255, 31, 41) // #FF1F29 */
