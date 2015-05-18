@@ -6,7 +6,10 @@ require([
   "basemap/ome/metrorio",
   "basemap/ome/supervia",
   "basemap/ome/vltcarioca",
-  "basemap/bairros", "dummy"
+  "basemap/bairros",
+  "dummy",
+  "mapstyles",
+  "popupfn"
 ], function(util){
 
   // coordenadas do mapa
@@ -23,87 +26,7 @@ require([
       attribution: '&copy; Mapa base: <a href="http://osm.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
-  // defining styles
-  var pathStyleBRTTransoeste    = {"color": "#5AC9E6","weight": 5,"opacity": .75},
-      pathStyleBRTTranscarioca  = {"color": "#FFCB5D","weight": 5,"opacity": .75},
-      pathStyleBRTTransolimpica = {"color": "#BDCC2A","weight": 5,"opacity": .75},
-      pathStyleBRTTransbrasil   = {"color": "#EF4738","weight": 5,"opacity": .75},
-      pathStyleSuperVia         = {"color": "#9A8D28","weight": 2,"opacity": .9},
-      pathStyleMetroRio         = {"color": "#9490BC","weight": 2,"opacity": .9},
-      pathStyleVLTCarioca       = {"color": "#FFE090","weight": 2,"opacity": .9};
-  // becc2a, a15019
-
-  var selectedMapaDeCalorRef = 'DES';
-
-  var pathStyleBairros = function(layer){
-    // estilo padrão
-    if(selectedMapaDeCalorRef == 'DES'){
-      return {
-        "color": "#404040",
-        "weight": .6,
-        "fillOpacity": .05,
-        "dashArray": "5, 5"
-      }
-    }
-
-    var _prop, _value, minLimit, maxLimit, hue = 0;
-    switch(selectedMapaDeCalorRef){
-      case 'DEN':
-        _prop = 'DENS_POP_K';
-        minLimit = 0;
-        maxLimit = 40;
-        break;
-      case 'EMP':
-        _prop = 'RAZAO_EMPR';
-        minLimit = 0.001;
-        maxLimit = 15.238;
-        break;
-    }
-    _value = layer.feature.properties[_prop];
-
-    // normalizing value
-    if(_value > maxLimit){
-      _value = maxLimit;
-    } else if(_value < minLimit){
-      _value = minLimit;
-    }
-
-    Math.log10 = Math.log10 || function(x) {
-      return Math.log(x) / Math.LN10;
-    };
-
-    // calculates color (hsl(hue, 100%, 40%);), hue is defined between 0 (red) and 120 (green)
-    if(selectedMapaDeCalorRef == 'DEN'){
-      //hue = ( (_value - minLimit) / maxLimit ) * 120;
-      hue = Math.log( ( (_value - minLimit) / maxLimit ) * (Math.E - 1) + 1) * 120;
-    }
-    else if(selectedMapaDeCalorRef == 'EMP'){
-      var epsilon = 0.008;
-      hue = ( ( Math.log(_value + epsilon) - Math.log(epsilon) ) / ( Math.log(maxLimit + epsilon) - Math.log(epsilon) ) ) * 120;
-    }
-
-    // inverting hue: I'd like my green to be 0, and red 120
-    hue *= -1; hue += 120;
-
-    return {
-      "color": "#404040",
-      "fillColor": 'hsl(' + hue + ', 100%, 40%)',
-      "weight": 2,
-      "fillOpacity": .4
-    }
-  };
-
-  // defining circle icons
-  var fnMarkerOptionsBrtStation = function(feature, latlng){
-    return L.circleMarker(latlng, {
-      radius: 2.5,
-      fillColor: '#ffffff',
-      color: '#ff7800',
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 1
-    });
-  };
+  selectedMapaDeCalorRef = 'DES';
 
   // defining popups
   var lineStatusText = function(status){
@@ -178,29 +101,32 @@ require([
   };
 
   // defining geojson's objects
-  var geoJsonBairros                 = L.geoJson(BAIRROS, {onEachFeature: bairrosPopupFn, style: pathStyleBairros}).addTo(map);
+  geoJsonBairros = L.geoJson(BAIRROS, {onEachFeature: bairrosPopupFn, style: pathStyle.Bairros}).addTo(map); // this had to be visible to popupfn.js context.
 
-  var geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1,                    {onEachFeature: linePopupFn, style: pathStyleMetroRio}).addTo(map);
-  var geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2,                    {onEachFeature: linePopupFn, style: pathStyleMetroRio}).addTo(map);
-  var geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
-  var geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
-  var geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
-  var geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
-  var geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,                       {onEachFeature: linePopupFn, style: pathStyleSuperVia}).addTo(map);
-  var geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,                        {onEachFeature: linePopupFn, style: pathStyleVLTCarioca}).addTo(map);
+  var defaultOptsMetroRio   = {onEachFeature: linePopupFn, style: pathStyle.OME.MetroRio},
+      defaultOptsSuperVia   = {onEachFeature: linePopupFn, style: pathStyle.OME.SuperVia},
+      defaultOptsVLTCarioca = {onEachFeature: linePopupFn, style: pathStyle.OME.VLTCarioca};
+  var geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1, defaultOptsMetroRio).addTo(map);
+  var geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2, defaultOptsMetroRio).addTo(map);
+  var geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,    defaultOptsSuperVia).addTo(map);
+  var geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,    defaultOptsSuperVia).addTo(map);
+  var geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,    defaultOptsSuperVia).addTo(map);
+  var geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,    defaultOptsSuperVia).addTo(map);
+  var geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,    defaultOptsSuperVia).addTo(map);
+  var geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,     defaultOptsVLTCarioca).addTo(map);
 
-  var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: pathStyleBRTTransoeste}).addTo(map);
-  var geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: pathStyleBRTTransoeste}).addTo(map);
-  var geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStyleBRTTransoeste}).addTo(map);
-  var geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: linePopupFn, style: pathStyleBRTTranscarioca}).addTo(map);
-  var geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: linePopupFn, style: pathStyleBRTTransolimpica}).addTo(map);
-  var geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyleBRTTransolimpica}).addTo(map);
-  var geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyleBRTTransbrasil}).addTo(map);
+  var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
+  var geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
+  var geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
+  var geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: linePopupFn, style: pathStyle.BRT.TC}).addTo(map);
+  var geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: linePopupFn, style: pathStyle.BRT.TO}).addTo(map);
+  var geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyle.BRT.TO}).addTo(map);
+  var geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyle.BRT.TB}).addTo(map);
 
-  var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
-  var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
-  var geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
-  var geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
 
   // initializing estudo object
   var study = {},
@@ -239,73 +165,9 @@ require([
       position: 'topright'
     },
 
-    _createTitle: function(titleText, container){
-      // <h2>Sistemas BRT</h2>
-      this.title = L.DomUtil.create('h2', '', container);
-      this.title.innerHTML = titleText;
-    },
-
-    _createCheckboxInput: function(labelText, htmlId, checked, container, layerArray){
-      // <div><input type="checkbox" id=""><label for=""></label></div>
-      this.div = L.DomUtil.create('div', '', container);
-      this.input = L.DomUtil.create('input', '', this.div);
-      this.input.type = 'checkbox';
-      this.input.id = htmlId;
-      this.input.checked = checked;
-      this.label = L.DomUtil.create('label', '', this.div);
-      this.label.innerHTML = labelText;
-      this.label.htmlFor = htmlId;
-
-      // event
-      var context = this;
-      L.DomEvent
-        .disableClickPropagation(this.input)
-        .on(this.input, 'change', function(e){
-          if(layerArray !== undefined){ // checkboxes das linhas
-            // remove ou adiciona todos os layers
-            for (l in layerArray){
-              if(map.hasLayer(layerArray[l])){
-                map.removeLayer(layerArray[l]);
-              }else{
-                map.addLayer(layerArray[l]);
-              }
-            }
-          }
-          if(e.srcElement.id == 'BDE'){ // checkbox dos bairros
-            if(e.srcElement.checked){   // se está ligando
-              document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'block';
-            } else {
-              document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'none';
-            }
-          }
-          context._handleLayerEstudoAddRemove();
-        }
-      );
-    },
-
-    _createRadioInput: function(labelText, htmlId, groupName, selected, container, layerArray){
-      //<div><input type="radio" name=""><label for=""></label></div>
-      this.div = L.DomUtil.create('div', '', container);
-      this.input = L.DomUtil.create('input',  '', this.div);
-      this.input.type = 'radio';
-      this.input.id = htmlId;
-      this.input.name = groupName;
-      this.input.checked = selected;
-      this.label = L.DomUtil.create('label', '', this.div);
-      this.label.innerHTML = labelText;
-      this.label.htmlFor = htmlId;
-
-      var context = this;
-      L.DomEvent
-        .disableClickPropagation(this.input)
-        .on(this.input, 'change', function(e){
-          selectedMapaDeCalorRef = e.srcElement.id;
-          geoJsonBairros.eachLayer(function(layer){
-            layer.setStyle(pathStyleBairros(layer));
-          });
-        }
-      );
-    },
+    _createTitle: popupfn.createTitle,
+    _createCheckboxInput: popupfn.createCheckboxInput,
+    _createRadioInput: popupfn.createRadioInput,
 
     _handleLayerEstudoAddRemove: function(){
       for(b in brts){
