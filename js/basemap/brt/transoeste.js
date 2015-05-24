@@ -1951,7 +1951,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Terminal Campo Grande",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -1963,7 +1963,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Terminal Jardim Oceânico (2016)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -1975,7 +1975,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Terminal Santa Cruz",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -1987,7 +1987,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cesarão I",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -1999,7 +1999,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cesarão II",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2011,7 +2011,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cesarão III",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2023,7 +2023,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Vila Paciência",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2035,7 +2035,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Três Pontes",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2047,7 +2047,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cesarinho",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2059,7 +2059,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "31 de Outubro",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2071,7 +2071,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Santa Eugênia",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2083,7 +2083,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Julia Miguel",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2095,7 +2095,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Parque São Paulo",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2107,7 +2107,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cosmos",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2119,7 +2119,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Icurana",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2131,7 +2131,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Vilar Carioca",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2143,7 +2143,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Inhoaíba",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2155,7 +2155,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Ana Gonzaga",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2167,7 +2167,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "São Jorge",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2179,7 +2179,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Pina Rangel",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2191,7 +2191,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Parque Esperança",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2203,7 +2203,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "ParkShopping",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2215,7 +2215,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Largo do Corrêa (em estudo)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2227,7 +2227,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Maria Tereza",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2239,7 +2239,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cândido Magalhães",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2251,7 +2251,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Terminal Campo Grande",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2263,7 +2263,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Prefeito Alim Pedro",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2275,7 +2275,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Vendas de Varanda",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2287,7 +2287,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Curral Falso",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2299,7 +2299,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Santa Veridiana",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2311,7 +2311,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cajueiros",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2323,7 +2323,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Gastão Rangel",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2335,7 +2335,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "General Olímpio",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2347,7 +2347,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Terminal Santa Cruz",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2359,7 +2359,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Terminal Jd. Oceânico (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2371,7 +2371,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cittá América (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2383,7 +2383,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Porto dos Cabritos (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2395,7 +2395,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Freeway (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2407,7 +2407,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Riviera (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2419,7 +2419,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Ricardo Marinho (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2431,7 +2431,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Parque das Rosas (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2443,7 +2443,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Barra Shopping (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2455,7 +2455,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Term. Alvorada",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2467,7 +2467,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Bosque da Barra",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2479,7 +2479,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Novo Leblon",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2491,7 +2491,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Américas Park",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2503,7 +2503,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Santa Mônica Jardins",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2515,7 +2515,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Rio Mar",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2527,7 +2527,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Golfe Olímpico",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2539,7 +2539,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Interlagos",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2551,7 +2551,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Pedra de Itaúna",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2563,7 +2563,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Pontões\/ Barrasul",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2575,7 +2575,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Salvador Allende",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2587,7 +2587,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Gelson Fonseca",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2599,7 +2599,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Guignard",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2611,7 +2611,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Gláucio Gil",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2623,7 +2623,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Benvindo de Novaes",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2635,7 +2635,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Nova Barra",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2647,7 +2647,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Gilka Machado",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2659,7 +2659,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Guiomar Novais",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2671,7 +2671,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Recreio Shopping",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2683,7 +2683,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Recanto das Garças",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2695,7 +2695,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Notre Dame",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2707,7 +2707,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Dom Bosco",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2719,7 +2719,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Pontal",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2731,7 +2731,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Ilha de Guaratiba",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2743,7 +2743,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cetex",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2755,7 +2755,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Embrapa",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2767,7 +2767,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Mato Alto",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2779,7 +2779,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Magarça",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2791,7 +2791,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Pingo D'água",
         "Corredor": "TransOeste",
-        "Type": null,
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
