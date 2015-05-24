@@ -131,18 +131,26 @@ Map { background-color: @land; }
 #bridge {
   ['mapnik::geometry_type'=2] {
     line-color: #afa9a6;
-    line-width: 0.5;
+    line-width: 0.05;
     [class='motorway'],
-    [class='main'] {
+    [class='motorway_link']{
+      [zoom>=0] { line-width: 0.5; }
       [zoom>=10] { line-width: 1; }
       [zoom>=12] { line-width: 2; }
       [zoom>=14] { line-width: 3; }
       [zoom>=16] { line-width: 5; }
     }
+    [class='main']{
+      [zoom>=13] { line-width: 1; }
+      [zoom>=14] { line-width: 2; }
+      [zoom>=15] { line-width: 3; }
+      [zoom>=16] { line-width: 5; }
+    }
     [class='street'],
     [class='street_limited'] {
-      //[zoom>=14] { line-width: 1; }
-      //[zoom>=16] { line-width: 2; }
+      [zoom>=14] { line-width: .5; }
+      [zoom>=15] { line-width: 1; }
+      [zoom>=16] { line-width: 2; }
     }
     [class='street_limited'] { line-dasharray: 4,1; }
   }
