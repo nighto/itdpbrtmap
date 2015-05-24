@@ -1013,18 +1013,6 @@ STATIONS_TRANSCARIOCA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Santa Efigênia",
-        "Corredor": "TransCarioca",
-        "Type": "Expresso\/Parador",
-        "Status": "Operational"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.371751912999969, -22.936626967999928, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
         "Name": "Merck",
         "Corredor": "TransCarioca",
         "Type": "Parador",
@@ -1033,6 +1021,18 @@ STATIONS_TRANSCARIOCA = [{
     "geometry": {
         "type": "Point",
         "coordinates": [-43.371763120999951, -22.935556608999946, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Santa Efigênia",
+        "Corredor": "TransCarioca",
+        "Type": "Expresso\/Parador",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.371751912999969, -22.936626967999928, 0.0]
     }
 }, {
     "type": "Feature",
