@@ -1,0 +1,27 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: nighto.3158c36f
+  rev: s-12acdb05
+  saveCenter: true
+attribution: ''
+center: 
+  - -43.1931
+  - -22.8967
+  - 16
+description: ''
+Layer: 
+  - id: Lines_VLT
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/3. RJ_TP_other/Lines_VLT.geojson
+      layer: OGRGeoJSON
+      type: ogr
+    description: ''
+    fields: 
+      Linetype: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 16
+minzoom: 7
+name: VLTCarioca

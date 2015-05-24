@@ -11,8 +11,8 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -43.3706
-  - -22.8508
+  - -43.271
+  - -22.8761
   - 13
 description: ''
 format: "png8:m=h"
@@ -21,7 +21,7 @@ layers: null
 maxzoom: 22
 minzoom: 7
 name: ITDP BRT Base map
-source: "mapbox:///mapbox.mapbox-streets-v5"
+source: "mapbox:///mapbox.mapbox-streets-v5,nighto.373e1c2d,nighto.5283918e,nighto.3158c36f"
 styles: 
   - style.mss
 template: ''

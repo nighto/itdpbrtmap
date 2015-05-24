@@ -1,0 +1,27 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: nighto.373e1c2d
+  rev: s-bcf0bb5f
+  saveCenter: true
+attribution: ''
+center: 
+  - -43.2408
+  - -22.9048
+  - 16
+description: Linhas da SuperVia
+Layer: 
+  - id: Lines_Supervia
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/3. RJ_TP_other/Lines_Supervia.geojson
+      layer: OGRGeoJSON
+      type: ogr
+    description: ''
+    fields: 
+      Name: SuperVia
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 16
+minzoom: 7
+name: SuperVia

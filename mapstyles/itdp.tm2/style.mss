@@ -14,7 +14,7 @@ Map { background-color: @land; }
 
 // Political boundaries //
 
-#admin[admin_level=2][maritime=0] {
+#admin[admin_level>=2][maritime=1] {
   line-join: round;
   line-color: #bbe;
   line-width: 1.4;
@@ -122,16 +122,14 @@ Map { background-color: @land; }
   }
 }
 
-// Roads & Railways //
-
+// Roads //
 #tunnel { opacity: 0.5; }
-
 #road,
 #tunnel,
 #bridge {
   ['mapnik::geometry_type'=2] {
     line-color: #afa9a6;
-    line-width: 0.05;
+    line-width: 0;
     [class='motorway'],
     [class='motorway_link']{
       [zoom>=0] { line-width: 0.5; }
@@ -156,8 +154,45 @@ Map { background-color: @land; }
   }
 }
 
+// Parks
 #landuse[class='park'],
 #landuse[class='forest'],
 #boundary[class='protected_area']{
   polygon-fill: #96d0a0;
+}
+
+// Railway
+#Lines_Supervia,#Lines_Metro,#Lines_VLT{
+  ::line {
+    [zoom>=0]{
+      line-width: 1;
+    }
+    [zoom>=14]{
+      line-width: 2;
+    }
+  }
+  ::hatch {
+    line-dasharray: 1, 24;
+    [zoom>=0]{
+      line-width: 4;
+    }
+    [zoom>=14]{
+      line-width: 8;
+    }
+  }
+}
+#Lines_Supervia{
+  ::line, ::hatch {
+    line-color: #9A8D28;
+  }
+}
+#Lines_Metro{
+  ::line, ::hatch {
+    line-color: #9490BC;
+  }
+}
+#Lines_VLT{
+  ::line, ::hatch {
+    line-color: #FFE090;
+  }
 }

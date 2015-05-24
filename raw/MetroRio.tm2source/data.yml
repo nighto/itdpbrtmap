@@ -1,0 +1,27 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: nighto.5283918e
+  rev: s-739e2964
+  saveCenter: true
+attribution: ''
+center: 
+  - -43.2704
+  - -22.8947
+  - 12
+description: ''
+Layer: 
+  - id: Lines_Metro
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/3. RJ_TP_other/Lines_Metro.geojson
+      layer: OGRGeoJSON
+      type: ogr
+    description: ''
+    fields: 
+      Name: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 16
+minzoom: 7
+name: MetrôRio
