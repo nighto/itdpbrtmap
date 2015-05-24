@@ -1,0 +1,39 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: nighto.4037ea1e
+  rev: s-2c9078fb
+  saveCenter: true
+attribution: ''
+center: 
+  - -43.4461
+  - -22.9145
+  - 12
+description: ''
+Layer: 
+  - id: RJ_TCM_Limites_Administrativos_Bairros_com_dados
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/1. RJ_TCM_Limites_Administrativos_Bairros_com_dados/RJ_TCM_Limites_Administrativos_Bairros_com_dados.geojson
+      layer: OGRGeoJSON
+      type: ogr
+    description: ''
+    fields: 
+      AREA: String
+      AREA_KM2: Number
+      BAIRRO_BDA: String
+      CIDADE: String
+      CODAP: String
+      CODAPI: String
+      CODBAIRRO: String
+      CODRA: String
+      DENS_POP_K: Number
+      EMPRG: Number
+      POPULACAO: Number
+      RA: String
+      RAZAO_EMPR: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 16
+minzoom: 7
+name: Bairros

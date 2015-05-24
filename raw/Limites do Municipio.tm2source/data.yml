@@ -1,0 +1,28 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: nighto.e5efe1d4
+  rev: s-58138820
+  saveCenter: true
+attribution: ODbL
+center: 
+  - -43.1763
+  - -22.9432
+  - 14
+description: ''
+Layer: 
+  - id: Limites_do_Municipio
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/Limites_do_Municipio.kml
+      layer: Limites_do_Municipio
+      type: ogr
+    description: ''
+    fields: 
+      Description: String
+      Name: String
+    properties: 
+      "buffer-size": 8
+    srs: "+init=epsg:4326"
+maxzoom: 16
+minzoom: 7
+name: Limites do Município do Rio de Janeiro

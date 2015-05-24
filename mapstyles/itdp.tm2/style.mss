@@ -196,3 +196,16 @@ Map { background-color: @land; }
     line-color: #FFE090;
   }
 }
+
+// Bairros
+#RJ_TCM_Limites_Administrativos_Bairros_com_dados{
+  ::line {
+    line-width: 1;
+    line-color: #C8C8C8;
+    line-dasharray: 5,5;
+    [zoom>=14]{
+      line-width: 2;
+      line-dasharray: 5,10;
+    }
+  }
+}
