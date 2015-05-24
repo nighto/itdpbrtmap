@@ -3,9 +3,6 @@ require([
   "basemap/brt/transcarioca",
   "basemap/brt/transolimpica",
   "basemap/brt/transbrasil",
-  "basemap/ome/metrorio",
-  "basemap/ome/supervia",
-  "basemap/ome/vltcarioca",
   "basemap/bairros",
   "dummy",
   "mapstyles",
@@ -103,18 +100,6 @@ require([
   // defining geojson's objects
   geoJsonBairros = L.geoJson(BAIRROS, {onEachFeature: bairrosPopupFn, style: pathStyle.Bairros}).addTo(map); // this had to be visible to popupfn.js context.
 
-  var defaultOptsMetroRio   = {onEachFeature: linePopupFn, style: pathStyle.OME.MetroRio},
-      defaultOptsSuperVia   = {onEachFeature: linePopupFn, style: pathStyle.OME.SuperVia},
-      defaultOptsVLTCarioca = {onEachFeature: linePopupFn, style: pathStyle.OME.VLTCarioca};
-  var geoJsonLineMetroRioLinha1      = L.geoJson(LINE_METRORIO_LINHA1, defaultOptsMetroRio).addTo(map);
-  var geoJsonLineMetroRioLinha2      = L.geoJson(LINE_METRORIO_LINHA2, defaultOptsMetroRio).addTo(map);
-  var geoJsonLineSuperViaSantaCruz   = L.geoJson(LINE_SUPERVIA_SCZ,    defaultOptsSuperVia).addTo(map);
-  var geoJsonLineSuperViaSaracuruna  = L.geoJson(LINE_SUPERVIA_SRC,    defaultOptsSuperVia).addTo(map);
-  var geoJsonLineSuperViaJaperi      = L.geoJson(LINE_SUPERVIA_JPI,    defaultOptsSuperVia).addTo(map);
-  var geoJsonLineSuperViaGuapimirim  = L.geoJson(LINE_SUPERVIA_GPI,    defaultOptsSuperVia).addTo(map);
-  var geoJsonLineSuperViaBelfordRoxo = L.geoJson(LINE_SUPERVIA_BRX,    defaultOptsSuperVia).addTo(map);
-  var geoJsonLineVltCarioca          = L.geoJson(LINE_VLT_CARIOCA,     defaultOptsVLTCarioca).addTo(map);
-
   var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
   var geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
   var geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
@@ -155,8 +140,6 @@ require([
       arrayLayerTransCarioca  = [geoJsonLineTransCarioca], // geoJsonStationTransCarioca
       arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpica],
       arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasil],
-      arrayLayerOutrosModos   = [geoJsonLineMetroRioLinha1, geoJsonLineMetroRioLinha2, geoJsonLineSuperViaSantaCruz, geoJsonLineSuperViaSaracuruna,
-                                 geoJsonLineSuperViaJaperi, geoJsonLineSuperViaGuapimirim, geoJsonLineSuperViaBelfordRoxo, geoJsonLineVltCarioca],
       arrayLayerBairros       = [geoJsonBairros];
 
   // adding layer control to map
