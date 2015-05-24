@@ -6,19 +6,14 @@ pathStyle.OME = {};
 pathStyle.BRT.TW = {"color": "#5AC9E6","weight": 5,"opacity": .75},
 pathStyle.BRT.TC = {"color": "#FFCB5D","weight": 5,"opacity": .75},
 pathStyle.BRT.TO = {"color": "#BDCC2A","weight": 5,"opacity": .75},
-pathStyle.BRT.TB = {"color": "#EF4738","weight": 5,"opacity": .75},
-pathStyle.OME.SuperVia   = {"color": "#9A8D28","weight": 2,"opacity": .9},
-pathStyle.OME.MetroRio   = {"color": "#9490BC","weight": 2,"opacity": .9},
-pathStyle.OME.VLTCarioca = {"color": "#FFE090","weight": 2,"opacity": .9};
+pathStyle.BRT.TB = {"color": "#EF4738","weight": 5,"opacity": .75};
 
 pathStyle.Bairros = function(layer){
   // estilo padrão
   if(selectedMapaDeCalorRef == 'DES'){
     return {
-      "color": "#404040",
-      "weight": .6,
-      "fillOpacity": .05,
-      "dashArray": "5, 5"
+      "weight": 0,
+      "fillOpacity": 0,
     }
   }
 
@@ -66,7 +61,7 @@ pathStyle.Bairros = function(layer){
 // defining circle icons
 pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng){
   // feature.properties.Corredor
-  var _color;
+  var _color, _fillColor, _fillOpacity = 1;
   switch(feature.properties.Corredor){
     case "TransOeste":
       _color = pathStyle.BRT.TW.color; break;
@@ -77,12 +72,22 @@ pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng){
     case "TransBrasil":
       _color = pathStyle.BRT.TB.color; break;
   }
+
+  _fillColor = _color;
+
+  if(
+    feature.properties.Type == 'Expresso/Parador' ||
+    (feature.properties.Corredor == 'TransOlímpica' || feature.properties.Corredor == 'TransBrasil') // temporário enquanto não sei quem vai ser parador e quem vai ser expresso
+  ){
+    _fillColor = '#ffffff';
+  }
+
   return L.circleMarker(latlng, {
-    radius: 2.5,
-    fillColor: '#ffffff',
+    radius: 4,//2.5,
+    fillColor: _fillColor,
     color: _color,
-    weight: 1,
+    weight: 2,
     opacity: 1,
-    fillOpacity: 1
+    fillOpacity: _fillOpacity
   });
 };
