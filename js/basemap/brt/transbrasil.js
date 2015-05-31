@@ -742,8 +742,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Terminal Deodoro",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -754,8 +754,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Guadalupe",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -766,8 +766,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Barros Filho",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -778,8 +778,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Coelho Neto",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -790,8 +790,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Irajá",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -800,10 +800,22 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
+        "Name": "Terminal Margaridas",
+        "Corredor": "TransBrasil",
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.323199822999982, -22.820153657999981, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
         "Name": "Isidro Rocha",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -814,8 +826,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Ponto Chique",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -824,34 +836,10 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Margaridas",
-        "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.323199822999982, -22.820153657999981, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Terminal Américo Fontenelle",
-        "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.192233551970261, -22.901546731723187, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
         "Name": "Terminal Missões",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -862,8 +850,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Brás de Pina",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -874,8 +862,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Marinha do Brasil",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -886,8 +874,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Marinha Mercante",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -898,8 +886,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Ramos",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -910,8 +898,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Rubem Vaz",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -922,8 +910,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Nova Holanda",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -934,8 +922,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Joana Nascimento",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -946,8 +934,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Fiocruz",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -958,8 +946,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "Parque Vitória",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -970,8 +958,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "São Francisco",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -982,8 +970,8 @@ STATIONS_TRANSBRASIL = [{
     "properties": {
         "Name": "I.N.T.O",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -992,10 +980,10 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal de Integração BRT-VLT",
+        "Name": "Terminal Gasômetro",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -1004,10 +992,22 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
+        "Name": "Terminal Américo Fontenelle",
+        "Corredor": "TransBrasil",
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.192233551970261, -22.901546731723187, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
         "Name": "Terminal Procópio Ferreira",
         "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",

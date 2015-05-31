@@ -43,6 +43,8 @@ require([
       return 'Planejada';
     if(status == 'In Study')
       return 'Em estudo';
+    if(status == 'U.C.')
+      return 'Em construção';
     return '';
   };
 
@@ -65,7 +67,11 @@ require([
       var popupText = 'Estação ' + feature.properties.Name;
 
       if(feature.properties.Type){
-        popupText += ' (' + feature.properties.Type + ')';
+        popupText += '<br>Serviço';
+        if(feature.properties.Type !== 'Parador'){ // se não for só parador, serviços no plural
+          popupText += 's';
+        }
+        popupText += ': ' + feature.properties.Type;
       }
 
       if(feature.properties.Corredor){

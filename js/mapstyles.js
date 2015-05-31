@@ -73,12 +73,11 @@ pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, ifHighZoom){
       _color = pathStyle.BRT.TB.color; break;
   }
 
+  // bolinha da estação a priori é da cor da linha
   _fillColor = _color;
 
-  if(
-    (feature.properties.Type == 'Expresso/Parador' || feature.properties.Type == 'Expresso\/Parador\/Semi-Direto') ||
-    (feature.properties.Corredor == 'TransOlímpica' || feature.properties.Corredor == 'TransBrasil') // temporário enquanto não sei quem vai ser parador e quem vai ser expresso
-  ){
+  // se a estação for expressa, é branca
+  if(feature.properties.Type == 'Expresso/Parador' || feature.properties.Type == 'Expresso\/Parador\/Semi-Direto'){
     _fillColor = '#ffffff';
   }
 

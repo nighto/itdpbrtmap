@@ -1949,18 +1949,6 @@ LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA = {
 STATIONS_TRANSOESTE = [{
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Campo Grande",
-        "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Operational"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.554268, -22.901953, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
         "Name": "Terminal Jardim Oceânico (2016)",
         "Corredor": "TransOeste",
         "Type": "Expresso\/Parador",
@@ -2257,6 +2245,18 @@ STATIONS_TRANSOESTE = [{
     "geometry": {
         "type": "Point",
         "coordinates": [-43.55491008499996, -22.901766554999938, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Gramado",
+        "Corredor": "TransOeste",
+        "Type": "Parador",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.57057, -22.90450, 0.0]
     }
 }, {
     "type": "Feature",

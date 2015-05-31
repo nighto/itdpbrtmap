@@ -420,10 +420,10 @@ LINE_TO_TC_GEOJSON_DATA = {
 STATIONS_TRANSOLIMPICA = [{
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Recreio",
+        "Name": "Terminal Salvador Allende",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -432,22 +432,22 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Deodoro",
+        "Name": "Estação 1 (ainda sem nome)",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-43.384866488999933, -22.855712567999944, 0.0]
+        "coordinates": [-43.434062377999965, -23.003874061999966, 0.0]
     }
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Estaçao",
+        "Name": "CBF",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -456,10 +456,22 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
+        "Name": "Estaçao 2 (ainda sem nome)",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.419122717999983, -22.990708398999971, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
         "Name": "RioCentro",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -468,22 +480,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Bandeirantes",
+        "Name": "Terminal Olímpico",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.393630205999955, -22.963105792999954, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Parque Olímpico",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -492,10 +492,82 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Colonia Juliano Moreira",
+        "Name": "Estação 3 (ainda sem nome)",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.396900418999962, -22.966692034999934, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Bandeirantes",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.393630205999955, -22.963105792999954, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Hospital Raphael de P. S.",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.391832151999949, -22.955221737999977, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Curicica",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.39111357899997, -22.951014365999978, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Largo da Preguiça",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.393954622548293, -22.945419777500419, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Guerenguê",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.394788564003221, -22.938109807661363, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Colônia Juliano Moreira",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -506,8 +578,8 @@ STATIONS_TRANSOLIMPICA = [{
     "properties": {
         "Name": "Boiúna",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -518,8 +590,8 @@ STATIONS_TRANSOLIMPICA = [{
     "properties": {
         "Name": "Marechal Fontenelle",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -528,34 +600,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Magalhães Bastos",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.411706118999973, -22.870627728999974, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Vila Militar",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.401720972999954, -22.862647941999963, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
         "Name": "Marechal Mallet",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -564,97 +612,49 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Largo da Preguiça",
+        "Name": "Magalhães Bastos",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-43.393954622548293, -22.945419777500419, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Hospital Raphael de P. S.",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.391832151999949, -22.955221737999977, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Estaçao",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.434062377999965, -23.003874061999966, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Estaçao",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.419122717999983, -22.990708398999971, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Estação",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.396900418999962, -22.966692034999934, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Curicica",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.39111357899997, -22.951014365999978, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Guerenguê",
-        "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.394788564003221, -22.938109807661363, 0.0]
+        "coordinates": [-43.411706118999973, -22.870627728999974, 0.0]
     }
 }, {
     "type": "Feature",
     "properties": {
         "Name": "Equitação",
         "Corredor": "TransOlímpica",
-        "Type": null,
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
         "coordinates": [-43.408766690999983, -22.866031670999973, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Vila Militar",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.401720972999954, -22.862647941999963, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Terminal Deodoro",
+        "Corredor": "TransOlímpica",
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.384866488999933, -22.855712567999944, 0.0]
     }
 }];
