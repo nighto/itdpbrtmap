@@ -752,7 +752,7 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Carrefour",
+        "Name": "Guadalupe",
         "Corredor": "TransBrasil",
         "Type": null,
         "Status": "Planned"
@@ -800,7 +800,7 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Correia Andrade",
+        "Name": "Isidro Rocha",
         "Corredor": "TransBrasil",
         "Type": null,
         "Status": "Planned"
@@ -908,7 +908,7 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Rubens Vaz",
+        "Name": "Rubem Vaz",
         "Corredor": "TransBrasil",
         "Type": null,
         "Status": "Planned"
@@ -1000,30 +1000,6 @@ STATIONS_TRANSBRASIL = [{
     "geometry": {
         "type": "Point",
         "coordinates": [-43.210871239999946, -22.898748474999934, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Terminal Ilha (Em estudo)",
-        "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "In Study"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.232206580999957, -22.824992449999968, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Estaçao Penha",
-        "Corredor": "TransBrasil",
-        "Type": null,
-        "Status": "In Study"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.278120315999956, -22.842145711999933, 0.0]
     }
 }, {
     "type": "Feature",
