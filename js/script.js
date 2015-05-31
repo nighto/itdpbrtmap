@@ -108,10 +108,75 @@ require([
   var geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyle.BRT.TO}).addTo(map);
   var geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyle.BRT.TB}).addTo(map);
 
-  var geoJsonStationTransOeste       = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
-  var geoJsonStationTransCarioca     = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
-  var geoJsonStationTransOlimpica    = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
-  var geoJsonStationTransBrasil      = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransOesteLZ     = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransCariocaLZ   = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransOlimpicaLZ  = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+  var geoJsonStationTransBrasilLZ    = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
+
+  var currentZoomLevel = 'LZ';
+
+  // bolinhas maiores
+  var geoJsonStationTransOesteHZ     = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationHighZoom});
+  var geoJsonStationTransCariocaHZ   = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationHighZoom});
+  var geoJsonStationTransOlimpicaHZ  = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationHighZoom});
+  var geoJsonStationTransBrasilHZ    = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationHighZoom});
+
+  map.on('zoomend', function(e){
+    console.log('zoomend', map.getZoom());
+    if(map.getZoom() >= 14){
+      if(currentZoomLevel == 'LZ'){
+        console.log('LZ->HZ');
+        currentZoomLevel = 'HZ';
+
+        map.removeLayer(geoJsonStationTransOesteLZ);
+        map.removeLayer(geoJsonStationTransCariocaLZ);
+        map.removeLayer(geoJsonStationTransOlimpicaLZ);
+        map.removeLayer(geoJsonStationTransBrasilLZ);
+
+        geoJsonStationTransOeste    = geoJsonStationTransOesteHZ;
+        geoJsonStationTransCarioca  = geoJsonStationTransCariocaHZ;
+        geoJsonStationTransOlimpica = geoJsonStationTransOlimpicaHZ;
+        geoJsonStationTransBrasil   = geoJsonStationTransBrasilHZ;
+
+        arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteHZ],
+        arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaHZ],
+        arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaHZ],
+        arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilHZ];
+
+        geoJsonStationTransOesteHZ.addTo(map);
+        geoJsonStationTransCariocaHZ.addTo(map);
+        geoJsonStationTransOlimpicaHZ.addTo(map);
+        geoJsonStationTransBrasilHZ.addTo(map);
+      }
+      currentZoomLevel = 'HZ';
+    }else{
+      if(currentZoomLevel == 'HZ'){
+        console.log('HZ->LZ');
+        currentZoomLevel = 'LZ';
+
+        map.removeLayer(geoJsonStationTransOeste);
+        map.removeLayer(geoJsonStationTransCarioca);
+        map.removeLayer(geoJsonStationTransOlimpica);
+        map.removeLayer(geoJsonStationTransBrasil);
+
+        geoJsonStationTransOeste    = geoJsonStationTransOesteLZ;
+        geoJsonStationTransCarioca  = geoJsonStationTransCariocaLZ;
+        geoJsonStationTransOlimpica = geoJsonStationTransOlimpicaLZ;
+        geoJsonStationTransBrasil   = geoJsonStationTransBrasilLZ;
+
+        arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteLZ],
+        arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaLZ],
+        arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaLZ],
+        arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilLZ];
+
+        geoJsonStationTransOeste.addTo(map);
+        geoJsonStationTransCarioca.addTo(map);
+        geoJsonStationTransOlimpica.addTo(map);
+        geoJsonStationTransBrasil.addTo(map);
+      }
+      currentZoomLevel = 'LZ';
+    }
+  });
 
   // initializing estudo object
   var study = {},
@@ -136,10 +201,10 @@ require([
   initializeStudy(study);
 
   // defining base layers
-  var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOeste],
-      arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCarioca],
-      arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpica],
-      arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasil],
+  var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteLZ],
+      arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaLZ],
+      arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaLZ],
+      arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilLZ],
       arrayLayerBairros       = [geoJsonBairros];
 
   // adding layer control to map

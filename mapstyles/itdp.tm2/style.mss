@@ -198,14 +198,30 @@ Map { background-color: @land; }
 }
 
 // Bairros
-#RJ_TCM_Limites_Administrativos_Bairros_com_dados{
+#RJ_TCM_Limites_Administrativos_Bairros_com_dados,
+#Limites_do_Municipio{
   ::line {
-    line-width: 1;
+    line-width: 0;
     line-color: #C8C8C8;
-    line-dasharray: 5,5;
     [zoom>=14]{
       line-width: 2;
+    }
+  }
+}
+#Limites_do_Municipio{
+  ::line{
+    line-width: 2;
+  }
+}
+#RJ_TCM_Limites_Administrativos_Bairros_com_dados{
+  ::line{
+    line-dasharray: 5,5;
+    [zoom>=11]{
+      line-width: 1;
+    }
+    [zoom>=14]{
       line-dasharray: 5,10;
+      line-width: 2;
     }
   }
 }

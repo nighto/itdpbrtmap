@@ -1135,7 +1135,7 @@ STATIONS_TRANSCARIOCA = [{
     "properties": {
         "Name": "Campinho",
         "Corredor": "TransCarioca",
-        "Type": "Parador",
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -1147,7 +1147,7 @@ STATIONS_TRANSCARIOCA = [{
     "properties": {
         "Name": "Madureira - Manaceia",
         "Corredor": "TransCarioca",
-        "Type": "Expresso\/Parador",
+        "Type": "Expresso\/Parador\/Semi-Direto",
         "Status": "Operational"
     },
     "geometry": {
@@ -1231,7 +1231,7 @@ STATIONS_TRANSCARIOCA = [{
     "properties": {
         "Name": "Vicente de Carvalho",
         "Corredor": "TransCarioca",
-        "Type": "Expresso\/Parador",
+        "Type": "Expresso\/Parador\/Semi-Direto",
         "Status": "Operational"
     },
     "geometry": {
@@ -1363,7 +1363,7 @@ STATIONS_TRANSCARIOCA = [{
     "properties": {
         "Name": "Santa Luzia",
         "Corredor": "TransCarioca",
-        "Type": "Parador",
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -1399,7 +1399,7 @@ STATIONS_TRANSCARIOCA = [{
     "properties": {
         "Name": "Galeão - Tom Jobim 2",
         "Corredor": "TransCarioca",
-        "Type": "Parador",
+        "Type": "Expresso\/Parador\/Semi-Direto",
         "Status": "Operational"
     },
     "geometry": {

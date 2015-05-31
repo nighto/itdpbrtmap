@@ -2083,7 +2083,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Julia Miguel",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2093,9 +2093,9 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Parque São Paulo",
+        "Name": "Parque de São Paulo",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2107,7 +2107,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cosmos",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2119,7 +2119,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Icurana",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2131,7 +2131,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Vilar Carioca",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2143,7 +2143,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Inhoaíba",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2155,7 +2155,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Ana Gonzaga",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2167,7 +2167,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "São Jorge",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2179,7 +2179,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Pina Rangel",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2191,7 +2191,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Parque Esperança",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2239,7 +2239,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cândido Magalhães",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2263,7 +2263,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Prefeito Alim Pedro",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2719,7 +2719,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Pontal",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2731,7 +2731,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Ilha de Guaratiba",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2741,7 +2741,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Cetex",
+        "Name": "CTEx",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "Operational"

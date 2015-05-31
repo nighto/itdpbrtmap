@@ -59,9 +59,9 @@ pathStyle.Bairros = function(layer){
 };
 
 // defining circle icons
-pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng){
+pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, ifHighZoom){
   // feature.properties.Corredor
-  var _color, _fillColor, _fillOpacity = 1;
+  var _color, _fillColor, _fillOpacity = 1, _radius = 4, _weight = 2;
   switch(feature.properties.Corredor){
     case "TransOeste":
       _color = pathStyle.BRT.TW.color; break;
@@ -76,18 +76,27 @@ pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng){
   _fillColor = _color;
 
   if(
-    feature.properties.Type == 'Expresso/Parador' ||
+    (feature.properties.Type == 'Expresso/Parador' || feature.properties.Type == 'Expresso\/Parador\/Semi-Direto') ||
     (feature.properties.Corredor == 'TransOlímpica' || feature.properties.Corredor == 'TransBrasil') // temporário enquanto não sei quem vai ser parador e quem vai ser expresso
   ){
     _fillColor = '#ffffff';
   }
 
+  if(ifHighZoom){
+    _radius = 8;
+    _weight = 4;
+  }
+
   return L.circleMarker(latlng, {
-    radius: 4,//2.5,
+    radius: _radius,
     fillColor: _fillColor,
     color: _color,
-    weight: 2,
+    weight: _weight,
     opacity: 1,
     fillOpacity: _fillOpacity
   });
+};
+
+pathStyle.fnMarkerOptionsBrtStationHighZoom = function(feature, latlng){
+  return pathStyle.fnMarkerOptionsBrtStation(feature, latlng, true);
 };
