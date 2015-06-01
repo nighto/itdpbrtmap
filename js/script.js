@@ -27,7 +27,7 @@ require([
 
   // defining popups
   var lineStatusText = function(status){
-    if(status == 'Open')
+    if(status == 'Open' || status == 'Operational')
       return 'Em funcionamento';
     if(status == 'U.C.')
       return 'Em construção';
@@ -57,7 +57,10 @@ require([
         popupText += '<br>Status: ' + lineStatusText(feature.properties.Status);
       }
 
-      layer.bindPopup(popupText);
+      var popup = L.popup({
+        className: feature.properties.Corredor
+      }).setContent(popupText);
+      layer.bindPopup(popup);
     }
   };
 
@@ -82,7 +85,11 @@ require([
         popupText += '<br>Status: ' + stationStatusText(feature.properties.Status);
       }
 
-      layer.bindPopup(popupText);
+      var popup = L.popup({
+        className: feature.properties.Corredor
+      }).setContent(popupText);
+
+      layer.bindPopup(popup);
     }
   };
 

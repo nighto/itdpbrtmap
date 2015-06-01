@@ -1,3 +1,4 @@
+/* "reset" */
 body {
   padding: 0;
   margin: 0;
@@ -7,6 +8,7 @@ html, body, #map {
     height: 100%;
 }
 
+/* Control on the top right side */
 .my-custom-control {
   background: white;
   border: 1px solid #DDD;
@@ -31,7 +33,9 @@ html, body, #map {
   font-weight: bold;
 }
 
-.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+/* Popups */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
   background: rgba(0,168,81,.9);
   color: white;
 }
@@ -49,9 +53,43 @@ html, body, #map {
 .leaflet-container a.leaflet-popup-close-button {
   top: 2px;
   right: 2px;
-  color: #ddd;
+  color: rgba(255,255,255,.7);
 }
 
 .leaflet-container a.leaflet-popup-close-button:hover {
-  color: white;
+  color: rgba(255,255,255,1);
+}
+
+.leaflet-popup.TransOeste .leaflet-popup-content-wrapper,
+.leaflet-popup.TransOeste .leaflet-popup-tip {
+  background: rgba(90,201,230,.9);
+  color: black;
+}
+.leaflet-popup.TransCarioca .leaflet-popup-content-wrapper,
+.leaflet-popup.TransCarioca .leaflet-popup-tip {
+  background: rgba(255,203,93,.9);
+  color: black;
+}
+.leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper,
+.leaflet-popup.Link          .leaflet-popup-content-wrapper,
+.leaflet-popup.TransOlímpica .leaflet-popup-tip,
+.leaflet-popup.Link          .leaflet-popup-tip{
+  background: rgba(189,204,42,.9);
+  color: black;
+}
+.leaflet-popup.TransBrasil .leaflet-popup-content-wrapper,
+.leaflet-popup.TransBrasil .leaflet-popup-tip {
+  background: rgba(239,71,56,.9);
+}
+.leaflet-popup.TransOeste    a.leaflet-popup-close-button,
+.leaflet-popup.TransCarioca  a.leaflet-popup-close-button,
+.leaflet-popup.TransOlímpica a.leaflet-popup-close-button,
+.leaflet-popup.Link          a.leaflet-popup-close-button{
+  rgba(0,0,0,.7);
+}
+.leaflet-popup.TransOeste    a.leaflet-popup-close-button:hover,
+.leaflet-popup.TransCarioca  a.leaflet-popup-close-button:hover,
+.leaflet-popup.TransOlímpica a.leaflet-popup-close-button:hover,
+.leaflet-popup.Link          a.leaflet-popup-close-button:hover{
+  rgba(0,0,0,1);
 }
