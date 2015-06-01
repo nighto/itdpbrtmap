@@ -1949,18 +1949,6 @@ LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA = {
 STATIONS_TRANSOESTE = [{
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Jardim Oceânico (2016)",
-        "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Planned"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.311367, -23.007069, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
         "Name": "Terminal Santa Cruz",
         "Corredor": "TransOeste",
         "Type": "Expresso\/Parador",
@@ -2357,10 +2345,10 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Jd. Oceânico (2ª etapa)",
+        "Name": "Terminal Jardim Oceânico (2ª etapa)",
         "Corredor": "TransOeste",
         "Type": "Expresso\/Parador",
-        "Status": "Planned"
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -2371,8 +2359,8 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Cittá América (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -2383,8 +2371,8 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Porto dos Cabritos (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -2395,8 +2383,8 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Freeway (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -2407,8 +2395,8 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Riviera (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -2419,8 +2407,8 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Ricardo Marinho (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -2431,8 +2419,8 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Parque das Rosas (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
@@ -2443,8 +2431,8 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Barra Shopping (2ª etapa)",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Planned"
+        "Type": "Parador",
+        "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
