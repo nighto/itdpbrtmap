@@ -27,7 +27,6 @@ popupfn.createCheckboxInput = function(labelText, htmlId, checked, container, la
   this.label.htmlFor = htmlId;
 
   // event
-  var context = this;
   L.DomEvent
     .disableClickPropagation(this.input)
     .on(this.input, 'change', function(e){
@@ -48,7 +47,7 @@ popupfn.createCheckboxInput = function(labelText, htmlId, checked, container, la
           document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'none';
         }
       }
-      context._handleLayerEstudoAddRemove();
+      fnHandleLayerEstudoAddRemove();
     }
   );
 };

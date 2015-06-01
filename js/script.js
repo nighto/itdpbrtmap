@@ -68,7 +68,7 @@ require([
 
       if(feature.properties.Type){
         popupText += '<br>Serviço';
-        if(feature.properties.Type !== 'Parador'){ // se não for só parador, serviços no plural
+        if(feature.properties.Type !== 'Parador'){ // if is not only "Parador", add plural
           popupText += 's';
         }
         popupText += ': ' + feature.properties.Type;
@@ -103,17 +103,19 @@ require([
     layer.bindPopup(popupText);
   };
 
-  // defining geojson's objects
+  // defining geojson's objects, starting with the bairros (suburbs)
   geoJsonBairros = L.geoJson(BAIRROS, {onEachFeature: bairrosPopupFn, style: pathStyle.Bairros}).addTo(map); // this had to be visible to popupfn.js context.
 
+  // BRT Lines
   var geoJsonLineTransOeste          = L.geoJson(LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA, {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
   var geoJsonLineTransOesteLote0     = L.geoJson(LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA,     {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
-  var geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStyle.BRT.TW}).addTo(map);
+  var geoJsonLineTransOestePlanejada = L.geoJson(LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA,  {onEachFeature: linePopupFn, style: pathStyle.BRT.TWplanejada}).addTo(map);
   var geoJsonLineTransCarioca        = L.geoJson(LINE_TRANSCARIOCA_GEOJSON_DATA,          {onEachFeature: linePopupFn, style: pathStyle.BRT.TC}).addTo(map);
   var geoJsonLineTransOlimpica       = L.geoJson(LINE_TRANSOLIMPICA_GEOJSON_DATA,         {onEachFeature: linePopupFn, style: pathStyle.BRT.TO}).addTo(map);
   var geoJsonLineTO_TC               = L.geoJson(LINE_TO_TC_GEOJSON_DATA,                 {onEachFeature: linePopupFn, style: pathStyle.BRT.TO}).addTo(map);
   var geoJsonLineTransBrasil         = L.geoJson(LINE_TRANSBRASIL_GEOJSON_DATA,           {onEachFeature: linePopupFn, style: pathStyle.BRT.TB}).addTo(map);
 
+  // BRT Stations
   var geoJsonStationTransOesteLZ     = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
   var geoJsonStationTransCariocaLZ   = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
   var geoJsonStationTransOlimpicaLZ  = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStation}).addTo(map);
@@ -121,64 +123,138 @@ require([
 
   var currentZoomLevel = 'LZ';
 
-  // bolinhas maiores
+  // bigger circles for higher zoom levels
   var geoJsonStationTransOesteHZ     = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationHighZoom});
   var geoJsonStationTransCariocaHZ   = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationHighZoom});
   var geoJsonStationTransOlimpicaHZ  = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationHighZoom});
   var geoJsonStationTransBrasilHZ    = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationHighZoom});
 
+  // even bigger circles for even higher zoom levels
+  var geoJsonStationTransOesteSHZ     = L.geoJson(STATIONS_TRANSOESTE,    {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationSuperHighZoom});
+  var geoJsonStationTransCariocaSHZ   = L.geoJson(STATIONS_TRANSCARIOCA,  {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationSuperHighZoom});
+  var geoJsonStationTransOlimpicaSHZ  = L.geoJson(STATIONS_TRANSOLIMPICA, {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationSuperHighZoom});
+  var geoJsonStationTransBrasilSHZ    = L.geoJson(STATIONS_TRANSBRASIL,   {onEachFeature: stationPopupFn, pointToLayer: pathStyle.fnMarkerOptionsBrtStationSuperHighZoom});
+
+  // auxiliary functions for different markers on different zoom levels
+  var zoomfns = {
+    deactivateCheckboxes: function(){
+      var _checkboxes = document.getElementsByClassName('brtcheckboxes')[0];
+      _checkboxes.parentNode.removeChild(_checkboxes);
+    },
+    activateCheckboxes: function(){
+      var _checkboxes = document.createElement('div');
+      _checkboxes.className = 'brtcheckboxes';
+
+      var _fcc = document.getElementsByClassName('form-custom-control')[0];
+      _fcc.insertBefore(_checkboxes, _fcc.firstChild);
+
+      popupfn.createTitle('Sistemas BRT', _checkboxes);
+      popupfn.createCheckboxInput('TransOeste',    'TW', true, _checkboxes, arrayLayerTransOeste,    ['icon-TW']);
+      popupfn.createCheckboxInput('TransCarioca',  'TC', true, _checkboxes, arrayLayerTransCarioca,  ['icon-TC']);
+      popupfn.createCheckboxInput('TransOlímpica', 'TO', true, _checkboxes, arrayLayerTransOlimpica, ['icon-TO']);
+      popupfn.createCheckboxInput('TransBrasil',   'TB', true, _checkboxes, arrayLayerTransBrasil,   ['icon-TB']);
+    },
+    deactivateLZ: function(){
+      map.removeLayer(geoJsonStationTransOesteLZ);
+      map.removeLayer(geoJsonStationTransCariocaLZ);
+      map.removeLayer(geoJsonStationTransOlimpicaLZ);
+      map.removeLayer(geoJsonStationTransBrasilLZ);
+      zoomfns.deactivateCheckboxes();
+    },
+    deactivateHZ: function(){
+      map.removeLayer(geoJsonStationTransOesteHZ);
+      map.removeLayer(geoJsonStationTransCariocaHZ);
+      map.removeLayer(geoJsonStationTransOlimpicaHZ);
+      map.removeLayer(geoJsonStationTransBrasilHZ);
+      zoomfns.deactivateCheckboxes();
+    },
+    deactivateSHZ: function(){
+      map.removeLayer(geoJsonStationTransOesteSHZ);
+      map.removeLayer(geoJsonStationTransCariocaSHZ);
+      map.removeLayer(geoJsonStationTransOlimpicaSHZ);
+      map.removeLayer(geoJsonStationTransBrasilSHZ);
+      zoomfns.deactivateCheckboxes();
+    },
+    activateLZ: function(){
+      geoJsonStationTransOeste    = geoJsonStationTransOesteLZ;
+      geoJsonStationTransCarioca  = geoJsonStationTransCariocaLZ;
+      geoJsonStationTransOlimpica = geoJsonStationTransOlimpicaLZ;
+      geoJsonStationTransBrasil   = geoJsonStationTransBrasilLZ;
+
+      arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteLZ],
+      arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaLZ],
+      arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaLZ],
+      arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilLZ];
+
+      geoJsonStationTransOesteLZ.addTo(map);
+      geoJsonStationTransCariocaLZ.addTo(map);
+      geoJsonStationTransOlimpicaLZ.addTo(map);
+      geoJsonStationTransBrasilLZ.addTo(map);
+
+      zoomfns.activateCheckboxes();
+    },
+    activateHZ: function(){
+      geoJsonStationTransOeste    = geoJsonStationTransOesteHZ;
+      geoJsonStationTransCarioca  = geoJsonStationTransCariocaHZ;
+      geoJsonStationTransOlimpica = geoJsonStationTransOlimpicaHZ;
+      geoJsonStationTransBrasil   = geoJsonStationTransBrasilHZ;
+
+      arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteHZ],
+      arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaHZ],
+      arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaHZ],
+      arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilHZ];
+
+      geoJsonStationTransOesteHZ.addTo(map);
+      geoJsonStationTransCariocaHZ.addTo(map);
+      geoJsonStationTransOlimpicaHZ.addTo(map);
+      geoJsonStationTransBrasilHZ.addTo(map);
+
+      zoomfns.activateCheckboxes();
+    },
+    activateSHZ: function(){
+      geoJsonStationTransOeste    = geoJsonStationTransOesteSHZ;
+      geoJsonStationTransCarioca  = geoJsonStationTransCariocaSHZ;
+      geoJsonStationTransOlimpica = geoJsonStationTransOlimpicaSHZ;
+      geoJsonStationTransBrasil   = geoJsonStationTransBrasilSHZ;
+
+      arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteSHZ],
+      arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaSHZ],
+      arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaSHZ],
+      arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilSHZ];
+
+      geoJsonStationTransOesteSHZ.addTo(map);
+      geoJsonStationTransCariocaSHZ.addTo(map);
+      geoJsonStationTransOlimpicaSHZ.addTo(map);
+      geoJsonStationTransBrasilSHZ.addTo(map);
+
+      zoomfns.activateCheckboxes();
+    }
+  };
+
+  // registering the event for every zoom level change
   map.on('zoomend', function(e){
-    console.log('zoomend', map.getZoom());
-    if(map.getZoom() >= 14){
+    var _zoomCode, _zoomLevel = map.getZoom();
+    console.log('zoomend', _zoomLevel);
+    if(_zoomLevel >= 13 && _zoomLevel < 16){ // HZ
       if(currentZoomLevel == 'LZ'){
-        console.log('LZ->HZ');
-        currentZoomLevel = 'HZ';
-
-        map.removeLayer(geoJsonStationTransOesteLZ);
-        map.removeLayer(geoJsonStationTransCariocaLZ);
-        map.removeLayer(geoJsonStationTransOlimpicaLZ);
-        map.removeLayer(geoJsonStationTransBrasilLZ);
-
-        geoJsonStationTransOeste    = geoJsonStationTransOesteHZ;
-        geoJsonStationTransCarioca  = geoJsonStationTransCariocaHZ;
-        geoJsonStationTransOlimpica = geoJsonStationTransOlimpicaHZ;
-        geoJsonStationTransBrasil   = geoJsonStationTransBrasilHZ;
-
-        arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteHZ],
-        arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaHZ],
-        arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaHZ],
-        arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilHZ];
-
-        geoJsonStationTransOesteHZ.addTo(map);
-        geoJsonStationTransCariocaHZ.addTo(map);
-        geoJsonStationTransOlimpicaHZ.addTo(map);
-        geoJsonStationTransBrasilHZ.addTo(map);
+        zoomfns.deactivateLZ();
+        zoomfns.activateHZ();
+      }
+      if(currentZoomLevel == 'SHZ'){
+        zoomfns.deactivateSHZ();
+        zoomfns.activateHZ();
       }
       currentZoomLevel = 'HZ';
-    }else{
+    }else if(_zoomLevel >= 16){ // SHZ
       if(currentZoomLevel == 'HZ'){
-        console.log('HZ->LZ');
-        currentZoomLevel = 'LZ';
-
-        map.removeLayer(geoJsonStationTransOeste);
-        map.removeLayer(geoJsonStationTransCarioca);
-        map.removeLayer(geoJsonStationTransOlimpica);
-        map.removeLayer(geoJsonStationTransBrasil);
-
-        geoJsonStationTransOeste    = geoJsonStationTransOesteLZ;
-        geoJsonStationTransCarioca  = geoJsonStationTransCariocaLZ;
-        geoJsonStationTransOlimpica = geoJsonStationTransOlimpicaLZ;
-        geoJsonStationTransBrasil   = geoJsonStationTransBrasilLZ;
-
-        arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteLZ],
-        arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaLZ],
-        arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaLZ],
-        arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilLZ];
-
-        geoJsonStationTransOeste.addTo(map);
-        geoJsonStationTransCarioca.addTo(map);
-        geoJsonStationTransOlimpica.addTo(map);
-        geoJsonStationTransBrasil.addTo(map);
+        zoomfns.deactivateHZ();
+        zoomfns.activateSHZ();
+      }
+      currentZoomLevel = 'SHZ';
+    }else{ // LZ
+      if(currentZoomLevel == 'HZ'){
+        zoomfns.deactivateHZ();
+        zoomfns.activateLZ();
       }
       currentZoomLevel = 'LZ';
     }
@@ -213,6 +289,37 @@ require([
       arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilLZ],
       arrayLayerBairros       = [geoJsonBairros];
 
+  fnHandleLayerEstudoAddRemove = function(){
+    for(b in brts){
+      for(c in caracteristicas){
+        for(n in niveis){
+          // checks if everything is checked and I didn't add, do add.
+          if(
+            document.getElementById(brts[b]).checked &&
+            document.getElementById(caracteristicas[c]).checked &&
+            document.getElementById(niveis[n]).checked &&
+            !study[brts[b]][caracteristicas[c]][niveis[n]].status
+          ){
+            study[brts[b]][caracteristicas[c]][niveis[n]].geojson.addTo(map);
+            study[brts[b]][caracteristicas[c]][niveis[n]].status = true;
+          }
+
+          // if something is not checked and I already added, do remove.
+          if(
+            (
+              !document.getElementById(brts[b]).checked ||
+              !document.getElementById(caracteristicas[c]).checked ||
+              !document.getElementById(niveis[n]).checked
+            ) && study[brts[b]][caracteristicas[c]][niveis[n]].status
+          ){
+            map.removeLayer(study[brts[b]][caracteristicas[c]][niveis[n]].geojson);
+            study[brts[b]][caracteristicas[c]][niveis[n]].status = false;
+          }
+        }
+      }
+    }
+  };
+
   // adding layer control to map
   var MyControl = L.Control.extend({
     options: {
@@ -222,70 +329,38 @@ require([
     _createTitle: popupfn.createTitle,
     _createCheckboxInput: popupfn.createCheckboxInput,
     _createRadioInput: popupfn.createRadioInput,
-
-    _handleLayerEstudoAddRemove: function(){
-      for(b in brts){
-        for(c in caracteristicas){
-          for(n in niveis){
-            // se tudo está marcado e eu ainda não adicionei, adiciono.
-            if(
-              document.getElementById(brts[b]).checked &&
-              document.getElementById(caracteristicas[c]).checked &&
-              document.getElementById(niveis[n]).checked &&
-              !study[brts[b]][caracteristicas[c]][niveis[n]].status
-            ){
-              study[brts[b]][caracteristicas[c]][niveis[n]].geojson.addTo(map);
-              study[brts[b]][caracteristicas[c]][niveis[n]].status = true;
-            }
-
-            // se algum não está marcado e eu já adicionei, removo.
-            if(
-              (
-                !document.getElementById(brts[b]).checked ||
-                !document.getElementById(caracteristicas[c]).checked ||
-                !document.getElementById(niveis[n]).checked
-              ) && study[brts[b]][caracteristicas[c]][niveis[n]].status
-            ){
-              map.removeLayer(study[brts[b]][caracteristicas[c]][niveis[n]].geojson);
-              study[brts[b]][caracteristicas[c]][niveis[n]].status = false;
-            }
-          }
-        }
-      }
-    },
+    _handleLayerEstudoAddRemove: fnHandleLayerEstudoAddRemove,
 
     onAdd: function(map){
       var container = L.DomUtil.create('div', 'my-custom-control');
-      this.form = L.DomUtil.create('form', '', container);
+      this.form = L.DomUtil.create('form', 'form-custom-control', container);
 
-      this._createTitle('Sistemas BRT', this.form);
-      this._createCheckboxInput('TransOeste',    'TW', true, this.form, arrayLayerTransOeste,    ['icon-TW']);
-      this._createCheckboxInput('TransCarioca',  'TC', true, this.form, arrayLayerTransCarioca,  ['icon-TC']);
-      this._createCheckboxInput('TransOlímpica', 'TO', true, this.form, arrayLayerTransOlimpica, ['icon-TO']);
-      this._createCheckboxInput('TransBrasil',   'TB', true, this.form, arrayLayerTransBrasil,   ['icon-TB']);
+      this.containerBRT = L.DomUtil.create('div', 'brtcheckboxes', this.form);
+      this._createTitle('Sistemas BRT', this.containerBRT);
+      this._createCheckboxInput('TransOeste',    'TW', true, this.containerBRT, arrayLayerTransOeste,    ['icon-TW']);
+      this._createCheckboxInput('TransCarioca',  'TC', true, this.containerBRT, arrayLayerTransCarioca,  ['icon-TC']);
+      this._createCheckboxInput('TransOlímpica', 'TO', true, this.containerBRT, arrayLayerTransOlimpica, ['icon-TO']);
+      this._createCheckboxInput('TransBrasil',   'TB', true, this.containerBRT, arrayLayerTransBrasil,   ['icon-TB']);
 
-      this._createTitle('Categorias', this.form);
-      this._createCheckboxInput('Segurança viária',     'SV', true, this.form);
-      this._createCheckboxInput('Integração modal',     'IN', true, this.form);
-      this._createCheckboxInput('Operação',             'OP', true, this.form);
-      this._createCheckboxInput('TOD',                  'TD', true, this.form);
-      this._createCheckboxInput('Bicicleta e pedestre', 'TA', true, this.form);
+      this.containerCategorias = L.DomUtil.create('div', 'categoriascheckboxes', this.form);
+      this._createTitle('Categorias', this.containerCategorias);
+      this._createCheckboxInput('Segurança viária',     'SV', true, this.containerCategorias);
+      this._createCheckboxInput('Integração modal',     'IN', true, this.containerCategorias);
+      this._createCheckboxInput('Operação',             'OP', true, this.containerCategorias);
+      this._createCheckboxInput('TOD',                  'TD', true, this.containerCategorias);
+      this._createCheckboxInput('Bicicleta e pedestre', 'TA', true, this.containerCategorias);
 
-      this._createTitle('Níveis de Atenção', this.form);
-      this._createCheckboxInput('Crítico',  'CR', true, this.form);
-      this._createCheckboxInput('Atenção',  'AT', true, this.form);
-      this._createCheckboxInput('Sugestão', 'SU', true, this.form);
+      this.containerNiveisDeAtencao = L.DomUtil.create('div', 'niveisdeatencaocheckboxes', this.form);
+      this._createTitle('Níveis de Atenção', this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Crítico',  'CR', true, this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Atenção',  'AT', true, this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Sugestão', 'SU', true, this.containerNiveisDeAtencao);
 
-      //this._createTitle('Extras', this.form);
-      //this._createCheckboxInput('Trens, Metrô e VLT', 'OME', true, this.form, arrayLayerOutrosModos);
-      //this._createCheckboxInput('Bairros e dados socioeconômicos', 'BDE', true, this.form, arrayLayerBairros);
-
-      this.divMapasDeCalor = L.DomUtil.create('div', 'mapasDeCalorInputs', this.form);
-
-      this._createTitle('Extras', this.divMapasDeCalor);
-      this._createRadioInput('Desativado',                 'DES', 'mapaCalor', true,  this.divMapasDeCalor, undefined);
-      this._createRadioInput('Densidade populacional',     'DEN', 'mapaCalor', false, this.divMapasDeCalor, undefined);
-      this._createRadioInput('Empregos formais/habitante', 'EMP', 'mapaCalor', false, this.divMapasDeCalor, undefined);
+      this.containerMapasDeCalor = L.DomUtil.create('div', 'mapasDeCalorInputs', this.form);
+      this._createTitle('Extras', this.containerMapasDeCalor);
+      this._createRadioInput('Desativado',                 'DES', 'mapaCalor', true,  this.containerMapasDeCalor, undefined);
+      this._createRadioInput('Densidade populacional',     'DEN', 'mapaCalor', false, this.containerMapasDeCalor, undefined);
+      this._createRadioInput('Empregos formais/habitante', 'EMP', 'mapaCalor', false, this.containerMapasDeCalor, undefined);
 
       return container;
     }

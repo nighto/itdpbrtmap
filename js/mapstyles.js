@@ -4,6 +4,7 @@ pathStyle.BRT = {},
 pathStyle.OME = {};
 
 pathStyle.BRT.TW = {"color": "#5AC9E6","weight": 5,"opacity": .75},
+pathStyle.BRT.TWplanejada = {"color": "#5AC9E6","weight": 5,"opacity": .50},
 pathStyle.BRT.TC = {"color": "#FFCB5D","weight": 5,"opacity": .75},
 pathStyle.BRT.TO = {"color": "#BDCC2A","weight": 5,"opacity": .75},
 pathStyle.BRT.TB = {"color": "#EF4738","weight": 5,"opacity": .75};
@@ -59,7 +60,7 @@ pathStyle.Bairros = function(layer){
 };
 
 // defining circle icons
-pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, ifHighZoom){
+pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, zoomCode){
   // feature.properties.Corredor
   var _color, _fillColor, _fillOpacity = 1, _radius = 4, _weight = 2;
   switch(feature.properties.Corredor){
@@ -81,9 +82,15 @@ pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, ifHighZoom){
     _fillColor = '#ffffff';
   }
 
-  if(ifHighZoom){
-    _radius = 8;
-    _weight = 4;
+  if(zoomCode){
+    if(zoomCode == 'HZ'){
+      _radius = 8;
+      _weight = 4;
+    }
+    if(zoomCode == 'SHZ'){
+      _radius = 16;
+      _weight = 8;
+    }
   }
 
   return L.circleMarker(latlng, {
@@ -97,5 +104,9 @@ pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, ifHighZoom){
 };
 
 pathStyle.fnMarkerOptionsBrtStationHighZoom = function(feature, latlng){
-  return pathStyle.fnMarkerOptionsBrtStation(feature, latlng, true);
+  return pathStyle.fnMarkerOptionsBrtStation(feature, latlng, 'HZ');
+};
+
+pathStyle.fnMarkerOptionsBrtStationSuperHighZoom = function(feature, latlng){
+  return pathStyle.fnMarkerOptionsBrtStation(feature, latlng, 'SHZ');
 };
