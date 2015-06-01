@@ -40,38 +40,17 @@ popupfn.createCheckboxInput = function(labelText, htmlId, checked, container, la
           }
         }
       }
-      if(e.srcElement.id == 'BDE'){ // checkbox dos bairros
-        if(e.srcElement.checked){   // se está ligando
-          document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'block';
-        } else {
-          document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'none';
-        }
-      }
       fnHandleLayerEstudoAddRemove();
     }
   );
 };
 
-popupfn.createRadioInput = function(labelText, htmlId, groupName, selected, container, layerArray){
-  //<div><input type="radio" name=""><label for=""></label></div>
+popupfn.createCheckboxInputExtras = function(labelText, htmlId, container){
   this.div = L.DomUtil.create('div', '', container);
-  this.input = L.DomUtil.create('input',  '', this.div);
-  this.input.type = 'radio';
+  this.input = L.DomUtil.create('input', '', this.div);
+  this.input.type = 'checkbox';
   this.input.id = htmlId;
-  this.input.name = groupName;
-  this.input.checked = selected;
-  this.label = L.DomUtil.create('label', '', this.div);
+  this.label = L.DomUtil.create('label', 'labelExtras', this.div);
   this.label.innerHTML = labelText;
   this.label.htmlFor = htmlId;
-
-  var context = this;
-  L.DomEvent
-    .disableClickPropagation(this.input)
-    .on(this.input, 'change', function(e){
-      selectedMapaDeCalorRef = e.srcElement.id;
-      geoJsonBairros.eachLayer(function(layer){
-        layer.setStyle(pathStyle.Bairros(layer));
-      });
-    }
-  );
 };

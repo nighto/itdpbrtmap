@@ -333,7 +333,6 @@ require([
 
     _createTitle: popupfn.createTitle,
     _createCheckboxInput: popupfn.createCheckboxInput,
-    _createRadioInput: popupfn.createRadioInput,
     _handleLayerEstudoAddRemove: fnHandleLayerEstudoAddRemove,
 
     onAdd: function(map){
@@ -361,11 +360,67 @@ require([
       this._createCheckboxInput('Atenção',  'AT', true, this.containerNiveisDeAtencao);
       this._createCheckboxInput('Sugestão', 'SU', true, this.containerNiveisDeAtencao);
 
-      this.containerMapasDeCalor = L.DomUtil.create('div', 'mapasDeCalorInputs', this.form);
-      this._createTitle('Extras', this.containerMapasDeCalor);
-      this._createRadioInput('Desativado',                 'DES', 'mapaCalor', true,  this.containerMapasDeCalor, undefined);
-      this._createRadioInput('Densidade populacional',     'DEN', 'mapaCalor', false, this.containerMapasDeCalor, undefined);
-      this._createRadioInput('Empregos formais/habitante', 'EMP', 'mapaCalor', false, this.containerMapasDeCalor, undefined);
+      // Extras
+      L.DomUtil.create('hr', '', this.form);
+
+      var checkboxExtras = L.DomUtil.create('input', '', this.form);
+      checkboxExtras.id = 'extras';
+      checkboxExtras.type = 'checkbox';
+      var labelCheckboxExtras = L.DomUtil.create('label', 'labelExtras', this.form);
+      labelCheckboxExtras.htmlFor = 'extras';
+      labelCheckboxExtras.innerHTML = 'Extras';
+
+      var divExtras = L.DomUtil.create('div', 'mapasDeCalorInputs', this.form);
+      divExtras.style.display = 'none';
+
+      var createRadioButton = function(id, groupName, checked, container){
+        var radiobutton = L.DomUtil.create('input', '', container);
+        radiobutton.id = id;
+        radiobutton.type = 'radio';
+        radiobutton.name = groupName;
+        radiobutton.checked = checked;
+        return radiobutton;
+      };
+      var createLabelRadioButton = function(htmlFor, labelText, container){
+        var label = L.DomUtil.create('label', '', container);
+        label.htmlFor = htmlFor;
+        label.innerHTML = labelText;
+      };
+
+      var containerDensidade = L.DomUtil.create('div', '', divExtras);
+      var containerEmpregos  = L.DomUtil.create('div', '', divExtras);
+      var radiobuttonDensidade = createRadioButton('DEN', 'mapaCalor', true,  containerDensidade);
+      var radiobuttonEmpregos  = createRadioButton('EMP', 'mapaCalor', false, containerEmpregos);
+      var labelRadiobuttonDensidade = createLabelRadioButton('DEN', 'Densidade populacional', containerDensidade);
+      var labelRadiobuttonEmpregos  = createLabelRadioButton('EMP', 'Empregos formais/habitante', containerEmpregos);
+
+      var handleBairrosChange = function(){
+        geoJsonBairros.eachLayer(function(layer){
+          layer.setStyle(pathStyle.Bairros(layer));
+        });
+      }
+      L.DomEvent.disableClickPropagation(checkboxExtras).on(checkboxExtras, 'change', function(e){
+        if(e.srcElement.checked){
+          if(document.getElementById('EMP').checked){
+            selectedMapaDeCalorRef = 'EMP';
+          }else{
+            selectedMapaDeCalorRef = 'DEN';
+          }
+          handleBairrosChange();
+          document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'block';
+        } else {
+          selectedMapaDeCalorRef = 'DES';
+          handleBairrosChange();
+          document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'none';
+        }
+      });
+      var handleRadioButtonChange = function(e){
+        console.log('handle radio change');
+        selectedMapaDeCalorRef = e.srcElement.id;
+        handleBairrosChange();
+      };
+      L.DomEvent.disableClickPropagation(radiobuttonDensidade).on(radiobuttonDensidade, 'change', handleRadioButtonChange);
+      L.DomEvent.disableClickPropagation(radiobuttonEmpregos).on(radiobuttonEmpregos, 'change', handleRadioButtonChange);
 
       return container;
     }

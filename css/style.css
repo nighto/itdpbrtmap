@@ -27,6 +27,10 @@ html, body, #map {
 .my-custom-control .icon-TO { color: #BDCC2A; }
 .my-custom-control .icon-TB { color: #EF4738; }
 
+.my-custom-control .labelExtras {
+  font-weight: bold;
+}
+
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
   background: rgba(0,168,81,.9);
   color: white;
