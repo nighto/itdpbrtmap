@@ -4,7 +4,7 @@ pathStyle.BRT = {},
 pathStyle.OME = {};
 
 pathStyle.BRT.TW = {"color": "#5AC9E6","weight": 5,"opacity": .75},
-pathStyle.BRT.TWplanejada = {"color": "#5AC9E6","weight": 5,"opacity": .50},
+pathStyle.BRT.TWplanejada = {"color": "#5AC9E6","weight": 5,"opacity": .4},
 pathStyle.BRT.TC = {"color": "#FFCB5D","weight": 5,"opacity": .75},
 pathStyle.BRT.TO = {"color": "#BDCC2A","weight": 5,"opacity": .75},
 pathStyle.BRT.TB = {"color": "#EF4738","weight": 5,"opacity": .75};
@@ -62,7 +62,7 @@ pathStyle.Bairros = function(layer){
 // defining circle icons
 pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, zoomCode){
   // feature.properties.Corredor
-  var _color, _fillColor, _fillOpacity = 1, _radius = 4, _weight = 2;
+  var _color, _fillColor, _fillOpacity = 1, _radius = 4, _weight = 2, _opacity = 1;
   switch(feature.properties.Corredor){
     case "TransOeste":
       _color = pathStyle.BRT.TW.color; break;
@@ -74,14 +74,20 @@ pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, zoomCode){
       _color = pathStyle.BRT.TB.color; break;
   }
 
-  // bolinha da estação a priori é da cor da linha
+  // station circle has the color of the line...
   _fillColor = _color;
 
-  // se a estação for expressa, é branca
+  // except if it's a express station, in which case it's white
   if(feature.properties.Type == 'Expresso/Parador' || feature.properties.Type == 'Expresso\/Parador\/Semi-Direto'){
     _fillColor = '#ffffff';
   }
 
+  // if it's still planned, make it a little transparent
+  if(feature.properties.Status == 'Planned'){
+    _opacity = .5;
+  }
+
+  // bigger circles for bigger zoom levels
   if(zoomCode){
     if(zoomCode == 'HZ'){
       _radius = 8;
@@ -98,7 +104,7 @@ pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, zoomCode){
     fillColor: _fillColor,
     color: _color,
     weight: _weight,
-    opacity: 1,
+    opacity: _opacity,
     fillOpacity: _fillOpacity
   });
 };
