@@ -234,28 +234,34 @@ require([
   // registering the event for every zoom level change
   map.on('zoomend', function(e){
     var _zoomLevel = map.getZoom();
+    if(_zoomLevel < 13){ // LZ
+      if(currentZoomLevel == 'HZ'){
+        zoomfns.deactivateHZ();
+        zoomfns.activateLZ();
+      } else if(currentZoomLevel == 'SHZ'){
+        zoomfns.deactivateSHZ();
+        zoomfns.activateHZ();
+      }
+      currentZoomLevel = 'LZ';
+    }
     if(_zoomLevel >= 13 && _zoomLevel < 16){ // HZ
       if(currentZoomLevel == 'LZ'){
         zoomfns.deactivateLZ();
         zoomfns.activateHZ();
-      }
-      if(currentZoomLevel == 'SHZ'){
+      } else if(currentZoomLevel == 'SHZ'){
         zoomfns.deactivateSHZ();
         zoomfns.activateHZ();
       }
       currentZoomLevel = 'HZ';
     }else if(_zoomLevel >= 16){ // SHZ
-      if(currentZoomLevel == 'HZ'){
+      if(currentZoomLevel == 'LZ'){
+        zoomfns.deactivateLZ();
+        zoomfns.activateHZ();
+      } else if(currentZoomLevel == 'HZ'){
         zoomfns.deactivateHZ();
         zoomfns.activateSHZ();
       }
       currentZoomLevel = 'SHZ';
-    }else{ // LZ
-      if(currentZoomLevel == 'HZ'){
-        zoomfns.deactivateHZ();
-        zoomfns.activateLZ();
-      }
-      currentZoomLevel = 'LZ';
     }
   });
 
