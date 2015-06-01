@@ -233,8 +233,7 @@ require([
 
   // registering the event for every zoom level change
   map.on('zoomend', function(e){
-    var _zoomCode, _zoomLevel = map.getZoom();
-    console.log('zoomend', _zoomLevel);
+    var _zoomLevel = map.getZoom();
     if(_zoomLevel >= 13 && _zoomLevel < 16){ // HZ
       if(currentZoomLevel == 'LZ'){
         zoomfns.deactivateLZ();
