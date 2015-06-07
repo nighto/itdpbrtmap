@@ -275,7 +275,7 @@ require([
   // initializing estudo object
   var study = {},
       brts = ['TW'],
-      caracteristicas = ['SV'],
+      caracteristicas = ['SV', 'IM', 'OP', 'TD', 'BP'],
       niveis = ['CR', 'AT', 'SU'];
 
   var initializeStudy = function(study){
@@ -287,7 +287,18 @@ require([
             study[brts[b]][caracteristicas[c]][niveis[n]] = {};
             study[brts[b]][caracteristicas[c]][niveis[n]].status = true;
             // L.geoJson(TW_SV_CR, {...})
-            study[brts[b]][caracteristicas[c]][niveis[n]].geojson = L.geoJson(window[brts[b] + '_' + caracteristicas[c] + '_' + niveis[n]], {onEachFeature: estudoPopupFn}).addTo(map);
+            study[brts[b]][caracteristicas[c]][niveis[n]].geojson = L.geoJson(window[brts[b] + '_' + caracteristicas[c] + '_' + niveis[n]], {
+              onEachFeature: estudoPopupFn,
+              pointToLayer: function(feature, latlng){
+                var pointIcon = L.icon({
+                  iconSize: [32, 37],
+                  iconAnchor: [16, 35],
+                  popupAnchor: [0, -35],
+                  iconUrl: 'icons/' + caracteristicas[c] + '_' + niveis[n] + '.png'
+                });
+                return L.marker(latlng, {icon: pointIcon});
+              }
+            }).addTo(map);
           }
         }
     }
@@ -356,10 +367,10 @@ require([
       this.containerCategorias = L.DomUtil.create('div', 'categoriascheckboxes', this.form);
       this._createTitle('Categorias', this.containerCategorias);
       this._createCheckboxInput('Segurança viária',     'SV', true, this.containerCategorias);
-      this._createCheckboxInput('Integração modal',     'IN', true, this.containerCategorias);
+      this._createCheckboxInput('Integração modal',     'IM', true, this.containerCategorias);
       this._createCheckboxInput('Operação',             'OP', true, this.containerCategorias);
       this._createCheckboxInput('TOD',                  'TD', true, this.containerCategorias);
-      this._createCheckboxInput('Bicicleta e pedestre', 'TA', true, this.containerCategorias);
+      this._createCheckboxInput('Bicicleta e pedestre', 'BP', true, this.containerCategorias);
 
       this.containerNiveisDeAtencao = L.DomUtil.create('div', 'niveisdeatencaocheckboxes', this.form);
       this._createTitle('Níveis de Atenção', this.containerNiveisDeAtencao);
