@@ -15,6 +15,9 @@ html, body, #map {
   border-radius: 5px;
   padding: 0 10px 10px;
 }
+.my-custom-control form {
+  width: 175px;
+}
 .my-custom-control h2 {
   font-size: 12px;
 }
