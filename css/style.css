@@ -69,7 +69,9 @@ html, body, #map {
   color: black;
 }
 .leaflet-popup.TransCarioca .leaflet-popup-content-wrapper,
-.leaflet-popup.TransCarioca .leaflet-popup-tip {
+.leaflet-popup.TransCarioca .leaflet-popup-tip,
+.leaflet-popup.mid .leaflet-popup-content-wrapper,
+.leaflet-popup.mid .leaflet-popup-tip{
   background: rgba(255,203,93,.9);
   color: black;
 }
@@ -81,7 +83,9 @@ html, body, #map {
   color: black;
 }
 .leaflet-popup.TransBrasil .leaflet-popup-content-wrapper,
-.leaflet-popup.TransBrasil .leaflet-popup-tip {
+.leaflet-popup.TransBrasil .leaflet-popup-tip,
+.leaflet-popup.high .leaflet-popup-content-wrapper,
+.leaflet-popup.high .leaflet-popup-tip{
   background: rgba(239,71,56,.9);
 }
 .leaflet-popup.TransOeste    a.leaflet-popup-close-button,

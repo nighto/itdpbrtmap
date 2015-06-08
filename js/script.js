@@ -5,6 +5,7 @@ require([
   "basemap/brt/transbrasil",
   "basemap/bairros",
   "dummy",
+  "estudo",
   "mapstyles",
   "popupfn"
 ], function(util){
@@ -101,12 +102,6 @@ require([
                   + 'Densidade populacional: ' + feature.properties.DENS_POP_K.toFixed(3).toString().replace('.',',') + ' hab./km²<br>'
                   + 'Empregos formais: ' + feature.properties.EMPRG.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + '<br>'
                   + 'Empregos formais/habitante: ' + feature.properties.RAZAO_EMPR.toFixed(3).toString().replace('.',',');
-    layer.bindPopup(popupText);
-  };
-
-  var estudoPopupFn = function(feature, layer){
-    // "properties": { "Name": "Uma coisa muito crítica", "Description": "Muito crítica mesmo" }
-    var popupText = '<b>' + feature.properties.Name + '</b><br>' + feature.properties.Description;
     layer.bindPopup(popupText);
   };
 
@@ -272,29 +267,46 @@ require([
     }
   });
 
-  // initializing estudo object
+  // initializing study object
   var study = {},
-      brts = ['TW'],
-      caracteristicas = ['SV', 'IM', 'OP', 'TD', 'BP'],
-      niveis = ['CR', 'AT', 'SU'];
+      brts = ['TW', 'TO', 'TB'],
+      categories = ['SV', 'IM', 'OP', 'TD', 'BP'],
+      levels = ['SU', 'AT', 'CR'];
 
   var initializeStudy = function(study){
     for(b in brts){
       study[brts[b]] = {};
-        for(c in caracteristicas){
-          study[brts[b]][caracteristicas[c]] = {};
-          for(n in niveis){
-            study[brts[b]][caracteristicas[c]][niveis[n]] = {};
-            study[brts[b]][caracteristicas[c]][niveis[n]].status = true;
+        for(c in categories){
+          study[brts[b]][categories[c]] = {};
+          for(l in levels){
+            study[brts[b]][categories[c]][levels[l]] = {};
+            study[brts[b]][categories[c]][levels[l]].status = true;
             // L.geoJson(TW_SV_CR, {...})
-            study[brts[b]][caracteristicas[c]][niveis[n]].geojson = L.geoJson(window[brts[b] + '_' + caracteristicas[c] + '_' + niveis[n]], {
-              onEachFeature: estudoPopupFn,
+            study[brts[b]][categories[c]][levels[l]].geojson = L.geoJson(window[brts[b] + '_' + categories[c] + '_' + levels[l]], {
+              onEachFeature: function(feature, layer){
+                // "properties": { "Name": "Uma coisa muito crítica", "Description": "Muito crítica mesmo" }
+                var popupText = '<b>' + feature.properties.Name + '</b>',
+                    level = '';
+                if(feature.properties.Place){
+                  popupText += '<br><br>Localização: ' + feature.properties.Place;
+                }
+                if(feature.properties.Description){
+                  popupText += '<br><br>Descrição: ' + feature.properties.Description;
+                }
+                if(feature.properties.Recommendation){
+                  popupText += '<br><br>Recomendação: ' + feature.properties.Recommendation;
+                }
+                if(feature.properties.Level){
+                  level = feature.properties.Level;
+                }
+                layer.bindPopup(L.popup({className: level}).setContent(popupText));
+              },
               pointToLayer: function(feature, latlng){
                 var pointIcon = L.icon({
                   iconSize: [32, 37],
                   iconAnchor: [16, 35],
                   popupAnchor: [0, -35],
-                  iconUrl: 'icons/' + caracteristicas[c] + '_' + niveis[n] + '.png'
+                  iconUrl: 'images/icons/' + categories[c] + '_' + levels[l] + '.png'
                 });
                 return L.marker(latlng, {icon: pointIcon});
               }
@@ -314,29 +326,29 @@ require([
 
   fnHandleLayerEstudoAddRemove = function(){
     for(b in brts){
-      for(c in caracteristicas){
-        for(n in niveis){
+      for(c in categories){
+        for(l in levels){
           // checks if everything is checked and I didn't add, do add.
           if(
             document.getElementById(brts[b]).checked &&
-            document.getElementById(caracteristicas[c]).checked &&
-            document.getElementById(niveis[n]).checked &&
-            !study[brts[b]][caracteristicas[c]][niveis[n]].status
+            document.getElementById(categories[c]).checked &&
+            document.getElementById(levels[l]).checked &&
+            !study[brts[b]][categories[c]][levels[l]].status
           ){
-            study[brts[b]][caracteristicas[c]][niveis[n]].geojson.addTo(map);
-            study[brts[b]][caracteristicas[c]][niveis[n]].status = true;
+            study[brts[b]][categories[c]][levels[l]].geojson.addTo(map);
+            study[brts[b]][categories[c]][levels[l]].status = true;
           }
 
           // if something is not checked and I already added, do remove.
           if(
             (
               !document.getElementById(brts[b]).checked ||
-              !document.getElementById(caracteristicas[c]).checked ||
-              !document.getElementById(niveis[n]).checked
-            ) && study[brts[b]][caracteristicas[c]][niveis[n]].status
+              !document.getElementById(categories[c]).checked ||
+              !document.getElementById(levels[l]).checked
+            ) && study[brts[b]][categories[c]][levels[l]].status
           ){
-            map.removeLayer(study[brts[b]][caracteristicas[c]][niveis[n]].geojson);
-            study[brts[b]][caracteristicas[c]][niveis[n]].status = false;
+            map.removeLayer(study[brts[b]][categories[c]][levels[l]].geojson);
+            study[brts[b]][categories[c]][levels[l]].status = false;
           }
         }
       }

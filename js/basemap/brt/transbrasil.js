@@ -896,7 +896,7 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Rubem Vaz",
+        "Name": "Rubens Vaz",
         "Corredor": "TransBrasil",
         "Type": "Parador",
         "Status": "U.C."
