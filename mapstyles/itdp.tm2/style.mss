@@ -157,7 +157,8 @@ Map { background-color: @land; }
 // Parks
 #landuse[class='park'],
 #landuse[class='forest'],
-#boundary[class='protected_area']{
+#boundary[class='protected_area'],
+#landuse[class='wood']{
   polygon-fill: #6e605e;
 }
 
