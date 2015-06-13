@@ -1,8 +1,11 @@
 LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA = {
     "type": "Feature",
     "properties": {
-        "Name": "BRT TransOeste - trecho Santa Cruz - Campo Grande - Alvorada",
+        "Name": "BRT TransOeste",
         "Corredor": "TransOeste",
+        "Trecho": "Santa Cruz - Campo Grande - Alvorada",
+        "Extensao": "X",
+        "Estacoes": "Y",
         "Status": "Open",
         "Shape_Leng": 0.99324987985799995
     },
@@ -1163,8 +1166,11 @@ LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA = {
 LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA = {
     "type": "Feature",
     "properties": {
-        "Name": "BRT TransOeste - trecho Alvorada - Jd. Oceânico",
+        "Name": "BRT TransOeste",
         "Corredor": "TransOeste",
+        "Trecho": "Alvorada - Jardim Oceânico",
+        "Extensao": "X",
+        "Estacoes": "Y",
         "Status": "U.C.",
         "Shape_Leng": 0.113564900634
     },
@@ -1241,8 +1247,11 @@ LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA = {
 LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA = {
     "type": "Feature",
     "properties": {
-        "Name": "BRT TransOeste - trecho Mato Alto",
+        "Name": "BRT TransOeste",
         "Corredor": "TransOeste",
+        "Trecho": "Mato Alto",
+        "Extensao": "X",
+        "Estacoes": "Y",
         "Status": "Planned",
         "Shape_Leng": 0.21499461460700001
     },

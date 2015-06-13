@@ -1,8 +1,11 @@
 LINE_TRANSBRASIL_GEOJSON_DATA = {
     "type": "Feature",
     "properties": {
-        "Name": "TransBrasil",
+        "Name": "BRT TransBrasil",
         "Corredor": "TransBrasil",
+        "Trecho": "Deodoro - Centro",
+        "Extensao": "X",
+        "Estacoes": "Y",
         "Status": "U.C.",
         "Shape_Leng": 0.54661113871699996
     },

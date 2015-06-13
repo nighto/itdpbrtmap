@@ -3,6 +3,9 @@ LINE_TRANSCARIOCA_GEOJSON_DATA = {
     "properties": {
         "Name": "BRT TransCarioca",
         "Corredor": "TransCarioca",
+        "Trecho": "Alvorada - Galeão",
+        "Extensao": "X",
+        "Estacoes": "Y",
         "Status": "Operational",
         "Shape_Leng": 0.74858152146599999
     },

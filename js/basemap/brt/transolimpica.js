@@ -3,6 +3,9 @@ LINE_TRANSOLIMPICA_GEOJSON_DATA = {
     "properties": {
         "Name": "BRT TransOlímpica",
         "Corredor": "TransOlímpica",
+        "Trecho": "Barra da Tijuca - Deodoro",
+        "Extensao": "X",
+        "Estacoes": "Y",
         "Status": "U.C.",
         "Shape_Leng": 0.41118799154000002
     },
@@ -360,8 +363,10 @@ LINE_TRANSOLIMPICA_GEOJSON_DATA = {
 LINE_TO_TC_GEOJSON_DATA = {
     "type": "Feature",
     "properties": {
-        "Name": "Ligação TransCarioca - TransOlímpica",
+        "Name": "Ligação entre BRTs TransCarioca - TransOlímpica",
         "Corredor": "Link",
+        "Extensao": "X",
+        "Estacoes": "Y",
         "Status": "U.C.",
         "Shape_Leng": 0.033564760651899998
     },

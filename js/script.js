@@ -54,6 +54,15 @@ require([
     if(feature.properties && feature.properties.Name){
       var popupText = '<b>' + feature.properties.Name + '</b>';
 
+      if(feature.properties.Trecho){
+        popupText += '<br><strong>Trecho:</strong> ' + feature.properties.Trecho;
+      }
+      if(feature.properties.Extensao){
+        popupText += '<br><strong>Extensão:</strong> ' + feature.properties.Extensao + 'km';
+      }
+      if(feature.properties.Estacoes){
+        popupText += '<br><strong>Estações:</strong> ' + feature.properties.Estacoes;
+      }
       if(feature.properties.Status){
         popupText += '<br><strong>Status:</strong> ' + lineStatusText(feature.properties.Status);
       }
