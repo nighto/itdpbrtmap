@@ -1,4 +1,4 @@
-// TransOlímpica Segurança Viária Crítico
+// TransOlímpica - Segurança Viária - Alto
 TO_SV_HI = [
   {
     "type": "Feature",
@@ -10,7 +10,7 @@ TO_SV_HI = [
       "Level": "high",
       "Place": "Terminal Salvador Allende",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Filename": "images/photos/TBR e TOL/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -29,7 +29,7 @@ TO_SV_HI = [
       "Level": "high",
       "Place": "Terminal Deodoro",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Filename": "images/photos/TBR e TOL/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -40,7 +40,7 @@ TO_SV_HI = [
   }
 ];
 
-// TransOlímpica Segurança Viária Atenção
+// TransOlímpica - Segurança Viária - Médio
 TO_SV_MD = [
   {
     "type": "Feature",
@@ -52,7 +52,7 @@ TO_SV_MD = [
       "Level": "mid",
       "Place": "Estação Bandeirantes",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/2. SV - Pedestres prioridade.jpg",
+        "Filename": "images/photos/TBR e TOL/2.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -63,7 +63,30 @@ TO_SV_MD = [
   }
 ];
 
-// TransOlímpica Integração Modal Crítico
+// TransOlímpica - Segurança Viária - Baixo
+TO_SV_LO = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Via expressa TransOlímpica",
+      "Description": "O corredor de BRT TransOlímpica foi planejado como parte de uma via expressa com o mesmo nome. A via expressa implica em um maior número de automóveis e o tráfego local, principalmente em suas rampas de acesso.",
+      "Recommendation": "Adoção de fiscalização eletrônica e de moderação de tráfego na saída e entrada da via expressa.",
+      "Corridor": "TransOlímpica",
+      "Level": "low",
+      "Place": "Rampas de acesso ao corredor / Linha - Parte Elevada do Corredor",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/3.jpg",
+        "Credits": "ITDP Brasil"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.39668, -22.91749, 0.0]
+    }
+  }
+];
+
+// TransOlímpica - Integração Modal - Alto
 TO_IM_HI = [
   {
     "type": "Feature",
@@ -75,7 +98,7 @@ TO_IM_HI = [
       "Level": "high",
       "Place": "Terminal Deodoro",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/6. OP - Terminal Deodoro integração Trens - imagem CidadeOlimpica.com.br.jpg",
+        "Filename": "images/photos/TBR e TOL/6.jpg",
         "Credits": "Cidade Olímpica",
         "CreditsURL": "http://www.cidadeolimpica.com.br"
       }
@@ -94,6 +117,10 @@ TO_IM_HI = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Centro de Controle Operacional (Terminal Alvorada)",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/17.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -102,7 +129,7 @@ TO_IM_HI = [
   }
 ];
 
-// TransOlímpica Integração Modal Atenção
+// TransOlímpica - Integração Modal - Médio
 TO_IM_MD = [
   {
     "type": "Feature",
@@ -113,6 +140,10 @@ TO_IM_MD = [
       "Corridor": "TransOlímpica",
       "Level": "mid",
       "Place": "Terminal Salvador Allende",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/14.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -128,6 +159,10 @@ TO_IM_MD = [
       "Corridor": "TransOlímpica",
       "Level": "mid",
       "Place": "Terminal Sulacap",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -136,7 +171,7 @@ TO_IM_MD = [
   }
 ];
 
-// TransOlímpica Integração Modal Sugestão
+// TransOlímpica - Integração Modal - Baixo
 TO_IM_LO = [
   {
     "type": "Feature",
@@ -147,6 +182,10 @@ TO_IM_LO = [
       "Corridor": "TransOlímpica",
       "Level": "low",
       "Place": "Ligação entre TransOlímpica e TransCarioca",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/15.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -155,7 +194,7 @@ TO_IM_LO = [
   }
 ];
 
-// TransOlímpica Bicicleta e Pedestre Crítico
+// TransOlímpica - Bicicleta e Pedestre - Alto
 TO_BP_HI = [
   {
     "type": "Feature",
@@ -204,7 +243,7 @@ TO_BP_HI = [
   }
 ];
 
-// TransOlímpica Bicicleta e Pedestre Sugestão
+// TransOlímpica - Bicicleta e Pedestre - Baixo
 TO_BP_LO = [
   {
     "type": "Feature",
@@ -215,6 +254,10 @@ TO_BP_LO = [
       "Corridor": "TransOlímpica",
       "Level": "low",
       "Place": "Guerenguê",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/21.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -230,6 +273,10 @@ TO_BP_LO = [
       "Corridor": "TransOlímpica",
       "Level": "low",
       "Place": "Boiúna",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/21.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -245,6 +292,10 @@ TO_BP_LO = [
       "Corridor": "TransOlímpica",
       "Level": "low",
       "Place": "Magalhães Bastos",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/21.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -260,6 +311,10 @@ TO_BP_LO = [
       "Corridor": "TransOlímpica",
       "Level": "low",
       "Place": "Terminal Deodoro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/22.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -268,7 +323,7 @@ TO_BP_LO = [
   }
 ];
 
-// TransOlímpica TOD Crítico
+// TransOlímpica - TOD - Alto
 TO_TD_HI = [
   {
     "type": "Feature",
@@ -279,6 +334,10 @@ TO_TD_HI = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Magalhães Bastos",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/28.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -294,6 +353,10 @@ TO_TD_HI = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Deodoro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/28.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -309,6 +372,10 @@ TO_TD_HI = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Estação Boiúna",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/29.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -324,6 +391,10 @@ TO_TD_HI = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Estação Colônia Juliano Moreira",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/29.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -339,6 +410,10 @@ TO_TD_HI = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Estação Guerenguê",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/29.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -347,7 +422,7 @@ TO_TD_HI = [
   }
 ];
 
-// TransOlímpica TOD Atenção
+// TransOlímpica - TOD - Médio
 TO_TD_MD = [
   {
     "type": "Feature",
@@ -358,15 +433,78 @@ TO_TD_MD = [
       "Corridor": "TransOlímpica",
       "Level": "mid",
       "Place": "Área de Proteção Ambiental da Pedra Branca",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/24.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
       "coordinates": [-43.4729, -22.9319, 0.0]
     }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Áreas livres sem uso definido",
+      "Description": "O BRT&nbsp;TransOlímpica passa próximo a grandes áreas livres, sem uso definido.",
+      "Recommendation": "As áreas livres devem ser mapeadas, planejadas e reguladas sob uma nova legislação urbanística, que seja sólida e articulada com as comunidades diretamente impactadas, e que incorpore os princípios do Desenvolvimento Orientado ao Transporte (TOD).",
+      "Corridor": "TransOlímpica",
+      "Level": "mid",
+      "Place": "Áreas Livres em Bairros Consolidados",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/25.jpg",
+        "Credits": "Google Street View",
+        "CreditsURL": "https://www.google.com/maps/views/u/0/streetview?gl=us"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.38692, -22.9419, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Áreas livres sem uso definido",
+      "Description": "O BRT&nbsp;TransOlímpica passa próximo a grandes áreas livres, sem uso definido.",
+      "Recommendation": "As áreas livres devem ser mapeadas, planejadas e reguladas sob uma nova legislação urbanística, que seja sólida e articulada com as comunidades diretamente impactadas, e que incorpore os princípios do Desenvolvimento Orientado ao Transporte (TOD).",
+      "Corridor": "TransOlímpica",
+      "Level": "mid",
+      "Place": "Áreas Livres em Bairros Consolidados",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/25.jpg",
+        "Credits": "Google Street View",
+        "CreditsURL": "https://www.google.com/maps/views/u/0/streetview?gl=us"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.39125, -22.9637, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Linhas alimentadoras próximas a Conjuntos Habitacionais",
+      "Description": "Alguns conjuntos habitacionais, importantes pólos geradores de viagens com grande número de moradores que usam transporte público, não contam com linhas alimentadoras, dificultando o acesso ao sistema de BRT.",
+      "Recommendation": "Mapear lacunas de atendimento das linhas alimentadoras aos conjuntos habitacionais próximos. As linhas alimentadoras devem incorporar uma lógica de integração territorial e não se limitar ao seccionamento de linhas paralelas.",
+      "Corridor": "TransOlímpica",
+      "Level": "mid",
+      "Place": "Minha Casa Minha Vida Juliano Moreira",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/32.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.39119, -22.93566, 0.0]
+    }
   }
 ];
 
-// TransOlímpica TOD Sugestão
+// TransOlímpica - TOD - Baixo
 TO_TD_LO = [
   {
     "type": "Feature",
@@ -377,6 +515,10 @@ TO_TD_LO = [
       "Corridor": "TransOlímpica",
       "Level": "low",
       "Place": "RioCentro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/26.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -392,6 +534,11 @@ TO_TD_LO = [
       "Corridor": "TransOlímpica",
       "Level": "low",
       "Place": "Vila União de Curicica",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/30.jpg",
+        "Credits": "mobiRio",
+        "CreditsURL": "http://mobirio.poli.ufrj.br/"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -400,7 +547,7 @@ TO_TD_LO = [
   }
 ];
 
-// TransBrasil Segurança Viária Crítico
+// TransBrasil - Segurança Viária - Alto
 TB_SV_HI = [
   {
     "type": "Feature",
@@ -412,7 +559,7 @@ TB_SV_HI = [
       "Level": "high",
       "Place": "Terminal Deodoro",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Filename": "images/photos/TBR e TOL/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -431,7 +578,7 @@ TB_SV_HI = [
       "Level": "high",
       "Place": "Terminal Margaridas",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Filename": "images/photos/TBR e TOL/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -450,7 +597,7 @@ TB_SV_HI = [
       "Level": "high",
       "Place": "Terminal Missões",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Filename": "images/photos/TBR e TOL/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -469,18 +616,18 @@ TB_SV_HI = [
       "Level": "high",
       "Place": "Terminal Procópio Ferreira",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/5. SV - Central Intenso Fluxo de Pedestres.jpg",
+        "Filename": "images/photos/TBR e TOL/5.jpg",
         "Credits": "ITDP Brasil"
       }
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [-43.190349807307115, -22.904942777317853, 0.0]
+      "coordinates": [-43.19083, -22.90507, 0.0]
     }
   }
 ];
 
-// TransBrasil Segurança Viária Atenção
+// TransBrasil - Segurança Viária - Médio
 TB_SV_MD = [
   {
     "type": "Feature",
@@ -492,7 +639,7 @@ TB_SV_MD = [
       "Level": "mid",
       "Place": "Estação Brás de Pina",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/2. SV - Pedestres prioridade.jpg",
+        "Filename": "images/photos/TBR e TOL/2.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -511,7 +658,7 @@ TB_SV_MD = [
       "Level": "mid",
       "Place": "Estação Manguinhos",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/4. SV - Travessia de Pedestre.jpg",
+        "Filename": "images/photos/TBR e TOL/4.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -522,7 +669,7 @@ TB_SV_MD = [
   }
 ];
 
-// TransBrasil Integração Modal Crítico
+// TransBrasil - Integração Modal - Alto
 TB_IM_HI = [
   {
     "type": "Feature",
@@ -534,7 +681,7 @@ TB_IM_HI = [
       "Level": "high",
       "Place": "Terminal Deodoro",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/6. OP - Terminal Deodoro integração Trens - imagem CidadeOlimpica.com.br.jpg",
+        "Filename": "images/photos/TBR e TOL/6.jpg",
         "Credits": "Cidade Olímpica",
         "CreditsURL": "http://www.cidadeolimpica.com.br"
       }
@@ -554,7 +701,7 @@ TB_IM_HI = [
       "Level": "high",
       "Place": "Terminal Procópio Ferreira",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/7. SV - Integração Modal Central do Brasil.JPG",
+        "Filename": "images/photos/TBR e TOL/7.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -572,10 +719,14 @@ TB_IM_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Margaridas",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/8.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [-43.323199822999982, -22.820153657999981, 0.0]
+      "coordinates": [-43.35611, -22.79884, 0.0]
     }
   },
   {
@@ -587,10 +738,14 @@ TB_IM_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Missões",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/8.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [-43.290288016999966, -22.813862068999981, 0.0]
+      "coordinates": [-43.28556, -22.78266, 0.0]
     }
   },
   {
@@ -602,6 +757,10 @@ TB_IM_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Margaridas",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/9.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -617,6 +776,10 @@ TB_IM_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Missões",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/9.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -662,6 +825,10 @@ TB_IM_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "MetrôRio Estação Coelho Neto",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/12.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -677,6 +844,10 @@ TB_IM_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Centro de Controle Operacional (Terminal Alvorada)",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/17.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -685,7 +856,7 @@ TB_IM_HI = [
   }
 ];
 
-// TransBrasil Integração Modal Atenção
+// TransBrasil - Integração Modal - Médio
 TB_IM_MD = [
   {
     "type": "Feature",
@@ -696,6 +867,10 @@ TB_IM_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "CCR Barcas Estação Praça XV",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/13.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -711,6 +886,10 @@ TB_IM_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Estação Guadalupe",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -726,6 +905,10 @@ TB_IM_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Estação Barros Filho",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -741,6 +924,10 @@ TB_IM_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Estação Coelho Neto",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -756,6 +943,10 @@ TB_IM_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Estação Fiocruz",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -771,6 +962,10 @@ TB_IM_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Terminal Gasômetro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -779,7 +974,7 @@ TB_IM_MD = [
   }
 ];
 
-// TransBrasil Integração Modal Sugestão
+// TransBrasil - Integração Modal - Baixo
 TB_IM_LO = [
   {
     "type": "Feature",
@@ -790,6 +985,10 @@ TB_IM_LO = [
       "Corridor": "TransBrasil",
       "Level": "low",
       "Place": "Aeroporto Santos Dumont",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/10.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -805,6 +1004,10 @@ TB_IM_LO = [
       "Corridor": "TransOlímpica",
       "Level": "low",
       "Place": "Ligação Viaduto entre TransBrasil e TransCarioca",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/15.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -813,7 +1016,7 @@ TB_IM_LO = [
   }
 ];
 
-// TransBrasil Bicicleta e Pedestre Crítico
+// TransBrasil - Bicicleta e Pedestre - Alto
 TB_BP_HI = [
   {
     "type": "Feature",
@@ -824,6 +1027,10 @@ TB_BP_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Estação Fiocruz",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/23.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -839,6 +1046,10 @@ TB_BP_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Estação Joana Nascimento",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/23.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -847,7 +1058,7 @@ TB_BP_HI = [
   }
 ];
 
-// TransBrasil Bicicleta e Pedestre Atenção
+// TransBrasil - Bicicleta e Pedestre - Médio
 TB_BP_MD = [
   {
     "type": "Feature",
@@ -903,6 +1114,10 @@ TB_BP_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Maré",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/20.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -918,6 +1133,10 @@ TB_BP_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Vila do João",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/20.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -933,6 +1152,10 @@ TB_BP_MD = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Olaria",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/20.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -941,7 +1164,7 @@ TB_BP_MD = [
   }
 ];
 
-// TransBrasil Bicicleta e Pedestre Sugestão
+// TransBrasil - Bicicleta e Pedestre - Baixo
 TB_BP_LO = [
   {
     "type": "Feature",
@@ -952,6 +1175,10 @@ TB_BP_LO = [
       "Corridor": "TransBrasil",
       "Level": "low",
       "Place": "Terminal Deodoro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/22.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -960,7 +1187,7 @@ TB_BP_LO = [
   }
 ];
 
-// TransBrasil TOD Crítico
+// TransBrasil - TOD - Alto
 TB_TD_HI = [
   {
     "type": "Feature",
@@ -971,15 +1198,62 @@ TB_TD_HI = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Deodoro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/28.jpg",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
       "coordinates": [-43.384863122999946, -22.855722815999965, 0.0]
     }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Oportunidades de desenvolvimento social",
+      "Description": "Ao longo do BRT TransBrasil, há uma série de galpões abandonados ou subutilizados entre os bairros da Penha e Caju, que já foram inclusive alvo de ocupação, podendo ser aproveitados em projetos de desenvolvimento urbano.",
+      "Recommendation": "Os galpões podem ser aproveitados, por exemplo, para a criação de Habitação de Interesse Social.",
+      "Corridor": "TransBrasil",
+      "Level": "high",
+      "Place": "Galpão Penha",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/31.jpg",
+        "Credits": "Jornal O Dia",
+        "CreditsURL": "http://odia.ig.com.br/"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.2474, -22.8462, 0.0]
+    }
   }
 ];
 
-// TransBrasil TOD Sugestão
+// TransBrasil - TOD - Médio
+TB_TD_MD = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Linhas alimentadoras em bairros adjacentes",
+      "Description": "As linhas alimentadoras devem atender os bairros adjacentes, integrando melhor a área de influência do BRT, aumentando sua capilaridade e evitando distorções, como por exemplo, áreas distantes dispondo de linhas alimentadoras e áreas mais próximas que não são atendidas.",
+      "Recommendation": "Mapear lacunas de atendimento das linhas alimentadoras nas áreas adjacentes ao corredor. As linhas alimentadoras devem incorporar uma lógica de integração territorial e não se limitar ao seccionamento de linhas paralelas.",
+      "Corridor": "TransBrasil",
+      "Level": "mid",
+      "Place": "Acari / Parque Colúmbia",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/33.jpg",
+        "Credits": "ITDP Brasil",
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.34549, -22.82089, 0.0]
+    }
+  }
+];
+
+// TransBrasil - TOD - Baixo
 TB_TD_LO = [
   {
     "type": "Feature",
@@ -990,6 +1264,11 @@ TB_TD_LO = [
       "Corridor": "TransBrasil",
       "Level": "low",
       "Place": "Estação São Francisco",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/27.jpg",
+        "Credits": "Google Earth",
+        "CreditsURL": "https://www.google.com/earth/"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -1005,6 +1284,11 @@ TB_TD_LO = [
       "Corridor": "TransBrasil",
       "Level": "low",
       "Place": "Estação Parque Vitória",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/27.jpg",
+        "Credits": "Google Earth",
+        "CreditsURL": "https://www.google.com/earth/"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -1020,6 +1304,11 @@ TB_TD_LO = [
       "Corridor": "TransBrasil",
       "Level": "low",
       "Place": "Piscinão de Ramos",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/34.jpg",
+        "Credits": "Urban Transport Photo Library",
+        "CreditsURL": "http://transportphoto.net/"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -1035,6 +1324,11 @@ TB_TD_LO = [
       "Corridor": "TransBrasil",
       "Level": "low",
       "Place": "Shopping Jardim Guadalupe",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/34.jpg",
+        "Credits": "Urban Transport Photo Library",
+        "CreditsURL": "http://transportphoto.net/"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -1050,6 +1344,11 @@ TB_TD_LO = [
       "Corridor": "TransBrasil",
       "Level": "low",
       "Place": "Shopping Via Brasil",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/34.jpg",
+        "Credits": "Urban Transport Photo Library",
+        "CreditsURL": "http://transportphoto.net/"
+      }
     },
     "geometry": {
       "type": "Point",
