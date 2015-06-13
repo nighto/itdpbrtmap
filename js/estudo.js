@@ -1,5 +1,5 @@
 // TransOlímpica Segurança Viária Crítico
-TO_SV_CR = [
+TO_SV_HI = [
   {
     "type": "Feature",
     "properties": {
@@ -9,6 +9,10 @@ TO_SV_CR = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Terminal Salvador Allende",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -24,6 +28,10 @@ TO_SV_CR = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Terminal Deodoro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -33,7 +41,7 @@ TO_SV_CR = [
 ];
 
 // TransOlímpica Segurança Viária Atenção
-TO_SV_AT = [
+TO_SV_MD = [
   {
     "type": "Feature",
     "properties": {
@@ -43,6 +51,10 @@ TO_SV_AT = [
       "Corridor": "TransOlímpica",
       "Level": "mid",
       "Place": "Estação Bandeirantes",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/2. SV - Pedestres prioridade.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -52,7 +64,7 @@ TO_SV_AT = [
 ];
 
 // TransOlímpica Integração Modal Crítico
-TO_IM_CR = [
+TO_IM_HI = [
   {
     "type": "Feature",
     "properties": {
@@ -62,6 +74,11 @@ TO_IM_CR = [
       "Corridor": "TransOlímpica",
       "Level": "high",
       "Place": "Terminal Deodoro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/6. OP - Terminal Deodoro integração Trens - imagem CidadeOlimpica.com.br.jpg",
+        "Credits": "Cidade Olímpica",
+        "CreditsURL": "http://www.cidadeolimpica.com.br"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -86,13 +103,13 @@ TO_IM_CR = [
 ];
 
 // TransOlímpica Integração Modal Atenção
-TO_IM_AT = [
+TO_IM_MD = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Falta de detalhamento da integração física entre BRT TransOeste e BRT TransOlímpica",
+      "Name": "Falta de detalhamento da integração física entre BRT&nbsp;TransOeste e BRT&nbsp;TransOlímpica",
       "Description": "Estão previstas uma estação e um terminal no mesmo local (Salvador Allende), uma para cada sistema de BRT (TransOeste e TransOlímpica). Contudo, falta detalhamento de projeto para entender se de fato haverá integração física entre eles.",
-      "Recommendation": "Analisar a viabilidade de adequação do BRT TransOlímpica para melhor integração com o BRT TransOeste.",
+      "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransOlímpica para melhor integração com o BRT&nbsp;TransOeste.",
       "Corridor": "TransOlímpica",
       "Level": "mid",
       "Place": "Terminal Salvador Allende",
@@ -106,7 +123,7 @@ TO_IM_AT = [
     "type": "Feature",
     "properties": {
       "Name": "Integração com linhas alimentadoras",
-      "Description": "Está prevista integração entre o BRT TransBrasil e BRT TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
+      "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransOlímpica",
       "Level": "mid",
@@ -120,12 +137,12 @@ TO_IM_AT = [
 ];
 
 // TransOlímpica Integração Modal Sugestão
-TO_IM_SU = [
+TO_IM_LO = [
   {
     "type": "Feature",
     "properties": {
       "Name": "Falta de integração entre corredores de BRT",
-      "Description": "Está prevista integração física por meio de terminais e viadutos nos dois BRTs. Porém, nestes pontos, os veículos podem adotar apenas uma direção, levando os passageiros a percorrer distâncias desnecessárias caso optem por seguir em outra direção. Provavelmente haverá um incremento na demanda dos corredores já operantes, como observado no BRT TransOeste após o início do TransCarioca.",
+      "Description": "Está prevista integração física por meio de terminais e viadutos nos dois BRTs. Porém, nestes pontos, os veículos podem adotar apenas uma direção, levando os passageiros a percorrer distâncias desnecessárias caso optem por seguir em outra direção. Provavelmente haverá um incremento na demanda dos corredores já operantes, como observado no BRT&nbsp;TransOeste após o início do TransCarioca.",
       "Recommendation": "Analisar a viabilidade de adequação para melhor integração entre corredores.",
       "Corridor": "TransOlímpica",
       "Level": "low",
@@ -139,11 +156,11 @@ TO_IM_SU = [
 ];
 
 // TransOlímpica Bicicleta e Pedestre Crítico
-TO_BP_CR = [
+TO_BP_HI = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por caminhada no BRT TransOlímpica",
+      "Name": "Acessibilidade por caminhada no BRT&nbsp;TransOlímpica",
       "Description": "A via expressa TransOlímpica conta com 31 pontes e 25 viadutos, que criam não-lugares desestimulantes e perigosos à caminhada e diminuem a atratividade do transporte público.",
       "Recommendation": "A via não deveria ser uma pista expressa de carros, mas unicamente um corredor de BRT. Os projetos de melhoria dos entornos das estações devem ser elaborados com participação da população local e garantir a integração do sistema de BRT ao interior dos bairros por meio dos deslocamentos à pé.",
       "Corridor": "TransOlímpica",
@@ -158,7 +175,7 @@ TO_BP_CR = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por caminhada no BRT TransOlímpica",
+      "Name": "Acessibilidade por caminhada no BRT&nbsp;TransOlímpica",
       "Description": "A via expressa TransOlímpica conta com 31 pontes e 25 viadutos, que criam não-lugares desestimulantes e perigosos à caminhada e diminuem a atratividade do transporte público.",
       "Recommendation": "A via não deveria ser uma pista expressa de carros, mas unicamente um corredor de BRT. Os projetos de melhoria dos entornos das estações devem ser elaborados com participação da população local e garantir a integração do sistema de BRT ao interior dos bairros por meio dos deslocamentos à pé.",
       "Corridor": "TransOlímpica",
@@ -173,7 +190,7 @@ TO_BP_CR = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por caminhada no BRT TransOlímpica",
+      "Name": "Acessibilidade por caminhada no BRT&nbsp;TransOlímpica",
       "Description": "A via expressa TransOlímpica conta com 31 pontes e 25 viadutos, que criam não-lugares desestimulantes e perigosos à caminhada e diminuem a atratividade do transporte público.",
       "Recommendation": "A via não deveria ser uma pista expressa de carros, mas unicamente um corredor de BRT. Os projetos de melhoria dos entornos das estações devem ser elaborados com participação da população local e garantir a integração do sistema de BRT ao interior dos bairros por meio dos deslocamentos à pé.",
       "Corridor": "TransOlímpica",
@@ -188,12 +205,12 @@ TO_BP_CR = [
 ];
 
 // TransOlímpica Bicicleta e Pedestre Sugestão
-TO_BP_SU = [
+TO_BP_LO = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por bicicletas no BRT TransOlímpica",
-      "Description": "No BRT TransOlímpica há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
+      "Name": "Acessibilidade por bicicletas no BRT&nbsp;TransOlímpica",
+      "Description": "No BRT&nbsp;TransOlímpica há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
       "Recommendation": "Implementação de bicicletários seguros e malha cicloviária que ofereça ligações transversais aos bairros adjacentes. A infraestrutura cicloviária planejada deve considerar a conexão ao sistema de BRT, com o sistema de bicicletas compartilhadas sendo expandido para áreas atendidas pelo corredor.",
       "Corridor": "TransOlímpica",
       "Level": "low",
@@ -207,8 +224,8 @@ TO_BP_SU = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por bicicletas no BRT TransOlímpica",
-      "Description": "No BRT TransOlímpica há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
+      "Name": "Acessibilidade por bicicletas no BRT&nbsp;TransOlímpica",
+      "Description": "No BRT&nbsp;TransOlímpica há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
       "Recommendation": "Implementação de bicicletários seguros e malha cicloviária que ofereça ligações transversais aos bairros adjacentes. A infraestrutura cicloviária planejada deve considerar a conexão ao sistema de BRT, com o sistema de bicicletas compartilhadas sendo expandido para áreas atendidas pelo corredor.",
       "Corridor": "TransOlímpica",
       "Level": "low",
@@ -222,8 +239,8 @@ TO_BP_SU = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por bicicletas no BRT TransOlímpica",
-      "Description": "No BRT TransOlímpica há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
+      "Name": "Acessibilidade por bicicletas no BRT&nbsp;TransOlímpica",
+      "Description": "No BRT&nbsp;TransOlímpica há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
       "Recommendation": "Implementação de bicicletários seguros e malha cicloviária que ofereça ligações transversais aos bairros adjacentes. A infraestrutura cicloviária planejada deve considerar a conexão ao sistema de BRT, com o sistema de bicicletas compartilhadas sendo expandido para áreas atendidas pelo corredor.",
       "Corridor": "TransOlímpica",
       "Level": "low",
@@ -252,12 +269,12 @@ TO_BP_SU = [
 ];
 
 // TransOlímpica TOD Crítico
-TO_TD_CR = [
+TO_TD_HI = [
   {
     "type": "Feature",
     "properties": {
       "Name": "Pendularidade do corredor",
-      "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
+      "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
       "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransOlímpica",
       "Level": "high",
@@ -272,7 +289,7 @@ TO_TD_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Pendularidade do corredor",
-      "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
+      "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
       "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransOlímpica",
       "Level": "high",
@@ -287,7 +304,7 @@ TO_TD_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Melhorias no planejamento urbano",
-      "Description": "As áreas no entorno do BRT TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
+      "Description": "As áreas no entorno do BRT&nbsp;TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
       "Recommendation": "O uso misto deve ser priorizado nos novos empreendimentos com, por exemplo, comércio de rua no andar térreo e salas de escritório e consultório no 1º andar, gerando fachadas mais ativas e mais deslocamentos à pé. Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
       "Corridor": "TransOlímpica",
       "Level": "high",
@@ -302,7 +319,7 @@ TO_TD_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Melhorias no planejamento urbano",
-      "Description": "As áreas no entorno do BRT TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
+      "Description": "As áreas no entorno do BRT&nbsp;TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
       "Recommendation": "O uso misto deve ser priorizado nos novos empreendimentos com, por exemplo, comércio de rua no andar térreo e salas de escritório e consultório no 1º andar, gerando fachadas mais ativas e mais deslocamentos à pé. Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
       "Corridor": "TransOlímpica",
       "Level": "high",
@@ -317,7 +334,7 @@ TO_TD_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Melhorias no planejamento urbano",
-      "Description": "As áreas no entorno do BRT TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
+      "Description": "As áreas no entorno do BRT&nbsp;TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
       "Recommendation": "O uso misto deve ser priorizado nos novos empreendimentos com, por exemplo, comércio de rua no andar térreo e salas de escritório e consultório no 1º andar, gerando fachadas mais ativas e mais deslocamentos à pé. Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
       "Corridor": "TransOlímpica",
       "Level": "high",
@@ -331,12 +348,12 @@ TO_TD_CR = [
 ];
 
 // TransOlímpica TOD Atenção
-TO_TD_AT = [
+TO_TD_MD = [
   {
     "type": "Feature",
     "properties": {
       "Name": "Ocupação ao longo do maciço da Pedra Branca",
-      "Description": "O acesso promovido pela BRT TransOlímpica pode estimular a ocupação de áreas de proteção ambiental, ao longo do Parque Estadual da Pedra Branca.",
+      "Description": "O acesso promovido pela BRT&nbsp;TransOlímpica pode estimular a ocupação de áreas de proteção ambiental, ao longo do Parque Estadual da Pedra Branca.",
       "Recommendation": "A ocupação deve ser regulada e fiscalizada nos bairros já existentes localizados às margens do maciço.",
       "Corridor": "TransOlímpica",
       "Level": "mid",
@@ -350,7 +367,7 @@ TO_TD_AT = [
 ];
 
 // TransOlímpica TOD Sugestão
-TO_TD_SU = [
+TO_TD_LO = [
   {
     "type": "Feature",
     "properties": {
@@ -384,7 +401,7 @@ TO_TD_SU = [
 ];
 
 // TransBrasil Segurança Viária Crítico
-TB_SV_CR = [
+TB_SV_HI = [
   {
     "type": "Feature",
     "properties": {
@@ -394,6 +411,10 @@ TB_SV_CR = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Deodoro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -409,6 +430,10 @@ TB_SV_CR = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Margaridas",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -424,6 +449,10 @@ TB_SV_CR = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Missões",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/1. SV - Fluxo de Pedestres.JPG",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -434,11 +463,15 @@ TB_SV_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Fluxo de pedestres no Centro",
-      "Description": "A estação terminal do BRT TransBrasil está planejada para a região da Central do Brasil, local de intenso fluxo de pedestres e o maior índice de atropelamentos da cidade.",
+      "Description": "A estação terminal do BRT&nbsp;TransBrasil está planejada para a região da Central do Brasil, local de intenso fluxo de pedestres e o maior índice de atropelamentos da cidade.",
       "Recommendation": "Estudo detalhado das travessias de pedestres na Av. Pres. Vargas e das soluções possíveis para a área central da cidade.",
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Procópio Ferreira",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/5. SV - Central Intenso Fluxo de Pedestres.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -448,7 +481,7 @@ TB_SV_CR = [
 ];
 
 // TransBrasil Segurança Viária Atenção
-TB_SV_AT = [
+TB_SV_MD = [
   {
     "type": "Feature",
     "properties": {
@@ -458,6 +491,10 @@ TB_SV_AT = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Estação Brás de Pina",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/2. SV - Pedestres prioridade.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -473,6 +510,10 @@ TB_SV_AT = [
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "Estação Manguinhos",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/4. SV - Travessia de Pedestre.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -482,7 +523,7 @@ TB_SV_AT = [
 ];
 
 // TransBrasil Integração Modal Crítico
-TB_IM_CR = [
+TB_IM_HI = [
   {
     "type": "Feature",
     "properties": {
@@ -492,6 +533,11 @@ TB_IM_CR = [
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Deodoro",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/6. OP - Terminal Deodoro integração Trens - imagem CidadeOlimpica.com.br.jpg",
+        "Credits": "Cidade Olímpica",
+        "CreditsURL": "http://www.cidadeolimpica.com.br"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -501,12 +547,16 @@ TB_IM_CR = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Integração entre BRT TransBrasil e outros sistemas de transporte",
-      "Description": "Integração efetiva entre o BRT TransBrasil com metrô, trens, VLT, teleférico e sistema de bicicletas compartilhadas no Terminal Central do Brasil, um dos maiores terminais intermodais de passageiros do mundo e fundamental para a mobilidade urbana da cidade do Rio de Janeiro.",
+      "Name": "Integração entre BRT&nbsp;TransBrasil e outros sistemas de transporte",
+      "Description": "Integração efetiva entre o BRT&nbsp;TransBrasil com metrô, trens, VLT, teleférico e sistema de bicicletas compartilhadas no Terminal Central do Brasil, um dos maiores terminais intermodais de passageiros do mundo e fundamental para a mobilidade urbana da cidade do Rio de Janeiro.",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação; integração física com proteção contra intempéries e acessibilidade universal.",
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "Terminal Procópio Ferreira",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/7. SV - Integração Modal Central do Brasil.JPG",
+        "Credits": "ITDP Brasil",
+      }
     },
     "geometry": {
       "type": "Point",
@@ -517,7 +567,7 @@ TB_IM_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Conexões para outros municípios da Região Metropolitana",
-      "Description": "Integração efetiva entre o BRT TransBrasil com as linhas de ônibus intermunicipais que atendem a Região Metropolitana, em especial a Baixada Fluminense, nos Terminais das Missões e das Margaridas.",
+      "Description": "Integração efetiva entre o BRT&nbsp;TransBrasil com as linhas de ônibus intermunicipais que atendem a Região Metropolitana, em especial a Baixada Fluminense, nos Terminais das Missões e das Margaridas.",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação em tempo real; integração física com proteção contra intempéries e acessibilidade universal; implantação de sistema de monitoramento da qualidade.",
       "Corridor": "TransBrasil",
       "Level": "high",
@@ -532,7 +582,7 @@ TB_IM_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Conexões para outros municípios da Região Metropolitana",
-      "Description": "Integração efetiva entre o BRT TransBrasil com as linhas de ônibus intermunicipais que atendem a Região Metropolitana, em especial a Baixada Fluminense, nos Terminais das Missões e das Margaridas.",
+      "Description": "Integração efetiva entre o BRT&nbsp;TransBrasil com as linhas de ônibus intermunicipais que atendem a Região Metropolitana, em especial a Baixada Fluminense, nos Terminais das Missões e das Margaridas.",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação em tempo real; integração física com proteção contra intempéries e acessibilidade universal; implantação de sistema de monitoramento da qualidade.",
       "Corridor": "TransBrasil",
       "Level": "high",
@@ -547,7 +597,7 @@ TB_IM_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Desafio da operação",
-      "Description": "No BRT TransBrasil, um dos maiores corredores de BRT do mundo, a gestão da frota para atender a grande quantidade de passageiros é um desafio operacional.",
+      "Description": "No BRT&nbsp;TransBrasil, um dos maiores corredores de BRT do mundo, a gestão da frota para atender a grande quantidade de passageiros é um desafio operacional.",
       "Recommendation": "O plano operacional dos Terminais deve ser feito com base em diretrizes internacionais, como o Guia de Planejamento de BRT. Deve haver baias bem sinalizadas para os diferentes serviços e áreas para a gestão da frota no horário de pico. Pode-se estudar a automatização de despachos e o controle de distância entre os ônibus em tempo real.",
       "Corridor": "TransBrasil",
       "Level": "high",
@@ -562,7 +612,7 @@ TB_IM_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Desafio da operação",
-      "Description": "No BRT TransBrasil, um dos maiores corredores de BRT do mundo, a gestão da frota para atender a grande quantidade de passageiros é um desafio operacional.",
+      "Description": "No BRT&nbsp;TransBrasil, um dos maiores corredores de BRT do mundo, a gestão da frota para atender a grande quantidade de passageiros é um desafio operacional.",
       "Recommendation": "O plano operacional dos Terminais deve ser feito com base em diretrizes internacionais, como o Guia de Planejamento de BRT. Deve haver baias bem sinalizadas para os diferentes serviços e áreas para a gestão da frota no horário de pico. Pode-se estudar a automatização de despachos e o controle de distância entre os ônibus em tempo real.",
       "Corridor": "TransBrasil",
       "Level": "high",
@@ -576,9 +626,9 @@ TB_IM_CR = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Falta de integração entre BRT TransBrasil e trens",
-      "Description": "O BRT TransBrasil tem potencial para formar uma grande conexão transversal entre diversos ramais de trem e metrô. Porém, não está prevista integração física entre o BRT TransBrasil e as estações de trem de Parada de Lucas e Barros Filho, que se encontram a apenas 300m e 500m do corredor, respectivamente.",
-      "Recommendation": "Analisar a viabilidade de adequação do BRT TransBrasil para integração com o trem.",
+      "Name": "Falta de integração entre BRT&nbsp;TransBrasil e trens",
+      "Description": "O BRT&nbsp;TransBrasil tem potencial para formar uma grande conexão transversal entre diversos ramais de trem e metrô. Porém, não está prevista integração física entre o BRT&nbsp;TransBrasil e as estações de trem de Parada de Lucas e Barros Filho, que se encontram a apenas 300m e 500m do corredor, respectivamente.",
+      "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransBrasil para integração com o trem.",
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "SuperVia Estação Parada de Lucas",
@@ -591,9 +641,9 @@ TB_IM_CR = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Falta de integração entre BRT TransBrasil e trens",
-      "Description": "O BRT TransBrasil tem potencial para formar uma grande conexão transversal entre diversos ramais de trem e metrô. Porém, não está prevista integração física entre o BRT TransBrasil e as estações de trem de Parada de Lucas e Barros Filho, que se encontram a apenas 300m e 500m do corredor, respectivamente.",
-      "Recommendation": "Analisar a viabilidade de adequação do BRT TransBrasil para integração com o trem.",
+      "Name": "Falta de integração entre BRT&nbsp;TransBrasil e trens",
+      "Description": "O BRT&nbsp;TransBrasil tem potencial para formar uma grande conexão transversal entre diversos ramais de trem e metrô. Porém, não está prevista integração física entre o BRT&nbsp;TransBrasil e as estações de trem de Parada de Lucas e Barros Filho, que se encontram a apenas 300m e 500m do corredor, respectivamente.",
+      "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransBrasil para integração com o trem.",
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "SuperVia Estação Barros Filho",
@@ -606,9 +656,9 @@ TB_IM_CR = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Falta de integração entre BRT TransBrasil e o metrô",
-      "Description": "Não está prevista integração física entre o BRT TransBrasil e a estação de metrô de Coelho Neto, que se encontra a 200m do corredor. Além disso, as passarelas do local tem capacidade inferior ao fluxo de pedestres atual e precisam ser revistas, sob pena de restringir o acesso de passageiros numa futura integração.",
-      "Recommendation": "Analisar a viabilidade de adequação do BRT TransBrasil para integração com o metrô.",
+      "Name": "Falta de integração entre BRT&nbsp;TransBrasil e o metrô",
+      "Description": "Não está prevista integração física entre o BRT&nbsp;TransBrasil e a estação de metrô de Coelho Neto, que se encontra a 200m do corredor. Além disso, as passarelas do local tem capacidade inferior ao fluxo de pedestres atual e precisam ser revistas, sob pena de restringir o acesso de passageiros numa futura integração.",
+      "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransBrasil para integração com o metrô.",
       "Corridor": "TransBrasil",
       "Level": "high",
       "Place": "MetrôRio Estação Coelho Neto",
@@ -636,13 +686,13 @@ TB_IM_CR = [
 ];
 
 // TransBrasil Integração Modal Atenção
-TB_IM_AT = [
+TB_IM_MD = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Falta de integração entre BRT TransBrasil e as barcas",
-      "Description": "Não está prevista integração física entre o BRT TransBrasil e a estação Praça XV das Barcas, o que ampliaria o acesso dos passageiros às áreas atendidas tanto pelo corredor quanto pelas linhas aquaviárias.",
-      "Recommendation": "Analisar a viabilidade de adequação do BRT TransBrasil para integração com as barcas.",
+      "Name": "Falta de integração entre BRT&nbsp;TransBrasil e as barcas",
+      "Description": "Não está prevista integração física entre o BRT&nbsp;TransBrasil e a estação Praça XV das Barcas, o que ampliaria o acesso dos passageiros às áreas atendidas tanto pelo corredor quanto pelas linhas aquaviárias.",
+      "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransBrasil para integração com as barcas.",
       "Corridor": "TransBrasil",
       "Level": "mid",
       "Place": "CCR Barcas Estação Praça XV",
@@ -656,7 +706,7 @@ TB_IM_AT = [
     "type": "Feature",
     "properties": {
       "Name": "Integração com linhas alimentadoras",
-      "Description": "Está prevista integração entre o BRT TransBrasil e BRT TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
+      "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -671,7 +721,7 @@ TB_IM_AT = [
     "type": "Feature",
     "properties": {
       "Name": "Integração com linhas alimentadoras",
-      "Description": "Está prevista integração entre o BRT TransBrasil e BRT TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
+      "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -686,7 +736,7 @@ TB_IM_AT = [
     "type": "Feature",
     "properties": {
       "Name": "Integração com linhas alimentadoras",
-      "Description": "Está prevista integração entre o BRT TransBrasil e BRT TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
+      "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -701,7 +751,7 @@ TB_IM_AT = [
     "type": "Feature",
     "properties": {
       "Name": "Integração com linhas alimentadoras",
-      "Description": "Está prevista integração entre o BRT TransBrasil e BRT TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
+      "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -716,7 +766,7 @@ TB_IM_AT = [
     "type": "Feature",
     "properties": {
       "Name": "Integração com linhas alimentadoras",
-      "Description": "Está prevista integração entre o BRT TransBrasil e BRT TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
+      "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -730,12 +780,12 @@ TB_IM_AT = [
 ];
 
 // TransBrasil Integração Modal Sugestão
-TB_IM_SU = [
+TB_IM_LO = [
   {
     "type": "Feature",
     "properties": {
       "Name": "Integração entre BRT e VLT para conectar os aeroportos",
-      "Description": "Integração efetiva entre o VLT e o BRT TransBrasil para criar uma conexão entre os aeroportos Santos Dumont e Antônio Carlos Jobim (Galeão).",
+      "Description": "Integração efetiva entre o VLT e o BRT&nbsp;TransBrasil para criar uma conexão entre os aeroportos Santos Dumont e Antônio Carlos Jobim (Galeão).",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação em tempo real; integração física com proteção contra intempéries e acessibilidade universal; implantação de sistema de monitoramento da qualidade.",
       "Corridor": "TransBrasil",
       "Level": "low",
@@ -750,7 +800,7 @@ TB_IM_SU = [
     "type": "Feature",
     "properties": {
       "Name": "Falta de integração entre corredores de BRT",
-      "Description": "Está prevista integração física por meio de terminais e viadutos nos dois BRTs. Porém, nestes pontos, os veículos podem adotar apenas uma direção, levando os passageiros a percorrer distâncias desnecessárias caso optem por seguir em outra direção. Provavelmente haverá um incremento na demanda dos corredores já operantes, como observado no BRT TransOeste após o início do TransCarioca.",
+      "Description": "Está prevista integração física por meio de terminais e viadutos nos dois BRTs. Porém, nestes pontos, os veículos podem adotar apenas uma direção, levando os passageiros a percorrer distâncias desnecessárias caso optem por seguir em outra direção. Provavelmente haverá um incremento na demanda dos corredores já operantes, como observado no BRT&nbsp;TransOeste após o início do TransCarioca.",
       "Recommendation": "Analisar a viabilidade de adequação para melhor integração entre corredores.",
       "Corridor": "TransOlímpica",
       "Level": "low",
@@ -764,12 +814,12 @@ TB_IM_SU = [
 ];
 
 // TransBrasil Bicicleta e Pedestre Crítico
-TB_BP_CR = [
+TB_BP_HI = [
   {
     "type": "Feature",
     "properties": {
       "Name": "Fluxo de pedestres nas estações de maior demanda",
-      "Description": "O ITDP Brasil realizou um estudo sobre passarelas nas área de Bonsucesso e Fiocruz do BRT TransBrasil, no qual foi constatado um subdimensionamento do acesso de pedestres às plataformas.",
+      "Description": "O ITDP Brasil Brasil realizou um estudo sobre passarelas nas área de Bonsucesso e Fiocruz do BRT&nbsp;TransBrasil, no qual foi constatado um subdimensionamento do acesso de pedestres às plataformas.",
       "Recommendation": "É necessário uma passarela em cada extremidade da estação, o que facilita o acesso a diferentes destinos nos bairros próximos e a opções de integração modal (linhas alimentadoras, bicicletas). As passarelas devem evitar retornos em 180º, ter escadas para fornecer rotas diretas e ser protegidas contra intempéries.",
       "Corridor": "TransBrasil",
       "Level": "high",
@@ -784,7 +834,7 @@ TB_BP_CR = [
     "type": "Feature",
     "properties": {
       "Name": "Fluxo de pedestres nas estações de maior demanda",
-      "Description": "O ITDP Brasil realizou um estudo sobre passarelas nas área de Bonsucesso e Fiocruz do BRT TransBrasil, no qual foi constatado um subdimensionamento do acesso de pedestres às plataformas.",
+      "Description": "O ITDP Brasil Brasil realizou um estudo sobre passarelas nas área de Bonsucesso e Fiocruz do BRT&nbsp;TransBrasil, no qual foi constatado um subdimensionamento do acesso de pedestres às plataformas.",
       "Recommendation": "É necessário uma passarela em cada extremidade da estação, o que facilita o acesso a diferentes destinos nos bairros próximos e a opções de integração modal (linhas alimentadoras, bicicletas). As passarelas devem evitar retornos em 180º, ter escadas para fornecer rotas diretas e ser protegidas contra intempéries.",
       "Corridor": "TransBrasil",
       "Level": "high",
@@ -798,12 +848,12 @@ TB_BP_CR = [
 ];
 
 // TransBrasil Bicicleta e Pedestre Atenção
-TB_BP_AT = [
+TB_BP_MD = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por caminhada no BRT TransBrasil",
-      "Description": "A segregação física entre o BRT TransBrasil e o meio urbano é grande e pode desestimular o acesso às estações, principalmente com a criação de 8 novos viadutos, embora esteja prevista a reurbanização ao longo do corredor (novas calçadas e iluminação pública).",
+      "Name": "Acessibilidade por caminhada no BRT&nbsp;TransBrasil",
+      "Description": "A segregação física entre o BRT&nbsp;TransBrasil e o meio urbano é grande e pode desestimular o acesso às estações, principalmente com a criação de 8 novos viadutos, embora esteja prevista a reurbanização ao longo do corredor (novas calçadas e iluminação pública).",
       "Recommendation": "Considerando sua extensão, é crítico que haja participação da população local e comprometimento com a qualidade do projeto. Desta forma pode-se aumentar a integração do sistema de BRT ao interior dos bairros por meio dos deslocamentos à pé.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -817,8 +867,8 @@ TB_BP_AT = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por caminhada no BRT TransBrasil",
-      "Description": "A segregação física entre o BRT TransBrasil e o meio urbano é grande e pode desestimular o acesso às estações, principalmente com a criação de 8 novos viadutos, embora esteja prevista a reurbanização ao longo do corredor (novas calçadas e iluminação pública).",
+      "Name": "Acessibilidade por caminhada no BRT&nbsp;TransBrasil",
+      "Description": "A segregação física entre o BRT&nbsp;TransBrasil e o meio urbano é grande e pode desestimular o acesso às estações, principalmente com a criação de 8 novos viadutos, embora esteja prevista a reurbanização ao longo do corredor (novas calçadas e iluminação pública).",
       "Recommendation": "Considerando sua extensão, é crítico que haja participação da população local e comprometimento com a qualidade do projeto. Desta forma pode-se aumentar a integração do sistema de BRT ao interior dos bairros por meio dos deslocamentos à pé.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -832,8 +882,8 @@ TB_BP_AT = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por caminhada no BRT TransBrasil",
-      "Description": "A segregação física entre o BRT TransBrasil e o meio urbano é grande e pode desestimular o acesso às estações, principalmente com a criação de 8 novos viadutos, embora esteja prevista a reurbanização ao longo do corredor (novas calçadas e iluminação pública).",
+      "Name": "Acessibilidade por caminhada no BRT&nbsp;TransBrasil",
+      "Description": "A segregação física entre o BRT&nbsp;TransBrasil e o meio urbano é grande e pode desestimular o acesso às estações, principalmente com a criação de 8 novos viadutos, embora esteja prevista a reurbanização ao longo do corredor (novas calçadas e iluminação pública).",
       "Recommendation": "Considerando sua extensão, é crítico que haja participação da população local e comprometimento com a qualidade do projeto. Desta forma pode-se aumentar a integração do sistema de BRT ao interior dos bairros por meio dos deslocamentos à pé.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -847,8 +897,8 @@ TB_BP_AT = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por bicicletas no BRT TransBrasil",
-      "Description": "No BRT TransBrasil há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
+      "Name": "Acessibilidade por bicicletas no BRT&nbsp;TransBrasil",
+      "Description": "No BRT&nbsp;TransBrasil há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
       "Recommendation": "Implementação de bicicletários seguros e malha cicloviária que ofereça ligações transversais aos bairros adjacentes. A infraestrutura cicloviária planejada deve considerar a conexão ao sistema de BRT, com o sistema de bicicletas compartilhadas sendo expandido para áreas atendidas pelo corredor.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -862,8 +912,8 @@ TB_BP_AT = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por bicicletas no BRT TransBrasil",
-      "Description": "No BRT TransBrasil há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
+      "Name": "Acessibilidade por bicicletas no BRT&nbsp;TransBrasil",
+      "Description": "No BRT&nbsp;TransBrasil há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
       "Recommendation": "Implementação de bicicletários seguros e malha cicloviária que ofereça ligações transversais aos bairros adjacentes. A infraestrutura cicloviária planejada deve considerar a conexão ao sistema de BRT, com o sistema de bicicletas compartilhadas sendo expandido para áreas atendidas pelo corredor.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -877,8 +927,8 @@ TB_BP_AT = [
   {
     "type": "Feature",
     "properties": {
-      "Name": "Acessibilidade por bicicletas no BRT TransBrasil",
-      "Description": "No BRT TransBrasil há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
+      "Name": "Acessibilidade por bicicletas no BRT&nbsp;TransBrasil",
+      "Description": "No BRT&nbsp;TransBrasil há um grande potencial para uso da bicicleta como elemento integrador, pela proximidade dos bairros e pelo grande número de bicicletas estacionadas no entorno das estações.",
       "Recommendation": "Implementação de bicicletários seguros e malha cicloviária que ofereça ligações transversais aos bairros adjacentes. A infraestrutura cicloviária planejada deve considerar a conexão ao sistema de BRT, com o sistema de bicicletas compartilhadas sendo expandido para áreas atendidas pelo corredor.",
       "Corridor": "TransBrasil",
       "Level": "mid",
@@ -892,7 +942,7 @@ TB_BP_AT = [
 ];
 
 // TransBrasil Bicicleta e Pedestre Sugestão
-TB_BP_SU = [
+TB_BP_LO = [
   {
     "type": "Feature",
     "properties": {
@@ -911,12 +961,12 @@ TB_BP_SU = [
 ];
 
 // TransBrasil TOD Crítico
-TB_TD_CR = [
+TB_TD_HI = [
   {
     "type": "Feature",
     "properties": {
       "Name": "Pendularidade do corredor",
-      "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
+      "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
       "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransBrasil",
       "Level": "high",
@@ -930,12 +980,12 @@ TB_TD_CR = [
 ];
 
 // TransBrasil TOD Sugestão
-TB_TD_SU = [
+TB_TD_LO = [
   {
     "type": "Feature",
     "properties": {
       "Name": "Conflito de usos na Av. Brasil",
-      "Description": "No BRT TransBrasil, caso haja adensamento nos bairros já consolidados próximos ao Centro, é possível haver conflitos entre novos usos residenciais e os históricos usos logísticos e industriais.",
+      "Description": "No BRT&nbsp;TransBrasil, caso haja adensamento nos bairros já consolidados próximos ao Centro, é possível haver conflitos entre novos usos residenciais e os históricos usos logísticos e industriais.",
       "Recommendation": "O adensamento populacional deve ser planejado para incorporar uma mistura de usos compatíveis nos entornos das estações.",
       "Corridor": "TransBrasil",
       "Level": "low",
@@ -950,7 +1000,7 @@ TB_TD_SU = [
     "type": "Feature",
     "properties": {
       "Name": "Conflito de usos na Av. Brasil",
-      "Description": "No BRT TransBrasil, caso haja adensamento nos bairros já consolidados próximos ao Centro, é possível haver conflitos entre novos usos residenciais e os históricos usos logísticos e industriais.",
+      "Description": "No BRT&nbsp;TransBrasil, caso haja adensamento nos bairros já consolidados próximos ao Centro, é possível haver conflitos entre novos usos residenciais e os históricos usos logísticos e industriais.",
       "Recommendation": "O adensamento populacional deve ser planejado para incorporar uma mistura de usos compatíveis nos entornos das estações.",
       "Corridor": "TransBrasil",
       "Level": "low",
@@ -965,7 +1015,7 @@ TB_TD_SU = [
     "type": "Feature",
     "properties": {
       "Name": "Desenvolvimento de centralidades",
-      "Description": "Ao longo do BRT TransBrasil há diversos e importantes pólos e equipamentos públicos.",
+      "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
       "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade.",
       "Corridor": "TransBrasil",
       "Level": "low",
@@ -980,7 +1030,7 @@ TB_TD_SU = [
     "type": "Feature",
     "properties": {
       "Name": "Desenvolvimento de centralidades",
-      "Description": "Ao longo do BRT TransBrasil há diversos e importantes pólos e equipamentos públicos.",
+      "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
       "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade.",
       "Corridor": "TransBrasil",
       "Level": "low",
@@ -995,7 +1045,7 @@ TB_TD_SU = [
     "type": "Feature",
     "properties": {
       "Name": "Desenvolvimento de centralidades",
-      "Description": "Ao longo do BRT TransBrasil há diversos e importantes pólos e equipamentos públicos.",
+      "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
       "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade.",
       "Corridor": "TransBrasil",
       "Level": "low",

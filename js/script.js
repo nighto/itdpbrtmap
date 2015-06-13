@@ -52,10 +52,10 @@ require([
   var linePopupFn = function(feature, layer){
     // does this feature have a property named "Name"?
     if(feature.properties && feature.properties.Name){
-      var popupText = feature.properties.Name;
+      var popupText = '<b>' + feature.properties.Name + '</b>';
 
       if(feature.properties.Status){
-        popupText += '<br>Status: ' + lineStatusText(feature.properties.Status);
+        popupText += '<br><strong>Status:</strong> ' + lineStatusText(feature.properties.Status);
       }
 
       var popup = L.popup({
@@ -68,22 +68,22 @@ require([
   var stationPopupFn = function(feature, layer){
     // "properties":{"Name":"Terminal Alvorada","Corredor":"TransCarioca","Type":"Expresso\/Parador","Status":"Operational"}
     if(feature.properties && feature.properties.Name){
-      var popupText = 'Estação ' + feature.properties.Name;
+      var popupText = '<b>Estação ' + feature.properties.Name + '</b>';
+
+      if(feature.properties.Corredor){
+        popupText += '<br><strong>Corredor:</strong> ' + feature.properties.Corredor;
+      }
 
       if(feature.properties.Type){
-        popupText += '<br>Serviço';
+        popupText += '<br><strong>Serviço';
         if(feature.properties.Type !== 'Parador'){ // if is not only "Parador", add plural
           popupText += 's';
         }
-        popupText += ': ' + feature.properties.Type;
-      }
-
-      if(feature.properties.Corredor){
-        popupText += '<br>Corredor: ' + feature.properties.Corredor;
+        popupText += ':</strong> ' + feature.properties.Type;
       }
 
       if(feature.properties.Status){
-        popupText += '<br>Status: ' + stationStatusText(feature.properties.Status);
+        popupText += '<br><strong>Status:</strong> ' + stationStatusText(feature.properties.Status);
       }
 
       var popup = L.popup({
@@ -97,11 +97,11 @@ require([
   var bairrosPopupFn = function(feature, layer){
     // "properties": { "BAIRRO_BDA": "Santa Teresa", "AREA": "Centro", "AREA_KM2": 5.1571268999999997, "POPULACAO": 40926, "EMPRG": 2297, "DENS_POP_K": 7.9358140285400003, "RAZAO_EMPR": 0.0561256902702 }
     var popupText = '<b>' + feature.properties.BAIRRO_BDA + '</b><br>'
-                  + 'Área: ' + feature.properties.AREA_KM2.toFixed(2).toString().replace('.',',') + ' km²<br>'
-                  + 'População: ' + feature.properties.POPULACAO.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' hab.<br>'
-                  + 'Densidade populacional: ' + feature.properties.DENS_POP_K.toFixed(3).toString().replace('.',',') + ' hab./km²<br>'
-                  + 'Empregos formais: ' + feature.properties.EMPRG.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + '<br>'
-                  + 'Empregos formais/habitante: ' + feature.properties.RAZAO_EMPR.toFixed(3).toString().replace('.',',');
+                  + '<strong>Área:</strong> ' + feature.properties.AREA_KM2.toFixed(2).toString().replace('.',',') + ' km²<br>'
+                  + '<strong>População:</strong> ' + feature.properties.POPULACAO.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' hab.<br>'
+                  + '<strong>Densidade populacional:</strong> ' + feature.properties.DENS_POP_K.toFixed(3).toString().replace('.',',') + ' hab./km²<br>'
+                  + '<strong>Empregos formais:</strong> ' + feature.properties.EMPRG.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + '<br>'
+                  + '<strong>Empregos formais/habitante:</strong> ' + feature.properties.RAZAO_EMPR.toFixed(3).toString().replace('.',',');
     layer.bindPopup(popupText);
   };
 
@@ -270,8 +270,8 @@ require([
   // initializing study object
   var study = {},
       brts = ['TW', 'TO', 'TB'],
-      categories = ['SV', 'IM', 'OP', 'TD', 'BP'],
-      levels = ['SU', 'AT', 'CR'];
+      categories = ['SV', 'IM', 'TD', 'BP'],
+      levels = ['LO', 'MD', 'HI'];
 
   var initializeStudy = function(study){
     for(b in brts){
@@ -288,13 +288,23 @@ require([
                 var popupText = '<b>' + feature.properties.Name + '</b>',
                     level = '';
                 if(feature.properties.Place){
-                  popupText += '<br><br>Localização: ' + feature.properties.Place;
+                  popupText += '<br><br><strong>Localização:</strong> ' + feature.properties.Place;
                 }
                 if(feature.properties.Description){
-                  popupText += '<br><br>Descrição: ' + feature.properties.Description;
+                  popupText += '<br><br><strong>Descrição:</strong> ' + feature.properties.Description;
                 }
                 if(feature.properties.Recommendation){
-                  popupText += '<br><br>Recomendação: ' + feature.properties.Recommendation;
+                  popupText += '<br><br><strong>Recomendação:</strong> ' + feature.properties.Recommendation;
+                }
+                if(feature.properties.Photo){
+                  popupText += '<br><br><img src="' + feature.properties.Photo.Filename + '" class="foto-estudo">';
+                  popupText += '<p style="text-align:right; position: relative; top: -10px; font-size: 8px;">Créditos da foto: ';
+                  if(feature.properties.Photo.CreditsURL){
+                    popupText += '<a target="_blank" href="' + feature.properties.Photo.CreditsURL + '">' + feature.properties.Photo.Credits + '</a>';
+                  } else {
+                    popupText += feature.properties.Photo.Credits;
+                  }
+                  popupText += '</p>';
                 }
                 if(feature.properties.Level){
                   level = feature.properties.Level;
@@ -378,17 +388,16 @@ require([
 
       this.containerCategorias = L.DomUtil.create('div', 'categoriascheckboxes', this.form);
       this._createTitle('Categorias', this.containerCategorias);
-      this._createCheckboxInput('Segurança viária',     'SV', true, this.containerCategorias);
-      this._createCheckboxInput('Integração modal',     'IM', true, this.containerCategorias);
-      this._createCheckboxInput('Operação',             'OP', true, this.containerCategorias);
-      this._createCheckboxInput('TOD',                  'TD', true, this.containerCategorias);
-      this._createCheckboxInput('Bicicleta e pedestre', 'BP', true, this.containerCategorias);
+      this._createCheckboxInput('Segurança viária',            'SV', true, this.containerCategorias);
+      this._createCheckboxInput('Operação e Integração modal', 'IM', true, this.containerCategorias);
+      this._createCheckboxInput('Planejamento Urbano (TOD)',   'TD', true, this.containerCategorias);
+      this._createCheckboxInput('Bicicleta e pedestre',        'BP', true, this.containerCategorias);
 
       this.containerNiveisDeAtencao = L.DomUtil.create('div', 'niveisdeatencaocheckboxes', this.form);
       this._createTitle('Níveis de Atenção', this.containerNiveisDeAtencao);
-      this._createCheckboxInput('Crítico',  'CR', true, this.containerNiveisDeAtencao);
-      this._createCheckboxInput('Atenção',  'AT', true, this.containerNiveisDeAtencao);
-      this._createCheckboxInput('Sugestão', 'SU', true, this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Alto',  'HI', true, this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Médio', 'MD', true, this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Baixo', 'LO', true, this.containerNiveisDeAtencao);
 
       // Extras
       L.DomUtil.create('hr', '', this.form);

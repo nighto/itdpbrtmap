@@ -5,7 +5,7 @@ pathStyle.OME = {};
 
 pathStyle.BRT.TW = {"color": "#5AC9E6","weight": 5,"opacity": .75},
 pathStyle.BRT.TWplanejada = {"color": "#5AC9E6","weight": 5,"opacity": .4},
-pathStyle.BRT.TC = {"color": "#FFCB5D","weight": 5,"opacity": .75},
+pathStyle.BRT.TC = {"color": "#F9A460","weight": 5,"opacity": .75},
 pathStyle.BRT.TO = {"color": "#BDCC2A","weight": 5,"opacity": .75},
 pathStyle.BRT.TB = {"color": "#EF4738","weight": 5,"opacity": .75};
 
@@ -22,7 +22,7 @@ pathStyle.Bairros = function(layer){
       _fillColor,
       _color = "#404040",
       _weight = 2,
-      _fillOpacity = .6;
+      _fillOpacity = .8;
   if(selectedMapaDeCalorRef == 'DEN'){
     _value = layer.feature.properties['DENS_POP_K'];
     if(_value < 5)
