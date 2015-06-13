@@ -7,8 +7,8 @@
 @sans_bold: 'Source Sans Pro Semibold';
 
 // Common Colors //
-@land: #fff;
-@water: #ddeffb;
+@land: #afa9a6;
+@water: #eee;
 
 Map { background-color: @land; }
 
@@ -128,7 +128,7 @@ Map { background-color: @land; }
 #tunnel,
 #bridge {
   ['mapnik::geometry_type'=2] {
-    line-color: #afa9a6;
+    line-color: #999;
     line-width: 0;
     [class='motorway'],
     [class='motorway_link']{
@@ -158,11 +158,11 @@ Map { background-color: @land; }
 #landuse[class='park'],
 #landuse[class='forest'],
 #boundary[class='protected_area']{
-  polygon-fill: #96d0a0;
+  polygon-fill: #6e605e;
 }
 
 // Railway
-#Lines_Supervia,#Lines_Metro,#Lines_VLT{
+#Lines_Supervia,#Lines_Metro,#Lines_VLT,#Lines_Metro_L4{
   ::line {
     [zoom>=0]{
       line-width: 1;
@@ -186,7 +186,7 @@ Map { background-color: @land; }
     line-color: #9A8D28;
   }
 }
-#Lines_Metro{
+#Lines_Metro,#Lines_Metro_L4{
   ::line, ::hatch {
     line-color: #9490BC;
   }

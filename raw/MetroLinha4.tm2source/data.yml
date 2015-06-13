@@ -1,0 +1,35 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: nighto.b5986efb
+  rev: s-545f3641
+  saveCenter: true
+attribution: ''
+center: 
+  - -43.2552
+  - -22.9922
+  - 12
+description: ''
+Layer: 
+  - id: Lines_Metro_L4
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/3. RJ_TP_other/Lines_Metro_L4.shp
+      type: shape
+    description: ''
+    fields: 
+      AltMode: Number
+      Base: Number
+      Clamped: Number
+      Extruded: Number
+      FolderPath: String
+      Name: String
+      PopupInfo: String
+      Shape_Leng: Number
+      Snippet: String
+      SymbolID: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 16
+minzoom: 7
+name: Metrô Linha 4
