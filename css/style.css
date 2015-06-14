@@ -9,6 +9,16 @@ html, body, #map {
     height: 100%;
 }
 
+h2 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+label {
+  font-weight: normal;
+  margin-left: 5px;
+}
+
 /* Control on the top right side */
 .my-custom-control {
   background: white;
@@ -33,7 +43,7 @@ html, body, #map {
 .my-custom-control .icon-TO { color: #BDCC2A; }
 .my-custom-control .icon-TB { color: #EF4738; }
 .my-custom-control hr {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .my-custom-control .labelExtras {
   font-weight: bold;

@@ -4,10 +4,10 @@ require([
   "basemap/brt/transolimpica",
   "basemap/brt/transbrasil",
   "basemap/bairros",
-  "dummy",
   "estudo",
   "mapstyles",
-  "popupfn"
+  "popupfn",
+  "vote"
 ], function(util){
 
   // coordenadas do mapa
@@ -279,7 +279,7 @@ require([
   // initializing study object
   var study = {},
       brts = ['TW', 'TO', 'TB'],
-      categories = ['SV', 'IM', 'TD', 'BP'],
+      categories = ['SV', 'OI', 'TD', 'BP'],
       levels = ['LO', 'MD', 'HI'];
 
   var initializeStudy = function(study){
@@ -304,6 +304,9 @@ require([
                 }
                 if(feature.properties.Recommendation){
                   popupText += '<br><br><strong>Recomendação:</strong> ' + feature.properties.Recommendation;
+                }
+                if(feature.properties.VoteCode){
+                  popupText += '<br><br>Votar: <a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 1)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 2)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 3)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 4)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 5)"><span class="glyphicon glyphicon-star"></span></a><span id="' + feature.properties.VoteCode + '_votemsg" style="display:none; margin-left:40px">Voto computado com sucesso.</span>';
                 }
                 if(feature.properties.Photo){
                   popupText += '<br><br><img src="' + feature.properties.Photo.Filename + '" class="foto-estudo">';
@@ -398,7 +401,7 @@ require([
       this.containerCategorias = L.DomUtil.create('div', 'categoriascheckboxes', this.form);
       this._createTitle('Categorias', this.containerCategorias);
       this._createCheckboxInput('Segurança viária',            'SV', true, this.containerCategorias);
-      this._createCheckboxInput('Operação e Integração modal', 'IM', true, this.containerCategorias);
+      this._createCheckboxInput('Operação e Integração modal', 'OI', true, this.containerCategorias);
       this._createCheckboxInput('Planejamento Urbano (TOD)',   'TD', true, this.containerCategorias);
       this._createCheckboxInput('Bicicleta e pedestre',        'BP', true, this.containerCategorias);
 

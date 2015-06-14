@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html ng-app="voteResultApp">
+<head>
+  <meta charset="UTF-8">
+	<title>ITDP BRT Map - Resultado da Votação</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+  <script src="js/estudo.js"></script>
+
+  <style type="text/css">
+
+.sortorder:after {
+  content: '\25b2';
+}
+.sortorder.reverse:after {
+  content: '\25bc';
+}
+
+  </style>
+
+</head>
+<body ng-controller="VoteResultCtrl">
+  <table class="table table-hover">
+    <tr>
+      <th><a href="" ng-click="order('voteCorridor')">Corredor</a> <span class="sortorder" ng-show="predicate === 'voteCorridor'" ng-class="{reverse:reverse}"></span></th>
+      <th><a href="" ng-click="order('voteCategory')">Categoria</a> <span class="sortorder" ng-show="predicate === 'voteCategory'" ng-class="{reverse:reverse}"></span></th>
+      <th><a href="" ng-click="order('voteLevel')">Nível</a> <span class="sortorder" ng-show="predicate === 'voteLevel'" ng-class="{reverse:reverse}"></span></th>
+      <th><a href="" ng-click="order('voteName')">Nome</a> <span class="sortorder" ng-show="predicate === 'voteName'" ng-class="{reverse:reverse}"></span></th>
+      <th class="text-center"><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
+      <th><a href="" ng-click="order('total')">Total de Votos</a> <span class="sortorder" ng-show="predicate === 'total'" ng-class="{reverse:reverse}"></span></th>
+      <th><a href="" ng-click="order('average')">Média</a> <span class="sortorder" ng-show="predicate === 'average'" ng-class="{reverse:reverse}"></span></th>
+    </tr>
+    <tr ng-repeat="vote in voteArray | orderBy:predicate:reverse">
+      <td>{{vote.voteCorridor}}</td>
+      <td>{{vote.voteCategory}}</td>
+      <td>{{vote.voteLevel}}</td>
+      <td>{{vote.voteName}}</td>
+      <td class="text-center"><span ng-if="vote['1']">{{vote['1']}}</span><span ng-if="!vote['1']">0</span></td>
+      <td class="text-center"><span ng-if="vote['2']">{{vote['2']}}</span><span ng-if="!vote['2']">0</span></td>
+      <td class="text-center"><span ng-if="vote['3']">{{vote['3']}}</span><span ng-if="!vote['3']">0</span></td>
+      <td class="text-center"><span ng-if="vote['4']">{{vote['4']}}</span><span ng-if="!vote['4']">0</span></td>
+      <td class="text-center"><span ng-if="vote['5']">{{vote['5']}}</span><span ng-if="!vote['5']">0</span></td>
+      <td class="text-center">{{vote.total}}</td>
+      <td class="text-center">{{vote.average | number:2}}</td>
+    </tr>
+  </table>
+
+  <script>
+
+var app = angular.module("voteResultApp", ["firebase"]);
+
+app.controller("VoteResultCtrl", function($scope, $firebaseArray) {
+  var ref = new Firebase("https://itdp-brt-map.firebaseio.com/");
+
+  var obj = $firebaseArray(ref);
+
+  obj.$loaded().then(function(){
+    $scope.voteArray = obj;
+    for(var i=0, l=$scope.voteArray.length; i<l; i++){
+      var _study = study($scope.voteArray[i].$id);
+      var _level = _study.properties.Level;
+      var _levelStr;
+      var _total = 0;
+      var _avg;
+
+      if(_level == 'low')
+        _levelStr = 'Baixo';
+      else if(_level == 'mid')
+        _levelStr = 'Médio';
+      else if(_level == 'high')
+        _levelStr = 'Alto';
+
+      var _v1 = $scope.voteArray[i]['1'] || 0,
+          _v2 = $scope.voteArray[i]['2'] || 0,
+          _v3 = $scope.voteArray[i]['3'] || 0,
+          _v4 = $scope.voteArray[i]['4'] || 0,
+          _v5 = $scope.voteArray[i]['5'] || 0;
+
+      _total = _v1 + _v2 + _v3 + _v4 + _v5;
+      _avg = ( _v1*1 + _v2*2 + _v3*3 + _v4*4 + _v5*5 ) / _total;
+
+      $scope.voteArray[i].voteName = _study.properties.Name.replace(/&nbsp;/gi, ' ');
+      $scope.voteArray[i].voteCorridor = _study.properties.Corridor;
+      $scope.voteArray[i].voteCategory = _study.properties.Category;
+      $scope.voteArray[i].voteLevel = _levelStr;
+      $scope.voteArray[i].total = _total;
+      $scope.voteArray[i].average = _avg;
+    }
+    console.log($scope.voteArray);
+  });
+
+  var study = function(code){
+    var strStudyArr = code.substr(0,2) + '_' + code.substr(2,2) + '_' + code.substr(4,2);
+    var studyArr = window[strStudyArr];
+    var studyName;
+
+    for(var i=0, l=studyArr.length; i<l; i++){
+      if(code === studyArr[i].properties.VoteCode){
+        return studyArr[i];
+      }
+    }
+
+    return null;
+  };
+
+  $scope.order = function(predicate) {
+    $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
+    $scope.predicate = predicate;
+  };
+});
+
+  </script>
+</body>
+</html>
