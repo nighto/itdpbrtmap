@@ -331,7 +331,7 @@ require([
                   iconSize:    iconSize[levels[l]],
                   iconAnchor:  iconAnchor[levels[l]],
                   popupAnchor: popupAnchor[levels[l]],
-                  iconUrl: 'images/icons/' + brts[b] + '_' + categories[c] + '_' + levels[l] + '.png'
+                  iconUrl: 'images/pins/' + brts[b] + '_' + categories[c] + '_' + levels[l] + '.png'
                 });
                 return L.marker(latlng, {icon: pointIcon});
               }
