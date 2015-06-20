@@ -324,11 +324,14 @@ require([
                 layer.bindPopup(L.popup({className: level}).setContent(popupText));
               },
               pointToLayer: function(feature, latlng){
+                var iconSize =    { LO: [24, 58], MD: [32, 77], HI: [48, 115] },
+                    iconAnchor =  { LO: [12, 58], MD: [16, 77], HI: [24, 115] },
+                    popupAnchor = { LO: [0, -47], MD: [0, -62], HI: [0,  -91] };
                 var pointIcon = L.icon({
-                  iconSize: [32, 37],
-                  iconAnchor: [16, 35],
-                  popupAnchor: [0, -35],
-                  iconUrl: 'images/icons/' + categories[c] + '_' + levels[l] + '.png'
+                  iconSize:    iconSize[levels[l]],
+                  iconAnchor:  iconAnchor[levels[l]],
+                  popupAnchor: popupAnchor[levels[l]],
+                  iconUrl: 'images/icons/' + brts[b] + '_' + categories[c] + '_' + levels[l] + '.png'
                 });
                 return L.marker(latlng, {icon: pointIcon});
               }
