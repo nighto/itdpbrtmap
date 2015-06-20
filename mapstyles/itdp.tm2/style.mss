@@ -7,7 +7,7 @@
 @sans_bold: 'Source Sans Pro Semibold';
 
 // Common Colors //
-@land: #afa9a6;
+@land: #dddad4;
 @water: #eee;
 
 Map { background-color: @land; }
