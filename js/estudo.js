@@ -225,6 +225,10 @@ TO_BP_HI = [
       "Level": "high",
       "Place": "Estação Curicica",
       "VoteCode": "TOBPHI1",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/18.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -242,6 +246,10 @@ TO_BP_HI = [
       "Level": "high",
       "Place": "Estação Marechal Mallet",
       "VoteCode": "TOBPHI2",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/18.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -259,6 +267,10 @@ TO_BP_HI = [
       "Level": "high",
       "Place": "Estação Marechal Fontenelle",
       "VoteCode": "TOBPHI3",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/18.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -551,6 +563,27 @@ TO_TD_MD = [
       "type": "Point",
       "coordinates": [-43.39119, -22.93566, 0.0]
     }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Linhas alimentadoras em bairros adjacentes",
+      "Description": "As linhas alimentadoras devem atender os bairros adjacentes, integrando melhor a área de influência do BRT, aumentando sua capilaridade e evitando distorções, como por exemplo, áreas distantes dispondo de linhas alimentadoras e áreas mais próximas que não são atendidas.",
+      "Recommendation": "Mapear lacunas de atendimento das linhas alimentadoras nas áreas adjacentes ao corredor. As linhas alimentadoras devem incorporar uma lógica de integração territorial e não se limitar ao seccionamento de linhas paralelas.",
+      "Corridor": "TransOlímpica",
+      "Category": "Planejamento Urbano (TOD)",
+      "Level": "mid",
+      "Place": "Realengo, próximo à encosta",
+      "VoteCode": "TOTDMD5",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/33.jpg",
+        "Credits": "ITDP Brasil",
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.41859, -22.89296, 0.0]
+    }
   }
 ];
 
@@ -588,11 +621,6 @@ TO_TD_LO = [
       "Level": "low",
       "Place": "Vila União de Curicica",
       "VoteCode": "TOTDLO2",
-      "Photo": {
-        "Filename": "images/photos/TBR e TOL/30.jpg",
-        "Credits": "mobiRio",
-        "CreditsURL": "http://mobirio.poli.ufrj.br/"
-      }
     },
     "geometry": {
       "type": "Point",
@@ -875,6 +903,11 @@ TB_OI_HI = [
       "Level": "high",
       "Place": "SuperVia Estação Parada de Lucas",
       "VoteCode": "TBOIHI7",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/11.jpg",
+        "Credits": "mobiRio",
+        "CreditsURL": "http://mobirio.poli.ufrj.br/"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -892,6 +925,11 @@ TB_OI_HI = [
       "Level": "high",
       "Place": "SuperVia Estação Barros Filho",
       "VoteCode": "TBOIHI8",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/11.jpg",
+        "Credits": "mobiRio",
+        "CreditsURL": "http://mobirio.poli.ufrj.br/"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -1177,6 +1215,10 @@ TB_BP_MD = [
       "Level": "mid",
       "Place": "Estação Isidro Rocha",
       "VoteCode": "TBBPMD1",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/19.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -1194,6 +1236,10 @@ TB_BP_MD = [
       "Level": "mid",
       "Place": "Estação Ramos",
       "VoteCode": "TBBPMD2",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/19.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
@@ -1211,6 +1257,10 @@ TB_BP_MD = [
       "Level": "mid",
       "Place": "Estação Rubens Vaz",
       "VoteCode": "TBBPMD3",
+      "Photo": {
+        "Filename": "images/photos/TBR e TOL/19.jpg",
+        "Credits": "ITDP Brasil"
+      }
     },
     "geometry": {
       "type": "Point",
