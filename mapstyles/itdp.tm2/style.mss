@@ -184,17 +184,17 @@ Map { background-color: @land; }
 }
 #Lines_Supervia{
   ::line, ::hatch {
-    line-color: #9A8D28;
+    line-color: #A1501C;
   }
 }
 #Lines_Metro,#Lines_Metro_L4{
   ::line, ::hatch {
-    line-color: #9490BC;
+    line-color: #A1501C;
   }
 }
 #Lines_VLT{
   ::line, ::hatch {
-    line-color: #FFE090;
+    line-color: #A1501C;
   }
 }
 

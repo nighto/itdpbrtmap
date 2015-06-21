@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-43.2978,-22.9878,11</Parameter>
+  <Parameter name="center">-43.2202,-22.9226,13</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">22</Parameter>
   <Parameter name="minzoom">7</Parameter>
@@ -828,21 +828,21 @@
 <Style name="Lines_Supervia-hatch" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="8" stroke="#9a8d28" stroke-dasharray="1, 24" />
+    <LineSymbolizer stroke-width="8" stroke="#a1501c" stroke-dasharray="1, 24" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="4" stroke="#9a8d28" stroke-dasharray="1, 24" />
+    <LineSymbolizer stroke-width="4" stroke="#a1501c" stroke-dasharray="1, 24" />
   </Rule>
 </Style>
 <Style name="Lines_Supervia-line" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="2" stroke="#9a8d28" />
+    <LineSymbolizer stroke-width="2" stroke="#a1501c" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="1" stroke="#9a8d28" />
+    <LineSymbolizer stroke-width="1" stroke="#a1501c" />
   </Rule>
 </Style>
 <Layer name="Lines_Supervia"
@@ -853,21 +853,21 @@
 <Style name="Lines_Metro-hatch" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="8" stroke="#9490bc" stroke-dasharray="1, 24" />
+    <LineSymbolizer stroke-width="8" stroke="#a1501c" stroke-dasharray="1, 24" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="4" stroke="#9490bc" stroke-dasharray="1, 24" />
+    <LineSymbolizer stroke-width="4" stroke="#a1501c" stroke-dasharray="1, 24" />
   </Rule>
 </Style>
 <Style name="Lines_Metro-line" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="2" stroke="#9490bc" />
+    <LineSymbolizer stroke-width="2" stroke="#a1501c" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="1" stroke="#9490bc" />
+    <LineSymbolizer stroke-width="1" stroke="#a1501c" />
   </Rule>
 </Style>
 <Layer name="Lines_Metro"
@@ -878,21 +878,21 @@
 <Style name="Lines_VLT-hatch" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="8" stroke="#ffe090" stroke-dasharray="1, 24" />
+    <LineSymbolizer stroke-width="8" stroke="#a1501c" stroke-dasharray="1, 24" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="4" stroke="#ffe090" stroke-dasharray="1, 24" />
+    <LineSymbolizer stroke-width="4" stroke="#a1501c" stroke-dasharray="1, 24" />
   </Rule>
 </Style>
 <Style name="Lines_VLT-line" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="2" stroke="#ffe090" />
+    <LineSymbolizer stroke-width="2" stroke="#a1501c" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="1" stroke="#ffe090" />
+    <LineSymbolizer stroke-width="1" stroke="#a1501c" />
   </Rule>
 </Style>
 <Layer name="Lines_VLT"
@@ -936,21 +936,21 @@
 <Style name="Lines_Metro_L4-hatch" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="8" stroke="#9490bc" stroke-dasharray="1, 24" />
+    <LineSymbolizer stroke-width="8" stroke="#a1501c" stroke-dasharray="1, 24" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="4" stroke="#9490bc" stroke-dasharray="1, 24" />
+    <LineSymbolizer stroke-width="4" stroke="#a1501c" stroke-dasharray="1, 24" />
   </Rule>
 </Style>
 <Style name="Lines_Metro_L4-line" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="2" stroke="#9490bc" />
+    <LineSymbolizer stroke-width="2" stroke="#a1501c" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="1" stroke="#9490bc" />
+    <LineSymbolizer stroke-width="1" stroke="#a1501c" />
   </Rule>
 </Style>
 <Layer name="Lines_Metro_L4"
