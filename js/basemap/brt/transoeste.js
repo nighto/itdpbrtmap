@@ -4,8 +4,9 @@ LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA = {
         "Name": "BRT TransOeste",
         "Corredor": "TransOeste",
         "Trecho": "Santa Cruz - Campo Grande - Alvorada",
-        "Extensao": "X",
-        "Estacoes": "Y",
+        "Extensao": "56",
+        "Estacoes": "56",
+        "Terminais": "3 (Campo Grande, Santa Cruz, Alvorada)",
         "Status": "Open",
         "Shape_Leng": 0.99324987985799995
     },
@@ -1169,8 +1170,9 @@ LINE_TRANSOESTE_LOTE_0_GEOJSON_DATA = {
         "Name": "BRT TransOeste",
         "Corredor": "TransOeste",
         "Trecho": "Alvorada - Jardim Oceânico",
-        "Extensao": "X",
-        "Estacoes": "Y",
+        "Extensao": "7",
+        "Estacoes": "8",
+        "Terminais": "1 (Jardim Oceânico)",
         "Status": "U.C.",
         "Shape_Leng": 0.113564900634
     },
@@ -1250,8 +1252,8 @@ LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA = {
         "Name": "BRT TransOeste",
         "Corredor": "TransOeste",
         "Trecho": "Mato Alto",
-        "Extensao": "X",
-        "Estacoes": "Y",
+        "Extensao": "12",
+        "Estacoes": "3",
         "Status": "Planned",
         "Shape_Leng": 0.21499461460700001
     },
@@ -1958,18 +1960,6 @@ LINE_TRANSOESTE_PLANEJADA_GEOJSON_DATA = {
 STATIONS_TRANSOESTE = [{
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Santa Cruz",
-        "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
-        "Status": "Operational"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.684387, -22.915709, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
         "Name": "Cesarão I",
         "Corredor": "TransOeste",
         "Type": "Expresso\/Parador",
@@ -2009,7 +1999,7 @@ STATIONS_TRANSOESTE = [{
         "Name": "Vila Paciência",
         "Corredor": "TransOeste",
         "Type": "Expresso\/Parador",
-        "Status": "Operational"
+        "Status": "Planned"
     },
     "geometry": {
         "type": "Point",
@@ -2525,7 +2515,7 @@ STATIONS_TRANSOESTE = [{
         "Name": "Golfe Olímpico",
         "Corredor": "TransOeste",
         "Type": "Parador",
-        "Status": "Operational"
+        "Status": "Planned"
     },
     "geometry": {
         "type": "Point",

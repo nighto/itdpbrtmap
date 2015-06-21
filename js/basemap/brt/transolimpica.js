@@ -4,8 +4,9 @@ LINE_TRANSOLIMPICA_GEOJSON_DATA = {
         "Name": "BRT TransOlímpica",
         "Corredor": "TransOlímpica",
         "Trecho": "Barra da Tijuca - Deodoro",
-        "Extensao": "X",
-        "Estacoes": "Y",
+        "Extensao": "22",
+        "Estacoes": "16",
+        "Terminais": "4 (Deodoro, Mal. Fontenelle, Olímpico, Salvador Allende)",
         "Status": "U.C.",
         "Shape_Leng": 0.41118799154000002
     },
@@ -593,7 +594,7 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Marechal Fontenelle",
+        "Name": "Terminal Mal. Fontenelle",
         "Corredor": "TransOlímpica",
         "Type": "Expresso\/Parador",
         "Status": "U.C."

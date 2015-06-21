@@ -85,6 +85,7 @@ pathStyle.fnMarkerOptionsBrtStation = function(feature, latlng, zoomCode){
   // if it's still planned, make it a little transparent
   if(feature.properties.Status == 'Planned'){
     _opacity = .5;
+    _fillOpacity = .5;
   }
 
   // bigger circles for bigger zoom levels

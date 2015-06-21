@@ -83,7 +83,7 @@ label {
   border-style: solid;
 }
 .leaflet-popup-tip-container {
-  top: -2px;
+  top: -3px;
 }
 .leaflet-container a.leaflet-popup-close-button {
   top: 7px;
@@ -127,11 +127,11 @@ label {
 .leaflet-popup.TransCarioca .leaflet-popup-tip,
 .leaflet-popup.mid .leaflet-popup-content-wrapper,
 .leaflet-popup.mid .leaflet-popup-tip{
-  border-color: rgba(255,203,93,.9);
+  border-color: rgba(249,164,96,.9);
 }
 .leaflet-popup.TransCarioca .leaflet-popup-content-wrapper b,
 .leaflet-popup.mid .leaflet-popup-content-wrapper b {
-  color: rgb(255,203,93);
+  color: rgb(249,164,96)
 }
 
 .leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper,

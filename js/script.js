@@ -63,6 +63,9 @@ require([
       if(feature.properties.Estacoes){
         popupText += '<br><strong>Estações:</strong> ' + feature.properties.Estacoes;
       }
+      if(feature.properties.Terminais){
+        popupText += '<br><strong>Terminais:</strong> ' + feature.properties.Terminais;
+      }
       if(feature.properties.Status){
         popupText += '<br><strong>Status:</strong> ' + lineStatusText(feature.properties.Status);
       }

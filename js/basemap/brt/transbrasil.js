@@ -4,8 +4,9 @@ LINE_TRANSBRASIL_GEOJSON_DATA = {
         "Name": "BRT TransBrasil",
         "Corredor": "TransBrasil",
         "Trecho": "Deodoro - Centro",
-        "Extensao": "X",
-        "Estacoes": "Y",
+        "Extensao": "28",
+        "Estacoes": "18",
+        "Terminais": "5 (Deodoro, Missões, Margaridas, Gasômetro, Central do Brasil)",
         "Status": "U.C.",
         "Shape_Leng": 0.54661113871699996
     },
