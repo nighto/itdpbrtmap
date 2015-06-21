@@ -72,85 +72,85 @@ label {
 .leaflet-container {
   font-family: 'Open Sans', sans-serif;
 }
+.leaflet-popup-content-wrapper {
+  border-radius: 20px;
+}
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: rgba(0,168,81,.9);
-  color: white;
+  background: white;
+  color: black;
+  border-width: 3px;
+  border-style: solid;
 }
-
+.leaflet-popup-tip-container {
+  top: -2px;
+}
+.leaflet-container a.leaflet-popup-close-button {
+  top: 7px;
+  right: 7px;
+}
+.leaflet-popup-content .popup-icon {
+  width: 50px;
+  height: 50px;
+  float: right;
+  border: 4px solid #00A851;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-size: contain;
+}
+.leaflet-popup-content .popup-icon-SV { background-image: url(../images/icons/SV.png); }
+.leaflet-popup-content .popup-icon-OI { background-image: url(../images/icons/OI.png); }
+.leaflet-popup-content .popup-icon-TD { background-image: url(../images/icons/TD.png); }
+.leaflet-popup-content .popup-icon-BP { background-image: url(../images/icons/BP.png); }
 .leaflet-popup-content-wrapper b {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.3;
 }
-
 .leaflet-popup-content {
-  margin: 7px 19px 13px;
+  margin: 25px 25px 13px;
   text-align: justify;
 }
-
 .leaflet-container img.foto-estudo {
   max-width: 300px !important;
 }
 
-.leaflet-popup-content-wrapper a{
-  color: white;
-}
-
-.leaflet-container a.leaflet-popup-close-button {
-  top: 2px;
-  right: 2px;
-  color: rgba(255,255,255,.7);
-}
-
-.leaflet-container a.leaflet-popup-close-button:hover {
-  color: rgba(255,255,255,1);
-}
-
-.leaflet-popup.TransOeste .leaflet-popup-content-wrapper,
-.leaflet-popup.TransOeste .leaflet-popup-content-wrapper a,
-.leaflet-popup.TransCarioca .leaflet-popup-content-wrapper,
-.leaflet-popup.TransCarioca .leaflet-popup-content-wrapper a,
-.leaflet-popup.mid .leaflet-popup-content-wrapper,
-.leaflet-popup.mid .leaflet-popup-content-wrapper a,
-.leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper,
-.leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper a,
-.leaflet-popup.Link          .leaflet-popup-content-wrapper,
-.leaflet-popup.Link          .leaflet-popup-content-wrapper a {
-    color: black;
-}
-
 .leaflet-popup.TransOeste .leaflet-popup-content-wrapper,
 .leaflet-popup.TransOeste .leaflet-popup-tip {
-  background: rgba(90,201,230,.9);
+  border-color: rgba(90,201,230,.9);
 }
+.leaflet-popup.TransOeste .leaflet-popup-content-wrapper b {
+  color: rgb(90,201,230);
+}
+
 .leaflet-popup.TransCarioca .leaflet-popup-content-wrapper,
 .leaflet-popup.TransCarioca .leaflet-popup-tip,
 .leaflet-popup.mid .leaflet-popup-content-wrapper,
 .leaflet-popup.mid .leaflet-popup-tip{
-  background: rgba(255,203,93,.9);
+  border-color: rgba(255,203,93,.9);
 }
+.leaflet-popup.TransCarioca .leaflet-popup-content-wrapper b,
+.leaflet-popup.mid .leaflet-popup-content-wrapper b {
+  color: rgb(255,203,93);
+}
+
 .leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper,
 .leaflet-popup.Link          .leaflet-popup-content-wrapper,
 .leaflet-popup.TransOlímpica .leaflet-popup-tip,
 .leaflet-popup.Link          .leaflet-popup-tip{
-  background: rgba(189,204,42,.9);
+  border-color: rgba(189,204,42,.9);
+}
+.leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper b,
+.leaflet-popup.Link          .leaflet-popup-content-wrapper b {
+  color: rgb(189,204,42);
 }
 .leaflet-popup.TransBrasil .leaflet-popup-content-wrapper,
 .leaflet-popup.TransBrasil .leaflet-popup-tip,
 .leaflet-popup.high .leaflet-popup-content-wrapper,
 .leaflet-popup.high .leaflet-popup-tip{
-  background: rgba(239,71,56,.9);
+  border-color: rgba(239,71,56,.9);
 }
-.leaflet-popup.TransOeste    a.leaflet-popup-close-button,
-.leaflet-popup.TransCarioca  a.leaflet-popup-close-button,
-.leaflet-popup.TransOlímpica a.leaflet-popup-close-button,
-.leaflet-popup.Link          a.leaflet-popup-close-button{
-  rgba(0,0,0,.7);
-}
-.leaflet-popup.TransOeste    a.leaflet-popup-close-button:hover,
-.leaflet-popup.TransCarioca  a.leaflet-popup-close-button:hover,
-.leaflet-popup.TransOlímpica a.leaflet-popup-close-button:hover,
-.leaflet-popup.Link          a.leaflet-popup-close-button:hover{
-  rgba(0,0,0,1);
+.leaflet-popup.TransBrasil .leaflet-popup-content-wrapper b,
+.leaflet-popup.high .leaflet-popup-content-wrapper b {
+  color: rgb(239,71,56);
 }

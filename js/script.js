@@ -21,7 +21,7 @@ require([
 
   // add an OpenStreetMap tile layer
   L.tileLayer(MAPBOX_TILE_LAYER_URL, {
-      attribution: '&copy; Mapa base: <a href="http://osm.org/copyright">OpenStreetMap</a>'
+      attribution: '&copy; CRÉDITOS A DEFINIR | Mapa base: <a href="http://osm.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
   selectedMapaDeCalorRef = 'DES';
@@ -293,17 +293,22 @@ require([
             // L.geoJson(TW_SV_CR, {...})
             study[brts[b]][categories[c]][levels[l]].geojson = L.geoJson(window[brts[b] + '_' + categories[c] + '_' + levels[l]], {
               onEachFeature: function(feature, layer){
-                // "properties": { "Name": "Uma coisa muito crítica", "Description": "Muito crítica mesmo" }
-                var popupText = '<b>' + feature.properties.Name + '</b>',
+                var popupText = '',
                     level = '';
+
+                popupText = '<div class="popup-icon popup-icon-' + categories[c] + '"></div>' +
+                            '<b>' + feature.properties.Name + '</b><br>';
+                if(feature.properties.Category){
+                  popupText += '<br><strong>Categoria:</strong> ' + feature.properties.Category;
+                }
                 if(feature.properties.Place){
-                  popupText += '<br><br><strong>Localização:</strong> ' + feature.properties.Place;
+                  popupText += '<br><strong>Localização:</strong> ' + feature.properties.Place;
                 }
                 if(feature.properties.Description){
-                  popupText += '<br><br><strong>Descrição:</strong> ' + feature.properties.Description;
+                  popupText += '<br><strong>Descrição:</strong> ' + feature.properties.Description;
                 }
                 if(feature.properties.Recommendation){
-                  popupText += '<br><br><strong>Recomendação:</strong> ' + feature.properties.Recommendation;
+                  popupText += '<br><strong>Recomendação:</strong> ' + feature.properties.Recommendation;
                 }
                 if(feature.properties.VoteCode){
                   popupText += '<br><br>Votar: <a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 1)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 2)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 3)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 4)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 5)"><span class="glyphicon glyphicon-star"></span></a><span id="' + feature.properties.VoteCode + '_votemsg" style="display:none; margin-left:40px">Voto computado com sucesso.</span>';
