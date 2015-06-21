@@ -19,12 +19,13 @@ popupfn.createCheckboxInput = function(labelText, htmlId, checked, container, la
 
   if(arrayLinesIcons !== undefined){
     for(var i=0, l=arrayLinesIcons.length; i<l; i++){
-      _iconsHTML += '<span class="icon ' + arrayLinesIcons[i] + '">●</span> ';
+      _iconsHTML += '<span class="' + arrayLinesIcons[i] + '">●</span> ';
     }
   }
 
   this.label.innerHTML = _iconsHTML + labelText;
   this.label.htmlFor = htmlId;
+  this.label.className = 'label-' + htmlId;
 
   // event
   L.DomEvent

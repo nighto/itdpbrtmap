@@ -27,16 +27,20 @@ label {
   padding: 0 10px 10px;
 }
 .my-custom-control form {
-  width: 180px;
+  width: 205px;
 }
 .my-custom-control h2 {
   font-size: 12px;
 }
-.my-custom-control .icon {
-  font-size: 23px;
-  line-height: 12px;
+.my-custom-control .icon-TW,
+.my-custom-control .icon-TC,
+.my-custom-control .icon-TO,
+.my-custom-control .icon-TB {
+  font-size: 37px;
+  line-height: 8px;
   position: relative;
-  top: 3px;
+  top: 7px;
+  left: -2px;
 }
 .my-custom-control .icon-TW { color: #5AC9E6; }
 .my-custom-control .icon-TC { color: #F9A460; }
@@ -45,6 +49,18 @@ label {
 .my-custom-control hr {
   margin: 10px 0;
 }
+.my-custom-control .label-SV,
+.my-custom-control .label-OI,
+.my-custom-control .label-TD,
+.my-custom-control .label-BP {
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 25px;
+}
+.my-custom-control .label-SV { background-image: url(../images/icons/SV.png); }
+.my-custom-control .label-OI { background-image: url(../images/icons/OI.png); }
+.my-custom-control .label-TD { background-image: url(../images/icons/TD.png); }
+.my-custom-control .label-BP { background-image: url(../images/icons/BP.png); }
 .my-custom-control .labelExtras {
   font-weight: bold;
 }
