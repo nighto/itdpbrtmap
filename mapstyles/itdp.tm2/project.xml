@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-43.2202,-22.9226,13</Parameter>
+  <Parameter name="center">-43.2085,-22.8173,12</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">22</Parameter>
   <Parameter name="minzoom">7</Parameter>
@@ -922,11 +922,11 @@
 <Style name="Limites_do_Municipio-line" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="2" stroke="#c8c8c8" />
+    <LineSymbolizer stroke-width="2" stroke="#0072bc" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="2" stroke="#c8c8c8" />
+    <LineSymbolizer stroke-width="1" stroke="#0072bc" />
   </Rule>
 </Style>
 <Layer name="Limites_do_Municipio"

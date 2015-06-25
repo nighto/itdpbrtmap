@@ -209,11 +209,6 @@ Map { background-color: @land; }
     }
   }
 }
-#Limites_do_Municipio{
-  ::line{
-    line-width: 2;
-  }
-}
 #RJ_TCM_Limites_Administrativos_Bairros_com_dados{
   ::line{
     line-dasharray: 5,5;
@@ -224,5 +219,11 @@ Map { background-color: @land; }
       line-dasharray: 5,10;
       line-width: 2;
     }
+  }
+}
+#Limites_do_Municipio{
+  ::line{
+    line-width: 1;
+    line-color: #0072bc;
   }
 }
