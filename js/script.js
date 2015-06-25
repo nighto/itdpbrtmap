@@ -407,6 +407,11 @@ require([
       var container = L.DomUtil.create('div', 'my-custom-control');
       this.form = L.DomUtil.create('form', 'form-custom-control', container);
 
+      this.containerLogo = L.DomUtil.create('div', 'logo', this.form);
+      var logoImg = L.DomUtil.create('img', '', this.containerLogo);
+      logoImg.src = 'images/logos/itdp.png';
+      L.DomUtil.create('hr', '', this.containerLogo);
+
       this.containerBRT = L.DomUtil.create('div', 'brtcheckboxes', this.form);
       this._createTitle('Sistemas BRT', this.containerBRT);
       this._createCheckboxInput('TransOeste',    'TW', true, this.containerBRT, arrayLayerTransOeste,    ['icon-TW']);
@@ -429,15 +434,16 @@ require([
 
       // Extras
       L.DomUtil.create('hr', '', this.form);
+      this.containerExtras = L.DomUtil.create('div', 'extras', this.form);
 
-      var checkboxExtras = L.DomUtil.create('input', '', this.form);
+      var checkboxExtras = L.DomUtil.create('input', '', this.containerExtras);
       checkboxExtras.id = 'extras';
       checkboxExtras.type = 'checkbox';
-      var labelCheckboxExtras = L.DomUtil.create('label', 'labelExtras', this.form);
+      var labelCheckboxExtras = L.DomUtil.create('label', 'labelExtras', this.containerExtras);
       labelCheckboxExtras.htmlFor = 'extras';
       labelCheckboxExtras.innerHTML = 'Extras';
 
-      var divExtras = L.DomUtil.create('div', 'mapasDeCalorInputs', this.form);
+      var divExtras = L.DomUtil.create('div', 'mapasDeCalorInputs', this.containerExtras);
       divExtras.style.display = 'none';
 
       var createRadioButton = function(id, groupName, checked, container){

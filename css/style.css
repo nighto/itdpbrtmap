@@ -29,6 +29,10 @@ label {
 .my-custom-control form {
   width: 205px;
 }
+.my-custom-control .logo img {
+  margin-top: 10px;
+  width: 100%;
+}
 .my-custom-control h2 {
   font-size: 12px;
 }
@@ -68,6 +72,13 @@ label {
 }
 .my-custom-control .mapasDeCalorInputs {
   margin-top: 10px;
+}
+.my-custom-control .extras {
+  background-color: rgb(0,168,81);
+  border-radius: 4px;
+  color: #eee;
+  margin: -10px;
+  padding: 10px;
 }
 
 /* Popups */
