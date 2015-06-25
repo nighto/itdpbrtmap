@@ -200,6 +200,7 @@ Map { background-color: @land; }
 
 // Bairros
 #RJ_TCM_Limites_Administrativos_Bairros_com_dados,
+#RJ_IBGE_RMRJ_Periferia,
 #Limites_do_Municipio{
   ::line {
     line-width: 0;
@@ -221,9 +222,15 @@ Map { background-color: @land; }
     }
   }
 }
-#Limites_do_Municipio{
+#Limites_do_Municipio,
+#RJ_IBGE_RMRJ_Periferia{
   ::line{
     line-width: 1;
-    line-color: #0072bc;
+    line-color: rgb(0,138,51); //#0072bc;
+  }
+}
+#RJ_IBGE_RMRJ_Periferia{
+  ::line{
+    line-color: rgba(0,168,81,.15);
   }
 }

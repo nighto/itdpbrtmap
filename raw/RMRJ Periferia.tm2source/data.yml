@@ -1,0 +1,42 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: nighto.58a0a6b0
+  rev: s-47793de3
+  saveCenter: true
+attribution: ''
+center: 
+  - -42.8165
+  - -22.7306
+  - 9
+description: ''
+Layer: 
+  - id: RJ_IBGE_RMRJ_Periferia
+    Datasource: 
+      file: /Users/nighto/src/itdpbrtmap/raw/ITDP_Proj_Mapeamento BRT TO e TB/4. RJ_IBGE_RMRJ_Periferia/RJ_IBGE_RMRJ_Periferia.shp
+      type: shape
+    description: IBGE RMRJ Periferia
+    fields: 
+      33MUE250_1: String
+      33MUE250_2: String
+      33MUE250GC: Number
+      33SEE250_1: Number
+      33SEE250_2: String
+      33SEE250_3: String
+      33SEE250_4: String
+      33SEE250_5: String
+      33SEE250_6: String
+      33SEE250_7: String
+      33SEE250_8: String
+      33SEE250_9: String
+      33SEE250GC: Number
+      33SEE25_10: String
+      33SEE25_11: String
+      33SEE25_12: String
+      33SEE25_13: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=GRS80 +no_defs
+maxzoom: 14
+minzoom: 0
+name: ''
