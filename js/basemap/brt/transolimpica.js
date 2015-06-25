@@ -438,7 +438,7 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Estação 1 (ainda sem nome)",
+        "Name": "(nome ainda a definir)",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
@@ -462,7 +462,7 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Estaçao 2 (ainda sem nome)",
+        "Name": "(nome ainda a definir)",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
@@ -498,7 +498,7 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Estação 3 (ainda sem nome)",
+        "Name": "(nome ainda a definir)",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."

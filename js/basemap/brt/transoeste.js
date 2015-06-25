@@ -2344,7 +2344,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Jardim Oceânico (2ª etapa)",
+        "Name": "Terminal Jardim Oceânico",
         "Corredor": "TransOeste",
         "Type": "Expresso\/Parador",
         "Status": "U.C."
@@ -2356,7 +2356,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Cittá América (2ª etapa)",
+        "Name": "Cittá América",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "U.C."
@@ -2368,7 +2368,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Porto dos Cabritos (2ª etapa)",
+        "Name": "Porto dos Cabritos",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "U.C."
@@ -2380,7 +2380,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Freeway (2ª etapa)",
+        "Name": "Freeway",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "U.C."
@@ -2392,7 +2392,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Riviera (2ª etapa)",
+        "Name": "Riviera",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "U.C."
@@ -2404,7 +2404,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Ricardo Marinho (2ª etapa)",
+        "Name": "Ricardo Marinho",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "U.C."
@@ -2416,7 +2416,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Parque das Rosas (2ª etapa)",
+        "Name": "Parque das Rosas",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "U.C."
@@ -2428,7 +2428,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Barra Shopping (2ª etapa)",
+        "Name": "Barra Shopping",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "U.C."

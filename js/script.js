@@ -21,7 +21,7 @@ require([
 
   // add an OpenStreetMap tile layer
   L.tileLayer(MAPBOX_TILE_LAYER_URL, {
-      attribution: '&copy; CRÉDITOS A DEFINIR | Mapa base: <a href="http://osm.org/copyright">OpenStreetMap</a>'
+      attribution: '&copy; 2015 ITDP Brasil | Mapa base: <a href="http://osm.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
   selectedMapaDeCalorRef = 'DES';
@@ -82,9 +82,9 @@ require([
     if(feature.properties && feature.properties.Name){
       var popupText = '<b>Estação ' + feature.properties.Name + '</b>';
 
-      if(feature.properties.Corredor){
-        popupText += '<br><strong>Corredor:</strong> ' + feature.properties.Corredor;
-      }
+      // if(feature.properties.Corredor){
+      //   popupText += '<br><strong>Corredor:</strong> ' + feature.properties.Corredor;
+      // }
 
       if(feature.properties.Type){
         popupText += '<br><strong>Serviço';
@@ -114,7 +114,12 @@ require([
                   + '<strong>Densidade populacional:</strong> ' + feature.properties.DENS_POP_K.toFixed(3).toString().replace('.',',') + ' hab./km²<br>'
                   + '<strong>Empregos formais:</strong> ' + feature.properties.EMPRG.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + '<br>'
                   + '<strong>Empregos formais/habitante:</strong> ' + feature.properties.RAZAO_EMPR.toFixed(3).toString().replace('.',',');
-    layer.bindPopup(popupText);
+
+    var popup = L.popup({
+        className: 'bairro'
+      }).setContent(popupText);
+
+    layer.bindPopup(popup);
   };
 
   // defining geojson's objects, starting with the bairros (suburbs)
@@ -300,7 +305,7 @@ require([
                     level = '';
 
                 popupText = '<div class="popup-icon popup-icon-' + categories[c] + '"></div>' +
-                            '<b>' + feature.properties.Name + '</b><br>';
+                            '<b>' + feature.properties.Name + '</b>';
                 if(feature.properties.Category){
                   popupText += '<br><strong>Categoria:</strong> ' + feature.properties.Category;
                 }
@@ -314,7 +319,7 @@ require([
                   popupText += '<br><strong>Recomendação:</strong> ' + feature.properties.Recommendation;
                 }
                 if(feature.properties.VoteCode){
-                  popupText += '<br><br>Votar: <a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 1)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 2)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 3)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 4)"><span class="glyphicon glyphicon-star"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 5)"><span class="glyphicon glyphicon-star"></span></a><span id="' + feature.properties.VoteCode + '_votemsg" style="display:none; margin-left:40px">Voto computado com sucesso.</span>';
+                  popupText += '<br><br><strong>Qual a prioridade para você?</strong> <a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 1)"><span class="glyphicon glyphicon-star star-1"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 2)"><span class="glyphicon glyphicon-star star-2"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 3)"><span class="glyphicon glyphicon-star star-3"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 4)"><span class="glyphicon glyphicon-star star-4"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 5)"><span class="glyphicon glyphicon-star star-5"></span></a><span id="' + feature.properties.VoteCode + '_votemsg" style="display:none;">Voto computado com sucesso.</span>';
                 }
                 if(feature.properties.Photo){
                   popupText += '<br><br><img src="' + feature.properties.Photo.Filename + '" class="foto-estudo">';
@@ -488,4 +493,7 @@ require([
     }
   });
   map.addControl(new MyControl());
+
+  // escala
+  L.control.scale().addTo(map);
 });

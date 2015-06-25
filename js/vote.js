@@ -7,6 +7,6 @@ vote = function(voteCode, stars){
     isFinite(currentVal) || (currentVal = 0);
     return currentVal+1;
   }, function(){
-    document.getElementById(voteCode + '_votemsg').style.display = 'inline';
+    document.getElementById(voteCode + '_votemsg').style.display = 'block';
   });
 };

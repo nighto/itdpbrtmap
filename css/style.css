@@ -36,11 +36,11 @@ label {
 .my-custom-control .icon-TC,
 .my-custom-control .icon-TO,
 .my-custom-control .icon-TB {
-  font-size: 37px;
-  line-height: 8px;
+  font-size: 36px;
+  line-height: 4px;
   position: relative;
-  top: 7px;
-  left: -2px;
+  top: 6px;
+  left: -1px;
 }
 .my-custom-control .icon-TW { color: #5AC9E6; }
 .my-custom-control .icon-TC { color: #F9A460; }
@@ -53,8 +53,10 @@ label {
 .my-custom-control .label-OI,
 .my-custom-control .label-TD,
 .my-custom-control .label-BP {
+  background-position: 1px 0;
   background-repeat: no-repeat;
   background-size: contain;
+  line-height: 1.5;
   padding-left: 25px;
 }
 .my-custom-control .label-SV { background-image: url(../images/icons/SV.png); }
@@ -71,6 +73,7 @@ label {
 /* Popups */
 .leaflet-container {
   font-family: 'Open Sans', sans-serif;
+  line-height: 1.3;
 }
 .leaflet-popup-content-wrapper {
   border-radius: 20px;
@@ -106,13 +109,24 @@ label {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.3;
+  display: block;
+  text-align: left;
 }
 .leaflet-popup-content {
-  margin: 25px 25px 13px;
+  margin: 20px;
   text-align: justify;
 }
 .leaflet-container img.foto-estudo {
   max-width: 300px !important;
+  margin-top: 15px;
+}
+
+.leaflet-popup.bairro .leaflet-popup-content-wrapper,
+.leaflet-popup.bairro .leaflet-popup-tip {
+  border-color: rgb(0,138,51);
+}
+.leaflet-popup.bairro .leaflet-popup-content-wrapper b {
+  color: rgb(0,138,51);
 }
 
 .leaflet-popup.TransOeste .leaflet-popup-content-wrapper,
@@ -154,3 +168,15 @@ label {
 .leaflet-popup.high .leaflet-popup-content-wrapper b {
   color: rgb(239,71,56);
 }
+
+.leaflet-popup .glyphicon-star {
+  font-size: 23px;
+  margin-left: 3px;
+  position: relative;
+  top: 6px;
+}
+.leaflet-popup .star-5 { color: rgba(0,168,81,1); }
+.leaflet-popup .star-4 { color: rgba(0,168,81,.8); }
+.leaflet-popup .star-3 { color: rgba(0,168,81,.6); }
+.leaflet-popup .star-2 { color: rgba(0,168,81,.4); }
+.leaflet-popup .star-1 { color: rgba(0,168,81,.2); }
