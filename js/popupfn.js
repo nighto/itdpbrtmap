@@ -31,16 +31,16 @@ popupfn.createCheckboxInput = function(labelText, htmlId, checked, container, la
   L.DomEvent
     .disableClickPropagation(this.input)
     .on(this.input, 'change', function(e){
-      if(layerArray !== undefined){ // checkboxes das linhas
-        // remove ou adiciona todos os layers
-        for (l in layerArray){
-          if(map.hasLayer(layerArray[l])){
-            map.removeLayer(layerArray[l]);
-          }else{
-            map.addLayer(layerArray[l]);
-          }
-        }
-      }
+      // if(layerArray !== undefined){ // checkboxes das linhas
+      //   // remove ou adiciona todos os layers
+      //   for (l in layerArray){
+      //     if(map.hasLayer(layerArray[l])){
+      //       map.removeLayer(layerArray[l]);
+      //     }else{
+      //       map.addLayer(layerArray[l]);
+      //     }
+      //   }
+      // }
       fnHandleLayerEstudoAddRemove();
     }
   );
