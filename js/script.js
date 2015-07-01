@@ -54,21 +54,20 @@ require([
     if(feature.properties && feature.properties.Name){
       var popupText = '<b>' + feature.properties.Name + '</b>';
 
-      if(feature.properties.Trecho){
+      if(feature.properties.Trecho)
         popupText += '<br><strong>Trecho:</strong> ' + feature.properties.Trecho;
-      }
-      if(feature.properties.Extensao){
+
+      if(feature.properties.Extensao)
         popupText += '<br><strong>Extensão:</strong> ' + feature.properties.Extensao + 'km';
-      }
-      if(feature.properties.Estacoes){
+
+      if(feature.properties.Estacoes)
         popupText += '<br><strong>Estações:</strong> ' + feature.properties.Estacoes;
-      }
-      if(feature.properties.Terminais){
+
+      if(feature.properties.Terminais)
         popupText += '<br><strong>Terminais:</strong> ' + feature.properties.Terminais;
-      }
-      if(feature.properties.Status){
+
+      if(feature.properties.Status)
         popupText += '<br><strong>Status:</strong> ' + lineStatusText(feature.properties.Status);
-      }
 
       var popup = L.popup({
         className: feature.properties.Corredor
@@ -80,11 +79,21 @@ require([
   var stationPopupFn = function(feature, layer){
     // "properties":{"Name":"Terminal Alvorada","Corredor":"TransCarioca","Type":"Expresso\/Parador","Status":"Operational"}
     if(feature.properties && feature.properties.Name){
-      var popupText = '<b>Estação ' + feature.properties.Name + '</b>';
+      var popupText = '',
+          iconClass = 'popup-icon-corridor ';
 
-      // if(feature.properties.Corredor){
-      //   popupText += '<br><strong>Corredor:</strong> ' + feature.properties.Corredor;
-      // }
+      if(feature.properties.Corredor == 'TransOeste')
+        iconClass += 'popup-icon-corridor-TW';
+      else if(feature.properties.Corredor == 'TransCarioca')
+        iconClass += 'popup-icon-corridor-TC';
+      else if(feature.properties.Corredor == 'TransOlímpica')
+        iconClass += 'popup-icon-corridor-TO';
+      else if(feature.properties.Corredor == 'TransBrasil')
+        iconClass += 'popup-icon-corridor-TB';
+
+      popupText += '<div class="' + iconClass + '"></div>';
+
+      popupText += '<b>Estação ' + feature.properties.Name + '</b>';
 
       if(feature.properties.Type){
         popupText += '<br><strong>Serviço';
@@ -99,7 +108,7 @@ require([
       }
 
       var popup = L.popup({
-        className: feature.properties.Corredor
+        className: 'station ' + feature.properties.Corredor
       }).setContent(popupText);
 
       layer.bindPopup(popup);
