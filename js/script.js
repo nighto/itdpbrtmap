@@ -471,10 +471,13 @@ require([
 
       var containerDensidade = L.DomUtil.create('div', '', divExtras);
       var containerEmpregos  = L.DomUtil.create('div', '', divExtras);
+      var containerSatelite  = L.DomUtil.create('div', '', divExtras);
       var radiobuttonDensidade = createRadioButton('DEN', 'mapaCalor', true,  containerDensidade);
       var radiobuttonEmpregos  = createRadioButton('EMP', 'mapaCalor', false, containerEmpregos);
+      var radiobuttonSatelite  = createRadioButton('SAT', 'mapaCalor', false, containerSatelite);
       var labelRadiobuttonDensidade = createLabelRadioButton('DEN', 'Densidade populacional', containerDensidade);
       var labelRadiobuttonEmpregos  = createLabelRadioButton('EMP', 'Empregos formais/habitante', containerEmpregos);
+      var labelRadiobuttonSatelite  = createLabelRadioButton('SAT', 'Imagens de satélite', containerSatelite);
 
       var handleBairrosChange = function(){
         geoJsonBairros.eachLayer(function(layer){
@@ -485,24 +488,46 @@ require([
         if(e.srcElement.checked){
           if(document.getElementById('EMP').checked){
             selectedMapaDeCalorRef = 'EMP';
-          }else{
+          }else if(document.getElementById('DEN').checked){
             selectedMapaDeCalorRef = 'DEN';
+          }else if(document.getElementById('SAT').checked){
+            selectedMapaDeCalorRef = 'DES';
+            if(isSatelliteAlreadyLoaded){
+              Esri_WorldImagery.bringToFront();
+            }
           }
           handleBairrosChange();
           document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'block';
         } else {
+          if(isSatelliteAlreadyLoaded){
+            Esri_WorldImagery.bringToBack();
+          }
           selectedMapaDeCalorRef = 'DES';
           handleBairrosChange();
           document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'none';
         }
       });
       var handleRadioButtonChange = function(e){
-        console.log('handle radio change');
-        selectedMapaDeCalorRef = e.srcElement.id;
-        handleBairrosChange();
+        if(e.srcElement.id == 'SAT'){
+          if(isSatelliteAlreadyLoaded){
+            Esri_WorldImagery.bringToFront();
+          }else{
+            Esri_WorldImagery.addTo(map);
+            isSatelliteAlreadyLoaded = true;
+          }
+          selectedMapaDeCalorRef = 'DES';
+          handleBairrosChange();
+        }else{
+          if(isSatelliteAlreadyLoaded){
+            Esri_WorldImagery.bringToBack();
+          }
+          selectedMapaDeCalorRef = e.srcElement.id;
+          handleBairrosChange();
+        }
       };
       L.DomEvent.disableClickPropagation(radiobuttonDensidade).on(radiobuttonDensidade, 'change', handleRadioButtonChange);
       L.DomEvent.disableClickPropagation(radiobuttonEmpregos).on(radiobuttonEmpregos, 'change', handleRadioButtonChange);
+      L.DomEvent.disableClickPropagation(radiobuttonSatelite).on(radiobuttonSatelite, 'change', handleRadioButtonChange);
 
       return container;
     }
@@ -511,4 +536,10 @@ require([
 
   // escala
   L.control.scale().addTo(map);
+
+  // satélite
+  var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    //attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+  });
+  var isSatelliteAlreadyLoaded = false;
 });
