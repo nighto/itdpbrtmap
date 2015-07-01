@@ -366,8 +366,9 @@ LINE_TO_TC_GEOJSON_DATA = {
     "properties": {
         "Name": "Ligação entre BRTs TransCarioca - TransOlímpica",
         "Corredor": "Link",
-        "Extensao": "X",
-        "Estacoes": "Y",
+        "Extensao": "1,7",
+        "Estacoes": "0",
+        "Terminais": "0",
         "Status": "U.C.",
         "Shape_Leng": 0.033564760651899998
     },
