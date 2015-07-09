@@ -543,4 +543,10 @@ require([
     //attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
   });
   var isSatelliteAlreadyLoaded = false;
+
+  // removendo o loading
+  document.getElementById('loading-container').className = 'loading-complete';
+  setTimeout(function(){
+    document.getElementById('loading-container').className = 'loading-complete hidden';
+  }, 4000);
 });
