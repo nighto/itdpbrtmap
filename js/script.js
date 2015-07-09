@@ -117,7 +117,8 @@ require([
 
   var bairrosPopupFn = function(feature, layer){
     // "properties": { "BAIRRO_BDA": "Santa Teresa", "AREA": "Centro", "AREA_KM2": 5.1571268999999997, "POPULACAO": 40926, "EMPRG": 2297, "DENS_POP_K": 7.9358140285400003, "RAZAO_EMPR": 0.0561256902702 }
-    var popupText = '<b>' + feature.properties.BAIRRO_BDA + '</b><br>'
+    var popupText = '<div class="popup-icon popup-icon-bairros"></div>'
+                  + '<b>' + feature.properties.BAIRRO_BDA + '</b><br>'
                   + '<strong>Área:</strong> ' + feature.properties.AREA_KM2.toFixed(2).toString().replace('.',',') + ' km²<br>'
                   + '<strong>População:</strong> ' + feature.properties.POPULACAO.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' hab.<br>'
                   + '<strong>Densidade populacional:</strong> ' + feature.properties.DENS_POP_K.toFixed(3).toString().replace('.',',') + ' hab./km²<br>'

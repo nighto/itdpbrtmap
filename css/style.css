@@ -150,9 +150,10 @@ label {
 .leaflet-popup.bairro .leaflet-popup-tip {
   border-color: rgb(0,138,51);
 }
-.leaflet-popup.bairro .leaflet-popup-content-wrapper b {
+.leaflet-popup.bairro .leaflet-popup-content-wrapper { /* b */
   color: rgb(0,138,51);
 }
+.leaflet-popup-content .popup-icon-bairros { background-image: url(../images/icons/bairros.png); }
 
 .leaflet-popup.TransOeste .leaflet-popup-content-wrapper,
 .leaflet-popup.TransOeste .leaflet-popup-tip {
