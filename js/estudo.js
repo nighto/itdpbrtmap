@@ -12,7 +12,7 @@ TO_SV_HI = [
       "Place": "Terminal Salvador Allende",
       "VoteCode": 'TOSVHI1',
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1.jpg",
+        "Filename": "images/photos/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -33,7 +33,7 @@ TO_SV_HI = [
       "Place": "Terminal Deodoro",
       "VoteCode": "TOSVHI2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1.jpg",
+        "Filename": "images/photos/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -58,7 +58,7 @@ TO_SV_MD = [
       "Place": "Estação Bandeirantes",
       "VoteCode": "TOSVMD1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/2.jpg",
+        "Filename": "images/photos/2.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -83,7 +83,7 @@ TO_SV_LO = [
       "Place": "Rampas de acesso ao corredor / Linha - Parte Elevada do Corredor",
       "VoteCode": "TOSVLO1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/3.jpg",
+        "Filename": "images/photos/3.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -108,7 +108,7 @@ TO_OI_HI = [
       "Place": "Terminal Deodoro",
       "VoteCode": "TOOIHI1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/6.jpg",
+        "Filename": "images/photos/6.jpg",
         "Credits": "Cidade Olímpica",
         "CreditsURL": "http://www.cidadeolimpica.com.br"
       }
@@ -130,7 +130,7 @@ TO_OI_HI = [
       "Place": "Centro de Controle Operacional (Terminal Alvorada)",
       "VoteCode": "TOOIHI2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/17.jpg",
+        "Filename": "images/photos/17.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -155,7 +155,7 @@ TO_OI_MD = [
       "Place": "Terminal Salvador Allende",
       "VoteCode": "TOOIMD1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/14.jpg",
+        "Filename": "images/photos/14.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -176,7 +176,7 @@ TO_OI_MD = [
       "Place": "Terminal Sulacap",
       "VoteCode": "TOOIMD2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Filename": "images/photos/16.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -201,7 +201,7 @@ TO_OI_LO = [
       "Place": "Ligação entre TransOlímpica e TransCarioca",
       "VoteCode": "TOOILO1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/15.jpg",
+        "Filename": "images/photos/15.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -226,7 +226,7 @@ TO_BP_HI = [
       "Place": "Estação Curicica",
       "VoteCode": "TOBPHI1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/18.jpg",
+        "Filename": "images/photos/18.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -247,7 +247,7 @@ TO_BP_HI = [
       "Place": "Estação Marechal Mallet",
       "VoteCode": "TOBPHI2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/18.jpg",
+        "Filename": "images/photos/18.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -268,7 +268,7 @@ TO_BP_HI = [
       "Place": "Estação Marechal Fontenelle",
       "VoteCode": "TOBPHI3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/18.jpg",
+        "Filename": "images/photos/18.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -293,7 +293,7 @@ TO_BP_LO = [
       "Place": "Guerenguê",
       "VoteCode": "TOBPLO1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/21.jpg",
+        "Filename": "images/photos/21.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -314,7 +314,7 @@ TO_BP_LO = [
       "Place": "Boiúna",
       "VoteCode": "TOBPLO2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/21.jpg",
+        "Filename": "images/photos/21.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -335,7 +335,7 @@ TO_BP_LO = [
       "Place": "Magalhães Bastos",
       "VoteCode": "TOBPLO3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/21.jpg",
+        "Filename": "images/photos/21.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -356,7 +356,7 @@ TO_BP_LO = [
       "Place": "Terminal Deodoro",
       "VoteCode": "TOBPLO4",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/22.jpg",
+        "Filename": "images/photos/22.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -381,7 +381,7 @@ TO_TD_HI = [
       "Place": "Magalhães Bastos",
       "VoteCode": "TOTDHI1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/28.jpg",
+        "Filename": "images/photos/28.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -402,7 +402,7 @@ TO_TD_HI = [
       "Place": "Deodoro",
       "VoteCode": "TOTDHI2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/28.jpg",
+        "Filename": "images/photos/28.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -423,7 +423,7 @@ TO_TD_HI = [
       "Place": "Estação Boiúna",
       "VoteCode": "TOTDHI3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/29.jpg",
+        "Filename": "images/photos/29.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -444,7 +444,7 @@ TO_TD_HI = [
       "Place": "Estação Colônia Juliano Moreira",
       "VoteCode": "TOTDHI4",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/29.jpg",
+        "Filename": "images/photos/29.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -465,7 +465,7 @@ TO_TD_HI = [
       "Place": "Estação Guerenguê",
       "VoteCode": "TOTDHI5",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/29.jpg",
+        "Filename": "images/photos/29.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -490,7 +490,7 @@ TO_TD_MD = [
       "Place": "Área de Proteção Ambiental da Pedra Branca",
       "VoteCode": "TOTDMD1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/24.jpg",
+        "Filename": "images/photos/24.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -511,7 +511,7 @@ TO_TD_MD = [
       "Place": "Áreas Livres em Bairros Consolidados",
       "VoteCode": "TOTDMD2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/25.jpg",
+        "Filename": "images/photos/25.jpg",
         "Credits": "Google Street View",
         "CreditsURL": "https://www.google.com/maps/views/u/0/streetview?gl=us"
       }
@@ -533,7 +533,7 @@ TO_TD_MD = [
       "Place": "Áreas Livres em Bairros Consolidados",
       "VoteCode": "TOTDMD3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/25.jpg",
+        "Filename": "images/photos/25.jpg",
         "Credits": "Google Street View",
         "CreditsURL": "https://www.google.com/maps/views/u/0/streetview?gl=us"
       }
@@ -555,7 +555,7 @@ TO_TD_MD = [
       "Place": "Minha Casa Minha Vida Juliano Moreira",
       "VoteCode": "TOTDMD4",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/32.jpg",
+        "Filename": "images/photos/32.jpg",
         "Credits": "ITDP"
       }
     },
@@ -576,7 +576,7 @@ TO_TD_MD = [
       "Place": "Realengo, próximo à encosta",
       "VoteCode": "TOTDMD5",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/33.jpg",
+        "Filename": "images/photos/33.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -601,7 +601,7 @@ TO_TD_LO = [
       "Place": "RioCentro",
       "VoteCode": "TOTDLO1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/26.jpg",
+        "Filename": "images/photos/26.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -643,7 +643,7 @@ TB_SV_HI = [
       "Place": "Terminal Deodoro",
       "VoteCode": "TBSVHI1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1.jpg",
+        "Filename": "images/photos/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -664,7 +664,7 @@ TB_SV_HI = [
       "Place": "Terminal Margaridas",
       "VoteCode": "TBSVHI2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1.jpg",
+        "Filename": "images/photos/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -685,7 +685,7 @@ TB_SV_HI = [
       "Place": "Terminal Missões",
       "VoteCode": "TBSVHI3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/1.jpg",
+        "Filename": "images/photos/1.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -706,7 +706,7 @@ TB_SV_HI = [
       "Place": "Terminal Procópio Ferreira",
       "VoteCode": "TBSVHI4",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/5.jpg",
+        "Filename": "images/photos/5.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -731,7 +731,7 @@ TB_SV_MD = [
       "Place": "Estação Brás de Pina",
       "VoteCode": "TBSVMD1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/2.jpg",
+        "Filename": "images/photos/2.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -752,7 +752,7 @@ TB_SV_MD = [
       "Place": "Estação Manguinhos",
       "VoteCode": "TBSVMD2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/4.jpg",
+        "Filename": "images/photos/4.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -777,7 +777,7 @@ TB_OI_HI = [
       "Place": "Terminal Deodoro",
       "VoteCode": "TBOIHI1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/6.jpg",
+        "Filename": "images/photos/6.jpg",
         "Credits": "Cidade Olímpica",
         "CreditsURL": "http://www.cidadeolimpica.com.br"
       }
@@ -799,7 +799,7 @@ TB_OI_HI = [
       "Place": "Terminal Procópio Ferreira",
       "VoteCode": "TBOIHI2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/7.jpg",
+        "Filename": "images/photos/7.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -820,7 +820,7 @@ TB_OI_HI = [
       "Place": "Terminal Margaridas",
       "VoteCode": "TBOIHI3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/8.jpg",
+        "Filename": "images/photos/8.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -841,7 +841,7 @@ TB_OI_HI = [
       "Place": "Terminal Missões",
       "VoteCode": "TBOIHI4",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/8.jpg",
+        "Filename": "images/photos/8.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -862,7 +862,7 @@ TB_OI_HI = [
       "Place": "Terminal Margaridas",
       "VoteCode": "TBOIHI5",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/9.jpg",
+        "Filename": "images/photos/9.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -883,7 +883,7 @@ TB_OI_HI = [
       "Place": "Terminal Missões",
       "VoteCode": "TBOIHI6",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/9.jpg",
+        "Filename": "images/photos/9.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -904,7 +904,7 @@ TB_OI_HI = [
       "Place": "SuperVia Estação Parada de Lucas",
       "VoteCode": "TBOIHI7",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/11.jpg",
+        "Filename": "images/photos/11.jpg",
         "Credits": "mobiRio",
         "CreditsURL": "http://mobirio.poli.ufrj.br/"
       }
@@ -926,7 +926,7 @@ TB_OI_HI = [
       "Place": "SuperVia Estação Barros Filho",
       "VoteCode": "TBOIHI8",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/11.jpg",
+        "Filename": "images/photos/11.jpg",
         "Credits": "mobiRio",
         "CreditsURL": "http://mobirio.poli.ufrj.br/"
       }
@@ -948,7 +948,7 @@ TB_OI_HI = [
       "Place": "MetrôRio Estação Coelho Neto",
       "VoteCode": "TBOIHI9",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/12.jpg",
+        "Filename": "images/photos/12.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -969,7 +969,7 @@ TB_OI_HI = [
       "Place": "Centro de Controle Operacional (Terminal Alvorada)",
       "VoteCode": "TBOIHI10",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/17.jpg",
+        "Filename": "images/photos/17.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -994,7 +994,7 @@ TB_OI_MD = [
       "Place": "CCR Barcas Estação Praça XV",
       "VoteCode": "TBOIMD1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/13.jpg",
+        "Filename": "images/photos/13.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1015,7 +1015,7 @@ TB_OI_MD = [
       "Place": "Estação Guadalupe",
       "VoteCode": "TBOIMD2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Filename": "images/photos/16.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1036,7 +1036,7 @@ TB_OI_MD = [
       "Place": "Estação Barros Filho",
       "VoteCode": "TBOIMD3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Filename": "images/photos/16.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1057,7 +1057,7 @@ TB_OI_MD = [
       "Place": "Estação Coelho Neto",
       "VoteCode": "TBOIMD4",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Filename": "images/photos/16.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1078,7 +1078,7 @@ TB_OI_MD = [
       "Place": "Estação Fiocruz",
       "VoteCode": "TBOIMD5",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Filename": "images/photos/16.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1099,7 +1099,7 @@ TB_OI_MD = [
       "Place": "Terminal Gasômetro",
       "VoteCode": "TBOIMD6",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/16.jpg",
+        "Filename": "images/photos/16.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1124,7 +1124,7 @@ TB_OI_LO = [
       "Place": "Aeroporto Santos Dumont",
       "VoteCode": "TBOILO1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/10.jpg",
+        "Filename": "images/photos/10.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1145,7 +1145,7 @@ TB_OI_LO = [
       "Place": "Ligação Viaduto entre TransBrasil e TransCarioca",
       "VoteCode": "TBOILO2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/15.jpg",
+        "Filename": "images/photos/15.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1170,7 +1170,7 @@ TB_BP_HI = [
       "Place": "Estação Fiocruz",
       "VoteCode": "TBBPHI1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/23.jpg",
+        "Filename": "images/photos/23.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1191,7 +1191,7 @@ TB_BP_HI = [
       "Place": "Estação Joana Nascimento",
       "VoteCode": "TBBPHI2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/23.jpg",
+        "Filename": "images/photos/23.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1216,7 +1216,7 @@ TB_BP_MD = [
       "Place": "Estação Isidro Rocha",
       "VoteCode": "TBBPMD1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/19.jpg",
+        "Filename": "images/photos/19.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -1237,7 +1237,7 @@ TB_BP_MD = [
       "Place": "Estação Ramos",
       "VoteCode": "TBBPMD2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/19.jpg",
+        "Filename": "images/photos/19.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -1258,7 +1258,7 @@ TB_BP_MD = [
       "Place": "Estação Rubens Vaz",
       "VoteCode": "TBBPMD3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/19.jpg",
+        "Filename": "images/photos/19.jpg",
         "Credits": "ITDP Brasil"
       }
     },
@@ -1279,7 +1279,7 @@ TB_BP_MD = [
       "Place": "Maré",
       "VoteCode": "TBBPMD4",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/20.jpg",
+        "Filename": "images/photos/20.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1300,7 +1300,7 @@ TB_BP_MD = [
       "Place": "Vila do João",
       "VoteCode": "TBBPMD5",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/20.jpg",
+        "Filename": "images/photos/20.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1321,7 +1321,7 @@ TB_BP_MD = [
       "Place": "Olaria",
       "VoteCode": "TBBPMD6",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/20.jpg",
+        "Filename": "images/photos/20.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1346,7 +1346,7 @@ TB_BP_LO = [
       "Place": "Terminal Deodoro",
       "VoteCode": "TBBPLO1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/22.jpg",
+        "Filename": "images/photos/22.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1371,7 +1371,7 @@ TB_TD_HI = [
       "Place": "Deodoro",
       "VoteCode": "TBTDHI1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/28.jpg",
+        "Filename": "images/photos/28.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1392,7 +1392,7 @@ TB_TD_HI = [
       "Place": "Galpão Penha",
       "VoteCode": "TBTDHI2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/31.jpg",
+        "Filename": "images/photos/31.jpg",
         "Credits": "Jornal O Dia",
         "CreditsURL": "http://odia.ig.com.br/"
       }
@@ -1418,7 +1418,7 @@ TB_TD_MD = [
       "Place": "Acari / Parque Colúmbia",
       "VoteCode": "TBTDMD1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/33.jpg",
+        "Filename": "images/photos/33.jpg",
         "Credits": "ITDP Brasil",
       }
     },
@@ -1443,7 +1443,7 @@ TB_TD_LO = [
       "Place": "Estação São Francisco",
       "VoteCode": "TBTDLO1",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/27.jpg",
+        "Filename": "images/photos/27.jpg",
         "Credits": "Google Earth",
         "CreditsURL": "https://www.google.com/earth/"
       }
@@ -1465,7 +1465,7 @@ TB_TD_LO = [
       "Place": "Estação Parque Vitória",
       "VoteCode": "TBTDLO2",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/27.jpg",
+        "Filename": "images/photos/27.jpg",
         "Credits": "Google Earth",
         "CreditsURL": "https://www.google.com/earth/"
       }
@@ -1487,7 +1487,7 @@ TB_TD_LO = [
       "Place": "Piscinão de Ramos",
       "VoteCode": "TBTDLO3",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/34.jpg",
+        "Filename": "images/photos/34.jpg",
         "Credits": "Urban Transport Photo Library",
         "CreditsURL": "http://transportphoto.net/"
       }
@@ -1509,7 +1509,7 @@ TB_TD_LO = [
       "Place": "Shopping Jardim Guadalupe",
       "VoteCode": "TBTDLO4",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/34.jpg",
+        "Filename": "images/photos/34.jpg",
         "Credits": "Urban Transport Photo Library",
         "CreditsURL": "http://transportphoto.net/"
       }
@@ -1531,7 +1531,7 @@ TB_TD_LO = [
       "Place": "Shopping Via Brasil",
       "VoteCode": "TBTDLO5",
       "Photo": {
-        "Filename": "images/photos/TBR e TOL/34.jpg",
+        "Filename": "images/photos/34.jpg",
         "Credits": "Urban Transport Photo Library",
         "CreditsURL": "http://transportphoto.net/"
       }
