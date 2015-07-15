@@ -1,3 +1,673 @@
+// TransOeste - Segurança Viária - Alto
+TW_SV_HI = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Pontos de linhas alimentadoras",
+      "Description": "Incidência de colisões e atropelamentos em pontos críticos, especialmente nos pontos de ônibus de linhas alimentadoras (ao longo da Av. das Américas) que se encontram desalinhados das estações de BRT.",
+      "Recommendation": "Redução da velocidade na faixas de tráfego comum e alinhamento dos pontos de ônibus com as travessias das estações, para diminuir o caminho do pedestre e evitar travessias fora das faixas.",
+      "Corridor": "TransOeste",
+      "Category": "Segurança Viária",
+      "Level": "mid",
+      "Place": "Estação Recanto das Garças",
+      "VoteCode": 'TWSVHI1',
+      "Photo": {
+        "Filename": "images/photos/37.jpg",
+        "Credits": "ITDP Brasil"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.495192311999965, -23.021155065999949, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Pontos de linhas alimentadoras",
+      "Description": "Incidência de colisões e atropelamentos em pontos críticos, especialmente nos pontos de ônibus de linhas alimentadoras (ao longo da Av. das Américas) que se encontram desalinhados das estações de BRT.",
+      "Recommendation": "Redução da velocidade na faixas de tráfego comum e alinhamento dos pontos de ônibus com as travessias das estações, para diminuir o caminho do pedestre e evitar travessias fora das faixas.",
+      "Corridor": "TransOeste",
+      "Category": "Segurança Viária",
+      "Level": "mid",
+      "Place": "Estação Nova Barra",
+      "VoteCode": 'TWSVHI2',
+      "Photo": {
+        "Filename": "images/photos/37.jpg",
+        "Credits": "ITDP Brasil"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.471914306999963, -23.015735812999932, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Pontos de linhas alimentadoras",
+      "Description": "Incidência de colisões e atropelamentos em pontos críticos, especialmente nos pontos de ônibus de linhas alimentadoras (ao longo da Av. das Américas) que se encontram desalinhados das estações de BRT.",
+      "Recommendation": "Redução da velocidade na faixas de tráfego comum e alinhamento dos pontos de ônibus com as travessias das estações, para diminuir o caminho do pedestre e evitar travessias fora das faixas.",
+      "Corridor": "TransOeste",
+      "Category": "Segurança Viária",
+      "Level": "mid",
+      "Place": "Estação Guiomar Novaes",
+      "VoteCode": 'TWSVHI3',
+      "Photo": {
+        "Filename": "images/photos/37.jpg",
+        "Credits": "ITDP Brasil"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.481952422999939, -23.018324266999969, 0.0]
+    }
+  }
+];
+
+// TransOeste - Segurança Viária - Médio
+TW_SV_MD = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Interface entre ônibus e estação",
+      "Description": "Portas deslizantes não operantes; vão maior que o ideal entre ônibus e plataforma; e a evasão do pagamento de tarifa pela pista são fatores que aumentam o risco de incidentes.",
+      "Recommendation": "Garantir manutenção de portas deslizantes; estudar substituição por um modelo mais robusto e funcional e a adoção de dispositivos que impeçam a entrada de não pagantes; reforçar treinamento dos motoristas para garantir parada com vão mínimo; avaliar viabilidade de implementação do sistema de ponte de embarque.",
+      "Corridor": "TransOeste",
+      "Category": "Segurança Viária",
+      "Level": "mid",
+      "Place": "Estação Cesarão",
+      "VoteCode": 'TWSVMD1',
+      "Photo": {
+        "Filename": "images/photos/35.jpg",
+        "Credits": "ITDP Brasil"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.665445825999939, -22.934719697999981, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Interface entre ônibus e estação",
+      "Description": "Portas deslizantes não operantes; vão maior que o ideal entre ônibus e plataforma; e a evasão do pagamento de tarifa pela pista são fatores que aumentam o risco de incidentes.",
+      "Recommendation": "Garantir manutenção de portas deslizantes; estudar substituição por um modelo mais robusto e funcional e a adoção de dispositivos que impeçam a entrada de não pagantes; reforçar treinamento dos motoristas para garantir parada com vão mínimo; avaliar viabilidade de implementação do sistema de ponte de embarque.",
+      "Corridor": "TransOeste",
+      "Category": "Segurança Viária",
+      "Level": "mid",
+      "Place": "Terminal Campo Grande",
+      "VoteCode": 'TWSVMD2',
+      "Photo": {
+        "Filename": "images/photos/35.jpg",
+        "Credits": "ITDP Brasil"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.55491008499996, -22.901766554999938, 0.0]
+    }
+  }
+];
+
+// TransOeste - Operação e Integração Modal - Alto
+TW_OI_HI = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Pavimentação do corredor",
+      "Description": "A pavimentação com asfalto pouco durável acelera o desgaste dos veículos, causando uma redução da frota operante, o que impacta diretamente na superlotação do sistema.",
+      "Recommendation": "No curto prazo, manutenção efetiva das vias no corredor. No médio prazo, repavimentação completa com leito de concreto (durabilidade de mais de 15 anos).",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "high",
+      "Place": "Túnel da Grota Funda",
+      "VoteCode": 'TWOIHI1',
+      "Photo": {
+        "Filename": "images/photos/38.jpg",
+        "Credits": "Extra, Set. 2014"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.5262498, -23.0145487, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Ampliação do terminal de Santa Cruz",
+      "Description": "Espaço físico insuficiente para a demanda de passageiros e para o número de serviços e ônibus atuais.",
+      "Recommendation": "Ampliação física do terminal; alocação dos serviços em subparadas bem sinalizadas; criação de área para manobra dos veículos em horário de pico; criação de espaço de estacionamento de veículos em retroárea; adequação da sinalização (posicionamento, tamanho, padronização) e dos mapas (entornos, contexto geográfico, outros modos).",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "high",
+      "Place": "Túnel Santa Cruz",
+      "VoteCode": 'TWOIHI2',
+      "Photo": {
+        "Filename": "images/photos/43.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.683589552999933, -22.917148250999954, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Adequação do terminal Alvorada",
+      "Description": "Acúmulo de passageiros durante o horário de pico vespertino; obstrução da entrada do terminal pela presença de veículos estacionados na área de operação; informação aos usuários pouco clara.",
+      "Recommendation": "Criar uma separação entre plataforma de embarque e de desembarque; expandir área de manobra dos veículos; remanejar área de estacionamento dos veículos para fora da área do terminal; adequar sinalização (posicionamento, tamanho, padronização) e mapas (entornos, contexto geográfico, outros modos).",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "high",
+      "Place": "Terminal Alvorada",
+      "VoteCode": 'TWOIHI3',
+      "Photo": {
+        "Filename": "images/photos/45.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.365743273999954, -23.000136718999951, 0.0]
+    }
+  }
+];
+
+// TransOeste - Operação e Integração Modal - Médio
+TW_OI_MD = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Frequência de ônibus baixa",
+      "Description": "No BRT TransOeste, a frequência de ônibus observada está abaixo do planejado, e o tempo de despacho pós-embarque de passageiros está acima do recomendado.",
+      "Recommendation": "Aumentar frota operante e de reserva; gerir a frota disponível de forma mais eficiente nos terminais; reorganizar o processo de embarque e despacho, com sequenciamento ágil de filas (prioritária, sentada e em pé).",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "mid",
+      "Place": "Centro de Controle Operacional (Terminal Alvorada)",
+      "VoteCode": 'TWOIMD1',
+      "Photo": {
+        "Filename": "images/photos/39.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.365, -23.001, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração do BRT TransOeste e o Metrô",
+      "Description": "A falta de integração física entre o BRT TransOeste e a estação Jardim Oceânico levará passageiros a andar de uma estação a outra para fazer a integração.",
+      "Recommendation": "Adequação da integração física com proteção contra intempéries e acessibilidade universal; integração tarifária por meio do Bilhete Único a ser realizada entre Estado e Muncípio; implantação de um sistema de informação integrado.",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "mid",
+      "Place": "Terminal Jardim Oceânico",
+      "VoteCode": 'TWOIMD2',
+      "Photo": {
+        "Filename": "images/photos/40.jpg",
+        "Credits": "RioCard, Jun. 2015"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.311048291999953, -23.006144665999951, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Reestruturação da estação em terminal",
+      "Description": "A estação Curral Falso é atualmente intermediária, posicionada em trecho não segregado do corredor. Não há linhas partindo dessa estação, o que leva passageiros a voltar até o terminal de Santa Cruz para realizar a viagem.",
+      "Recommendation": "Para melhor estruturar a rede de BRTs, essa estação poderia ser convertida em um novo terminal, que receberia linhas de Campo Grande e descongestionaria o terminal de Santa Cruz. Recomenda-se também estudo de segregação viária para o atual trecho misto.",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "mid",
+      "Place": "Estação Curral Falso",
+      "VoteCode": 'TWOIMD3',
+      "Photo": {
+        "Filename": "images/photos/44.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.66693234, -22.93655771799996, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Expansão das estações",
+      "Description": "Tamanho insuficiente para a demanda atual.",
+      "Recommendation": "(i) Adequação da infraestrutura: expansão das estações para tornar a espera mais confortável e para haver espaço de manobra e retorno de veículos; espaço de estacionamento de veículos em retroárea; adequação da integração com as linhas alimentadoras.<br>(ii) Adequação do desenho operacional: intervalo de serviços atendendo a estação; adequação da sinalização (posicionamento, tamanho, padronização) e mapas (entornos, contexto geográfico, outros modos).",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "mid",
+      "Place": "Estação Mato Alto",
+      "VoteCode": 'TWOIMD4',
+      "Photo": {
+        "Filename": "images/photos/46.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.596724327999937, -22.993864873999939, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Expansão das estações",
+      "Description": "Tamanho insuficiente para a demanda atual.",
+      "Recommendation": "(i) Adequação da infraestrutura: expansão das estações para tornar a espera mais confortável e para haver espaço de manobra e retorno de veículos; espaço de estacionamento de veículos em retroárea; adequação da integração com as linhas alimentadoras.<br>(ii) Adequação do desenho operacional: intervalo de serviços atendendo a estação; adequação da sinalização (posicionamento, tamanho, padronização) e mapas (entornos, contexto geográfico, outros modos).",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "mid",
+      "Place": "Estação Magarça",
+      "VoteCode": 'TWOIMD5',
+      "Photo": {
+        "Filename": "images/photos/46.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.621981550999976, -22.968544004999956, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Expansão das estações",
+      "Description": "Tamanho insuficiente para a demanda atual.",
+      "Recommendation": "(i) Adequação da infraestrutura: expansão das estações para tornar a espera mais confortável e para haver espaço de manobra e retorno de veículos; espaço de estacionamento de veículos em retroárea; adequação da integração com as linhas alimentadoras.<br>(ii) Adequação do desenho operacional: intervalo de serviços atendendo a estação; adequação da sinalização (posicionamento, tamanho, padronização) e mapas (entornos, contexto geográfico, outros modos).",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "mid",
+      "Place": "Estação Pingo d'Água",
+      "VoteCode": 'TWOIMD6',
+      "Photo": {
+        "Filename": "images/photos/46.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.647133453999963, -22.96569685299994, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Expansão das estações",
+      "Description": "Tamanho insuficiente para a demanda atual.",
+      "Recommendation": "(i) Adequação da infraestrutura: expansão das estações para tornar a espera mais confortável e para haver espaço de manobra e retorno de veículos; espaço de estacionamento de veículos em retroárea; adequação da integração com as linhas alimentadoras.<br>(ii) Adequação do desenho operacional: intervalo de serviços atendendo a estação; adequação da sinalização (posicionamento, tamanho, padronização) e mapas (entornos, contexto geográfico, outros modos).",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "mid",
+      "Place": "Estação Salvador Allende",
+      "VoteCode": 'TWOIMD7',
+      "Photo": {
+        "Filename": "images/photos/46.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.442, -23.009, 0.0]
+    }
+  }
+];
+
+// TransOeste - Operação e Integração Modal - Baixo
+TW_OI_LO = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Estruturação e melhoria das linhas alimentadoras",
+      "Description": "Baixa qualidade de serviço das linhas alimentadoras pode comprometer ganho de tempo e a imagem do sistema BRT. Terminais e pontos de linhas alimentadoras não apresentam em geral conforto ambiental e segurança.",
+      "Recommendation": "Estudar viabilidade de faixas BRS (Bus Rapid Service); rever a integração física (iluminação e proteção contra intempéries) dos pontos terminais; implantar integração operacional (chegadas e partidas sincronizadas e informação de quadro de horário) para melhorar linhas alimentadoras.",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "low",
+      "Place": "Estação Mato Alto",
+      "VoteCode": 'TWOILO1',
+      "Photo": {
+        "Filename": "images/photos/41.jpg",
+        "Credits": "Google Earth, Jun. 2015"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.596724327999937, -22.993864873999939, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Estruturação e melhoria das linhas alimentadoras",
+      "Description": "Baixa qualidade de serviço das linhas alimentadoras pode comprometer ganho de tempo e a imagem do sistema BRT. Terminais e pontos de linhas alimentadoras não apresentam em geral conforto ambiental e segurança.",
+      "Recommendation": "Estudar viabilidade de faixas BRS (Bus Rapid Service); rever a integração física (iluminação e proteção contra intempéries) dos pontos terminais; implantar integração operacional (chegadas e partidas sincronizadas e informação de quadro de horário) para melhorar linhas alimentadoras.",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "low",
+      "Place": "Estação Guiomar Novaes",
+      "VoteCode": 'TWOILO2',
+      "Photo": {
+        "Filename": "images/photos/41.jpg",
+        "Credits": "Google Earth, Jun. 2015"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.481952422999939, -23.018324266999969, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Estruturação e melhoria das linhas alimentadoras",
+      "Description": "Baixa qualidade de serviço das linhas alimentadoras pode comprometer ganho de tempo e a imagem do sistema BRT. Terminais e pontos de linhas alimentadoras não apresentam em geral conforto ambiental e segurança.",
+      "Recommendation": "Estudar viabilidade de faixas BRS (Bus Rapid Service); rever a integração física (iluminação e proteção contra intempéries) dos pontos terminais; implantar integração operacional (chegadas e partidas sincronizadas e informação de quadro de horário) para melhorar linhas alimentadoras.",
+      "Corridor": "TransOeste",
+      "Category": "Operação e Integração Modal",
+      "Level": "low",
+      "Place": "Estação Santa Eugênia",
+      "VoteCode": 'TWOILO3',
+      "Photo": {
+        "Filename": "images/photos/41.jpg",
+        "Credits": "Google Earth, Jun. 2015"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.632811755999967, -22.916785413999943, 0.0]
+    }
+  }
+];
+
+// TransOeste - Bicicleta e Pedestre - Alto
+TW_BP_HI = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração de bairros adjacentes por bicicleta",
+      "Description": "A ausência de rede cicloviária nos bairros residenciais próximos, aliada à ausência de equipamentos e segurança para estacionar bicicletas nas estações, reduz a capilaridade do sistema BRT.",
+      "Recommendation": "Implementar infraestrutura cicloviária no entorno das estações; bicicletários fechados (com controle de acesso) nas estações com maior uso de bicicleta e bicicletários normais nas demais; e expandir sistema de bicicletas compartilhadas.",
+      "Corridor": "TransOeste",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "high",
+      "Place": "Arredores da Estação Pingo d'Água",
+      "VoteCode": 'TWBPHI1',
+      "Photo": {
+        "Filename": "images/photos/47.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.6504338, -22.9781192, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração de bairros adjacentes por bicicleta",
+      "Description": "A ausência de rede cicloviária nos bairros residenciais próximos, aliada à ausência de equipamentos e segurança para estacionar bicicletas nas estações, reduz a capilaridade do sistema BRT.",
+      "Recommendation": "Implementar infraestrutura cicloviária no entorno das estações; bicicletários fechados (com controle de acesso) nas estações com maior uso de bicicleta e bicicletários normais nas demais; e expandir sistema de bicicletas compartilhadas.",
+      "Corridor": "TransOeste",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "high",
+      "Place": "Arredores da Estação Mato Alto",
+      "VoteCode": 'TWBPHI2',
+      "Photo": {
+        "Filename": "images/photos/47.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.6137219, -22.9994893, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração de bairros adjacentes por bicicleta",
+      "Description": "A ausência de rede cicloviária nos bairros residenciais próximos, aliada à ausência de equipamentos e segurança para estacionar bicicletas nas estações, reduz a capilaridade do sistema BRT.",
+      "Recommendation": "Implementar infraestrutura cicloviária no entorno das estações; bicicletários fechados (com controle de acesso) nas estações com maior uso de bicicleta e bicicletários normais nas demais; e expandir sistema de bicicletas compartilhadas.",
+      "Corridor": "TransOeste",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "high",
+      "Place": "Arredores do Terminal Jardim Oceânico",
+      "VoteCode": 'TWBPHI3',
+      "Photo": {
+        "Filename": "images/photos/47.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.309101, -23.0111399, 0.0]
+    }
+  }
+];
+
+// TransOeste - Bicicleta e Pedestre - Médio
+TW_BP_MD = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Remanejo da ciclovia da Av. das Américas",
+      "Description": "Com a implantação do Lote 0 do BRT TransOeste, houve remanejo da ciclovia do canteiro central em determinados trechos.",
+      "Recommendation": "Recomenda-se que ciclovias estejam localizadas adjacentes às calçadas da quadra, por estarem mais próximas dos reais pontos de origem e destino dos usuários. Deve-se estudar a existência de eventuais pontos de risco viário na alteração da ciclovia existente.",
+      "Corridor": "TransOeste",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Estação Riviera",
+      "VoteCode": 'TWBPMD1',
+      "Photo": {
+        "Filename": "images/photos/48.jpg",
+        "Credits": "Extra, Jun. 2012"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.340264326999943, -23.000298284999928, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração de condomínios adjacentes por bicicleta",
+      "Description": "A infraestrutura cicloviária no entorno desses condomínios é parcial ou inexistente, o que deixa o sistema pouco atraente para moradores dos grandes condomínios residenciais da Barra e Recreio.",
+      "Recommendation": "Considerando as largas vias existentes nestes bairros, é importante a implementação de ciclovias segregadas e arborizadas desde a entrada dos condomínios até às estações, ou seja, uma rede cicloviária alimentadora.",
+      "Corridor": "TransOeste",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Estação Gláucio Gil",
+      "VoteCode": 'TWBPMD2',
+      "Photo": {
+        "Filename": "images/photos/49.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.458910750999962, -23.012416689999952, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração de condomínios adjacentes por bicicleta",
+      "Description": "A infraestrutura cicloviária no entorno desses condomínios é parcial ou inexistente, o que deixa o sistema pouco atraente para moradores dos grandes condomínios residenciais da Barra e Recreio.",
+      "Recommendation": "Considerando as largas vias existentes nestes bairros, é importante a implementação de ciclovias segregadas e arborizadas desde a entrada dos condomínios até às estações, ou seja, uma rede cicloviária alimentadora.",
+      "Corridor": "TransOeste",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Estação Parque das Rosas",
+      "VoteCode": 'TWBPMD3',
+      "Photo": {
+        "Filename": "images/photos/49.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.353060905999932, -23.000077476999934, 0.0]
+    }
+  }
+];
+
+// TransOeste - Bicicletra e Pedestre - Baixo
+TW_BP_LO = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração com o sistema de bicicletas compartillhadas",
+      "Description": "O sistema de bicicletas compartilhadas está restrito a apenas algumas estações na Barra e Recreio.",
+      "Recommendation": "Criação de novas estações de bicicletas compartilhadas no entorno das estações do BRT TransOeste, em especial nas áreas mais populosas da Zona Oeste (Santa Cruz e Campo Grande).",
+      "Corridor": "TransOeste",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "low",
+      "Place": "Terminal Santa Cruz",
+      "VoteCode": 'TWBPLO1',
+      "Photo": {
+        "Filename": "images/photos/50.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.683589552999933, -22.917148250999954, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração com o sistema de bicicletas compartillhadas",
+      "Description": "O sistema de bicicletas compartilhadas está restrito a apenas algumas estações na Barra e Recreio.",
+      "Recommendation": "Criação de novas estações de bicicletas compartilhadas no entorno das estações do BRT TransOeste, em especial nas áreas mais populosas da Zona Oeste (Santa Cruz e Campo Grande).",
+      "Corridor": "TransOeste",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "low",
+      "Place": "Terminal Campo Grande",
+      "VoteCode": 'TWBPLO2',
+      "Photo": {
+        "Filename": "images/photos/50.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.55491008499996, -22.901766554999938, 0.0]
+    }
+  }
+];
+
+// TransOeste - TOD - Alto
+TW_TD_HI = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Pendularidade do corredor",
+      "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
+      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financiera.",
+      "Corridor": "TransOeste",
+      "Category": "TOD",
+      "Level": "high",
+      "Place": "Estação Gastão Rangel",
+      "VoteCode": 'TWTDHI1',
+      "Photo": {
+        "Filename": "images/photos/51.jpg",
+        "Credits": "Google Earth, Jun. 2014"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.67827, -22.92832, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Pendularidade do corredor",
+      "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
+      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financiera.",
+      "Corridor": "TransOeste",
+      "Category": "TOD",
+      "Level": "high",
+      "Place": "Estação Vilar Carioca",
+      "VoteCode": 'TWTDHI2',
+      "Photo": {
+        "Filename": "images/photos/51.jpg",
+        "Credits": "Google Earth, Jun. 2014"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.60171, -22.91466, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Pendularidade do corredor",
+      "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
+      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financiera.",
+      "Corridor": "TransOeste",
+      "Category": "TOD",
+      "Level": "high",
+      "Place": "Estação Curral Falso",
+      "VoteCode": 'TWTDHI3',
+      "Photo": {
+        "Filename": "images/photos/51.jpg",
+        "Credits": "Google Earth, Jun. 2014"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.66769, -22.93709, 0.0]
+    }
+  }
+];
+
+// TransOeste - TOD - Médio
+TW_TD_MD = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Ligação Campo Grande - Mato Alto",
+      "Description": "A ligação Campo Grande - Mato Alto, apesar de já possuir uma estação construída, não tem previsão de início de operação. Hoje, os passageiros vindos de Campo Grande realizam um trajeto \"negativo\" para poder chegar até a Barra da Tijuca.",
+      "Recommendation": "Essa ligação é importantíssima para reduzir o tempo de deslocamento entre Campo Grande e Barra. Recomenda-se o detalhamento do plano de início de operação deste trecho.",
+      "Corridor": "TransOeste",
+      "Category": "TOD",
+      "Level": "mid",
+      "Place": "Estação ParkShopping",
+      "VoteCode": 'TWTDMD1',
+      "Photo": {
+        "Filename": "images/photos/52.jpg",
+        "Credits": "Google Earth, Jun. 2015"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.57398650399994, -22.929802741999932, 0.0]
+    }
+  }
+];
+
 // TransOlímpica - Segurança Viária - Alto
 TO_SV_HI = [
   {
