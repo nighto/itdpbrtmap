@@ -611,7 +611,7 @@ require([
   L.control.scale().addTo(map);
 
   // north
-  var north = L.control({position: "bottomright"});
+  var north = L.control({position: "bottomleft"});
   north.onAdd = function(map) {
       var div = L.DomUtil.create("div", "info legend");
       div.innerHTML = '<img src="images/icons/norte.png" style="width:50px">';
