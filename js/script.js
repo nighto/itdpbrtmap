@@ -175,7 +175,7 @@ require([
       _checkboxes.className = 'brtcheckboxes';
 
       var _fcc = document.getElementsByClassName('form-custom-control')[0];
-      _fcc.insertBefore(_checkboxes, _fcc.firstChild);
+      _fcc.insertBefore(_checkboxes, _fcc.firstChild.nextSibling);
 
       popupfn.createTitle('Sistemas BRT', _checkboxes);
       popupfn.createCheckboxInput('TransOeste',    'TW', true, _checkboxes, arrayLayerTransOeste,    ['icon-TW']);
