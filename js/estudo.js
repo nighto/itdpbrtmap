@@ -668,6 +668,609 @@ TW_TD_MD = [
   }
 ];
 
+// TransCarioca - Segurança Viária - Alto
+TC_SV_HI = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Redesenho viário no entorno das estações",
+      "Description": "O ITDP Brasil realizou estudo específico no entorno desta estação em que detectou: calçadas estreitas, barreiras ao pedestre, ausência de arborização, interseções perigosas, limites mal definidos (pedestre/BRT/tráfego/construções), área enclausurada.",
+      "Recommendation": "Reduzir velocidade nas proximidades com implantação de travessia em nível para pedestres; adequar calçadas; abrir outra entrada para acesso à estação; potencializar espaços públicos com desapropriação de certos edifícios subutilizados.",
+      "Corridor": "TransCarioca",
+      "Category": "Segurança Viária",
+      "Level": "high",
+      "Place": "Estação Cardoso de Moraes",
+      "VoteCode": 'TCSVHI1',
+      "Photo": {
+        "Filename": "images/photos/55.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.25828245799994, -22.857439849999935, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Redesenho viário no entorno das estações",
+      "Description": "O ITDP Brasil realizou estudo específico no entorno desta estação em que detectou: tráfego intenso, calçadas estreitas, barreiras ao pedestre, ausência de arborização, interseções perigosas, limites mal definidos (pedestre/BRT/tráfego/construções).",
+      "Recommendation": "Reduzir velocidade nas proximidades com implantação de travessia em nível para pedestres; adequar calçadas melhorar sinalização do pavimento da pista do BRT; implantar ciclovias segregadas.",
+      "Corridor": "TransCarioca",
+      "Category": "Segurança Viária",
+      "Level": "high",
+      "Place": "Estação Mercadão",
+      "VoteCode": 'TCSVHI2',
+      "Photo": {
+        "Filename": "images/photos/56.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.335512955999945, -22.870011200999954, 0.0]
+    }
+  }
+];
+
+// TransCarioca - Operação e Integração Modal - Alto
+TC_OI_HI = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Ajustes operacionais",
+      "Description": "A operação apresenta frota insuficiente, intervalos irregulares e tempo de espera elevado para os diferentes serviços; tempo importante gasto em algumas interseções (falta de prioridade semafórica); e superlotação em alguns trechos.",
+      "Recommendation": "A priorização mais inteligente dos ônibus nas intersecções; o ajuste e monitoramento dos intervalos; agilizar a entrada/saída dos veículos nos terminais; adequação a frota operante com mais veículos bi e superarticulados pode diminuir o tempo de ciclo.",
+      "Corridor": "TransCarioca",
+      "Category": "Operação e Integração Modal",
+      "Level": "high",
+      "Place": "Estação Taquara",
+      "VoteCode": 'TCOIHI1',
+      "Photo": {
+        "Filename": "images/photos/57.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.373839480999941, -22.924146657999927, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Ajustes operacionais",
+      "Description": "A operação apresenta frota insuficiente, intervalos irregulares e tempo de espera elevado para os diferentes serviços; tempo importante gasto em algumas interseções (falta de prioridade semafórica); e superlotação em alguns trechos.",
+      "Recommendation": "A priorização mais inteligente dos ônibus nas intersecções; o ajuste e monitoramento dos intervalos; agilizar a entrada/saída dos veículos nos terminais; adequação a frota operante com mais veículos bi e superarticulados pode diminuir o tempo de ciclo.",
+      "Corridor": "TransCarioca",
+      "Category": "Operação e Integração Modal",
+      "Level": "high",
+      "Place": "Estação Penha",
+      "VoteCode": 'TCOIHI2',
+      "Photo": {
+        "Filename": "images/photos/57.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.277238680999972, -22.842587932999944, 0.0]
+    }
+  }
+];
+
+// TransCarioca - Operação e Integração Modal - Médio
+TC_OI_MD = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração tarifária com metrô",
+      "Description": "A integração tarifária interfere diretamente na dinâmica dos usuários em relação aos trechos complementares da viagem. Em Vicente de Carvalho, há integração física entre o BRT e o metrô, porém não há integração tarifária (o usuário precisa pagar duas passagens).",
+      "Recommendation": "A integração tarifária entre BRT e metrô garante aos usuários acesso a uma maior diversidade de oportunidades na cidade (usuários do metrô podem acessar aeroporto, Z.Norte e Barra; usuários do BRT a região Central e a Z.Sul da cidade).",
+      "Corridor": "TransCarioca",
+      "Category": "Operação e Integração Modal",
+      "Level": "mid",
+      "Place": "Estação do Metrô Vicente de Carvalho",
+      "VoteCode": 'TCOIMD1',
+      "Photo": {
+        "Filename": "images/photos/59.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.31311, -22.85410, 0.0]
+    }
+  }
+];
+
+// TransCarioca - Operação e Integração Modal - Baixo
+TC_OI_LO = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Aprimoramento nas linhas alimentadoras",
+      "Description": "Terminais de integração com linhas alimentadoras são adequados, porém baixa qualidade de serviço das mesmas pode comprometer ganhos e imagem do sistema BRT.",
+      "Recommendation": "Estudo de BRS para melhorar linhas alimentadoras que contemple: Faixas com prioridade para ônibus; Pontos abrigados e confortáveis que diminuem a percepção do tempo de espera; Veículos confortáveis com câmbio automático e ar-condicionado; Informação sobre o itinerário das linhas e quadro de horários planejado de passagem dos veículos.",
+      "Corridor": "TransCarioca",
+      "Category": "Operação e Integração Modal",
+      "Level": "low",
+      "Place": "Terminal de Integração Estação Tanque - Mestre Candeia",
+      "VoteCode": 'TCOILO1',
+      "Photo": {
+        "Filename": "images/photos/58.jpg",
+        "Credits": "SMU"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.36105, -22.91578, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Aprimoramento nas linhas alimentadoras",
+      "Description": "Terminais de integração com linhas alimentadoras são adequados, porém baixa qualidade de serviço das mesmas pode comprometer ganhos e imagem do sistema BRT.",
+      "Recommendation": "Estudo de BRS para melhorar linhas alimentadoras que contemple: Faixas com prioridade para ônibus; Pontos abrigados e confortáveis que diminuem a percepção do tempo de espera; Veículos confortáveis com câmbio automático e ar-condicionado; Informação sobre o itinerário das linhas e quadro de horários planejado de passagem dos veículos.",
+      "Corridor": "TransCarioca",
+      "Category": "Operação e Integração Modal",
+      "Level": "low",
+      "Place": "Terminal de Integração Estação Taquara - Bandeira Brasil",
+      "VoteCode": 'TCOILO2',
+      "Photo": {
+        "Filename": "images/photos/58.jpg",
+        "Credits": "SMU"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.37432, -22.92363, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Aprimoramento nas linhas alimentadoras",
+      "Description": "Terminais de integração com linhas alimentadoras são adequados, porém baixa qualidade de serviço das mesmas pode comprometer ganhos e imagem do sistema BRT.",
+      "Recommendation": "Estudo de BRS para melhorar linhas alimentadoras que contemple: Faixas com prioridade para ônibus; Pontos abrigados e confortáveis que diminuem a percepção do tempo de espera; Veículos confortáveis com câmbio automático e ar-condicionado; Informação sobre o itinerário das linhas e quadro de horários planejado de passagem dos veículos.",
+      "Corridor": "TransCarioca",
+      "Category": "Operação e Integração Modal",
+      "Level": "low",
+      "Place": "Terminal de Integração Estação Fundão - Aroldo Melodia",
+      "VoteCode": 'TCOILO3',
+      "Photo": {
+        "Filename": "images/photos/58.jpg",
+        "Credits": "SMU"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.23926, -22.84144, 0.0]
+    }
+  }
+];
+
+// TransCarioca - Bicicleta e Pedestre - Alto
+TC_BP_HI = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração com a bicicleta",
+      "Description": "A ausência de rede cicloviária nos bairros residenciais próximos, aliada à ausência de equipamentos e segurança para estacionar bicicletas nas estações, reduz a capilaridade do sistema BRT.",
+      "Recommendation": "Implementar infraestrutura cicloviária no entorno das estações; bicicletários fechados (com controle de acesso) nas estações com maior uso de bicicleta e bicicletários normais nas demais; e expandir sistema de bicicletas compartilhadas.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "high",
+      "Place": "Estação Curicica",
+      "VoteCode": 'TCBPHI1',
+      "Photo": {
+        "Filename": "images/photos/60.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.388718393999966, -22.959925086999927, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração com a bicicleta",
+      "Description": "A ausência de rede cicloviária nos bairros residenciais próximos, aliada à ausência de equipamentos e segurança para estacionar bicicletas nas estações, reduz a capilaridade do sistema BRT.",
+      "Recommendation": "Implementar infraestrutura cicloviária no entorno das estações; bicicletários fechados (com controle de acesso) nas estações com maior uso de bicicleta e bicicletários normais nas demais; e expandir sistema de bicicletas compartilhadas.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "high",
+      "Place": "Estação Praça do Carmo",
+      "VoteCode": 'TCBPHI2',
+      "Photo": {
+        "Filename": "images/photos/60.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.295112281999934, -22.838842988999939, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Integração com a bicicleta",
+      "Description": "A ausência de rede cicloviária nos bairros residenciais próximos, aliada à ausência de equipamentos e segurança para estacionar bicicletas nas estações, reduz a capilaridade do sistema BRT.",
+      "Recommendation": "Implementar infraestrutura cicloviária no entorno das estações; bicicletários fechados (com controle de acesso) nas estações com maior uso de bicicleta e bicicletários normais nas demais; e expandir sistema de bicicletas compartilhadas.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "high",
+      "Place": "Estação Olaria",
+      "VoteCode": 'TCBPHI3',
+      "Photo": {
+        "Filename": "images/photos/60.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.26546469799996, -22.848617784999931, 0.0]
+    }
+  }
+];
+
+// TransCarioca - Bicicleta e Pedestre - Médio
+TC_BP_MD = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Acessibilidade às estações",
+      "Description": "Em algumas estações do BRT TransCarioca, foram detectadas má qualidade de calçadas e tráfego intenso no entorno, fatores que dificultam o acesso ao sistema.",
+      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Terminal Madureira - Paulo Da Portela",
+      "VoteCode": 'TCBPMD1',
+      "Photo": {
+        "Filename": "images/photos/54.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.33682319299993, -22.878100686999968, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Acessibilidade às estações",
+      "Description": "Em algumas estações do BRT TransCarioca, foram detectadas má qualidade de calçadas e tráfego intenso no entorno, fatores que dificultam o acesso ao sistema.",
+      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Estação Rio II",
+      "VoteCode": 'TCBPMD2',
+      "Photo": {
+        "Filename": "images/photos/54.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.384246773999962, -22.973236504999932, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Acessibilidade às estações",
+      "Description": "Em algumas estações do BRT TransCarioca, foram detectadas má qualidade de calçadas e tráfego intenso no entorno, fatores que dificultam o acesso ao sistema.",
+      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Estação Merck",
+      "VoteCode": 'TCBPMD3',
+      "Photo": {
+        "Filename": "images/photos/54.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.371763120999951, -22.935556608999946, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Redesenho viário no entorno das estações",
+      "Description": "Redução de conectividade do espaço urbano causada pelas obras do BRT TransCarioca e pelos gradis pode prejudicar a circulação dos pedestres.",
+      "Recommendation": "Sistema de BRT deve incorporar uma lógica de integração territorial e de respeito da dinâmica urbana e social nos bairros adjacentes, contemplando eventualmente travessias em meio de quadra, e respeitando as linhas de desejo dos pedestres.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Estação Campinho",
+      "VoteCode": 'TCBPMD4',
+      "Photo": {
+        "Filename": "images/photos/61.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.342128216999981, -22.88222690799995, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Redesenho viário no entorno das estações",
+      "Description": "Redução de conectividade do espaço urbano causada pelas obras do BRT TransCarioca e pelos gradis pode prejudicar a circulação dos pedestres.",
+      "Recommendation": "Sistema de BRT deve incorporar uma lógica de integração territorial e de respeito da dinâmica urbana e social nos bairros adjacentes, contemplando eventualmente travessias em meio de quadra, e respeitando as linhas de desejo dos pedestres.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Estação Praça Seca",
+      "VoteCode": 'TCBPMD5',
+      "Photo": {
+        "Filename": "images/photos/61.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.352240207999955, -22.897717927999963, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Redesenho viário no entorno das estações",
+      "Description": "Redução de conectividade do espaço urbano causada pelas obras do BRT TransCarioca e pelos gradis pode prejudicar a circulação dos pedestres.",
+      "Recommendation": "Sistema de BRT deve incorporar uma lógica de integração territorial e de respeito da dinâmica urbana e social nos bairros adjacentes, contemplando eventualmente travessias em meio de quadra, e respeitando as linhas de desejo dos pedestres.",
+      "Corridor": "TransCarioca",
+      "Category": "Bicicleta e Pedestre",
+      "Level": "mid",
+      "Place": "Estação Pedro Taques",
+      "VoteCode": 'TCBPMD6',
+      "Photo": {
+        "Filename": "images/photos/61.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.298748183999969, -22.841507369999931, 0.0]
+    }
+  }
+];
+
+// TransCarioca - TOD - Alto
+TC_TD_HI = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Desenvolvimento de centralidades",
+      "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "high",
+      "Place": "Estação Penha",
+      "VoteCode": 'TCTDHI1',
+      "Photo": {
+        "Filename": "images/photos/64.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.277419331999965, -22.841917825999928, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Desenvolvimento de centralidades",
+      "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "high",
+      "Place": "Estação Vaz Lobo",
+      "VoteCode": 'TCTDHI2',
+      "Photo": {
+        "Filename": "images/photos/64.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.328408242999956, -22.856634570999972, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Desenvolvimento de centralidades",
+      "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "high",
+      "Place": "Parque Madureira",
+      "VoteCode": 'TCTDHI3',
+      "Photo": {
+        "Filename": "images/photos/64.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.3434, -22.8659, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Desenvolvimento de centralidades",
+      "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "high",
+      "Place": "Estação Vicente de Carvalho",
+      "VoteCode": 'TCTDHI4',
+      "Photo": {
+        "Filename": "images/photos/64.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.312858675999962, -22.852747704999956, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Desenvolvimento de centralidades",
+      "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "high",
+      "Place": "Estação Taquara",
+      "VoteCode": 'TCTDHI4',
+      "Photo": {
+        "Filename": "images/photos/64.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.373839480999941, -22.924146657999927, 0.0]
+    }
+  }
+];
+
+// TransCarioca - TOD - Médio
+TC_TD_MD = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Revisão da política de estacionamento",
+      "Description": "Parte do BRT TransCarioca passará por reformulação sob a forma de um Projeto de Área de Especial Interesse Urbanístico (AEIU). O projeto de lei prevê dentre outros, uma revisão da Política de Estacionamento para a área.",
+      "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento proíba a construção de edifícios-garagem a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "mid",
+      "Place": "Estação Campinho",
+      "VoteCode": 'TCTDMD1',
+      "Photo": {
+        "Filename": "images/photos/62.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.343, -22.883, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Revisão da política de estacionamento",
+      "Description": "Parte do BRT TransCarioca passará por reformulação sob a forma de um Projeto de Área de Especial Interesse Urbanístico (AEIU). O projeto de lei prevê dentre outros, uma revisão da Política de Estacionamento para a área.",
+      "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento proíba a construção de edifícios-garagem a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "mid",
+      "Place": "Estação Praça Seca",
+      "VoteCode": 'TCTDMD2',
+      "Photo": {
+        "Filename": "images/photos/62.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.353, -22.898, 0.0]
+    }
+  }
+];
+
+// TransCarioca - TOD - Baixo
+TC_TD_LO = [
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Oportunidades de desenvolvimento social",
+      "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
+      "Recommendation": "Promover a construção de empreendimentos de habitação de interesse social (HIS) no entorno e áreas de influência do corredor é essencial para minimizar processos de gentrificação. Além disso, a diversidade social no entorno de estações auxilia a minimizar a pendularidade do corredor.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "low",
+      "Place": "Estação Maré",
+      "VoteCode": 'TCTDLO1',
+      "Photo": {
+        "Filename": "images/photos/63.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.243875577999972, -22.84709965299993, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Oportunidades de desenvolvimento social",
+      "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
+      "Recommendation": "Promover a construção de empreendimentos de habitação de interesse social (HIS) no entorno e áreas de influência do corredor é essencial para minimizar processos de gentrificação. Além disso, a diversidade social no entorno de estações auxilia a minimizar a pendularidade do corredor.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "low",
+      "Place": "Estação Santa Luzia",
+      "VoteCode": 'TCTDLO2',
+      "Photo": {
+        "Filename": "images/photos/63.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.25394, -22.85419, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Oportunidades de desenvolvimento social",
+      "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
+      "Recommendation": "Promover a construção de empreendimentos de habitação de interesse social (HIS) no entorno e áreas de influência do corredor é essencial para minimizar processos de gentrificação. Além disso, a diversidade social no entorno de estações auxilia a minimizar a pendularidade do corredor.",
+      "Corridor": "TransCarioca",
+      "Category": "TOD",
+      "Level": "low",
+      "Place": "Estação IPASE",
+      "VoteCode": 'TCTDLO3',
+      "Photo": {
+        "Filename": "images/photos/63.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.35833, -22.90392, 0.0]
+    }
+  }
+];
+
 // TransOlímpica - Segurança Viária - Alto
 TO_SV_HI = [
   {

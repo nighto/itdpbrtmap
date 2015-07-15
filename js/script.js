@@ -296,7 +296,7 @@ require([
 
   // initializing study object
   var study = {},
-      brts = ['TW', 'TO', 'TB'],
+      brts = ['TW', 'TC', 'TO', 'TB'],
       categories = ['SV', 'OI', 'TD', 'BP'],
       levels = ['LO', 'MD', 'HI'];
 
