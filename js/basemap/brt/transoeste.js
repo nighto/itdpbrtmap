@@ -2644,7 +2644,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Guiomar Novais",
+        "Name": "Guiomar Novaes",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "Operational"
