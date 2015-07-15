@@ -379,7 +379,7 @@ require([
       var auxNode = eval(aux_area.value);
       var auxPointsArray = auxNode.properties.aux_area;
 
-      // inverting lat/lon
+      // inverting lat/lon (on GeoJSON they're inverted in relation of what Leaflet expects)
       if(auxNode.properties.aux_area_workaround === undefined){
         for(var i=0, l=auxPointsArray.length; i<l; i++){
           var t = auxPointsArray[i][0];
@@ -392,18 +392,48 @@ require([
       aux_polygon = L.polygon(auxPointsArray).addTo(map);
     }
     else {
-      //console.log('não tem');
       if(map.hasLayer(aux_polygon)){
         map.removeLayer(aux_polygon);
         aux_polygon = null;
       }
     }
   });
-
   map.on('popupclose', function(e){
-    //console.log('removendo');
     if(map.hasLayer(aux_polygon)){
       map.removeLayer(aux_polygon);
+    }
+  });
+
+  // Bairros misclicking correction
+  lastPopupClickBairros = false;
+  map.on('popupopen', function(e){
+    var popupClassList = e.popup._container.classList;
+    for(var i=0, l=popupClassList.length; i<l; i++){
+      if(popupClassList[i] == 'bairro'){
+        lastPopupClickBairros = true;
+      }
+    }
+  });
+  map.on('popupclose', function(e){
+    var popupClassList = e.popup._container.classList;
+    for(var i=0, l=popupClassList.length; i<l; i++){
+      if(popupClassList[i] == 'bairro'){
+        if(lastPopupClickBairros){
+          window.setTimeout(function(){
+            // close popup if bairro
+            var p = document.getElementsByClassName('leaflet-popup-close-button')[0]
+            if(p !== undefined){
+              var newPopupClassList = p.parentElement.classList;
+              for(var i=0, l=newPopupClassList.length; i<l; i++){
+                if(newPopupClassList[i] == 'bairro'){
+                  p.click();
+                }
+              }
+            }
+            lastPopupClickBairros = false;
+          }, 0);
+        }
+      }
     }
   });
 
