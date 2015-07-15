@@ -175,9 +175,12 @@ label {
 }
 
 .leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper,
-.leaflet-popup.Link          .leaflet-popup-content-wrapper,
 .leaflet-popup.TransOlímpica .leaflet-popup-tip,
-.leaflet-popup.Link          .leaflet-popup-tip{
+.leaflet-popup.Link          .leaflet-popup-content-wrapper,
+.leaflet-popup.Link          .leaflet-popup-tip,
+.leaflet-popup.low           .leaflet-popup-content-wrapper,
+.leaflet-popup.low           .leaflet-popup-tip,
+{
   border-color: rgba(189,204,42,.9);
 }
 .leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper b,
