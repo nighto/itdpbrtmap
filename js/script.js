@@ -607,16 +607,25 @@ require([
   });
   map.addControl(new MyControl());
 
-  // escala
+  // scale
   L.control.scale().addTo(map);
 
-  // satélite
+  // north
+  var north = L.control({position: "bottomright"});
+  north.onAdd = function(map) {
+      var div = L.DomUtil.create("div", "info legend");
+      div.innerHTML = '<img src="images/icons/norte.png" style="width:50px">';
+      return div;
+  }
+  north.addTo(map);
+
+  // satellite imagery
   var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     //attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
   });
   var isSatelliteAlreadyLoaded = false;
 
-  // removendo o loading
+  // removing loading
   document.getElementById('loading-container').className = 'loading-complete';
   setTimeout(function(){
     document.getElementById('loading-container').className = 'loading-complete hidden';
