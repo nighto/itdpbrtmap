@@ -314,7 +314,13 @@ require([
                 var popupText = '',
                     level = '';
 
-                popupText = '<div class="popup-icon popup-icon-' + categories[c] + '"></div>' +
+                popupText = '<div class="popup-icon popup-icon-' + categories[c] + '"';
+
+                if(feature.properties.aux_area !== undefined){
+                  popupText += ' data-aux-area="' + brts[b] + '_' + categories[c] + '_' + levels[l] + '[' + feature.properties.index + ']"'
+                }
+
+                popupText += '></div>' +
                             '<b>' + feature.properties.Name + '</b>';
                 if(feature.properties.Category){
                   popupText += '<br><strong>Categoria:</strong> ' + feature.properties.Category;
@@ -364,6 +370,42 @@ require([
     }
   };
   initializeStudy(study);
+
+  // drawing auxiliary areas
+  aux_polygon = null;
+  map.on('popupopen', function(e){
+    var aux_area = e.target._popup._contentNode.childNodes[0].attributes[1]; // AB_CD_EF[n]
+    if(aux_area !== undefined){
+      var auxNode = eval(aux_area.value);
+      var auxPointsArray = auxNode.properties.aux_area;
+
+      // inverting lat/lon
+      if(auxNode.properties.aux_area_workaround === undefined){
+        for(var i=0, l=auxPointsArray.length; i<l; i++){
+          var t = auxPointsArray[i][0];
+          auxPointsArray[i][0] = auxPointsArray[i][1];
+          auxPointsArray[i][1] = t;
+        }
+        auxNode.properties.aux_area_workaround = true;
+      }
+
+      aux_polygon = L.polygon(auxPointsArray).addTo(map);
+    }
+    else {
+      //console.log('não tem');
+      if(map.hasLayer(aux_polygon)){
+        map.removeLayer(aux_polygon);
+        aux_polygon = null;
+      }
+    }
+  });
+
+  map.on('popupclose', function(e){
+    //console.log('removendo');
+    if(map.hasLayer(aux_polygon)){
+      map.removeLayer(aux_polygon);
+    }
+  });
 
   // defining base layers
   var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteLZ],
