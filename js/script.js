@@ -389,7 +389,7 @@ require([
         auxNode.properties.aux_area_workaround = true;
       }
 
-      aux_polygon = L.polygon(auxPointsArray).addTo(map);
+      aux_polygon = L.polygon(auxPointsArray, { color: "#00A851" }).addTo(map);
     }
     else {
       if(map.hasLayer(aux_polygon)){
