@@ -558,7 +558,7 @@ require([
         });
       }
       L.DomEvent.disableClickPropagation(checkboxExtras).on(checkboxExtras, 'change', function(e){
-        if(e.srcElement.checked){
+        if(document.getElementById('extras').checked){
           if(document.getElementById('EMP').checked){
             selectedMapaDeCalorRef = 'EMP';
           }else if(document.getElementById('DEN').checked){
@@ -581,7 +581,13 @@ require([
         }
       });
       var handleRadioButtonChange = function(e){
-        if(e.srcElement.id == 'SAT'){
+        var rbsrc;
+        if(e.srcElement !== undefined){
+          rbsrc = e.srcElement.id;
+        }else{
+          rbsrc = e.target.id;
+        }
+        if(rbsrc == 'SAT'){
           if(isSatelliteAlreadyLoaded){
             Esri_WorldImagery.bringToFront();
           }else{
@@ -594,7 +600,7 @@ require([
           if(isSatelliteAlreadyLoaded){
             Esri_WorldImagery.bringToBack();
           }
-          selectedMapaDeCalorRef = e.srcElement.id;
+          selectedMapaDeCalorRef = rbsrc;
           handleBairrosChange();
         }
       };
