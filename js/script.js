@@ -21,7 +21,7 @@ require([
 
   // add an OpenStreetMap tile layer
   L.tileLayer(MAPBOX_TILE_LAYER_URL, {
-      attribution: '&copy; 2015 ITDP Brasil | Mapa base: <a href="http://osm.org/copyright">OpenStreetMap</a>'
+      attribution: '&copy; 2015 ITDP Brasil | Mapa base: <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> | <a href="http://itdpbrasil.org.br/mapa-interativo-ficha-tecnica/" target="_blank">Ficha técnica</a>'
   }).addTo(map);
 
   selectedMapaDeCalorRef = 'DES';
