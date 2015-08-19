@@ -29,13 +29,14 @@
       <th><a href="" ng-click="order('voteCategory')">Categoria</a> <span class="sortorder" ng-show="predicate === 'voteCategory'" ng-class="{reverse:reverse}"></span></th>
       <th><a href="" ng-click="order('voteLevel')">Nível</a> <span class="sortorder" ng-show="predicate === 'voteLevel'" ng-class="{reverse:reverse}"></span></th>
       <th><a href="" ng-click="order('voteName')">Nome</a> <span class="sortorder" ng-show="predicate === 'voteName'" ng-class="{reverse:reverse}"></span></th>
-      <th class="text-center"><span class="glyphicon glyphicon-star"></span></th>
-      <th class="text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
-      <th class="text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
-      <th class="text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
-      <th class="text-center"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center" style="width: 50px"><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center" style="width: 50px"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center" style="width: 50px"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center" style="width: 70px"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
+      <th class="text-center" style="width: 70px"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></th>
       <th><a href="" ng-click="order('total')">Total de Votos</a> <span class="sortorder" ng-show="predicate === 'total'" ng-class="{reverse:reverse}"></span></th>
       <th><a href="" ng-click="order('average')">Média</a> <span class="sortorder" ng-show="predicate === 'average'" ng-class="{reverse:reverse}"></span></th>
+      <th style="text-align: center"><a href="" ng-click="order('weight')">Soma das <span class="glyphicon glyphicon-star"></span></a> <span class="sortorder" ng-show="predicate === 'weight'" ng-class="{reverse:reverse}"></span></th>
     </tr>
     <tr ng-repeat="vote in voteArray | orderBy:predicate:reverse">
       <td>{{vote.voteCorridor}}</td>
@@ -49,6 +50,7 @@
       <td class="text-center"><span ng-if="vote['5']">{{vote['5']}}</span><span ng-if="!vote['5']">0</span></td>
       <td class="text-center">{{vote.total}}</td>
       <td class="text-center">{{vote.average | number:2}}</td>
+      <td class="text-center">{{vote.weight}}</td>
     </tr>
   </table>
 
@@ -68,6 +70,7 @@ app.controller("VoteResultCtrl", function($scope, $firebaseArray) {
       var _level = _study.properties.Level;
       var _levelStr;
       var _total = 0;
+      var _weight = 0;
       var _avg;
 
       if(_level == 'low')
@@ -83,8 +86,9 @@ app.controller("VoteResultCtrl", function($scope, $firebaseArray) {
           _v4 = $scope.voteArray[i]['4'] || 0,
           _v5 = $scope.voteArray[i]['5'] || 0;
 
-      _total = _v1 + _v2 + _v3 + _v4 + _v5;
-      _avg = ( _v1*1 + _v2*2 + _v3*3 + _v4*4 + _v5*5 ) / _total;
+      _total  = _v1   + _v2   + _v3   + _v4   + _v5;
+      _weight = _v1*1 + _v2*2 + _v3*3 + _v4*4 + _v5*5;
+      _avg    = _weight / _total;
 
       $scope.voteArray[i].voteName = _study.properties.Name.replace(/&nbsp;/gi, ' ');
       $scope.voteArray[i].voteCorridor = _study.properties.Corridor;
@@ -92,6 +96,7 @@ app.controller("VoteResultCtrl", function($scope, $firebaseArray) {
       $scope.voteArray[i].voteLevel = _levelStr;
       $scope.voteArray[i].total = _total;
       $scope.voteArray[i].average = _avg;
+      $scope.voteArray[i].weight = _weight;
     }
     console.log($scope.voteArray);
   });
