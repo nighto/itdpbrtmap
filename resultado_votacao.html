@@ -25,6 +25,7 @@
 <body ng-controller="VoteResultCtrl">
   <table class="table table-hover">
     <tr>
+      <th><a href="" ng-click="order('votePlace')">Localização</a> <span class="sortorder" ng-show="predicate === 'votePlace'" ng-class="{reverse:reverse}"></span></th>
       <th><a href="" ng-click="order('voteCorridor')">Corredor</a> <span class="sortorder" ng-show="predicate === 'voteCorridor'" ng-class="{reverse:reverse}"></span></th>
       <th><a href="" ng-click="order('voteCategory')">Categoria</a> <span class="sortorder" ng-show="predicate === 'voteCategory'" ng-class="{reverse:reverse}"></span></th>
       <th><a href="" ng-click="order('voteLevel')">Nível</a> <span class="sortorder" ng-show="predicate === 'voteLevel'" ng-class="{reverse:reverse}"></span></th>
@@ -39,6 +40,7 @@
       <th style="text-align: center"><a href="" ng-click="order('weight')">Soma das <span class="glyphicon glyphicon-star"></span></a> <span class="sortorder" ng-show="predicate === 'weight'" ng-class="{reverse:reverse}"></span></th>
     </tr>
     <tr ng-repeat="vote in voteArray | orderBy:predicate:reverse">
+      <td>{{vote.votePlace}}</td>
       <td>{{vote.voteCorridor}}</td>
       <td>{{vote.voteCategory}}</td>
       <td>{{vote.voteLevel}}</td>
@@ -93,6 +95,7 @@ app.controller("VoteResultCtrl", function($scope, $firebaseArray) {
       $scope.voteArray[i].voteName = _study.properties.Name.replace(/&nbsp;/gi, ' ');
       $scope.voteArray[i].voteCorridor = _study.properties.Corridor;
       $scope.voteArray[i].voteCategory = _study.properties.Category;
+      $scope.voteArray[i].votePlace = _study.properties.Place;
       $scope.voteArray[i].voteLevel = _levelStr;
       $scope.voteArray[i].total = _total;
       $scope.voteArray[i].average = _avg;
