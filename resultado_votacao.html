@@ -40,6 +40,7 @@
       <th style="text-align: center"><a href="" ng-click="order('weight')">Soma das <span class="glyphicon glyphicon-star"></span></a> <span class="sortorder" ng-show="predicate === 'weight'" ng-class="{reverse:reverse}"></span></th>
     </tr>
     <tr ng-repeat="vote in voteArray | orderBy:predicate:reverse">
+      <td>{{vote.voteCode}}</td>
       <td>{{vote.votePlace}}</td>
       <td>{{vote.voteCorridor}}</td>
       <td>{{vote.voteCategory}}</td>
@@ -92,6 +93,7 @@ app.controller("VoteResultCtrl", function($scope, $firebaseArray) {
       _weight = _v1*1 + _v2*2 + _v3*3 + _v4*4 + _v5*5;
       _avg    = _weight / _total;
 
+      $scope.voteArray[i].voteCode = _study.properties.VoteCode;
       $scope.voteArray[i].voteName = _study.properties.Name.replace(/&nbsp;/gi, ' ');
       $scope.voteArray[i].voteCorridor = _study.properties.Corridor;
       $scope.voteArray[i].voteCategory = _study.properties.Category;
