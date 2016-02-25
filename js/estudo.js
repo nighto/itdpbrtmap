@@ -4,7 +4,7 @@ TW_SV_HI = [
     "type": "Feature",
     "properties": {
       "Name": "Pontos de linhas alimentadoras",
-      "Description": "Incidência de "<a target="_blank" href="http://itdpbrasil.org.br/wp-content/local/brtmap/">" colisões "</a>" e atropelamentos em pontos críticos, especialmente nos pontos de ônibus de linhas alimentadoras (ao longo da Av. das Américas) que se encontram desalinhados das estações de BRT.",
+      "Description": "Incidência de <a target="_blank" href="http://itdpbrasil.org.br/wp-content/local/brtmap/"> colisões </a> e atropelamentos em pontos críticos, especialmente nos pontos de ônibus de linhas alimentadoras (ao longo da Av. das Américas) que se encontram desalinhados das estações de BRT.",
       "Recommendation": "Redução da velocidade na faixas de tráfego comum e alinhamento dos pontos de ônibus com as travessias das estações, para diminuir o caminho do pedestre e evitar travessias fora das faixas.",
       "Corridor": "TransOeste",
       "Category": "Segurança Viária",
