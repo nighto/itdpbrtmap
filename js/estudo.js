@@ -1,7 +1,7 @@
 // TransOeste - Segurança Viária - Alto
 TW_SV_HI = [
   {
-    "type": "Feature",<a target="_blank" href="' + feature.properties.Photo.CreditsURL + '">' + feature.properties.Photo.Credits + '</a>
+    "type": "Feature",
     "properties": {
       "Name": "Pontos de linhas alimentadoras",
       "Description": "Incidência de "<a target="_blank" href="http://itdpbrasil.org.br/wp-content/local/brtmap/">" colisões "</a>" e atropelamentos em pontos críticos, especialmente nos pontos de ônibus de linhas alimentadoras (ao longo da Av. das Américas) que se encontram desalinhados das estações de BRT.",
