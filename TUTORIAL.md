@@ -22,7 +22,7 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
     * [Alterar propriedades de pontos do estudo](#alterar-propriedades-de-pontos-do-estudo)
     * [Alterar propriedades de um corredor ou de estações de um corredor](#alterar-propriedades-de-um-corredor-ou-de-estações-de-um-corredor)
     * [Alterar propriedades dos bairros](#alterar-propriedades-dos-bairros)
-    * [Alterar estilos dos elementos desenhados sobre o mapa](#alterar-estilos-dos-elementos-desenhados-sobre-o-mapa)
+    * [Alterar estilos das linhas desenhadas sobre o mapa](#alterar-estilos-das-linhas-desenhadas-sobre-o-mapa)
 
 ## Descrevendo os arquivos
 
@@ -141,6 +141,6 @@ Veja mais detalhes na seção [Arquivos dos Corredores](#arquivos-dos-corredores
 
 As propriedades dos bairros (exibidas nas camadas Extras > Densidade Populacional e Empregos formais/habitante) são realizadas no arquivo [`js/basemap/bairros.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/basemap/bairros.js). Veja mais detalhes na seção [Arquivo dos bairros](#arquivo-dos-bairros).
 
-### Alterar estilos dos elementos desenhados sobre o mapa
+### Alterar estilos das linhas desenhadas sobre o mapa
 
-Os estilos dos elementos desenhados sobre o mapa são definidos no arquivo [`js/mapstyles.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/mapstyles.js). Veja mais detalhes na seção [Arquivo de estilos do mapa](#arquivo-de-estilos-do-mapa).
+Os estilos das linhas desenhadas sobre o mapa, tais como: linhas de BRT, estações de BRT e cores dos bairros nas camadas Extra são definidos no arquivo [`js/mapstyles.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/mapstyles.js). Veja mais detalhes na seção [Arquivo de estilos do mapa](#arquivo-de-estilos-do-mapa).
