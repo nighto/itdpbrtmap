@@ -32,7 +32,7 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
       * [Definição dos demais controles](#definição-dos-demais-controles)
   * [Exemplos de alterações](#exemplos-de-alterações)
     * [Alterar propriedades de pontos do estudo](#alterar-propriedades-de-pontos-do-estudo)
-    * [Alterar aparência do popup dos objetos do estudo](#Alterar-aparência-do-popup-dos-objetos-do-estudo)
+    * [Alterar aparência do popup dos objetos do estudo](#alterar-aparência-do-popup-dos-objetos-do-estudo)
     * [Alterar propriedades de um corredor ou de estações de um corredor](#alterar-propriedades-de-um-corredor-ou-de-estações-de-um-corredor)
     * [Alterar aparência do popup dos corredores ou de estações de um corredor](#alterar-aparência-do-popup-dos-corredores-ou-de-estações-de-um-corredor)
     * [Alterar propriedades dos bairros](#alterar-propriedades-dos-bairros)
