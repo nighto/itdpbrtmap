@@ -1,5 +1,5 @@
-Tutorial
-==========
+Tutorial de edição do mapa
+==========================
 
 Este documento tem como objetivo descrever os códigos JavaScript para permitir que sua edição seja feita por qualquer pessoa, sem muito treinamento. Pularemos definições básicas sobre JS, por exemplo *o que são* objetos, arrays etc.
 
