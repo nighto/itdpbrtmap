@@ -20,6 +20,14 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
     * [js/mapstyles.js](#arquivo-de-estilos-do-mapa)
     * [js/popupfn.js](#arquivo-de-funções-do-menu-lateral)
     * [js/vote.js](#arquivo-de-funções-de-votação)
+    * [js/script.js](#arquivo-principal)
+      * [Inicialização do mapa base, coordenadas e nível de zoom iniciais](#inicialização-do-mapa-base,-coordenadas-e-nível-de-zoom-iniciais)
+      * [Definição dos textos do popup](#definição-dos-textos-do-popup)
+      * [Definição das camadas](#definição-das-camadas)
+      * [Definição dos eventos do menu lateral e de mudança de zoom](#definição-dos-eventos-do-menu-lateral-e-de-mudança-de-zoom)
+      * [Definição das camadas do estudo](#definição-das-camadas-do-estudo)
+      * [Definição da construção do menu lateral](#definiçãoda-construção-do-menu-lateral)
+      * [Definição dos demais controles](#definição-dos-demais-controles)
   * [Exemplos de alterações](#exemplos-de-alterações)
     * [Alterar propriedades de pontos do estudo](#alterar-propriedades-de-pontos-do-estudo)
     * [Alterar propriedades de um corredor ou de estações de um corredor](#alterar-propriedades-de-um-corredor-ou-de-estações-de-um-corredor)
@@ -129,6 +137,54 @@ O arquivo [`js/popupfn.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/j
 ### Arquivo de funções de votação
 
 O arquivo [`js/vote.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/vote.js) define função auxiliar utilizada para exibir os links de votação de cada ponto.
+
+### Arquivo principal
+
+Voltamos finalmente ao arquivo [`js/script.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/script.js), o arquivo principal do projeto. Analisaremos individualmente cada seção do arquivo:
+
+#### Inicialização do mapa base, coordenadas e nível de zoom iniciais
+
+Nas linhas 13 a 24, temos a definição das coordenadas e nível de zoom iniciais, bem como do endereço do mapa base no Mapbox, e o *instanciamento* do mapa. Na linha 26, definimos que o mapa se inicia com os Extras desativados.
+
+#### Definição dos textos do popup
+
+Nas linhas 28 a 49, definimos os textos que aparecem nos status das linhas e estações (em funcionamento, em construção etc).
+
+Nas linhas 51 a 76, definimos os textos que aparecem no popup de uma linha (nome, trecho, extensão, estações, terminais, status).
+
+Nas linhas 78 a 115, definimos os textos que aparecem no popup de uma estação (nome, ícone, serviços, status).
+
+Nas linhas 117 a 132, definimos os textos que aparecem no popup dos bairros (nome, área, população, densidade populacional, empregos formais, empregos formais/habitante).
+
+#### Definição das camadas
+
+Nas linhas 134 a 164, instanciamos as camadas dos bairros, linhas e estações, associando as funções de popup definidas anteriormente.
+
+#### Definição dos eventos do menu lateral e de mudança de zoom
+
+Nas linhas 166 a 294, definimos o menu lateral e os eventos de ligar e desligar camada, que são alterados em determinados níveis de zoom.
+
+#### Definição das camadas do estudo
+
+Nas linhas 297 a 371, definimos os objetos das camadas do estudo, os textos que aparecem no popup (nome, ícone, categoria, localização, descrição, recomendação, voto, foto e, se for o caso, áreas em destaque, nas linhas 313 a 353) e os pinos que aparecem no mapa para cada objeto do estudo (tamanho e nome do arquivo, nas linhas 354 a 365).
+
+Nas linhas 373 a 404, definimos o tratamento das áreas auxiliares, bem como a sua aparência (linha 391).
+
+Nas linhas 406 a 437, há o tratamento dos cliques nos bairros - caso haja algum popup aberto, ao clicar em um bairro, é preciso fechar o popup, antes de exibir um novo.
+
+#### Definição da construção do menu lateral
+
+Nas linhas 439 a 613, há a construção do menu lateral e seus eventos de clique, exibindo ou ocultando camadas.
+
+#### Definição dos demais controles
+
+Nas linhas 615 e 616, há a adição do elemento de escala do mapa.
+
+Nas linhas 619 a 625, há a adição da rosa dos ventos, bem como a sua definição (linha 622).
+
+Nas linhas 627 a 631, há a definição das imagens utilizadas na opção Extras > Imagens de satélite.
+
+Finalmente, nas linhas 633 a 637, há a remoção do elemento de pré-carregamento (logo do ITDP girando na inicialização da página).
 
 ## Exemplos de alterações
 
