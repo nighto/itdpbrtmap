@@ -1,7 +1,9 @@
 Tutorial
 ==========
 
-Este documento tem como objetivo descrever o código para permitir que sua edição seja feita por qualquer pessoa, sem muito treinamento em JavaScript.
+Este documento tem como objetivo descrever os códigos JavaScript para permitir que sua edição seja feita por qualquer pessoa, sem muito treinamento. Pularemos definições básicas sobre JS, por exemplo *o que são* objetos, arrays etc.
+
+O tutorial fala em alguns momentos sobre *aparência* de determinados aspectos (cores de corredores, por exemplo). De fato, algumas definições são realizadas no JavaScript (por serem plotadas no mapa), mas outras são realizadas diretamente no CSS (cores e tamanho de elementos etc), o que não é coberto por este tutorial, mas pode ser editado no arquivo [`css/styles.css`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/css/style.css).
 
 Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o projeto, explicando em linhas gerais que informações eles contém e como editá-las. Na segunda parte teremos o inverso: uma lista de possibilidades de edições a serem feitas e que arquivos devem ser editados para que se atinja esse objetivo.
 
@@ -26,11 +28,13 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
       * [Definição das camadas](#definição-das-camadas)
       * [Definição dos eventos do menu lateral e de mudança de zoom](#definição-dos-eventos-do-menu-lateral-e-de-mudança-de-zoom)
       * [Definição das camadas do estudo](#definição-das-camadas-do-estudo)
-      * [Definição da construção do menu lateral](#definiçãoda-construção-do-menu-lateral)
+      * [Definição da construção do menu lateral](#definição-da-construção-do-menu-lateral)
       * [Definição dos demais controles](#definição-dos-demais-controles)
   * [Exemplos de alterações](#exemplos-de-alterações)
     * [Alterar propriedades de pontos do estudo](#alterar-propriedades-de-pontos-do-estudo)
+    * [Alterar aparência do popup dos objetos do estudo](#Alterar-aparência-do-popup-dos-objetos-do-estudo)
     * [Alterar propriedades de um corredor ou de estações de um corredor](#alterar-propriedades-de-um-corredor-ou-de-estações-de-um-corredor)
+    * [Alterar aparência do popup dos corredores ou de estações de um corredor](#alterar-aparência-do-popup-dos-corredores-ou-de-estações-de-um-corredor)
     * [Alterar propriedades dos bairros](#alterar-propriedades-dos-bairros)
     * [Alterar estilos das linhas desenhadas sobre o mapa](#alterar-estilos-das-linhas-desenhadas-sobre-o-mapa)
 
@@ -190,7 +194,11 @@ Finalmente, nas linhas 633 a 637, há a remoção do elemento de pré-carregamen
 
 ### Alterar propriedades de pontos do estudo
 
-Para alterar propriedades de pontos do estudo (texto, descrição, recomendação etc.), edite o arquivo [`js/estudo.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/estudo.js). Veja mais detalhes sobre como editar este arquivo na seção [Arquivo do estudo](#arquivo-do-estudo).
+Para alterar propriedades de pontos do estudo (texto, descrição, recomendação, foto etc.), bem como a posição dos pinos ou áreas auxiliares definidas neles, edite o arquivo [`js/estudo.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/estudo.js). Veja mais detalhes sobre como editar este arquivo na seção [Arquivo do estudo](#arquivo-do-estudo).
+
+### Alterar aparência do popup dos objetos do estudo
+
+Para alterar a aparência do popup dos objetos do estudo, como legendas para cada campo (por exemplo, o texto "Recomendação:"), edite o arquivo [`js/script.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/script.js). Veja mais detalhes sobre esta alteração na seção [Definição das camadas do estudo](#definição-das-camadas-do-estudo).
 
 ### Alterar propriedades de um corredor ou de estações de um corredor
 
@@ -202,6 +210,10 @@ Para alterar propriedades de um corredor (nome, trecho, extensão, quantidade de
 * [`js/basemap/brt/transbrasil.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/basemap/brt/transbrasil.js)
 
 Veja mais detalhes na seção [Arquivos dos Corredores](#arquivos-dos-corredores).
+
+### Alterar aparência do popup dos corredores ou de estações de um corredor
+
+Para alterar a aparência do popup dos corredores ou das estações de um corredor (por exemplo, o texto "Status:"), edite o arquivo [`js/script.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/script.js). Veja mais detalhes sobre esta alteração na seção [Definição dos textos do popup](#definição-dos-textos-do-popup).
 
 ### Alterar propriedades dos bairros
 
