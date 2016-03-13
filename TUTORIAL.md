@@ -18,6 +18,7 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
       * [js/basemap/bairros.js](#arquivo-dos-bairros)
     * [js/estudo.js](#arquivo-do-estudo)
     * [js/mapstyles.js](#arquivo-de-estilos-do-mapa)
+    * [js/popupfn.js](#arquivo-de-funcoes-do-menu-lateral)
   * [Exemplos de alterações](#exemplos-de-alterações)
     * [Alterar propriedades de pontos do estudo](#alterar-propriedades-de-pontos-do-estudo)
     * [Alterar propriedades de um corredor ou de estações de um corredor](#alterar-propriedades-de-um-corredor-ou-de-estações-de-um-corredor)
@@ -70,7 +71,7 @@ Por motivos de performance, este arquivo é *minificado*, o que faz com que ele 
 
 ### Arquivo do estudo
 
-O arquivo [`js/estudo.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/estudo.js) traz as informações do estudo realizado, que vem a aparecer nos pontos plotados no mapa. Para cada corredor, categoria, e nível de atenção, há um *array* definido, com todos os pontos que atendem a esta combinação. Antes de nos debruçarmos nos detalhes desse *array*, vamos ver os *arrays* definidos:
+O arquivo [`js/estudo.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/estudo.js) traz as informações do estudo realizado, que vem a aparecer nos pontos plotados no mapa. Para cada corredor, categoria, e nível de atenção, há um *array* definido, com todos os pontos que atendem a esta combinação. Antes de nos debruçarmos nos detalhes desse *array*, vamos ver as combinações possíveis:
 
   * Corredores
     * `TW` - TransOeste (mnemônico: "**T**rans**W**est")
@@ -119,6 +120,10 @@ Nas linhas 6 a 10, é definido o estilo das linhas de BRT (cor, peso (espessura 
 Nas linhas 12 a 60, há a definição do estilo dos bairros, sendo das linhas 26 a 38 definidas as cores para o estilo exibido na opção Extras > Densidade populacional, e nas linhas 39 a 51 as cores do estilo Extras > Empregos formais/habitante.
 
 Finalmente, nas linhas 62 a 129 há a definição dos estilos das bolinhas que representam cada estação no sistema BRT.
+
+### Arquivo de funções do menu lateral
+
+O arquivo [`js/popupfn.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/popupfn.js) define funções auxiliares que são utilizadas pelo script ao gerar o menu lateral, como o título das seções (linhas 3 a 7), os checkboxes que exibem e ocultam as camadas do mapa (linhas 9 a 47) e os botões da camada extras (linhas 49 a 57).
 
 ## Exemplos de alterações
 
