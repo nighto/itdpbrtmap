@@ -13,7 +13,6 @@ require([
   // coordenadas do mapa
   var INITIAL_COORDINATES = [-22.871658, -43.3371976], // Madureira
       INITIAL_ZOOM = 11,
-      OSM_TILE_LAYER_URL = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       MAPBOX_TILE_LAYER_URL = 'http://{s}.tiles.mapbox.com/v3/nighto.02109f37/{z}/{x}/{y}.png';
 
   // create a map in the "map" div, set the view to a given place and zoom
