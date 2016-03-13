@@ -21,7 +21,7 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
     * [js/popupfn.js](#arquivo-de-funções-do-menu-lateral)
     * [js/vote.js](#arquivo-de-funções-de-votação)
     * [js/script.js](#arquivo-principal)
-      * [Inicialização do mapa base, coordenadas e nível de zoom iniciais](#inicialização-do-mapa-base,-coordenadas-e-nível-de-zoom-iniciais)
+      * [Inicialização do mapa base, coordenadas e nível de zoom iniciais](#inicialização-do-mapa-base-coordenadas-e-nível-de-zoom-iniciais)
       * [Definição dos textos do popup](#definição-dos-textos-do-popup)
       * [Definição das camadas](#definição-das-camadas)
       * [Definição dos eventos do menu lateral e de mudança de zoom](#definição-dos-eventos-do-menu-lateral-e-de-mudança-de-zoom)
