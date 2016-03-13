@@ -19,6 +19,7 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
     * [js/estudo.js](#arquivo-do-estudo)
     * [js/mapstyles.js](#arquivo-de-estilos-do-mapa)
     * [js/popupfn.js](#arquivo-de-funcoes-do-menu-lateral)
+    * [js/vote.js](#arquivo-de-funcoes-de-votacao)
   * [Exemplos de alterações](#exemplos-de-alterações)
     * [Alterar propriedades de pontos do estudo](#alterar-propriedades-de-pontos-do-estudo)
     * [Alterar propriedades de um corredor ou de estações de um corredor](#alterar-propriedades-de-um-corredor-ou-de-estações-de-um-corredor)
@@ -124,6 +125,10 @@ Finalmente, nas linhas 62 a 129 há a definição dos estilos das bolinhas que r
 ### Arquivo de funções do menu lateral
 
 O arquivo [`js/popupfn.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/popupfn.js) define funções auxiliares que são utilizadas pelo script ao gerar o menu lateral, como o título das seções (linhas 3 a 7), os checkboxes que exibem e ocultam as camadas do mapa (linhas 9 a 47) e os botões da camada extras (linhas 49 a 57).
+
+### Arquivo de funções de votação
+
+O arquivo [`js/vote.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/vote.js) define função auxiliar utilizada para exibir os links de votação de cada ponto.
 
 ## Exemplos de alterações
 
