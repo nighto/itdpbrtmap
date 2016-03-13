@@ -1,7 +1,6 @@
 // public object to hold all path style definitions
 pathStyle = {};
-pathStyle.BRT = {},
-pathStyle.OME = {};
+pathStyle.BRT = {};
 
 pathStyle.BRT.TW = {"color": "#5AC9E6","weight": 5,"opacity": .75},
 pathStyle.BRT.TWplanejada = {"color": "#5AC9E6","weight": 5,"opacity": .4},
