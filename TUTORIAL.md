@@ -16,13 +16,15 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
           * [Tipos de operação](#tipos-de-operação)
           * [Status](#status)
       * [js/basemap/bairros.js](#arquivo-dos-bairros)
+    * [js/estudo.js](#arquivo-do-estudo)
   * [Exemplos de alterações](#exemplos-de-alterações)
+    * [Alterar propriedades de pontos do estudo](#alterar-propriedades-de-pontos-do-estudo)
     * [Alterar propriedades de um corredor ou de estações de um corredor](#alterar-propriedades-de-um-corredor-ou-de-estações-de-um-corredor)
     * [Alterar propriedades dos bairros](#alterar-propriedades-dos-bairros)
 
 ## Descrevendo os arquivos
 
-O arquivo [`js/script.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/script.js) é o principal arquivo do projeto. Nas linhas iniciais há a chamada do `require` que carrega os demais arquivos. Por esse motivo, os analisaremos primeiro.
+O arquivo [`js/script.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/script.js) é o primeiro arquivo JavaScript do projeto a ser carregado. Nas linhas iniciais (1 a 10) há a chamada do `require`, que *requer* os demais arquivos para funcionar. Somente após estes arquivos serem carregados, e interpretados, o restante do código é executado. Por esse motivo, os analisaremos primeiro, na ordem em que eles estão especificados.
 
 ### Pasta js basemap
 
@@ -64,7 +66,55 @@ O arquivo [`js/basemap/bairros.js`](https://github.com/nighto/itdpbrtmap/blob/gh
 
 Por motivos de performance, este arquivo é *minificado*, o que faz com que ele seja uma única grande linha de texto (não há espaços entre os elementos), consequentemente sendo de mais difícil leitura. Caso seja necessário editar este arquivo, sugiro que se faça a desminificação (por exemplo, com o [JSBeautifier](http://jsbeautifier.org/)), e posteriormente se minifique novamente.
 
+### Arquivo do estudo
+
+O arquivo [`js/estudo.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/estudo.js) traz as informações do estudo realizado, que vem a aparecer nos pontos plotados no mapa. Para cada corredor, categoria, e nível de atenção, há um *array* definido, com todos os pontos que atendem a esta combinação. Antes de nos debruçarmos nos detalhes desse *array*, vamos ver os *arrays* definidos:
+
+  * Corredores
+    * `TW` - TransOeste (mnemônico: "**T**rans**W**est")
+    * `TC` - **T**rans**C**arioca
+    * `TO` - **T**rans**O**límpica
+    * `TB` - **T**rans**B**rasil
+  * Categorias
+    * `SV` - **S*egurança **v**iária
+    * `OI` - **O**peração e **i**ntegração modal
+    * `TD` - Planejamento Urbano (**T**O**D**)
+    * `BP` - **B**icicleta e **p**edestre
+  * Níveis de atenção
+    * `HI` - Alto (mnemônico: "**hi**gh")
+    * `MD` - **M**é**d**io
+    * `LO` - Baixo (mnemônico: "**lo**w")
+
+Cada array com a combinação específica é definido. Por exemplo, todos os pontos da **T**rans**O**límpica sobre **T**O**D** de nível de atenção **m**é**d**io são defidos no array **`TO_TD_MD`**. Caso não haja pontos com a combinação específica em questão, ele é suprimido da lista.
+
+Explicada a nomenclatura, tomemos por exemplo o *array* `TO_TD_MD`, definido a partir da linha 1809 do arquivo [`js/estudo.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/estudo.js). Cada elemento no array é um objeto seguindo o padrão [GeoJSON](http://geojson.org/), as propriedades `properties` definidas abaixo, e `geometry`, trazendo as coordenadas do ponto em questão. O objeto `properties` traz os seguintes campos:
+
+  * `Name` - nome do ponto em questão, título do popup
+  * `Description` - a descrição do ponto
+  * `Recommendation` - a recomendação que o estudo dá
+  * `Corridor` - corredor que o ponto faz parte
+  * `Category` - categoria do ponto em questão
+  * `Level` - nível de atenção, podendo ser `low`, `mid` ou `high`
+  * `Place` - lugar em que o problema se apresenta
+  * `VoteCode` - código de votação, para a plataforma que computa os votos. Note que cada elemento possui um código único, composto do nome do array (sem os `_` underlines) seguido de um número a partir de `1`
+  * `Photo` - objeto que define a foto. Contém as propriedades:
+    * `Filename` - nome do arquivo
+    * `Credits` - créditos da foto
+    * `CreditsURL` - URL para aonde o link dos créditos aponta (*opcional*)
+  * `index` - índice do elemento no array, número único, crescente no array, a partir de `0`
+  * `aux_area` - objeto *opcional*  que define a área que aparece em destaque no mapa, sendo um array de coordenadas, sendo cada coordenada um array de tuplas. Veja exemplo na linha 1826.
+
+Dessa forma, a edição de pontos existentes é bastante simplificada, basta alterar o texto em questão, tomando o cuidado de verificar as vírgulas e as aspas para que o script não *quebre*. Caso seja necessário entrar com aspas duplas (o caractere `"`) deve-se tomar o cuidado de *escapar* as aspas, introduzindo `\"` (exemplo: linha 664).
+
+Caso seja necessário incluir ou excluir um ponto, pode-se duplicar um item já existente, tomando o cuidado de respeitar a formatação e alterar corretamente a propriedade `index` do objeto inserido (ou a dos demais itens de um array com objeto excluído). Caso haja dois objetos com o mesmo `index`, ou um "buraco" na contagem do `index`, problemas inesperados podem ocorrer.
+
+### Arquivo de estilos do mapa
+
 ## Exemplos de alterações
+
+### Alterar propriedades de pontos do estudo
+
+Para alterar propriedades de pontos do estudo (texto, descrição, recomendação etc.), edite o arquivo [`js/estudo.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/estudo.js). Veja mais detalhes sobre como editar este arquivo na seção [Arquivo do estudo](#arquivo-do-estudo).
 
 ### Alterar propriedades de um corredor ou de estações de um corredor
 
