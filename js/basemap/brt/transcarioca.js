@@ -909,7 +909,7 @@ STATIONS_TRANSCARIOCA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Hospital Sarah",
+        "Name": "Rede Sarah",
         "Corredor": "TransCarioca",
         "Type": "Parador",
         "Status": "Operational"
@@ -1077,7 +1077,7 @@ STATIONS_TRANSCARIOCA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Tanque \/ Terminal Mestre Candeia",
+        "Name": "Tanque",
         "Corredor": "TransCarioca",
         "Type": "Expresso\/Parador",
         "Status": "Operational"
@@ -1312,7 +1312,7 @@ STATIONS_TRANSCARIOCA = [{
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-43.277238680999972, -22.842587932999944, 0.0]
+        "coordinates": [-43.276458, -22.841954, 0.0]
     }
 }, {
     "type": "Feature",
@@ -1324,7 +1324,7 @@ STATIONS_TRANSCARIOCA = [{
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-43.277419331999965, -22.841917825999928, 0.0]
+        "coordinates": [-43.276902, -22.841390, 0.0]
     }
 }, {
     "type": "Feature",
