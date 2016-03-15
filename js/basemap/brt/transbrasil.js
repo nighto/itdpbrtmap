@@ -6,7 +6,7 @@ LINE_TRANSBRASIL_GEOJSON_DATA = {
         "Trecho": "Deodoro - Centro",
         "Extensao": "28",
         "Estacoes": "18",
-        "Terminais": "5 (Deodoro, Missões, Margaridas, Gasômetro, Central do Brasil)",
+        "Terminais": "5 (Deodoro, Missões, Margaridas, Rodoviária, Central do Brasil)",
         "Status": "U.C.",
         "Shape_Leng": 0.54661113871699996
     },
@@ -816,19 +816,19 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Isidro Rocha",
+        "Name": "Parada de Lucas",
         "Corredor": "TransBrasil",
         "Type": "Parador",
         "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-43.308405507999964, -22.818187841999929, 0.0]
+        "coordinates": [-43.3007422, -22.8155452, 0.0]
     }
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Ponto Chique",
+        "Name": "Ponto Chic",
         "Corredor": "TransBrasil",
         "Type": "Parador",
         "Status": "U.C."
@@ -960,7 +960,7 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "São Francisco",
+        "Name": "Caju",
         "Corredor": "TransBrasil",
         "Type": "Parador",
         "Status": "U.C."
@@ -984,7 +984,7 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Gasômetro",
+        "Name": "Terminal Rodoviária",
         "Corredor": "TransBrasil",
         "Type": "Expresso\/Parador",
         "Status": "U.C."
@@ -996,7 +996,7 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Américo Fontenelle",
+        "Name": "Terminal Central do Brasil / Américo Fontenelle",
         "Corredor": "TransBrasil",
         "Type": "Expresso\/Parador",
         "Status": "U.C."
@@ -1008,7 +1008,7 @@ STATIONS_TRANSBRASIL = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Procópio Ferreira",
+        "Name": "Uruguaiana",
         "Corredor": "TransBrasil",
         "Type": "Expresso\/Parador",
         "Status": "U.C."
