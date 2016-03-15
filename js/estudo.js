@@ -111,7 +111,7 @@ TW_SV_MD = [
   }
 ];
 
-// TransOeste - Operação e Integração Modal - Alto
+// TransOeste - Rede de Transporte Público - Alto
 TW_OI_HI = [
   {
     "type": "Feature",
@@ -120,7 +120,7 @@ TW_OI_HI = [
       "Description": "A pavimentação com asfalto pouco durável acelera o desgaste dos veículos, causando uma redução da frota operante, o que impacta diretamente na superlotação do sistema.",
       "Recommendation": "No curto prazo, manutenção efetiva das vias no corredor. No médio prazo, repavimentação completa com leito de concreto (durabilidade de mais de 15 anos).",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Trecho Santa Cruz - Terminal Alvorada",
       "VoteCode": 'TWOIHI1',
@@ -141,7 +141,7 @@ TW_OI_HI = [
       "Description": "Espaço físico insuficiente para a demanda de passageiros e para o número de serviços e ônibus atuais.",
       "Recommendation": "Ampliação física do terminal; alocação dos serviços em subparadas bem sinalizadas; criação de área para manobra dos veículos em horário de pico; criação de espaço de estacionamento de veículos em retroárea; adequação da sinalização (posicionamento, tamanho, padronização) e dos mapas (entornos, contexto geográfico, outros modos).",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Santa Cruz",
       "VoteCode": 'TWOIHI2',
@@ -162,7 +162,7 @@ TW_OI_HI = [
       "Description": "Acúmulo de passageiros durante o horário de pico vespertino; obstrução da entrada do terminal pela presença de veículos estacionados na área de operação; informação aos usuários pouco clara.",
       "Recommendation": "Criar uma separação entre plataforma de embarque e de desembarque; expandir área de manobra dos veículos; remanejar área de estacionamento dos veículos para fora da área do terminal; adequar sinalização (posicionamento, tamanho, padronização) e mapas (entornos, contexto geográfico, outros modos).",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Alvorada",
       "VoteCode": 'TWOIHI3',
@@ -178,7 +178,7 @@ TW_OI_HI = [
   }
 ];
 
-// TransOeste - Operação e Integração Modal - Médio
+// TransOeste - Rede de Transporte Público - Médio
 TW_OI_MD = [
   {
     "type": "Feature",
@@ -187,7 +187,7 @@ TW_OI_MD = [
       "Description": "No BRT TransOeste, a frequência de ônibus observada está abaixo do planejado, e o tempo de despacho pós-embarque de passageiros está acima do recomendado.",
       "Recommendation": "Aumentar frota operante e de reserva; gerir a frota disponível de forma mais eficiente nos terminais; reorganizar o processo de embarque e despacho, com sequenciamento ágil de filas (prioritária, sentada e em pé).",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Centro de Controle Operacional (Terminal Alvorada)",
       "VoteCode": 'TWOIMD1',
@@ -208,7 +208,7 @@ TW_OI_MD = [
       "Description": "A falta de integração física entre o BRT TransOeste e a estação Jardim Oceânico levará passageiros a andar de uma estação a outra para fazer a integração.",
       "Recommendation": "Adequação da integração física com proteção contra intempéries e acessibilidade universal; integração tarifária por meio do Bilhete Único a ser realizada entre Estado e Muncípio; implantação de um sistema de informação integrado.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Terminal Jardim Oceânico",
       "VoteCode": 'TWOIMD2',
@@ -229,7 +229,7 @@ TW_OI_MD = [
       "Description": "A estação Curral Falso é atualmente intermediária, posicionada em trecho não segregado do corredor. Não há linhas partindo dessa estação, o que leva passageiros a voltar até o terminal de Santa Cruz para realizar a viagem.",
       "Recommendation": "Para melhor estruturar a rede de BRTs, essa estação poderia ser convertida em um novo terminal, que receberia linhas de Campo Grande e descongestionaria o terminal de Santa Cruz. Recomenda-se também estudo de segregação viária para o atual trecho misto.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Curral Falso",
       "VoteCode": 'TWOIMD3',
@@ -250,7 +250,7 @@ TW_OI_MD = [
       "Description": "Dimensão insuficiente para a demanda atual.",
       "Recommendation": "(i) Adequação da infraestrutura: expansão das estações para tornar a espera mais confortável e para haver espaço de manobra e retorno de veículos; espaço de estacionamento de veículos em retroárea; adequação da integração com as linhas alimentadoras.<br>(ii) Adequação do desenho operacional: ajuste do intervalo de serviços atendendo a estação; adequação da sinalização (posicionamento, tamanho, padronização), mapas (entornos, contexto geográfico, outros modos) e criar serviços específicos para o atendimento da demanda na estação quando necessário.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Mato Alto",
       "VoteCode": 'TWOIMD4',
@@ -271,7 +271,7 @@ TW_OI_MD = [
       "Description": "Dimensão insuficiente para a demanda atual.",
       "Recommendation": "(i) Adequação da infraestrutura: expansão das estações para tornar a espera mais confortável e para haver espaço de manobra e retorno de veículos; espaço de estacionamento de veículos em retroárea; adequação da integração com as linhas alimentadoras.<br>(ii) Adequação do desenho operacional: ajuste do intervalo de serviços atendendo a estação; adequação da sinalização (posicionamento, tamanho, padronização), mapas (entornos, contexto geográfico, outros modos) e criar serviços específicos para o atendimento da demanda na estação quando necessário.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Magarça",
       "VoteCode": 'TWOIMD5',
@@ -292,7 +292,7 @@ TW_OI_MD = [
       "Description": "Dimensão insuficiente para a demanda atual.",
       "Recommendation": "(i) Adequação da infraestrutura: expansão das estações para tornar a espera mais confortável e para haver espaço de manobra e retorno de veículos; espaço de estacionamento de veículos em retroárea; adequação da integração com as linhas alimentadoras.<br>(ii) Adequação do desenho operacional: ajuste do intervalo de serviços atendendo a estação; adequação da sinalização (posicionamento, tamanho, padronização), mapas (entornos, contexto geográfico, outros modos) e criar serviços específicos para o atendimento da demanda na estação quando necessário.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Pingo d'Água",
       "VoteCode": 'TWOIMD6',
@@ -313,7 +313,7 @@ TW_OI_MD = [
       "Description": "Dimensão insuficiente para a demanda atual.",
       "Recommendation": "(i) Adequação da infraestrutura: expansão das estações para tornar a espera mais confortável e para haver espaço de manobra e retorno de veículos; espaço de estacionamento de veículos em retroárea; adequação da integração com as linhas alimentadoras.<br>(ii) Adequação do desenho operacional: ajuste do intervalo de serviços atendendo a estação; adequação da sinalização (posicionamento, tamanho, padronização), mapas (entornos, contexto geográfico, outros modos) e criar serviços específicos para o atendimento da demanda na estação quando necessário.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Salvador Allende",
       "VoteCode": 'TWOIMD7',
@@ -329,7 +329,7 @@ TW_OI_MD = [
   }
 ];
 
-// TransOeste - Operação e Integração Modal - Baixo
+// TransOeste - Rede de Transporte Público - Baixo
 TW_OI_LO = [
   {
     "type": "Feature",
@@ -338,7 +338,7 @@ TW_OI_LO = [
       "Description": "Baixa qualidade de serviço das linhas alimentadoras pode comprometer ganho de tempo e a imagem do sistema BRT. Terminais e pontos de linhas alimentadoras não apresentam em geral conforto ambiental e segurança.",
       "Recommendation": "Estudar viabilidade de faixas BRS (Bus Rapid Service); rever a integração física (iluminação e proteção contra intempéries) dos pontos terminais; implantar integração operacional (chegadas e partidas sincronizadas e informação de quadro de horário) para melhorar linhas alimentadoras.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
       "Place": "Estação Mato Alto",
       "VoteCode": 'TWOILO1',
@@ -363,7 +363,7 @@ TW_OI_LO = [
       "Description": "Baixa qualidade de serviço das linhas alimentadoras pode comprometer ganho de tempo e a imagem do sistema BRT. Terminais e pontos de linhas alimentadoras não apresentam em geral conforto ambiental e segurança.",
       "Recommendation": "Estudar viabilidade de faixas BRS (Bus Rapid Service); rever a integração física (iluminação e proteção contra intempéries) dos pontos terminais; implantar integração operacional (chegadas e partidas sincronizadas e informação de quadro de horário) para melhorar linhas alimentadoras.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
       "Place": "Estação Guiomar Novaes",
       "VoteCode": 'TWOILO2',
@@ -388,7 +388,7 @@ TW_OI_LO = [
       "Description": "Baixa qualidade de serviço das linhas alimentadoras pode comprometer ganho de tempo e a imagem do sistema BRT. Terminais e pontos de linhas alimentadoras não apresentam em geral conforto ambiental e segurança.",
       "Recommendation": "Estudar viabilidade de faixas BRS (Bus Rapid Service); rever a integração física (iluminação e proteção contra intempéries) dos pontos terminais; implantar integração operacional (chegadas e partidas sincronizadas e informação de quadro de horário) para melhorar linhas alimentadoras.",
       "Corridor": "TransOeste",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
       "Place": "Estação Santa Eugênia",
       "VoteCode": 'TWOILO3',
@@ -588,7 +588,7 @@ TW_BP_LO = [
   }
 ];
 
-// TransOeste - TOD - Alto
+// TransOeste - Desenvolvimento Urbano (DOTS) - Alto
 TW_TD_HI = [
   {
     "type": "Feature",
@@ -597,7 +597,7 @@ TW_TD_HI = [
       "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
       "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
       "Corridor": "TransOeste",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Estação Gastão Rangel",
       "VoteCode": 'TWTDHI1',
@@ -618,7 +618,7 @@ TW_TD_HI = [
       "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
       "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
       "Corridor": "TransOeste",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Estação Vilar Carioca",
       "VoteCode": 'TWTDHI2',
@@ -639,7 +639,7 @@ TW_TD_HI = [
       "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
       "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
       "Corridor": "TransOeste",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Estação Curral Falso",
       "VoteCode": 'TWTDHI3',
@@ -655,7 +655,7 @@ TW_TD_HI = [
   }
 ];
 
-// TransOeste - TOD - Médio
+// TransOeste - Desenvolvimento Urbano (DOTS) - Médio
 TW_TD_MD = [
   {
     "type": "Feature",
@@ -664,7 +664,7 @@ TW_TD_MD = [
       "Description": "A ligação Campo Grande - Mato Alto, apesar de já possuir uma estação construída, não tem previsão de início de operação. Hoje, os passageiros vindos de Campo Grande realizam um trajeto \"negativo\" para poder chegar até a Barra da Tijuca.",
       "Recommendation": "Essa ligação é importantíssima para reduzir o tempo de deslocamento entre Campo Grande e Barra. Recomenda-se o detalhamento do plano de início de operação deste trecho.",
       "Corridor": "TransOeste",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Estação ParkShopping",
       "VoteCode": 'TWTDMD1',
@@ -726,7 +726,7 @@ TC_SV_HI = [
   }
 ];
 
-// TransCarioca - Operação e Integração Modal - Alto
+// TransCarioca - Rede de Transporte Público - Alto
 TC_OI_HI = [
   {
     "type": "Feature",
@@ -735,7 +735,7 @@ TC_OI_HI = [
       "Description": "A operação apresenta frota insuficiente, intervalos irregulares e tempo de espera elevado para os diferentes serviços; tempo importante gasto em algumas interseções (falta de prioridade semafórica); e superlotação em alguns trechos.",
       "Recommendation": "A priorização mais inteligente dos ônibus nas intersecções; o ajuste e monitoramento dos intervalos; agilizar a entrada/saída dos veículos nos terminais; adequação a frota operante com mais veículos bi e superarticulados pode diminuir o tempo de ciclo.",
       "Corridor": "TransCarioca",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Estação Taquara",
       "VoteCode": 'TCOIHI1',
@@ -756,9 +756,9 @@ TC_OI_HI = [
       "Description": "A operação apresenta frota insuficiente, intervalos irregulares e tempo de espera elevado para os diferentes serviços; tempo importante gasto em algumas interseções (falta de prioridade semafórica); e superlotação em alguns trechos.",
       "Recommendation": "A priorização mais inteligente dos ônibus nas intersecções; o ajuste e monitoramento dos intervalos; agilizar a entrada/saída dos veículos nos terminais; adequação a frota operante com mais veículos bi e superarticulados pode diminuir o tempo de ciclo.",
       "Corridor": "TransCarioca",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
-      "Place": "Estação Penha",
+      "Place": "Estação Penha II",
       "VoteCode": 'TCOIHI2',
       "Photo": {
         "Filename": "images/photos/57.jpg",
@@ -767,12 +767,12 @@ TC_OI_HI = [
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [-43.277238680999972, -22.842587932999944, 0.0]
+      "coordinates": [-43.276458, -22.841954, 0.0]
     }
   }
 ];
 
-// TransCarioca - Operação e Integração Modal - Médio
+// TransCarioca - Rede de Transporte Público - Médio
 TC_OI_MD = [
   {
     "type": "Feature",
@@ -781,7 +781,7 @@ TC_OI_MD = [
       "Description": "A integração tarifária interfere diretamente na dinâmica dos usuários em relação aos trechos complementares da viagem. Em Vicente de Carvalho, há integração física entre o BRT e o metrô, porém não há integração tarifária (o usuário precisa pagar duas passagens).",
       "Recommendation": "A integração tarifária entre BRT e metrô garante aos usuários acesso a uma maior diversidade de oportunidades na cidade (usuários do metrô podem acessar aeroporto, Z.Norte e Barra; usuários do BRT a região Central e a Z.Sul da cidade).",
       "Corridor": "TransCarioca",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação do Metrô Vicente de Carvalho",
       "VoteCode": 'TCOIMD1',
@@ -794,10 +794,52 @@ TC_OI_MD = [
       "type": "Point",
       "coordinates": [-43.31311, -22.85410, 0.0]
     }
-  }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Estação Planejada e não Executada",
+      "Description": "Estação Lafaiete foi planejada para este local, porém não foi implementada. Distância entre as estações mais próximas é grande, o que desestimula usuários a aderir ao sistema.",
+      "Recommendation": "Analisar a viabilidade de construção de estação nessa localidade.",
+      "Corridor": "TransCarioca",
+      "Category": "Rede de Transporte Público",
+      "Level": "mid",
+      "Place": "Estação Lafaiete",
+      "VoteCode": 'TCOIMD2',
+      "Photo": {
+        "Filename": "images/photos/59.jpg",
+        "Credits": "ITDP"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.30254, -22.84597, 0.0]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Estação Planejada e não Executada",
+      "Description": "O BRT TransCarioca não acessa o bairro residencial da Ilha do Governador e deixa também de realizar integração com a estação Cocotá das Barcas. Esta conexão embora não planejada inicialmente consolidaria a rede de TP da cidade.",
+      "Recommendation": "Analisar a viabilidade de adequeação do BRT TransCarioca para sua expansão até as barcas da Ilha do Governador (estação Cocotá).",
+      "Corridor": "TransCarioca",
+      "Category": "Rede de Transporte Público",
+      "Level": "mid",
+      "Place": "Estação Cocotá",
+      "VoteCode": 'TCOIMD3',
+      "Photo": {
+        "Filename": "images/photos/13.jpg",
+        "Credits": "ITDP Brasil",
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.18068, -22.80503, 0.0]
+    }
+  },
 ];
 
-// TransCarioca - Operação e Integração Modal - Baixo
+// TransCarioca - Rede de Transporte Público - Baixo
 TC_OI_LO = [
   {
     "type": "Feature",
@@ -806,9 +848,9 @@ TC_OI_LO = [
       "Description": "Terminais de integração com linhas alimentadoras são adequados, porém baixa qualidade de serviço das mesmas pode comprometer ganhos e imagem do sistema BRT.",
       "Recommendation": "Estudo de BRS para melhorar linhas alimentadoras que contemple: Faixas com prioridade para ônibus; Pontos abrigados e confortáveis que diminuem a percepção do tempo de espera; Veículos confortáveis com câmbio automático e ar-condicionado; Informação sobre o itinerário das linhas e quadro de horários planejado de passagem dos veículos.",
       "Corridor": "TransCarioca",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
-      "Place": "Terminal de Integração Estação Tanque - Mestre Candeia",
+      "Place": "Tanque",
       "VoteCode": 'TCOILO1',
       "Photo": {
         "Filename": "images/photos/58.jpg",
@@ -827,7 +869,7 @@ TC_OI_LO = [
       "Description": "Terminais de integração com linhas alimentadoras são adequados, porém baixa qualidade de serviço das mesmas pode comprometer ganhos e imagem do sistema BRT.",
       "Recommendation": "Estudo de BRS para melhorar linhas alimentadoras que contemple: Faixas com prioridade para ônibus; Pontos abrigados e confortáveis que diminuem a percepção do tempo de espera; Veículos confortáveis com câmbio automático e ar-condicionado; Informação sobre o itinerário das linhas e quadro de horários planejado de passagem dos veículos.",
       "Corridor": "TransCarioca",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
       "Place": "Terminal de Integração Estação Taquara - Bandeira Brasil",
       "VoteCode": 'TCOILO2',
@@ -848,7 +890,7 @@ TC_OI_LO = [
       "Description": "Terminais de integração com linhas alimentadoras são adequados, porém baixa qualidade de serviço das mesmas pode comprometer ganhos e imagem do sistema BRT.",
       "Recommendation": "Estudo de BRS para melhorar linhas alimentadoras que contemple: Faixas com prioridade para ônibus; Pontos abrigados e confortáveis que diminuem a percepção do tempo de espera; Veículos confortáveis com câmbio automático e ar-condicionado; Informação sobre o itinerário das linhas e quadro de horários planejado de passagem dos veículos.",
       "Corridor": "TransCarioca",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
       "Place": "Terminal de Integração Estação Fundão - Aroldo Melodia",
       "VoteCode": 'TCOILO3',
@@ -1061,7 +1103,7 @@ TC_BP_MD = [
   }
 ];
 
-// TransCarioca - TOD - Alto
+// TransCarioca - Desenvolvimento Urbano (DOTS) - Alto
 TC_TD_HI = [
   {
     "type": "Feature",
@@ -1070,9 +1112,9 @@ TC_TD_HI = [
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
       "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
-      "Place": "Estação Penha",
+      "Place": "Estação Penha I",
       "VoteCode": 'TCTDHI1',
       "Photo": {
         "Filename": "images/photos/64.jpg",
@@ -1081,7 +1123,7 @@ TC_TD_HI = [
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [-43.277419331999965, -22.841917825999928, 0.0]
+      "coordinates": [-43.276902, -22.841390, 0.0]
     }
   },
   {
@@ -1091,7 +1133,7 @@ TC_TD_HI = [
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
       "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Estação Vaz Lobo",
       "VoteCode": 'TCTDHI2',
@@ -1112,7 +1154,7 @@ TC_TD_HI = [
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
       "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Parque Madureira",
       "VoteCode": 'TCTDHI3',
@@ -1133,7 +1175,7 @@ TC_TD_HI = [
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
       "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Estação Vicente de Carvalho",
       "VoteCode": 'TCTDHI4',
@@ -1154,7 +1196,7 @@ TC_TD_HI = [
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
       "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do Desenvolvimento Orientado ao Transporte (TOD), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Estação Taquara",
       "VoteCode": 'TCTDHI4',
@@ -1170,7 +1212,7 @@ TC_TD_HI = [
   }
 ];
 
-// TransCarioca - TOD - Médio
+// TransCarioca - Desenvolvimento Urbano (DOTS) - Médio
 TC_TD_MD = [
   {
     "type": "Feature",
@@ -1179,7 +1221,7 @@ TC_TD_MD = [
       "Description": "Parte da área no entorno do BRT TransCarioca passará por reformulação sob a forma de um Projeto de Área de Especial Interesse Urbanístico (AEIU). O projeto de lei prevê dentre outras medidas, uma revisão da Política de Estacionamento para a área.",
       "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento proíba a construção de edifícios-garagem a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Estação Campinho",
       "VoteCode": 'TCTDMD1',
@@ -1200,7 +1242,7 @@ TC_TD_MD = [
       "Description": "Parte da área no entorno do BRT TransCarioca passará por reformulação sob a forma de um Projeto de Área de Especial Interesse Urbanístico (AEIU). O projeto de lei prevê dentre outras medidas, uma revisão da Política de Estacionamento para a área.",
       "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento proíba a construção de edifícios-garagem a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Estação Praça Seca",
       "VoteCode": 'TCTDMD2',
@@ -1216,7 +1258,7 @@ TC_TD_MD = [
   }
 ];
 
-// TransCarioca - TOD - Baixo
+// TransCarioca - Desenvolvimento Urbano (DOTS) - Baixo
 TC_TD_LO = [
   {
     "type": "Feature",
@@ -1225,7 +1267,7 @@ TC_TD_LO = [
       "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
       "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento elimine requisítos mínimos de vagas para edificações residenciais e comerciais e proíba a construção de edifícios-garagem a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
       "Place": "Estação Maré",
       "VoteCode": 'TCTDLO1',
@@ -1246,7 +1288,7 @@ TC_TD_LO = [
       "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
       "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento elimine requisítos mínimos de vagas para edificações residenciais e comerciais e proíba a construção de edifícios-garagem a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
       "Place": "Estação Santa Luzia",
       "VoteCode": 'TCTDLO2',
@@ -1267,7 +1309,7 @@ TC_TD_LO = [
       "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
       "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento elimine requisítos mínimos de vagas para edificações residenciais e comerciais e proíba a construção de edifícios-garagem a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
-      "Category": "TOD",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
       "Place": "Estação IPASE",
       "VoteCode": 'TCTDLO3',
@@ -1294,7 +1336,7 @@ TO_SV_HI = [
       "Corridor": "TransOlímpica",
       "Category": "Segurança Viária",
       "Level": "high",
-      "Place": "Terminal Salvador Allende",
+      "Place": "Terminal Recreio",
       "VoteCode": 'TOSVHI1',
       "Photo": {
         "Filename": "images/photos/1.jpg",
@@ -1379,7 +1421,7 @@ TO_SV_LO = [
   }
 ];
 
-// TransOlímpica - Operação e Integração Modal - Alto
+// TransOlímpica - Rede de Transporte Público - Alto
 TO_OI_HI = [
   {
     "type": "Feature",
@@ -1388,7 +1430,7 @@ TO_OI_HI = [
       "Description": "Integração física entre os corredores TransBrasil e TransOlímpica com os trens metropolitanos no Terminal Deodoro.",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação em tempo real; integração física com proteção contra intempéries e acessibilidade universal; implantação de sistema de monitoramento da qualidade; implantação de sistema de monitoramento da qualidade do serviço.",
       "Corridor": "TransOlímpica",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Deodoro",
       "VoteCode": "TOOIHI1",
@@ -1410,7 +1452,7 @@ TO_OI_HI = [
       "Description": "A comunicação de informações de forma estática ou em tempo real ainda não é satisfatória nos corredores TransOeste e TransCarioca. Com mais 2 corredores, o sistema ficará ainda mais complexo.",
       "Recommendation": "Sistema de informações simples, unificado e preciso, que dê facilidades para o usuário se localizar na cidade e escolher dentre os serviços disponíveis para atingir seu destino.",
       "Corridor": "TransOlímpica",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Centro de Controle Operacional (Terminal Alvorada)",
       "VoteCode": "TOOIHI2",
@@ -1426,7 +1468,7 @@ TO_OI_HI = [
   }
 ];
 
-// TransOlímpica - Operação e Integração Modal - Médio
+// TransOlímpica - Rede de Transporte Público - Médio
 TO_OI_MD = [
   {
     "type": "Feature",
@@ -1435,7 +1477,7 @@ TO_OI_MD = [
       "Description": "Estão previstas uma estação e um terminal no mesmo local (Salvador Allende), uma para cada sistema de BRT (TransOeste e TransOlímpica). O projeto deve prever a integração física dos sistemas.",
       "Recommendation": "Adequar o projeto do BRT&nbsp;TransOlímpica para promover a integração física entre os sistemas, com curta distância de caminhada e proteção contra intempéries.",
       "Corridor": "TransOlímpica",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Terminal Salvador Allende",
       "VoteCode": "TOOIMD1",
@@ -1456,7 +1498,7 @@ TO_OI_MD = [
       "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransOlímpica",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Terminal Sulacap",
       "VoteCode": "TOOIMD2",
@@ -1472,7 +1514,7 @@ TO_OI_MD = [
   }
 ];
 
-// TransOlímpica - Operação e Integração Modal - Baixo
+// TransOlímpica - Rede de Transporte Público - Baixo
 TO_OI_LO = [
   {
     "type": "Feature",
@@ -1481,7 +1523,7 @@ TO_OI_LO = [
       "Description": "Está prevista integração física por meio de terminais e viadutos nos dois BRTs. Porém, nestes pontos, os veículos podem adotar apenas uma direção, levando os passageiros a percorrer distâncias desnecessárias caso optem por seguir em outra direção. Provavelmente haverá um incremento na demanda dos corredores já operantes, como observado no BRT&nbsp;TransOeste após o início do TransCarioca.",
       "Recommendation": "Analisar a viabilidade de adequação para melhor integração entre corredores.",
       "Corridor": "TransOlímpica",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
       "Place": "Ligação entre TransOlímpica e TransCarioca",
       "VoteCode": "TOOILO1",
@@ -1676,7 +1718,7 @@ TO_BP_LO = [
   }
 ];
 
-// TransOlímpica - TOD - Alto
+// TransOlímpica - Desenvolvimento Urbano (DOTS) - Alto
 TO_TD_HI = [
   {
     "type": "Feature",
@@ -1685,7 +1727,7 @@ TO_TD_HI = [
       "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
       "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Magalhães Bastos",
       "VoteCode": "TOTDHI1",
@@ -1710,7 +1752,7 @@ TO_TD_HI = [
       "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
       "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Deodoro",
       "VoteCode": "TOTDHI2",
@@ -1735,7 +1777,7 @@ TO_TD_HI = [
       "Description": "As áreas no entorno do BRT&nbsp;TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
       "Recommendation": "O uso misto deve ser priorizado nos novos empreendimentos com, por exemplo, comércio de rua no andar térreo e salas de escritório e consultório no 1º andar, gerando fachadas mais ativas e mais deslocamentos à pé. Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Estação Boiúna",
       "VoteCode": "TOTDHI3",
@@ -1760,9 +1802,9 @@ TO_TD_HI = [
       "Description": "As áreas no entorno do BRT&nbsp;TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
       "Recommendation": "O uso misto deve ser priorizado nos novos empreendimentos com, por exemplo, comércio de rua no andar térreo e salas de escritório e consultório no 1º andar, gerando fachadas mais ativas e mais deslocamentos à pé. Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
-      "Place": "Estação Colônia Juliano Moreira",
+      "Place": "Estação Outeiro Santo",
       "VoteCode": "TOTDHI4",
       "Photo": {
         "Filename": "images/photos/29.jpg",
@@ -1785,9 +1827,9 @@ TO_TD_HI = [
       "Description": "As áreas no entorno do BRT&nbsp;TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
       "Recommendation": "O uso misto deve ser priorizado nos novos empreendimentos com, por exemplo, comércio de rua no andar térreo e salas de escritório e consultório no 1º andar, gerando fachadas mais ativas e mais deslocamentos à pé. Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
-      "Place": "Estação Guerenguê",
+      "Place": "Guerenguê",
       "VoteCode": "TOTDHI5",
       "Photo": {
         "Filename": "images/photos/29.jpg",
@@ -1800,12 +1842,12 @@ TO_TD_HI = [
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [-43.394788564003221, -22.938109807661363, 0.0]
+      "coordinates": [-43.37917, -22.92804, 0.0]
     }
   }
 ];
 
-// TransOlímpica - TOD - Médio
+// TransOlímpica - Desenvolvimento Urbano (DOTS) - Médio
 TO_TD_MD = [
   {
     "type": "Feature",
@@ -1814,7 +1856,7 @@ TO_TD_MD = [
       "Description": "O acesso promovido pelo BRT&nbsp;TransOlímpica pode estimular a ocupação no interior e no entorno do Parque Estadual da Pedra Branca - PEPB. A principal função desta unidade de conservação é a preservação do patrimônio natural da região.",
       "Recommendation": "A ocupação deve ser regulada e fiscalizada nos bairros já existentes localizados às margens do maciço.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Área de Proteção Ambiental da Parque Estadual da Pedra Branca - PEPB",
       "VoteCode": "TOTDMD1",
@@ -1839,7 +1881,7 @@ TO_TD_MD = [
       "Description": "O BRT&nbsp;TransOlímpica passa próximo a grandes áreas livres, sem uso definido.",
       "Recommendation": "As áreas não edificadas ou subutilizadas devem ser mapeadas e sua ocupação regulada sob uma nova legislação urbanística, que seja sólida e articulada com as comunidades diretamente impactadas, e que incorpore os princípios do Desenvolvimento Orientado ao Transporte (TOD).",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Áreas Livres em Bairros Consolidados",
       "VoteCode": "TOTDMD2",
@@ -1865,7 +1907,7 @@ TO_TD_MD = [
       "Description": "O BRT&nbsp;TransOlímpica passa próximo a grandes áreas livres, sem uso definido.",
       "Recommendation": "As áreas não edificadas ou subutilizadas devem ser mapeadas e sua ocupação regulada sob uma nova legislação urbanística, que seja sólida e articulada com as comunidades diretamente impactadas, e que incorpore os princípios do Desenvolvimento Orientado ao Transporte (TOD).",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Áreas Livres em Bairros Consolidados",
       "VoteCode": "TOTDMD3",
@@ -1891,7 +1933,7 @@ TO_TD_MD = [
       "Description": "Alguns conjuntos habitacionais, importantes pólos geradores de viagens com grande número de moradores que usam transporte público, não contam com linhas alimentadoras, dificultando o acesso ao sistema de BRT.",
       "Recommendation": "Mapear lacunas de atendimento das linhas alimentadoras aos conjuntos habitacionais próximos. As linhas alimentadoras devem incorporar uma lógica de integração territorial e não se limitar ao seccionamento de linhas paralelas.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Minha Casa Minha Vida Juliano Moreira",
       "VoteCode": "TOTDMD4",
@@ -1916,7 +1958,7 @@ TO_TD_MD = [
       "Description": "As linhas alimentadoras devem atender os bairros adjacentes, integrando melhor a área de influência do BRT, aumentando sua capilaridade e evitando distorções, como por exemplo, áreas distantes dispondo de linhas alimentadoras e áreas mais próximas que não são atendidas.",
       "Recommendation": "Mapear lacunas de atendimento das linhas alimentadoras nas áreas adjacentes ao corredor. As linhas alimentadoras devem incorporar uma lógica de integração territorial e não se limitar ao seccionamento de linhas paralelas.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Realengo, próximo à encosta",
       "VoteCode": "TOTDMD5",
@@ -1936,7 +1978,7 @@ TO_TD_MD = [
   }
 ];
 
-// TransOlímpica - TOD - Baixo
+// TransOlímpica - Desenvolvimento Urbano (DOTS) - Baixo
 TO_TD_LO = [
   {
     "type": "Feature",
@@ -1945,9 +1987,9 @@ TO_TD_LO = [
       "Description": "A região do entorno da Av. Salvador Allende se desenvolve de forma pouco compacta e pouco amigável à caminhada e ao uso da bicicleta. A expansão das faixas de rolamento neste trecho reforça o estímulo ao uso do carro.",
       "Recommendation": "O planejamento urbano, sob a forma de uma legislação urbanística sólida e articulada com as comunidades relacionadas, que incorpore os princípios do Desenvolvimento Orientado ao Transporte (TOD), é vital para o desenvolvimento sustentável das áreas atendidas.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
-      "Place": "RioCentro",
+      "Place": "Estação Olof Palme",
       "VoteCode": "TOTDLO1",
       "Photo": {
         "Filename": "images/photos/26.jpg",
@@ -1966,7 +2008,7 @@ TO_TD_LO = [
       "Description": "O número original de remoções previsto para a construção deste corredor foi reduzido. A maior parte dos moradores das comunidades locais permaneceram em um ambiente urbano com pouca infraestrutura e devem ser prioridade no planejamento urbano.",
       "Recommendation": "Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
       "Corridor": "TransOlímpica",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
       "Place": "Vila União de Curicica",
       "VoteCode": "TOTDLO2",
@@ -2052,7 +2094,7 @@ TB_SV_HI = [
       "Corridor": "TransBrasil",
       "Category": "Segurança Viária",
       "Level": "high",
-      "Place": "Terminal Procópio Ferreira",
+      "Place": "Terminal Uruguaiana",
       "VoteCode": "TBSVHI4",
       "Photo": {
         "Filename": "images/photos/5.jpg",
@@ -2112,7 +2154,7 @@ TB_SV_MD = [
   }
 ];
 
-// TransBrasil - Operação e Integração Modal - Alto
+// TransBrasil - Rede de Transporte Público - Alto
 TB_OI_HI = [
   {
     "type": "Feature",
@@ -2121,7 +2163,7 @@ TB_OI_HI = [
       "Description": "Integração física entre os corredores TransBrasil e TransOlímpica com os trens metropolitanos no Terminal Deodoro.",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação em tempo real; integração física com proteção contra intempéries e acessibilidade universal; implantação de sistema de monitoramento da qualidade; implantação de sistema de monitoramento da qualidade do serviço.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Deodoro",
       "VoteCode": "TBOIHI1",
@@ -2143,7 +2185,7 @@ TB_OI_HI = [
       "Description": "Integração efetiva entre o BRT&nbsp;TransBrasil com metrô, trens, VLT, teleférico e sistema de bicicletas compartilhadas no Terminal Central do Brasil, um dos maiores terminais intermodais de passageiros do mundo e fundamental para a mobilidade urbana da cidade do Rio de Janeiro.",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação; integração física com proteção contra intempéries e acessibilidade universal.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Procópio Ferreira",
       "VoteCode": "TBOIHI2",
@@ -2164,7 +2206,7 @@ TB_OI_HI = [
       "Description": "Integração efetiva entre o BRT&nbsp;TransBrasil com as linhas de ônibus intermunicipais que atendem a Região Metropolitana, em especial a Baixada Fluminense, nos Terminais das Missões e das Margaridas.",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação em tempo real; integração física com proteção contra intempéries e acessibilidade universal; implantação de sistema de monitoramento da qualidade.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Margaridas",
       "VoteCode": "TBOIHI3",
@@ -2185,7 +2227,7 @@ TB_OI_HI = [
       "Description": "Integração efetiva entre o BRT&nbsp;TransBrasil com as linhas de ônibus intermunicipais que atendem a Região Metropolitana, em especial a Baixada Fluminense, nos Terminais das Missões e das Margaridas.",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação em tempo real; integração física com proteção contra intempéries e acessibilidade universal; implantação de sistema de monitoramento da qualidade.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Missões",
       "VoteCode": "TBOIHI4",
@@ -2206,7 +2248,7 @@ TB_OI_HI = [
       "Description": "No BRT&nbsp;TransBrasil, um dos maiores corredores de BRT do mundo, a gestão da frota para atender a grande quantidade de passageiros é um desafio operacional.",
       "Recommendation": "O plano operacional dos Terminais deve ser feito com base em diretrizes internacionais, como o Guia de Planejamento de BRT. Deve haver baias bem sinalizadas para os diferentes serviços e áreas para a gestão da frota no horário de pico. Pode-se estudar a automatização de despachos e o controle de distância entre os ônibus em tempo real.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Margaridas",
       "VoteCode": "TBOIHI5",
@@ -2227,7 +2269,7 @@ TB_OI_HI = [
       "Description": "No BRT&nbsp;TransBrasil, um dos maiores corredores de BRT do mundo, a gestão da frota para atender a grande quantidade de passageiros é um desafio operacional.",
       "Recommendation": "O plano operacional dos Terminais deve ser feito com base em diretrizes internacionais, como o Guia de Planejamento de BRT. Deve haver baias bem sinalizadas para os diferentes serviços e áreas para a gestão da frota no horário de pico. Pode-se estudar a automatização de despachos e o controle de distância entre os ônibus em tempo real.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Terminal Missões",
       "VoteCode": "TBOIHI6",
@@ -2248,7 +2290,7 @@ TB_OI_HI = [
       "Description": "O BRT&nbsp;TransBrasil tem potencial para formar uma grande conexão transversal entre diversos ramais de trem e metrô. Porém, não está prevista integração física entre o BRT&nbsp;TransBrasil e as estações de trem de Parada de Lucas e Barros Filho, que se encontram a apenas 300m e 500m do corredor, respectivamente.",
       "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransBrasil para integração com o trem.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "SuperVia Estação Parada de Lucas",
       "VoteCode": "TBOIHI7",
@@ -2270,7 +2312,7 @@ TB_OI_HI = [
       "Description": "O BRT&nbsp;TransBrasil tem potencial para formar uma grande conexão transversal entre diversos ramais de trem e metrô. Porém, não está prevista integração física entre o BRT&nbsp;TransBrasil e as estações de trem de Parada de Lucas e Barros Filho, que se encontram a apenas 300m e 500m do corredor, respectivamente.",
       "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransBrasil para integração com o trem.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "SuperVia Estação Barros Filho",
       "VoteCode": "TBOIHI8",
@@ -2292,7 +2334,7 @@ TB_OI_HI = [
       "Description": "Não está prevista integração física entre o BRT&nbsp;TransBrasil e a estação de metrô de Coelho Neto, que se encontra a 200m do corredor. Além disso, as passarelas do local tem capacidade inferior ao fluxo de pedestres atual e precisam ser revistas, sob pena de restringir o acesso de passageiros numa futura integração.",
       "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransBrasil para integração com o metrô.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "MetrôRio Estação Coelho Neto",
       "VoteCode": "TBOIHI9",
@@ -2313,7 +2355,7 @@ TB_OI_HI = [
       "Description": "A comunicação de informações de forma estática ou em tempo real ainda não é satisfatória nos corredores TransOeste e TransCarioca. Com mais 2 corredores, o sistema ficará ainda mais complexo.",
       "Recommendation": "Sistema de informações simples, unificado e preciso, que dê facilidades para o usuário se localizar na cidade e escolher dentre os serviços disponíveis para atingir seu destino.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "high",
       "Place": "Centro de Controle Operacional (Terminal Alvorada)",
       "VoteCode": "TBOIHI10",
@@ -2329,7 +2371,7 @@ TB_OI_HI = [
   }
 ];
 
-// TransBrasil - Operação e Integração Modal - Médio
+// TransBrasil - Rede de Transporte Público - Médio
 TB_OI_MD = [
   {
     "type": "Feature",
@@ -2338,7 +2380,7 @@ TB_OI_MD = [
       "Description": "Não está prevista integração física entre o BRT&nbsp;TransBrasil e a estação Praça XV das Barcas, o que ampliaria o acesso dos passageiros às áreas atendidas tanto pelo corredor quanto pelas linhas aquaviárias.",
       "Recommendation": "Analisar a viabilidade de adequação do BRT&nbsp;TransBrasil para integração com as barcas.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "CCR Barcas Estação Praça XV",
       "VoteCode": "TBOIMD1",
@@ -2359,7 +2401,7 @@ TB_OI_MD = [
       "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Guadalupe",
       "VoteCode": "TBOIMD2",
@@ -2380,7 +2422,7 @@ TB_OI_MD = [
       "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Barros Filho",
       "VoteCode": "TBOIMD3",
@@ -2401,7 +2443,7 @@ TB_OI_MD = [
       "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Coelho Neto",
       "VoteCode": "TBOIMD4",
@@ -2422,7 +2464,7 @@ TB_OI_MD = [
       "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
       "Place": "Estação Fiocruz",
       "VoteCode": "TBOIMD5",
@@ -2443,9 +2485,9 @@ TB_OI_MD = [
       "Description": "Está prevista integração entre o BRT&nbsp;TransBrasil e BRT&nbsp;TransOlímpica com o sistema de linhas alimentadoras. Para ser efetiva, essa integração precisa atender com qualidade locais com intensa concentração de linhas e grande número de veículos.",
       "Recommendation": "Atenção à integração física com proteção contra intempéries; à integração operacional com a chegadas e partidas sincronizadas; e informação do quadro de horário das linhas alimentadoras.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "mid",
-      "Place": "Terminal Gasômetro",
+      "Place": "Terminal Rodoviária",
       "VoteCode": "TBOIMD6",
       "Photo": {
         "Filename": "images/photos/16.jpg",
@@ -2459,7 +2501,7 @@ TB_OI_MD = [
   }
 ];
 
-// TransBrasil - Operação e Integração Modal - Baixo
+// TransBrasil - Rede de Transporte Público - Baixo
 TB_OI_LO = [
   {
     "type": "Feature",
@@ -2468,7 +2510,7 @@ TB_OI_LO = [
       "Description": "Integração efetiva entre o VLT e o BRT&nbsp;TransBrasil para criar uma conexão entre os aeroportos Santos Dumont e Antônio Carlos Jobim (Galeão).",
       "Recommendation": "Integração tarifária por meio do Bilhete Único; integração operacional com chegadas/partidas sincronizadas e sistema de informação em tempo real; integração física com proteção contra intempéries e acessibilidade universal; implantação de sistema de monitoramento da qualidade.",
       "Corridor": "TransBrasil",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
       "Place": "Aeroporto Santos Dumont",
       "VoteCode": "TBOILO1",
@@ -2489,7 +2531,7 @@ TB_OI_LO = [
       "Description": "Está prevista integração física por meio de terminais e viadutos nos dois BRTs. Porém, nestes pontos, os veículos podem adotar apenas uma direção, levando os passageiros a percorrer distâncias desnecessárias caso optem por seguir em outra direção. Provavelmente haverá um incremento na demanda dos corredores já operantes, como observado no BRT&nbsp;TransOeste após o início do TransCarioca.",
       "Recommendation": "Analisar a viabilidade de adequação para melhor integração entre corredores.",
       "Corridor": "TransOlímpica",
-      "Category": "Operação e Integração Modal",
+      "Category": "Rede de Transporte Público",
       "Level": "low",
       "Place": "Ligação Viaduto entre TransBrasil e TransCarioca",
       "VoteCode": "TBOILO2",
@@ -2730,7 +2772,7 @@ TB_BP_LO = [
   }
 ];
 
-// TransBrasil - TOD - Alto
+// TransBrasil - Desenvolvimento Urbano (DOTS) - Alto
 TB_TD_HI = [
   {
     "type": "Feature",
@@ -2739,7 +2781,7 @@ TB_TD_HI = [
       "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
       "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransBrasil",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Deodoro",
       "VoteCode": "TBTDHI1",
@@ -2760,7 +2802,7 @@ TB_TD_HI = [
       "Description": "Ao longo do BRT TransBrasil, há uma série de galpões abandonados ou subutilizados entre os bairros da Penha e Caju, que já foram inclusive alvo de ocupação, podendo ser aproveitados em projetos de desenvolvimento urbano.",
       "Recommendation": "Os galpões podem ser aproveitados, por exemplo, para a criação de Habitação de Interesse Social.",
       "Corridor": "TransBrasil",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Galpão Penha",
       "VoteCode": "TBTDHI2",
@@ -2781,7 +2823,7 @@ TB_TD_HI = [
   }
 ];
 
-// TransBrasil - TOD - Médio
+// TransBrasil - Desenvolvimento Urbano (DOTS) - Médio
 TB_TD_MD = [
   {
     "type": "Feature",
@@ -2790,7 +2832,7 @@ TB_TD_MD = [
       "Description": "As linhas alimentadoras devem atender os bairros adjacentes, integrando melhor a área de influência do BRT, aumentando sua capilaridade e evitando distorções, como por exemplo, áreas distantes dispondo de linhas alimentadoras e áreas mais próximas que não são atendidas.",
       "Recommendation": "Mapear lacunas de atendimento das linhas alimentadoras nas áreas adjacentes ao corredor. As linhas alimentadoras devem incorporar uma lógica de integração territorial e não se limitar ao seccionamento de linhas paralelas.",
       "Corridor": "TransBrasil",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
       "Place": "Acari / Parque Colúmbia",
       "VoteCode": "TBTDMD1",
@@ -2810,7 +2852,7 @@ TB_TD_MD = [
   }
 ];
 
-// TransBrasil - TOD - Baixo
+// TransBrasil - Desenvolvimento Urbano (DOTS) - Baixo
 TB_TD_LO = [
   {
     "type": "Feature",
@@ -2819,9 +2861,9 @@ TB_TD_LO = [
       "Description": "No BRT&nbsp;TransBrasil, caso haja adensamento nos bairros já consolidados próximos ao Centro, é possível haver conflitos entre novos usos residenciais e os históricos usos logísticos e industriais.",
       "Recommendation": "O adensamento populacional deve ser planejado para incorporar uma mistura de usos compatíveis nos entornos das estações.",
       "Corridor": "TransBrasil",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
-      "Place": "Estação São Francisco",
+      "Place": "Estação Caju",
       "VoteCode": "TBTDLO1",
       "Photo": {
         "Filename": "images/photos/27.jpg",
@@ -2845,7 +2887,7 @@ TB_TD_LO = [
       "Description": "No BRT&nbsp;TransBrasil, caso haja adensamento nos bairros já consolidados próximos ao Centro, é possível haver conflitos entre novos usos residenciais e os históricos usos logísticos e industriais.",
       "Recommendation": "O adensamento populacional deve ser planejado para incorporar uma mistura de usos compatíveis nos entornos das estações.",
       "Corridor": "TransBrasil",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
       "Place": "Estação Parque Vitória",
       "VoteCode": "TBTDLO2",
@@ -2871,7 +2913,7 @@ TB_TD_LO = [
       "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
       "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade.",
       "Corridor": "TransBrasil",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
       "Place": "Hospital Federal de Bonsucesso",
       "VoteCode": "TBTDLO3",
@@ -2893,7 +2935,7 @@ TB_TD_LO = [
       "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
       "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade.",
       "Corridor": "TransBrasil",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
       "Place": "Shopping Jardim Guadalupe",
       "VoteCode": "TBTDLO4",
@@ -2915,7 +2957,7 @@ TB_TD_LO = [
       "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
       "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade.",
       "Corridor": "TransBrasil",
-      "Category": "Planejamento Urbano (TOD)",
+      "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
       "Place": "Shopping Via Brasil",
       "VoteCode": "TBTDLO5",
