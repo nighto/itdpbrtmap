@@ -5,8 +5,8 @@ LINE_TRANSOLIMPICA_GEOJSON_DATA = {
         "Corredor": "TransOlímpica",
         "Trecho": "Barra da Tijuca - Deodoro",
         "Extensao": "22",
-        "Estacoes": "16",
-        "Terminais": "4 (Deodoro, Mal. Fontenelle, Olímpico, Salvador Allende)",
+        "Estacoes": "15",
+        "Terminais": "4 (Deodoro, Mal. Fontenelle, Olímpico, Recreio)",
         "Status": "U.C.",
         "Shape_Leng": 0.41118799154000002
     },
@@ -427,7 +427,7 @@ LINE_TO_TC_GEOJSON_DATA = {
 STATIONS_TRANSOLIMPICA = [{
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Salvador Allende",
+        "Name": "Terminal Recreio",
         "Corredor": "TransOlímpica",
         "Type": "Expresso\/Parador",
         "Status": "U.C."
@@ -439,7 +439,7 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "(nome ainda a definir)",
+        "Name": "Viva Viver",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
@@ -451,7 +451,7 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "CBF",
+        "Name": "Tapebuias",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
@@ -463,7 +463,7 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "(nome ainda a definir)",
+        "Name": "CNEN",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
@@ -475,7 +475,7 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "RioCentro",
+        "Name": "Olof Palme",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
@@ -487,7 +487,19 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Olímpico",
+        "Name": "RioCentro",
+        "Corredor": "TransOlímpica",
+        "Type": "Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.4069023, -22.9774463, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Terminal Olímpico / Estação Morro do Outeiro",
         "Corredor": "TransOlímpica",
         "Type": "Expresso\/Parador",
         "Status": "U.C."
@@ -499,7 +511,19 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "(nome ainda a definir)",
+        "Name": "Parque Olímpico",
+        "Corredor": "TransOlímpica",
+        "Type": "Expresso\/Parador",
+        "Status": "U.C."
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.393476, -22.973227, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Minha Praia",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
@@ -547,31 +571,19 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Largo da Preguiça",
+        "Name": "Colônia",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-43.393954622548293, -22.945419777500419, 0.0]
+        "coordinates": [-43.391780, -22.947870, 0.0]
     }
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Guerenguê",
-        "Corredor": "TransOlímpica",
-        "Type": "Parador",
-        "Status": "U.C."
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.394788564003221, -22.938109807661363, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Colônia Juliano Moreira",
+        "Name": "Outeiro Santo",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
         "Status": "U.C."
@@ -627,18 +639,6 @@ STATIONS_TRANSOLIMPICA = [{
     "geometry": {
         "type": "Point",
         "coordinates": [-43.411706118999973, -22.870627728999974, 0.0]
-    }
-}, {
-    "type": "Feature",
-    "properties": {
-        "Name": "Equitação",
-        "Corredor": "TransOlímpica",
-        "Type": "Parador",
-        "Status": "U.C."
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-43.408766690999983, -22.866031670999973, 0.0]
     }
 }, {
     "type": "Feature",
