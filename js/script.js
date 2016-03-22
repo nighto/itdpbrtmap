@@ -338,7 +338,7 @@ require([
                   popupText += '<br><br><strong>Qual a prioridade para você?</strong> <a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 1)"><span class="glyphicon glyphicon-star star-1"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 2)"><span class="glyphicon glyphicon-star star-2"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 3)"><span class="glyphicon glyphicon-star star-3"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 4)"><span class="glyphicon glyphicon-star star-4"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 5)"><span class="glyphicon glyphicon-star star-5"></span></a><span id="' + feature.properties.VoteCode + '_votemsg" style="display:none;">Voto computado com sucesso.</span><br><p style="position: relative; top: -10px; bottom: -40px; font-size: 90%; font-style: italic;">O ITDP Brasil quer saber a sua opinião!<br> Você pode votar sobre a prioridade deste ponto em uma escala de 1 (baixa prioridade, à esquerda) a 5 (alta prioridade, à direita).</p>';
                 }
                 if(feature.properties.Photo){
-                  popupText += '<br><img src="' + feature.properties.Photo.Filename + '" class="foto-estudo">';
+                  popupText += '<img src="' + feature.properties.Photo.Filename + '" class="foto-estudo">';
                   popupText += '<p style="text-align:right; position: relative; top: -10px; font-size: 8px;">Créditos da foto: ';
                   if(feature.properties.Photo.CreditsURL){
                     popupText += '<a target="_blank" href="' + feature.properties.Photo.CreditsURL + '">' + feature.properties.Photo.Credits + '</a>';
