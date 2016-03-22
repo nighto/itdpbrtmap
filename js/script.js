@@ -13,6 +13,7 @@ require([
   // coordenadas do mapa
   var INITIAL_COORDINATES = [-22.871658, -43.3371976], // Madureira
       INITIAL_ZOOM = 11,
+      OSM_TILE_LAYER_URL = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       MAPBOX_TILE_LAYER_URL = 'http://{s}.tiles.mapbox.com/v3/nighto.02109f37/{z}/{x}/{y}.png';
 
   // create a map in the "map" div, set the view to a given place and zoom
@@ -334,7 +335,7 @@ require([
                   popupText += '<br><strong>Recomendação:</strong> ' + feature.properties.Recommendation;
                 }
                 if(feature.properties.VoteCode){
-                  popupText += '<br><br><strong>Qual a prioridade para você?</strong> <a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 1)"><span class="glyphicon glyphicon-star star-1"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 2)"><span class="glyphicon glyphicon-star star-2"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 3)"><span class="glyphicon glyphicon-star star-3"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 4)"><span class="glyphicon glyphicon-star star-4"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 5)"><span class="glyphicon glyphicon-star star-5"></span></a><span id="' + feature.properties.VoteCode + '_votemsg" style="display:none;">Voto computado com sucesso.</span>';
+                  popupText += '<br><br><strong>Qual a prioridade para você?</strong> <a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 1)"><span class="glyphicon glyphicon-star star-1"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 2)"><span class="glyphicon glyphicon-star star-2"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 3)"><span class="glyphicon glyphicon-star star-3"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 4)"><span class="glyphicon glyphicon-star star-4"></span></a><a href="javascript:vote(\'' + feature.properties.VoteCode + '\', 5)"><span class="glyphicon glyphicon-star star-5"></span></a><span id="' + feature.properties.VoteCode + '_votemsg" style="display:none;">Voto computado com sucesso.</span><br><br> O ITDP Brasil quer saber a sua opinião! Você pode votar numa escala de 1 (baixa prioridade, à esquerda) a 5 (alta prioridade, à direita).';
                 }
                 if(feature.properties.Photo){
                   popupText += '<br><br><img src="' + feature.properties.Photo.Filename + '" class="foto-estudo">';
