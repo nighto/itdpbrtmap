@@ -139,7 +139,7 @@ TW_OI_HI = [
     "properties": {
       "Name": "Ampliação do terminal de Santa Cruz",
       "Description": "Espaço físico insuficiente para a demanda de passageiros e para o número de serviços e ônibus atuais.",
-      "Recommendation": "Conforme <a href="http://itdpbrasil.org.br/brt-transoeste-revisao-da-pontuacao-e-recomendacoes-de-melhorias/" target="_blank">Relatório de Recomendações do TransOeste</a>: Ampliação física do terminal; alocação dos serviços em subparadas bem sinalizadas; criação de área para manobra dos veículos em horário de pico; criação de espaço de estacionamento de veículos em retroárea; adequação da sinalização (posicionamento, tamanho, padronização) e dos mapas (entornos, contexto geográfico, outros modos).",
+      "Recommendation": "Conforme <a href='http://itdpbrasil.org.br/brt-transoeste-revisao-da-pontuacao-e-recomendacoes-de-melhorias/' target='_blank'>Relatório de Recomendações do TransOeste</a>: Ampliação física do terminal; alocação dos serviços em subparadas bem sinalizadas; criação de área para manobra dos veículos em horário de pico; criação de espaço de estacionamento de veículos em retroárea; adequação da sinalização (posicionamento, tamanho, padronização) e dos mapas (entornos, contexto geográfico, outros modos).",
       "Corridor": "TransOeste",
       "Category": "Rede de Transporte Público",
       "Level": "high",
