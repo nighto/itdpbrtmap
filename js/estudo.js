@@ -139,7 +139,7 @@ TW_OI_HI = [
     "properties": {
       "Name": "Ampliação do terminal de Santa Cruz",
       "Description": "Espaço físico insuficiente para a demanda de passageiros e para o número de serviços e ônibus atuais.",
-      "Recommendation": "Ampliação física do terminal; alocação dos serviços em subparadas bem sinalizadas; criação de área para manobra dos veículos em horário de pico; criação de espaço de estacionamento de veículos em retroárea; adequação da sinalização (posicionamento, tamanho, padronização) e dos mapas (entornos, contexto geográfico, outros modos).",
+      "Recommendation": "Conforme <a href="http://itdpbrasil.org.br/brt-transoeste-revisao-da-pontuacao-e-recomendacoes-de-melhorias/" target="_blank">Relatório de Recomendações do TransOeste</a>: Ampliação física do terminal; alocação dos serviços em subparadas bem sinalizadas; criação de área para manobra dos veículos em horário de pico; criação de espaço de estacionamento de veículos em retroárea; adequação da sinalização (posicionamento, tamanho, padronização) e dos mapas (entornos, contexto geográfico, outros modos).",
       "Corridor": "TransOeste",
       "Category": "Rede de Transporte Público",
       "Level": "high",
@@ -850,7 +850,7 @@ TC_OI_LO = [
       "Corridor": "TransCarioca",
       "Category": "Rede de Transporte Público",
       "Level": "low",
-      "Place": "Tanque",
+      "Place": "Estação Tanque",
       "VoteCode": 'TCOILO1',
       "Photo": {
         "Filename": "images/photos/58.jpg",
@@ -871,7 +871,7 @@ TC_OI_LO = [
       "Corridor": "TransCarioca",
       "Category": "Rede de Transporte Público",
       "Level": "low",
-      "Place": "Terminal de Integração Estação Taquara - Bandeira Brasil",
+      "Place": "Estação Taquara",
       "VoteCode": 'TCOILO2',
       "Photo": {
         "Filename": "images/photos/58.jpg",
@@ -1629,7 +1629,7 @@ TO_BP_LO = [
       "Corridor": "TransOlímpica",
       "Category": "Bicicleta e Pedestre",
       "Level": "low",
-      "Place": "Guerenguê",
+      "Place": "Outeiro Santo",
       "VoteCode": "TOBPLO1",
       "Photo": {
         "Filename": "images/photos/21.jpg",
@@ -1637,7 +1637,7 @@ TO_BP_LO = [
       },
       "index": 0,
       "aux_area": [
-        [ -43.385039021834444, -22.938010884641496 ], [ -43.38548309953007, -22.940806136681484 ], [ -43.386838108658281, -22.94333747573236 ], [ -43.38897144867569, -22.945357098052082 ], [ -43.391674298145119, -22.946667283125269 ], [ -43.394682053807585, -22.947139757790307 ], [ -43.39770024307068, -22.946728261349893 ], [ -43.400433369109159, -22.945473078320205 ], [ -43.402613857340377, -22.943497093425716 ], [ -43.404028261687067, -22.940993755647732 ], [ -43.404538159949887, -22.93820813222391 ], [ -43.404093692232799, -22.935412910939419 ], [ -43.402738421516453, -22.932881703141017 ], [ -43.400605048262015, -22.930862262436772 ], [ -43.3979024066021, -22.929552239971109 ], [ -43.394895020419497, -22.929079846795105 ], [ -43.391877221177886, -22.929491312480007 ], [ -43.389144356727535, -22.93074636425721 ], [ -43.386963901733324, -22.932722167536234 ], [ -43.385549289577128, -22.935225342706694 ], [ -43.385039021834444, -22.938010884641496 ]
+        [ -43.385714428181359, -22.928751615822666 ], [ -43.386158502319034, -22.931546868167807 ], [ -43.38751344364907, -22.934078199739748 ], [ -43.389646658244928, -22.936097807536829 ], [ -43.39234933694344, -22.937407972476848 ], [ -43.395356893216608, -22.937880423379415 ], [ -43.39837487401654, -22.937468901878592 ], [ -43.401107802952652, -22.936213694941802 ], [ -43.403288124755754, -22.934237689625409 ], [ -43.404702409642823, -22.931734336898174 ], [ -43.405212247093331, -22.928948705450626 ], [ -43.404767783137054, -22.926153483848047 ], [ -43.403412580357703, -22.923622283470156 ], [ -43.401279332546594, -22.921602857206956 ], [ -43.39857686155397, -22.920292854800866 ], [ -43.395569674571263, -22.919820485349852 ], [ -43.392552083589955, -22.920231976108106 ], [ -43.389819416103158, -22.921487051850839 ], [ -43.387639127515293, -22.923462875633355 ], [ -43.386224634922321, -22.925966065826664 ], [ -43.385714428181359, -22.928751615822666 ]
       ]
     },
     "geometry": {
@@ -1829,7 +1829,7 @@ TO_TD_HI = [
       "Corridor": "TransOlímpica",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
-      "Place": "Guerenguê",
+      "Place": "Estação Guerenguê",
       "VoteCode": "TOTDHI5",
       "Photo": {
         "Filename": "images/photos/29.jpg",
