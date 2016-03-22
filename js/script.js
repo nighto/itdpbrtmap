@@ -382,4 +382,258 @@ require([
       // inverting lat/lon (on GeoJSON they're inverted in relation of what Leaflet expects)
       if(auxNode.properties.aux_area_workaround === undefined){
         for(var i=0, l=auxPointsArray.length; i<l; i++){
-          var t = auxPointsArray[i
+          var t = auxPointsArray[i][0];
+          auxPointsArray[i][0] = auxPointsArray[i][1];
+          auxPointsArray[i][1] = t;
+        }
+        auxNode.properties.aux_area_workaround = true;
+      }
+
+      aux_polygon = L.polygon(auxPointsArray, { color: "#00A851" }).addTo(map);
+    }
+    else {
+      if(map.hasLayer(aux_polygon)){
+        map.removeLayer(aux_polygon);
+        aux_polygon = null;
+      }
+    }
+  });
+  map.on('popupclose', function(e){
+    if(map.hasLayer(aux_polygon)){
+      map.removeLayer(aux_polygon);
+    }
+  });
+
+  // Bairros misclicking correction
+  lastPopupClickBairros = false;
+  map.on('popupopen', function(e){
+    var popupClassList = e.popup._container.classList;
+    for(var i=0, l=popupClassList.length; i<l; i++){
+      if(popupClassList[i] == 'bairro'){
+        lastPopupClickBairros = true;
+      }
+    }
+  });
+  map.on('popupclose', function(e){
+    var popupClassList = e.popup._container.classList;
+    for(var i=0, l=popupClassList.length; i<l; i++){
+      if(popupClassList[i] == 'bairro'){
+        if(lastPopupClickBairros){
+          window.setTimeout(function(){
+            // close popup if bairro
+            var p = document.getElementsByClassName('leaflet-popup-close-button')[0]
+            if(p !== undefined){
+              var newPopupClassList = p.parentElement.classList;
+              for(var i=0, l=newPopupClassList.length; i<l; i++){
+                if(newPopupClassList[i] == 'bairro'){
+                  p.click();
+                }
+              }
+            }
+            lastPopupClickBairros = false;
+          }, 0);
+        }
+      }
+    }
+  });
+
+  // defining base layers
+  var arrayLayerTransOeste    = [geoJsonLineTransOeste, geoJsonLineTransOesteLote0, geoJsonLineTransOestePlanejada, geoJsonStationTransOesteLZ],
+      arrayLayerTransCarioca  = [geoJsonLineTransCarioca, geoJsonStationTransCariocaLZ],
+      arrayLayerTransOlimpica = [geoJsonLineTransOlimpica, geoJsonLineTO_TC, geoJsonStationTransOlimpicaLZ],
+      arrayLayerTransBrasil   = [geoJsonLineTransBrasil, geoJsonStationTransBrasilLZ],
+      arrayLayerBairros       = [geoJsonBairros];
+
+  fnHandleLayerEstudoAddRemove = function(){
+    for(b in brts){
+      for(c in categories){
+        for(l in levels){
+          // checks if everything is checked and I didn't add, do add.
+          if(
+            document.getElementById(brts[b]).checked &&
+            document.getElementById(categories[c]).checked &&
+            document.getElementById(levels[l]).checked &&
+            !study[brts[b]][categories[c]][levels[l]].status
+          ){
+            study[brts[b]][categories[c]][levels[l]].geojson.addTo(map);
+            study[brts[b]][categories[c]][levels[l]].status = true;
+          }
+
+          // if something is not checked and I already added, do remove.
+          if(
+            (
+              !document.getElementById(brts[b]).checked ||
+              !document.getElementById(categories[c]).checked ||
+              !document.getElementById(levels[l]).checked
+            ) && study[brts[b]][categories[c]][levels[l]].status
+          ){
+            map.removeLayer(study[brts[b]][categories[c]][levels[l]].geojson);
+            study[brts[b]][categories[c]][levels[l]].status = false;
+          }
+        }
+      }
+    }
+  };
+
+  // adding layer control to map
+  var MyControl = L.Control.extend({
+    options: {
+      position: 'topright'
+    },
+
+    _createTitle: popupfn.createTitle,
+    _createCheckboxInput: popupfn.createCheckboxInput,
+    _handleLayerEstudoAddRemove: fnHandleLayerEstudoAddRemove,
+
+    onAdd: function(map){
+      var container = L.DomUtil.create('div', 'my-custom-control');
+      this.form = L.DomUtil.create('form', 'form-custom-control', container);
+
+      this.containerLogo = L.DomUtil.create('div', 'logo', this.form);
+      var logoImg = L.DomUtil.create('img', '', this.containerLogo);
+      logoImg.src = 'images/logos/itdp.png';
+      L.DomUtil.create('hr', '', this.containerLogo);
+
+      this.containerBRT = L.DomUtil.create('div', 'brtcheckboxes', this.form);
+      this._createTitle('Sistemas BRT', this.containerBRT);
+      this._createCheckboxInput('TransOeste',    'TW', true, this.containerBRT, arrayLayerTransOeste,    ['icon-TW']);
+      this._createCheckboxInput('TransCarioca',  'TC', true, this.containerBRT, arrayLayerTransCarioca,  ['icon-TC']);
+      this._createCheckboxInput('TransOlímpica', 'TO', true, this.containerBRT, arrayLayerTransOlimpica, ['icon-TO']);
+      this._createCheckboxInput('TransBrasil',   'TB', true, this.containerBRT, arrayLayerTransBrasil,   ['icon-TB']);
+
+      this.containerCategorias = L.DomUtil.create('div', 'categoriascheckboxes', this.form);
+      this._createTitle('Categorias', this.containerCategorias);
+      this._createCheckboxInput('Segurança viária',            'SV', true, this.containerCategorias);
+      this._createCheckboxInput('Operação e Integração modal', 'OI', true, this.containerCategorias);
+      this._createCheckboxInput('Planejamento Urbano (TOD)',   'TD', true, this.containerCategorias);
+      this._createCheckboxInput('Bicicleta e pedestre',        'BP', true, this.containerCategorias);
+
+      this.containerNiveisDeAtencao = L.DomUtil.create('div', 'niveisdeatencaocheckboxes', this.form);
+      this._createTitle('Níveis de Atenção', this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Alto',  'HI', true, this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Médio', 'MD', true, this.containerNiveisDeAtencao);
+      this._createCheckboxInput('Baixo', 'LO', true, this.containerNiveisDeAtencao);
+
+      // Extras
+      L.DomUtil.create('hr', '', this.form);
+      this.containerExtras = L.DomUtil.create('div', 'extras', this.form);
+
+      var checkboxExtras = L.DomUtil.create('input', '', this.containerExtras);
+      checkboxExtras.id = 'extras';
+      checkboxExtras.type = 'checkbox';
+      var labelCheckboxExtras = L.DomUtil.create('label', 'labelExtras', this.containerExtras);
+      labelCheckboxExtras.htmlFor = 'extras';
+      labelCheckboxExtras.innerHTML = 'Extras';
+
+      var divExtras = L.DomUtil.create('div', 'mapasDeCalorInputs', this.containerExtras);
+      divExtras.style.display = 'none';
+
+      var createRadioButton = function(id, groupName, checked, container){
+        var radiobutton = L.DomUtil.create('input', '', container);
+        radiobutton.id = id;
+        radiobutton.type = 'radio';
+        radiobutton.name = groupName;
+        radiobutton.checked = checked;
+        return radiobutton;
+      };
+      var createLabelRadioButton = function(htmlFor, labelText, container){
+        var label = L.DomUtil.create('label', '', container);
+        label.htmlFor = htmlFor;
+        label.innerHTML = labelText;
+      };
+
+      var containerDensidade = L.DomUtil.create('div', '', divExtras);
+      var containerEmpregos  = L.DomUtil.create('div', '', divExtras);
+      var containerSatelite  = L.DomUtil.create('div', '', divExtras);
+      var radiobuttonDensidade = createRadioButton('DEN', 'mapaCalor', true,  containerDensidade);
+      var radiobuttonEmpregos  = createRadioButton('EMP', 'mapaCalor', false, containerEmpregos);
+      var radiobuttonSatelite  = createRadioButton('SAT', 'mapaCalor', false, containerSatelite);
+      var labelRadiobuttonDensidade = createLabelRadioButton('DEN', 'Densidade populacional', containerDensidade);
+      var labelRadiobuttonEmpregos  = createLabelRadioButton('EMP', 'Empregos formais/habitante', containerEmpregos);
+      var labelRadiobuttonSatelite  = createLabelRadioButton('SAT', 'Imagens de satélite', containerSatelite);
+
+      var handleBairrosChange = function(){
+        geoJsonBairros.eachLayer(function(layer){
+          layer.setStyle(pathStyle.Bairros(layer));
+        });
+      }
+      L.DomEvent.disableClickPropagation(checkboxExtras).on(checkboxExtras, 'change', function(e){
+        if(document.getElementById('extras').checked){
+          if(document.getElementById('EMP').checked){
+            selectedMapaDeCalorRef = 'EMP';
+          }else if(document.getElementById('DEN').checked){
+            selectedMapaDeCalorRef = 'DEN';
+          }else if(document.getElementById('SAT').checked){
+            selectedMapaDeCalorRef = 'DES';
+            if(isSatelliteAlreadyLoaded){
+              Esri_WorldImagery.bringToFront();
+            }
+          }
+          handleBairrosChange();
+          document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'block';
+        } else {
+          if(isSatelliteAlreadyLoaded){
+            Esri_WorldImagery.bringToBack();
+          }
+          selectedMapaDeCalorRef = 'DES';
+          handleBairrosChange();
+          document.getElementsByClassName('mapasDeCalorInputs')[0].style.display = 'none';
+        }
+      });
+      var handleRadioButtonChange = function(e){
+        var rbsrc;
+        if(e.srcElement !== undefined){
+          rbsrc = e.srcElement.id;
+        }else{
+          rbsrc = e.target.id;
+        }
+        if(rbsrc == 'SAT'){
+          if(isSatelliteAlreadyLoaded){
+            Esri_WorldImagery.bringToFront();
+          }else{
+            Esri_WorldImagery.addTo(map);
+            isSatelliteAlreadyLoaded = true;
+          }
+          selectedMapaDeCalorRef = 'DES';
+          handleBairrosChange();
+        }else{
+          if(isSatelliteAlreadyLoaded){
+            Esri_WorldImagery.bringToBack();
+          }
+          selectedMapaDeCalorRef = rbsrc;
+          handleBairrosChange();
+        }
+      };
+      L.DomEvent.disableClickPropagation(radiobuttonDensidade).on(radiobuttonDensidade, 'change', handleRadioButtonChange);
+      L.DomEvent.disableClickPropagation(radiobuttonEmpregos).on(radiobuttonEmpregos, 'change', handleRadioButtonChange);
+      L.DomEvent.disableClickPropagation(radiobuttonSatelite).on(radiobuttonSatelite, 'change', handleRadioButtonChange);
+
+      return container;
+    }
+  });
+  map.addControl(new MyControl());
+
+  // scale
+  L.control.scale().addTo(map);
+
+  // north
+  var north = L.control({position: "bottomleft"});
+  north.onAdd = function(map) {
+      var div = L.DomUtil.create("div", "info legend");
+      div.innerHTML = '<img src="images/icons/norte.png" style="width:50px">';
+      return div;
+  }
+  north.addTo(map);
+
+  // satellite imagery
+  var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    //attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+  });
+  var isSatelliteAlreadyLoaded = false;
+
+  // removing loading
+  document.getElementById('loading-container').className = 'loading-complete';
+  setTimeout(function(){
+    document.getElementById('loading-container').className = 'loading-complete hidden';
+  }, 4000);
+});
