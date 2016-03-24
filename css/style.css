@@ -156,7 +156,9 @@ label {
 .leaflet-popup-content .popup-icon-bairros { background-image: url(../images/icons/bairros.png); }
 
 .leaflet-popup.TransOeste .leaflet-popup-content-wrapper,
-.leaflet-popup.TransOeste .leaflet-popup-tip {
+.leaflet-popup.TransOeste .leaflet-popup-tip,
+.leaflet-popup.TW .leaflet-popup-content-wrapper,
+.leaflet-popup.TW .leaflet-popup-tip {
   border-color: rgba(90,201,230,.9);
 }
 .leaflet-popup.TransOeste .leaflet-popup-content-wrapper b {
@@ -165,6 +167,8 @@ label {
 
 .leaflet-popup.TransCarioca .leaflet-popup-content-wrapper,
 .leaflet-popup.TransCarioca .leaflet-popup-tip,
+.leaflet-popup.TC .leaflet-popup-content-wrapper,
+.leaflet-popup.TC .leaflet-popup-tip,
 .leaflet-popup.mid .leaflet-popup-content-wrapper,
 .leaflet-popup.mid .leaflet-popup-tip{
   border-color: rgba(249,164,96,.9);
@@ -176,6 +180,8 @@ label {
 
 .leaflet-popup.TransOlímpica .leaflet-popup-content-wrapper,
 .leaflet-popup.TransOlímpica .leaflet-popup-tip,
+.leaflet-popup.TO .leaflet-popup-content-wrapper,
+.leaflet-popup.TO .leaflet-popup-tip,
 .leaflet-popup.Link          .leaflet-popup-content-wrapper,
 .leaflet-popup.Link          .leaflet-popup-tip,
 .leaflet-popup.low           .leaflet-popup-content-wrapper,
@@ -189,6 +195,8 @@ label {
 }
 .leaflet-popup.TransBrasil .leaflet-popup-content-wrapper,
 .leaflet-popup.TransBrasil .leaflet-popup-tip,
+.leaflet-popup.TB .leaflet-popup-content-wrapper,
+.leaflet-popup.TB .leaflet-popup-tip,
 .leaflet-popup.high .leaflet-popup-content-wrapper,
 .leaflet-popup.high .leaflet-popup-tip{
   border-color: rgba(239,71,56,.9);
