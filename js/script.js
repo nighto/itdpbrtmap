@@ -350,7 +350,7 @@ require([
                 if(feature.properties.Level){
                   level = feature.properties.Level;
                 }
-                layer.bindPopup(L.popup({className: level}).setContent(popupText));
+                layer.bindPopup(L.popup({className: brts[b]}).setContent(popupText));
               },
               pointToLayer: function(feature, latlng){
                 var iconSize =    { LO: [24, 58], MD: [32, 77], HI: [48, 115] },
