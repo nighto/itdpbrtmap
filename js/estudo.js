@@ -227,7 +227,7 @@ TW_OI_MD = [
     "properties": {
       "Name": "Reestruturação da estação em terminal",
       "Description": "A estação Curral Falso é atualmente intermediária, posicionada em trecho não segregado do corredor. Não há linhas partindo dessa estação, o que leva passageiros a voltar até o terminal de Santa Cruz para realizar a viagem.",
-      "Recommendation": "<a href='http://itdpbrasil.org.br/padrao-de-qualidade-brt/' target='_blank'>Para melhor estruturar a rede de BRTs</a>, essa estação poderia ser convertida em um novo terminal, que receberia linhas de Campo Grande e descongestionaria o terminal de Santa Cruz. Recomenda-se também estudo de segregação viária para o atual trecho misto.",
+      "Recommendation": "<a href='http://itdpbrasil.org.br/superlotacao-no-brt-transoeste-como-reverter-o-problema/' target='_blank'>Para melhor estruturar a rede de BRTs</a>, essa estação poderia ser convertida em um novo terminal, que receberia linhas de Campo Grande e descongestionaria o terminal de Santa Cruz. Recomenda-se também estudo de segregação viária para o atual trecho misto.",
       "Corridor": "TransOeste",
       "Category": "Rede de Transporte Público",
       "Level": "mid",
@@ -595,7 +595,7 @@ TW_TD_HI = [
     "properties": {
       "Name": "Pendularidade do corredor",
       "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
-      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
+      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (DOTS) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
       "Corridor": "TransOeste",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -616,7 +616,7 @@ TW_TD_HI = [
     "properties": {
       "Name": "Pendularidade do corredor",
       "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
-      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
+      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (DOTS) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
       "Corridor": "TransOeste",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -637,7 +637,7 @@ TW_TD_HI = [
     "properties": {
       "Name": "Pendularidade do corredor",
       "Description": "Desequilíbrio na oferta de moradia e emprego entre os extremos do corredor gera pendularidade acentuada, com superlotação em um único sentido e ônibus vazios no sentido inverso. A lógica de financiamento baseada na tarifa prejudica a sustentabilidade financeira do sistema.",
-      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (TOD) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
+      "Recommendation": "Projetos de Desenvolvimento Orientado ao Transporte (DOTS) podem ser estudados para estações específicas do corredor para diversificar o padrão de demanda, reduzir a superlotação e melhorar a sustentabilidade financeira.",
       "Corridor": "TransOeste",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -686,8 +686,8 @@ TC_SV_HI = [
     "type": "Feature",
     "properties": {
       "Name": "Redesenho viário no entorno das estações",
-      "Description": "O ITDP Brasil realizou <a href='http://itdpbrasil.org.br/relatorio-ruas-completas-ao-longo-do-transcarioca-oficina-de-desenho-e-seguranca-viaria/' target='_blank'>estudo específico no entorno desta estação</a> em que detectou: calçadas estreitas, barreiras ao pedestre, ausência de arborização, interseções perigosas, limites mal definidos (pedestre/BRT/tráfego/construções), área enclausurada.",
-      "Recommendation": "Conforme o <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>: Reduzir velocidade nas proximidades com implantação de travessia em nível para pedestres; adequar calçadas; abrir outra entrada para acesso à estação; potencializar espaços públicos com desapropriação de certos edifícios subutilizados.",
+      "Description": "O ITDP Brasil realizou estudo específico no entorno desta estação em que detectou: calçadas estreitas, barreiras ao pedestre, ausência de arborização, interseções perigosas, limites mal definidos (pedestre/BRT/tráfego/construções), área enclausurada. Os achados deste estudo são corroborados por <a href='http://videerrado.blogspot.com.br/' target='_blank'>análises locais</a> de usuários.",
+      "Recommendation": "Conforme <a href='http://itdpbrasil.org.br/relatorio-ruas-completas-ao-longo-do-transcarioca-oficina-de-desenho-e-seguranca-viaria/' target='_blank'>Relatório</a> deste estudo: Reduzir velocidade nas proximidades com implantação de travessia em nível para pedestres; adequar calçadas; abrir outra entrada para acesso à estação; potencializar espaços públicos com desapropriação de certos edifícios subutilizados.",
       "Corridor": "TransCarioca",
       "Category": "Segurança Viária",
       "Level": "high",
@@ -707,8 +707,8 @@ TC_SV_HI = [
     "type": "Feature",
     "properties": {
       "Name": "Redesenho viário no entorno das estações",
-      "Description": "O ITDP Brasil realizou <a href='http://itdpbrasil.org.br/relatorio-ruas-completas-ao-longo-do-transcarioca-oficina-de-desenho-e-seguranca-viaria/' target='_blank'>estudo específico no entorno desta estação</a> em que detectou: tráfego intenso, calçadas estreitas, barreiras ao pedestre, ausência de arborização, interseções perigosas, limites mal definidos (pedestre/BRT/tráfego/construções).",
-      "Recommendation": "Conforme o <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>: Reduzir velocidade nas proximidades com implantação de travessia em nível para pedestres; adequar calçadas melhorar sinalização do pavimento da pista do BRT; implantar ciclovias segregadas.",
+      "Description": "O ITDP Brasil realizou estudo específico no entorno desta estação em que detectou: tráfego intenso, calçadas estreitas, barreiras ao pedestre, ausência de arborização, interseções perigosas, limites mal definidos (pedestre/BRT/tráfego/construções).",
+      "Recommendation": "Conforme  <a href='http://itdpbrasil.org.br/relatorio-ruas-completas-ao-longo-do-transcarioca-oficina-de-desenho-e-seguranca-viaria/' target='_blank'>Relatório</a> deste estudo: Reduzir velocidade nas proximidades com implantação de travessia em nível para pedestres; adequar calçadas melhorar sinalização do pavimento da pista do BRT; implantar ciclovias segregadas.",
       "Corridor": "TransCarioca",
       "Category": "Segurança Viária",
       "Level": "high",
@@ -733,7 +733,7 @@ TC_OI_HI = [
     "properties": {
       "Name": "Ajustes operacionais",
       "Description": "A operação apresenta frota insuficiente, intervalos irregulares e tempo de espera elevado para os diferentes serviços; tempo importante gasto em algumas interseções (falta de prioridade semafórica); e superlotação em alguns trechos.",
-      "Recommendation": "Conforme o <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>: A priorização mais inteligente dos ônibus nas intersecções; o ajuste e monitoramento dos intervalos; agilizar a entrada/saída dos veículos nos terminais; adequação a frota operante com mais veículos bi e superarticulados pode diminuir o tempo de ciclo.",
+      "Recommendation": "Conforme <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>, pode-se diminuir o tempo de ciclo com:<br>(i) Priorização mais inteligente dos ônibus nas intersecções;<br>(ii) Ajuste e monitoramento dos intervalos;<br>(iii) Agilização da entrada/saída dos veículos nos terminais;<br>(iv) Adequação da frota operante com mais veículos bi e superarticulados.",
       "Corridor": "TransCarioca",
       "Category": "Rede de Transporte Público",
       "Level": "high",
@@ -754,7 +754,7 @@ TC_OI_HI = [
     "properties": {
       "Name": "Ajustes operacionais",
       "Description": "A operação apresenta frota insuficiente, intervalos irregulares e tempo de espera elevado para os diferentes serviços; tempo importante gasto em algumas interseções (falta de prioridade semafórica); e superlotação em alguns trechos.",
-      "Recommendation": "Conforme o <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>: A priorização mais inteligente dos ônibus nas intersecções; o ajuste e monitoramento dos intervalos; agilizar a entrada/saída dos veículos nos terminais; adequação a frota operante com mais veículos bi e superarticulados pode diminuir o tempo de ciclo.",
+      "Recommendation": "Conforme <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>, pode-se diminuir o tempo de ciclo com:<br>(i) Priorização mais inteligente dos ônibus nas intersecções;<br>(ii) Ajuste e monitoramento dos intervalos;<br>(iii) Agilização da entrada/saída dos veículos nos terminais;<br>(iv) Adequação da frota operante com mais veículos bi e superarticulados.",
       "Corridor": "TransCarioca",
       "Category": "Rede de Transporte Público",
       "Level": "high",
@@ -980,7 +980,7 @@ TC_BP_MD = [
     "properties": {
       "Name": "Acessibilidade às estações",
       "Description": "Em algumas estações do BRT TransCarioca, foram detectadas má qualidade de calçadas e tráfego intenso no entorno, fatores que dificultam o acesso ao sistema.",
-      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Conforme o <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>, recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
+      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Conforme  <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>, recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
       "Corridor": "TransCarioca",
       "Category": "Bicicleta e Pedestre",
       "Level": "mid",
@@ -1001,7 +1001,7 @@ TC_BP_MD = [
     "properties": {
       "Name": "Acessibilidade às estações",
       "Description": "Em algumas estações do BRT TransCarioca, foram detectadas má qualidade de calçadas e tráfego intenso no entorno, fatores que dificultam o acesso ao sistema.",
-      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Conforme o <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>, recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
+      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Conforme  <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>, recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
       "Corridor": "TransCarioca",
       "Category": "Bicicleta e Pedestre",
       "Level": "mid",
@@ -1022,7 +1022,7 @@ TC_BP_MD = [
     "properties": {
       "Name": "Acessibilidade às estações",
       "Description": "Em algumas estações do BRT TransCarioca, foram detectadas má qualidade de calçadas e tráfego intenso no entorno, fatores que dificultam o acesso ao sistema.",
-      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Conforme o <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>, recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
+      "Recommendation": "Melhorar a acessibilidade do pedestre e pessoa com deficiência para aumentar a adesão de passageiros e a transferência modal em relação ao veículo particular. Conforme  <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>Relatório da Análise de Impacto do TransCarioca</a>, recomenda-se estudar alargamento, nivelamento e arborização de calçadas e criação de ilhas e/ou elevação das travessias para maior segurança e conforto do pedestre.",
       "Corridor": "TransCarioca",
       "Category": "Bicicleta e Pedestre",
       "Level": "mid",
@@ -1110,7 +1110,7 @@ TC_TD_HI = [
     "properties": {
       "Name": "Desenvolvimento de centralidades",
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
-      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>princípios do Desenvolvimento Orientado ao Transporte (TOD)</a>, pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do DOTS (conforme <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>recomendações da Análise de Impacto do BRT TransCarioca</a>), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -1131,7 +1131,7 @@ TC_TD_HI = [
     "properties": {
       "Name": "Desenvolvimento de centralidades",
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
-      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>princípios do Desenvolvimento Orientado ao Transporte (TOD)</a>, pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do DOTS (conforme <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>recomendações da Análise de Impacto do BRT TransCarioca</a>), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -1152,7 +1152,7 @@ TC_TD_HI = [
     "properties": {
       "Name": "Desenvolvimento de centralidades",
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
-      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>princípios do Desenvolvimento Orientado ao Transporte (TOD)</a>, pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do DOTS (conforme <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>recomendações da Análise de Impacto do BRT TransCarioca</a>), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -1173,7 +1173,7 @@ TC_TD_HI = [
     "properties": {
       "Name": "Desenvolvimento de centralidades",
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
-      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>princípios do Desenvolvimento Orientado ao Transporte (TOD)</a>, pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do DOTS (conforme <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>recomendações da Análise de Impacto do BRT TransCarioca</a>), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -1194,12 +1194,12 @@ TC_TD_HI = [
     "properties": {
       "Name": "Desenvolvimento de centralidades",
       "Description": "Ao longo do BRT TransCarioca, há infraestrutura consolidada e centros de atividade importantes. Certas áreas estão degradadas e há carência de recursos para melhorias.",
-      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>princípios do Desenvolvimento Orientado ao Transporte (TOD)</a>, pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
+      "Recommendation": "Corredores de BRT podem potencializar o desenvolvimento social e urbano. Há um Projeto de Área de Especial Interesse Urbanístico (AEIU TransCarioca) em debate que, caso alinhado com os princípios do DOTS (conforme <a href='http://itdpbrasil.org.br/brt-transcarioca-relatorio-da-analise-de-impacto/' target='_blank'>recomendações da Análise de Impacto do BRT TransCarioca</a>), pode auxiliar a requalificar centralidades e arrecadar mais-valia fundiária.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
       "Place": "Estação Taquara",
-      "VoteCode": 'TCTDHI4',
+      "VoteCode": 'TCTDHI5',
       "Photo": {
         "Filename": "images/photos/64.jpg",
         "Credits": "ITDP"
@@ -1219,7 +1219,7 @@ TC_TD_MD = [
     "properties": {
       "Name": "Revisão da política de estacionamento",
       "Description": "Parte da área no entorno do BRT TransCarioca passará por reformulação sob a forma de um Projeto de Área de Especial Interesse Urbanístico (AEIU). O projeto de lei prevê dentre outras medidas, uma revisão da Política de Estacionamento para a área.",
-      "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>proíba a construção de edifícios-garagem</a> a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
+      "Recommendation": "Em área bem servida por um corredor de transporte estruturante, recomenda-se que a Política de Estacionamento <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>proíba a construção de edifícios-garagem</a> a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
@@ -1240,7 +1240,7 @@ TC_TD_MD = [
     "properties": {
       "Name": "Revisão da política de estacionamento",
       "Description": "Parte da área no entorno do BRT TransCarioca passará por reformulação sob a forma de um Projeto de Área de Especial Interesse Urbanístico (AEIU). O projeto de lei prevê dentre outras medidas, uma revisão da Política de Estacionamento para a área.",
-      "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>proíba a construção de edifícios-garagem</a> a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
+      "Recommendation": "Em área bem servida por um corredor de transporte estruturante, recomenda-se que a Política de Estacionamento <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>proíba a construção de edifícios-garagem</a> a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
@@ -1264,8 +1264,8 @@ TC_TD_LO = [
     "type": "Feature",
     "properties": {
       "Name": "Oportunidades de desenvolvimento social",
-      "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
-      "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento elimine requisítos mínimos de vagas para edificações residenciais e comerciais e <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>proíba a construção de edifícios-garagem</a> a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
+      "Description": "O BRT TransCarioca atravessa algumas comunidades com baixa oferta de serviços públicos e áreas livres qualificadas.",
+      "Recommendation": "Em área bem servida por um corredor de transporte estruturante, recomenda-se que o espaço público seja qualificado e que a <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>Política de Estacionamento</a> elimine requisítos mínimos de vagas para edificações residenciais e comerciais e proíba a construção de edifícios-garagem a uma distância de no <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>mínimo 1000 metros das estações</a> de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
@@ -1285,8 +1285,8 @@ TC_TD_LO = [
     "type": "Feature",
     "properties": {
       "Name": "Oportunidades de desenvolvimento social",
-      "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
-      "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento elimine requisítos mínimos de vagas para edificações residenciais e comerciais e <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>proíba a construção de edifícios-garagem</a> a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
+      "Description": "O BRT TransCarioca atravessa algumas comunidades com baixa oferta de serviços públicos e áreas livres qualificadas. Nesta área foi <a href='http://videerrado.blogspot.com.br/2015/06/em-2016-olimpiadas-no-rio-de-janeiro-e.html' target='_blank'>detectada</a> deterioração e uso indevido de espaço público para estacionamento de carros.",
+      "Recommendation": "Em área bem servida por um corredor de transporte estruturante, recomenda-se que o espaço público seja qualificado e que a <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>Política de Estacionamento</a> elimine requisítos mínimos de vagas para edificações residenciais e comerciais e proíba a construção de edifícios-garagem a uma distância de no <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>mínimo 1000 metros das estações</a> de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
@@ -1306,8 +1306,8 @@ TC_TD_LO = [
     "type": "Feature",
     "properties": {
       "Name": "Oportunidades de desenvolvimento social",
-      "Description": "O BRT TransCarioca atravessa algumas comunidades com demandas pouco atendidas de serviços públicos e outras oportunidades, que são dependentes de transporte público.",
-      "Recommendation": "Em área bem servida por um corredor de transporte estruturador, recomenda-se que a Política de Estacionamento elimine requisítos mínimos de vagas para edificações residenciais e comerciais e <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>proíba a construção de edifícios-garagem</a> a uma distância de no mínimo 1000 metros das estações de BRT, de forma a desestimular o uso do carro.",
+      "Description": "O BRT TransCarioca atravessa algumas comunidades com baixa oferta de serviços públicos e áreas livres qualificadas.",
+      "Recommendation": "Em área bem servida por um corredor de transporte estruturante, recomenda-se que o espaço público seja qualificado e a <a href='http://itdpbrasil.org.br/guia-estacionamento/' target='_blank'>Política de Estacionamento</a> elimine requisítos mínimos de vagas para edificações residenciais e comerciais e proíba a construção de edifícios-garagem a uma distância de no <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>mínimo 1000 metros das estações</a> de BRT, de forma a desestimular o uso do carro.",
       "Corridor": "TransCarioca",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
@@ -1725,7 +1725,7 @@ TO_TD_HI = [
     "properties": {
       "Name": "Pendularidade do corredor",
       "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
-      "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
+      "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (DOTS) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransOlímpica",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -1750,7 +1750,7 @@ TO_TD_HI = [
     "properties": {
       "Name": "Pendularidade do corredor",
       "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
-      "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
+      "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (DOTS) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransOlímpica",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -1775,7 +1775,7 @@ TO_TD_HI = [
     "properties": {
       "Name": "Melhorias no planejamento urbano",
       "Description": "As áreas no entorno do BRT&nbsp;TransOlímpica estão sob intensa reformulação com a construção de prédios estritamente residenciais.",
-      "Recommendation": "Conforme o <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>Padrão de Qualidade TOD</a>: O uso misto deve ser priorizado nos novos empreendimentos com, por exemplo, comércio de rua no andar térreo e salas de escritório e consultório no 1º andar, gerando fachadas mais ativas e mais deslocamentos à pé. Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
+      "Recommendation": "Conforme  <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>Padrão de Qualidade TOD</a>: O uso misto deve ser priorizado nos novos empreendimentos com, por exemplo, comércio de rua no andar térreo e salas de escritório e consultório no 1º andar, gerando fachadas mais ativas e mais deslocamentos à pé. Os entornos devem ser redesenhados para tornarem-se mais amigáveis à bicicleta e ao pedestre.",
       "Corridor": "TransOlímpica",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -1879,7 +1879,7 @@ TO_TD_MD = [
     "properties": {
       "Name": "Áreas não edificadas ou subutilizadas",
       "Description": "O BRT&nbsp;TransOlímpica passa próximo a grandes áreas livres, sem uso definido.",
-      "Recommendation": "As áreas não edificadas ou subutilizadas devem ser mapeadas e sua ocupação regulada sob uma nova legislação urbanística, que seja sólida e articulada com as comunidades diretamente impactadas, e que incorpore os princípios do Desenvolvimento Orientado ao Transporte (TOD).",
+      "Recommendation": "As áreas não edificadas ou subutilizadas devem ser mapeadas e sua ocupação regulada sob uma nova legislação urbanística, que seja sólida e articulada com as comunidades diretamente impactadas, e que incorpore os princípios do Desenvolvimento Orientado ao Transporte (DOTS).",
       "Corridor": "TransOlímpica",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
@@ -1905,7 +1905,7 @@ TO_TD_MD = [
     "properties": {
       "Name": "Áreas não edificadas ou subutilizadas",
       "Description": "O BRT&nbsp;TransOlímpica passa próximo a grandes áreas livres, sem uso definido.",
-      "Recommendation": "As áreas não edificadas ou subutilizadas devem ser mapeadas e sua ocupação regulada sob uma nova legislação urbanística, que seja sólida e articulada com as comunidades diretamente impactadas, e que incorpore os princípios do Desenvolvimento Orientado ao Transporte (TOD).",
+      "Recommendation": "As áreas não edificadas ou subutilizadas devem ser mapeadas e sua ocupação regulada sob uma nova legislação urbanística, que seja sólida e articulada com as comunidades diretamente impactadas, e que incorpore os princípios do Desenvolvimento Orientado ao Transporte (DOTS).",
       "Corridor": "TransOlímpica",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
@@ -1985,7 +1985,7 @@ TO_TD_LO = [
     "properties": {
       "Name": "Desenvolvimento no entorno da Av. Salvador Allende",
       "Description": "A região do entorno da Av. Salvador Allende se desenvolve de forma pouco compacta e pouco amigável à caminhada e ao uso da bicicleta. A expansão das faixas de rolamento neste trecho reforça o estímulo ao uso do carro.",
-      "Recommendation": "O planejamento urbano, sob a forma de uma legislação urbanística sólida e articulada com as comunidades relacionadas, que incorpore os <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>princípios do Desenvolvimento Orientado ao Transporte (TOD)</a>, é vital para o desenvolvimento sustentável das áreas atendidas.",
+      "Recommendation": "O planejamento urbano, sob a forma de uma legislação urbanística sólida e articulada com as comunidades relacionadas, que incorpore os <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>princípios do Desenvolvimento Orientado ao Transporte (DOTS)</a>, é vital para o desenvolvimento sustentável das áreas atendidas.",
       "Corridor": "TransOlímpica",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
@@ -2779,7 +2779,7 @@ TB_TD_HI = [
     "properties": {
       "Name": "Pendularidade do corredor",
       "Description": "Dada a concentração de empregos e moradia em extremidades opostas dos corredores BRT&nbsp;TransBrasil e TransOlímpica, ambos tendem a apresentar grande pendularidade.",
-      "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (TOD) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
+      "Recommendation": "A implementação de medidas de Desenvolvimento Orientado ao Transporte (DOTS) nos bairros de Deodoro e Magalhães Bastos pode reduzir a pendularidade desses corredores. Deve-se estudar quais usos podem gerar empregos e potencializar o desenvolvimento, aproveitando a convergência das rotas de BRT, trem e vias expressas já consolidadas.",
       "Corridor": "TransBrasil",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "high",
@@ -2910,8 +2910,8 @@ TB_TD_LO = [
     "type": "Feature",
     "properties": {
       "Name": "Desenvolvimento de centralidades",
-      "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
-      "Recommendation": "Estes podem se tornar <a href='http://itdpbrasil.org.br/workshop-transbrasil-bonsucesso/' target='_blank'>atrativos para diferentes públicos</a> em horários diversificados, servindo para consolidar novas centralidades, <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>incentivar o adensamento ao longo do corredor</a> e reduzir sua pendularidade.",
+      "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos. O caso da estação Joana Nascimento, que conta com o Hospital de Bonsucesso próximo, foi objeto de estudo específico do ITDP.",
+      "Recommendation": "Segundo <a href='http://itdpbrasil.org.br/workshop-transbrasil-bonsucesso/' target='_blank'>diagnóstico levantado</a>, este local pode se tornar atrativo para diferentes públicos em horários diversificados, servindo para consolidar esta centralidade, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade.",
       "Corridor": "TransBrasil",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
@@ -2933,7 +2933,7 @@ TB_TD_LO = [
     "properties": {
       "Name": "Desenvolvimento de centralidades",
       "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
-      "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>incentivar o adensamento ao longo do corredor</a> e reduzir sua pendularidade.",
+      "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade. Sugere-se que as particularidades destas estações e pólos da cidade sejam estudadas com metodologia similar à empregada na <a href='http://itdpbrasil.org.br/workshop-transbrasil-bonsucesso/' target='_blank'>oficina de DOTS realizada no BRT&nbsp;TransBrasil em Bonsucesso</a>.",
       "Corridor": "TransBrasil",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
@@ -2955,7 +2955,7 @@ TB_TD_LO = [
     "properties": {
       "Name": "Desenvolvimento de centralidades",
       "Description": "Ao longo do BRT&nbsp;TransBrasil há diversos e importantes pólos e equipamentos públicos.",
-      "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, <a href='http://itdpbrasil.org.br/padrao-de-qualidade-tod/' target='_blank'>incentivar o adensamento ao longo do corredor</a> e reduzir sua pendularidade.",
+      "Recommendation": "Estes podem se tornar atrativos para diferentes públicos em horários diversificados, servindo para consolidar novas centralidades, incentivar o adensamento ao longo do corredor e reduzir sua pendularidade. Sugere-se que as particularidades destas estações e pólos da cidade sejam estudadas com metodologia similar à empregada na <a href='http://itdpbrasil.org.br/workshop-transbrasil-bonsucesso/' target='_blank'>oficina de DOTS realizada no BRT&nbsp;TransBrasil em Bonsucesso</a>.",
       "Corridor": "TransBrasil",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "low",
