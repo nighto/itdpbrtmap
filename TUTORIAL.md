@@ -96,7 +96,7 @@ O arquivo [`js/estudo.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js
     * `TO` - **T**rans**O**límpica
     * `TB` - **T**rans**B**rasil
   * Categorias
-    * `SV` - **S*egurança **v**iária
+    * `SV` - **S**egurança **v**iária
     * `OI` - **O**peração e **i**ntegração modal
     * `TD` - Planejamento Urbano (**T**O**D**)
     * `BP` - **B**icicleta e **p**edestre
