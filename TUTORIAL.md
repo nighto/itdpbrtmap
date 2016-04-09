@@ -37,6 +37,8 @@ Cada arquivo pode ser editado diretamente no GitHub ou transferido para seu comp
     * [Alterar aparência do popup dos objetos do estudo](#alterar-aparência-do-popup-dos-objetos-do-estudo)
     * [Alterar propriedades de um corredor ou de estações de um corredor](#alterar-propriedades-de-um-corredor-ou-de-estações-de-um-corredor)
     * [Alterar aparência do popup dos corredores ou de estações de um corredor](#alterar-aparência-do-popup-dos-corredores-ou-de-estações-de-um-corredor)
+    * [Criar propriedade de corredor ou estação de corredor](#criar-propriedade-de-corredor-ou-estação-de-corredor)
+    * [Criar link entre corredores](#criar-link-entre-corredores)
     * [Alterar propriedades dos bairros](#alterar-propriedades-dos-bairros)
     * [Alterar estilos das linhas desenhadas sobre o mapa](#alterar-estilos-das-linhas-desenhadas-sobre-o-mapa)
   * [Ferramentas Adicionais]
@@ -218,6 +220,14 @@ Veja mais detalhes na seção [Arquivos dos Corredores](#arquivos-dos-corredores
 ### Alterar aparência do popup dos corredores ou de estações de um corredor
 
 Para alterar a aparência do popup dos corredores ou das estações de um corredor (por exemplo, o texto "Status:"), edite o arquivo [`js/script.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/script.js). Veja mais detalhes sobre esta alteração na seção [Definição dos textos do popup](#definição-dos-textos-do-popup).
+
+### Criar propriedade de corredor ou estação de corredor
+
+Para criar uma propriedade nova em corredor ou estação de corredor, será necessário atualizar tanto o arquivo correspondente do corredor, tanto o arquivo que define o conteúdo dos popups dos mesmos (duas seções anteriores).
+
+### Criar link entre corredores
+
+Para criar link entre corredores, será necessário definir o traçado do mesmo (seguir exemplo do link TransOlímpica-TransCarioca, definido no arquivo [`js/basemap/brt/transolimpica.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/basemap/brt/transolimpica.js), linhas 364 a 426) e alterar o [`js/script.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/script.js) para incluir a renderização da mesma (seguindo o exemplo, linhas 144, 215, 233, 252 e 443).
 
 ### Alterar propriedades dos bairros
 
