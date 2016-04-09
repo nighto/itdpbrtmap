@@ -7,6 +7,8 @@ O tutorial fala em alguns momentos sobre *aparência* de determinados aspectos (
 
 Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o projeto, explicando em linhas gerais que informações eles contém e como editá-las. Na segunda parte teremos o inverso: uma lista de possibilidades de edições a serem feitas e que arquivos devem ser editados para que se atinja esse objetivo.
 
+Cada arquivo pode ser editado diretamente no GitHub ou transferido para seu computador. Para editar diretamente, estando com um usuário logado e com permissão de edição, basta clicar no botão editar no canto superior direito (símbolo de lápis). Caso queira editar no computador, pode baixar um arquivo individualmente (clicando em "raw" e salvando) ou baixando um pacote zip com todo o conteúdo do repositório (na página inicial do projeto há um botão "Download ZIP"). Para transferir um arquivo modificado em seu computador, basta abrir o arquivo para edição (símbolo de lápis) e copiar e colar o seu conteúdo.
+
 Índice
 ------
 
@@ -37,6 +39,8 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
     * [Alterar aparência do popup dos corredores ou de estações de um corredor](#alterar-aparência-do-popup-dos-corredores-ou-de-estações-de-um-corredor)
     * [Alterar propriedades dos bairros](#alterar-propriedades-dos-bairros)
     * [Alterar estilos das linhas desenhadas sobre o mapa](#alterar-estilos-das-linhas-desenhadas-sobre-o-mapa)
+  * [Ferramentas Adicionais]
+    * [Converter Shapefile para GeoJSON](#converter-shapefile-para-geojson)
 
 ## Descrevendo os arquivos
 
@@ -222,3 +226,9 @@ As propriedades dos bairros (exibidas nas camadas Extras > Densidade Populaciona
 ### Alterar estilos das linhas desenhadas sobre o mapa
 
 Os estilos das linhas desenhadas sobre o mapa, tais como: linhas de BRT, estações de BRT e cores dos bairros nas camadas Extra são definidos no arquivo [`js/mapstyles.js`](https://github.com/nighto/itdpbrtmap/blob/gh-pages/js/mapstyles.js). Veja mais detalhes na seção [Arquivo de estilos do mapa](#arquivo-de-estilos-do-mapa).
+
+## Ferramentas Adicionais
+
+### Converter Shapefile para GeoJSON
+
+Para converter shapefiles e demais formatos cartográficos para GeoJSON e vice-versa, pode-se utilizar o [Ogre - ogr2ogr web client](https://ogre.adc4gis.com/).
