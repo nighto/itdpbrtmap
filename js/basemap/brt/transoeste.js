@@ -4,8 +4,8 @@ LINE_TRANSOESTE_CONSTRUIDA_GEOJSON_DATA = {
         "Name": "BRT TransOeste",
         "Corredor": "TransOeste",
         "Trecho": "Santa Cruz - Campo Grande - Alvorada",
-        "Extensao": "56",
-        "Estacoes": "56",
+        "Extensao": "52",
+        "Estacoes": "52",
         "Terminais": "3 (Campo Grande, Santa Cruz, Alvorada)",
         "Status": "Open",
         "Shape_Leng": 0.99324987985799995
