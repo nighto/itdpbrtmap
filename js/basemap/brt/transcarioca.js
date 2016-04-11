@@ -5,7 +5,7 @@ LINE_TRANSCARIOCA_GEOJSON_DATA = {
         "Corredor": "TransCarioca",
         "Trecho": "Alvorada - Galeão",
         "Extensao": "39",
-        "Estacoes": "44",
+        "Estacoes": "43",
         "Terminais": "3 (Alvorada, Madureira, Fundão)",
         "Status": "Operational",
         "Shape_Leng": 0.74858152146599999
