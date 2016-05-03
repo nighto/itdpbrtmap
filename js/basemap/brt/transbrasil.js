@@ -823,7 +823,7 @@ STATIONS_TRANSBRASIL = [{
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-43.3007422, -22.8155452, 0.0]
+        "coordinates": [-43.3084, -22.81818, 0.0]
     }
 }, {
     "type": "Feature",
