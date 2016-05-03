@@ -2604,7 +2604,7 @@ TB_BP_MD = [
       "Corridor": "TransBrasil",
       "Category": "Bicicleta e Pedestre",
       "Level": "mid",
-      "Place": "Estação Isidro Rocha",
+      "Place": "Estação Parada de Lucas",
       "VoteCode": "TBBPMD1",
       "Photo": {
         "Filename": "images/photos/19.jpg",
