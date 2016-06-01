@@ -1858,7 +1858,7 @@ TO_TD_MD = [
       "Corridor": "TransOlímpica",
       "Category": "Desenvolvimento Urbano (DOTS)",
       "Level": "mid",
-      "Place": "Área de Proteção Ambiental da Parque Estadual da Pedra Branca - PEPB",
+      "Place": "Parque Estadual da Pedra Branca - PEPB",
       "VoteCode": "TOTDMD1",
       "Photo": {
         "Filename": "images/photos/24.jpg",
