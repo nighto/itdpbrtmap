@@ -917,7 +917,7 @@ TC_BP_HI = [
       "Corridor": "TransCarioca",
       "Category": "Bicicleta e Pedestre",
       "Level": "high",
-      "Place": "Estação Curicica",
+      "Place": "Estação Ventura",
       "VoteCode": 'TCBPHI1',
       "Photo": {
         "Filename": "images/photos/60.jpg",
@@ -1336,7 +1336,7 @@ TO_SV_HI = [
       "Corridor": "TransOlímpica",
       "Category": "Segurança Viária",
       "Level": "high",
-      "Place": "Terminal Recreio",
+      "Place": "Terminal Recreio/Salvador Allende",
       "VoteCode": 'TOSVHI1',
       "Photo": {
         "Filename": "images/photos/1.jpg",
@@ -1382,7 +1382,7 @@ TO_SV_MD = [
       "Corridor": "TransOlímpica",
       "Category": "Segurança Viária",
       "Level": "mid",
-      "Place": "Estação Bandeirantes",
+      "Place": "Estação Leila Diniz",
       "VoteCode": "TOSVMD1",
       "Photo": {
         "Filename": "images/photos/2.jpg",
@@ -1550,7 +1550,7 @@ TO_BP_HI = [
       "Corridor": "TransOlímpica",
       "Category": "Bicicleta e Pedestre",
       "Level": "high",
-      "Place": "Estação Curicica",
+      "Place": "Estação Ventura",
       "VoteCode": "TOBPHI1",
       "Photo": {
         "Filename": "images/photos/18.jpg",
@@ -1575,7 +1575,7 @@ TO_BP_HI = [
       "Corridor": "TransOlímpica",
       "Category": "Bicicleta e Pedestre",
       "Level": "high",
-      "Place": "Estação Marechal Mallet",
+      "Place": "Pe. João Chribbin",
       "VoteCode": "TOBPHI2",
       "Photo": {
         "Filename": "images/photos/18.jpg",
