@@ -6,7 +6,7 @@ LINE_TRANSOLIMPICA_GEOJSON_DATA = {
         "Trecho": "Barra da Tijuca - Deodoro",
         "Extensao": "22",
         "Estacoes": "15",
-        "Terminais": "4 (Deodoro, Mal. Fontenelle, Olímpico, Recreio)",
+        "Terminais": "4 (Deodoro, Marechal Fontenelle, Centro Olímpico, Recreio/Salvador Allende)",
         "Status": "U.C.",
         "Shape_Leng": 0.41118799154000002
     },
@@ -427,10 +427,10 @@ LINE_TO_TC_GEOJSON_DATA = {
 STATIONS_TRANSOLIMPICA = [{
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Recreio",
+        "Name": "Terminal Recreio/Salvador Allende",
         "Corredor": "TransOlímpica",
         "Type": "Expresso\/Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -439,10 +439,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Viva Viver",
+        "Name": "Catedral do Recreio",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -454,7 +454,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Tapebuias",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -463,10 +463,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "CNEN",
+        "Name": "Ilha Pura",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -478,7 +478,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Olof Palme",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -490,7 +490,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "RioCentro",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -499,10 +499,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Olímpico / Estação Morro do Outeiro",
+        "Name": "Terminal Centro Olímpico/Estação Morro do Outeiro",
         "Corredor": "TransOlímpica",
         "Type": "Expresso\/Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -514,7 +514,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Parque Olímpico",
         "Corredor": "TransOlímpica",
         "Type": "Expresso\/Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -526,7 +526,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Minha Praia",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -535,10 +535,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Bandeirantes",
+        "Name": "Asa Branca",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -547,10 +547,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Hospital Raphael de P. S.",
+        "Name": "Leila Diniz",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -559,10 +559,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Curicica",
+        "Name": "Ventura",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -574,7 +574,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Colônia",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -586,7 +586,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Outeiro Santo",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -598,7 +598,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Boiúna",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -607,10 +607,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Terminal Mal. Fontenelle",
+        "Name": "Terminal Marechal Fontenelle",
         "Corredor": "TransOlímpica",
         "Type": "Expresso\/Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -619,10 +619,10 @@ STATIONS_TRANSOLIMPICA = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Marechal Mallet",
+        "Name": "Pe. João Chribbin",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -634,7 +634,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Magalhães Bastos",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -646,7 +646,7 @@ STATIONS_TRANSOLIMPICA = [{
         "Name": "Vila Militar",
         "Corredor": "TransOlímpica",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",

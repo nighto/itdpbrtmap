@@ -2347,7 +2347,7 @@ STATIONS_TRANSOESTE = [{
         "Name": "Terminal Jardim Oceânico",
         "Corredor": "TransOeste",
         "Type": "Expresso\/Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -2356,10 +2356,10 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Cittá América",
+        "Name": "Bosque Marapendi",
         "Corredor": "TransOeste",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -2368,10 +2368,10 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Porto dos Cabritos",
+        "Name": "Paulo Malta Rezende",
         "Corredor": "TransOeste",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -2380,10 +2380,10 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Freeway",
+        "Name": "Afrânio Costa",
         "Corredor": "TransOeste",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -2395,7 +2395,7 @@ STATIONS_TRANSOESTE = [{
         "Name": "Riviera",
         "Corredor": "TransOeste",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -2407,7 +2407,7 @@ STATIONS_TRANSOESTE = [{
         "Name": "Ricardo Marinho",
         "Corredor": "TransOeste",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -2419,7 +2419,7 @@ STATIONS_TRANSOESTE = [{
         "Name": "Parque das Rosas",
         "Corredor": "TransOeste",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
@@ -2431,7 +2431,7 @@ STATIONS_TRANSOESTE = [{
         "Name": "Barra Shopping",
         "Corredor": "TransOeste",
         "Type": "Parador",
-        "Status": "U.C."
+        "Status": "Operational"
     },
     "geometry": {
         "type": "Point",
