@@ -1998,7 +1998,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Vila Paciência",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Planned"
     },
     "geometry": {
@@ -2226,7 +2226,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Terminal Campo Grande",
         "Corredor": "TransOeste",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2358,7 +2358,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Bosque Marapendi",
         "Corredor": "TransOeste",
-        "Type": "Parador",
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2430,7 +2430,7 @@ STATIONS_TRANSOESTE = [{
     "properties": {
         "Name": "Barra Shopping",
         "Corredor": "TransOeste",
-        "Type": "Parador",
+        "Type": "Expresso\/Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -2500,7 +2500,7 @@ STATIONS_TRANSOESTE = [{
 }, {
     "type": "Feature",
     "properties": {
-        "Name": "Rio Mar",
+        "Name": "Riomar",
         "Corredor": "TransOeste",
         "Type": "Parador",
         "Status": "Operational"

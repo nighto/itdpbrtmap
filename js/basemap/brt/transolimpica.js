@@ -513,7 +513,7 @@ STATIONS_TRANSOLIMPICA = [{
     "properties": {
         "Name": "Parque Olímpico",
         "Corredor": "TransOlímpica",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -609,7 +609,7 @@ STATIONS_TRANSOLIMPICA = [{
     "properties": {
         "Name": "Terminal Marechal Fontenelle",
         "Corredor": "TransOlímpica",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -657,11 +657,23 @@ STATIONS_TRANSOLIMPICA = [{
     "properties": {
         "Name": "Terminal Deodoro",
         "Corredor": "TransOlímpica",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "U.C."
     },
     "geometry": {
         "type": "Point",
         "coordinates": [-43.384866488999933, -22.855712567999944, 0.0]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "Name": "Terminal Sulacap",
+        "Corredor": "TransOlímpica",
+        "Type": "Expresso\/Parador",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-43.4000987, -22.88751, 0.0]
     }
 }];

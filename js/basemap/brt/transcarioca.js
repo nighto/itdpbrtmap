@@ -1139,7 +1139,7 @@ STATIONS_TRANSCARIOCA = [{
     "properties": {
         "Name": "Campinho",
         "Corredor": "TransCarioca",
-        "Type": "Expresso\/Parador",
+        "Type": "Parador",
         "Status": "Operational"
     },
     "geometry": {
@@ -1403,7 +1403,7 @@ STATIONS_TRANSCARIOCA = [{
     "properties": {
         "Name": "Galeão - Tom Jobim 2",
         "Corredor": "TransCarioca",
-        "Type": "Expresso\/Parador\/Semi-Direto",
+        "Type": "Parador\/Semi-Direto",
         "Status": "Operational"
     },
     "geometry": {
@@ -1415,7 +1415,7 @@ STATIONS_TRANSCARIOCA = [{
     "properties": {
         "Name": "Galeão - Tom Jobim 1",
         "Corredor": "TransCarioca",
-        "Type": "Expresso\/Parador\/Semi-Direto",
+        "Type": "Parador\/Semi-Direto",
         "Status": "Operational"
     },
     "geometry": {
