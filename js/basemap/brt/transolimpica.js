@@ -674,6 +674,6 @@ STATIONS_TRANSOLIMPICA = [{
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-43.4000987, -22.88751, 0.0]
+        "coordinates": [-43.398432, -22.884493, 0.0]
     }
 }];
