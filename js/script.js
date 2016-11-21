@@ -505,7 +505,7 @@ require([
       this._createTitle('Categorias', this.containerCategorias);
       this._createCheckboxInput('Segurança viária',            'SV', true, this.containerCategorias);
       this._createCheckboxInput('Rede de Transporte Público', 'OI', true, this.containerCategorias);
-      this._createCheckboxInput('Desenvolvimento Urbano (DOTS)',   'TD', true, this.containerCategorias);
+      this._createCheckboxInput('Desenvolvimento Urbano',   'TD', true, this.containerCategorias);
       this._createCheckboxInput('Bicicleta e pedestre',        'BP', true, this.containerCategorias);
 
       this.containerNiveisDeAtencao = L.DomUtil.create('div', 'niveisdeatencaocheckboxes', this.form);
