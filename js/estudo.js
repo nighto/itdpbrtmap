@@ -326,6 +326,27 @@ TW_OI_MD = [
       "type": "Point",
       "coordinates": [-43.442, -23.009, 0.0]
     }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "Name": "Ligação Campo Grande - Mato Alto",
+      "Description": "A ligação Campo Grande - Mato Alto, apesar de já possuir uma estação construída, não tem previsão de início de operação. Hoje, os passageiros vindos de Campo Grande realizam um trajeto \"negativo\" para poder chegar até a Barra da Tijuca.",
+      "Recommendation": "Essa ligação é importantíssima para reduzir o tempo de deslocamento entre Campo Grande e Barra. Recomenda-se o detalhamento do plano de início de operação deste trecho.",
+      "Corridor": "TransOeste",
+      "Category": "Rede de Transporte Público",
+      "Level": "mid",
+      "Place": "Estação ParkShopping",
+      "VoteCode": 'TWOIMD8',
+      "Photo": {
+        "Filename": "images/photos/52.jpg",
+        "Credits": "Google Earth, Jun. 2015"
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-43.57398650399994, -22.929802741999932, 0.0]
+    }
   }
 ];
 
@@ -651,31 +672,6 @@ TW_TD_HI = [
     "geometry": {
       "type": "Point",
       "coordinates": [-43.66769, -22.93709, 0.0]
-    }
-  }
-];
-
-// TransOeste - Desenvolvimento Urbano (DOTS) - Médio
-TW_TD_MD = [
-  {
-    "type": "Feature",
-    "properties": {
-      "Name": "Ligação Campo Grande - Mato Alto",
-      "Description": "A ligação Campo Grande - Mato Alto, apesar de já possuir uma estação construída, não tem previsão de início de operação. Hoje, os passageiros vindos de Campo Grande realizam um trajeto \"negativo\" para poder chegar até a Barra da Tijuca.",
-      "Recommendation": "Essa ligação é importantíssima para reduzir o tempo de deslocamento entre Campo Grande e Barra. Recomenda-se o detalhamento do plano de início de operação deste trecho.",
-      "Corridor": "TransOeste",
-      "Category": "Desenvolvimento Urbano (DOTS)",
-      "Level": "mid",
-      "Place": "Estação ParkShopping",
-      "VoteCode": 'TWTDMD1',
-      "Photo": {
-        "Filename": "images/photos/52.jpg",
-        "Credits": "Google Earth, Jun. 2015"
-      }
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [-43.57398650399994, -22.929802741999932, 0.0]
     }
   }
 ];
