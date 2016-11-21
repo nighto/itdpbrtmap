@@ -9,6 +9,8 @@ Na primeira parte, iremos acompanhar uma descrição dos arquivos que compõem o
 
 Cada arquivo pode ser editado diretamente no GitHub ou transferido para seu computador. Para editar diretamente, estando com um usuário logado e com permissão de edição, basta clicar no botão editar no canto superior direito (símbolo de lápis). Caso queira editar no computador, pode baixar um arquivo individualmente (clicando em "raw" e salvando) ou baixando um pacote zip com todo o conteúdo do repositório (na página inicial do projeto há um botão "Download ZIP"). Para transferir um arquivo modificado em seu computador, basta abrir o arquivo para edição (símbolo de lápis) e copiar e colar o seu conteúdo.
 
+*Os arquivos adicionados nesse repositório GitHub repercutem no mapa temporário a seguir:* http://nighto.github.io/itdpbrtmap/
+
 Índice
 ------
 
